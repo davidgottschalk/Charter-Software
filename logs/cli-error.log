@@ -1,0 +1,19 @@
+2016-04-28 13:30:01 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'david_c.grouos' doesn't exist
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'grouos', Array, Object(Cake\Database\Schema\Table))
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(65): Cake\Database\Schema\Collection->describe('grouos', Array)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(426): Cake\Database\Schema\CachedCollection->describe('grouos')
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(502): Cake\ORM\Table->schema()
+#4 /home/david/webdev/C/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(194): Cake\ORM\Table->primaryKey()
+#5 /home/david/webdev/C/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(109): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 /home/david/webdev/C/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(95): Bake\Shell\Task\ModelTask->bake('Grouos')
+#7 /home/david/webdev/C/vendor/cakephp/bake/src/Shell/BakeShell.php(241): Bake\Shell\Task\ModelTask->main('Grouos')
+#8 [internal function]: Bake\Shell\BakeShell->all('grouos')
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/Shell.php(380): call_user_func_array(Array, Array)
+#10 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(204): Cake\Console\Shell->runCommand(Array, true)
+#11 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(175): Cake\Console\ShellDispatcher->_dispatch()
+#12 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch()
+#13 /home/david/webdev/C/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#14 {main}
+
+
