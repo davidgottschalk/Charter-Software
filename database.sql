@@ -24,7 +24,15 @@ CREATE TABLE airports (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     city VARCHAR(100) NOT NULL,
-    country VARCHAR(100) NOT NULL
+    country VARCHAR(100) NOT NULL,
+    iata_faa VARCHAR(100),
+    icao VARCHAR(100),
+    latitude DECIMAL(18,12)NOT NULL,
+    longitude DECIMAL(18,12) NOT NULL,
+    altitude INT NOT NULL,
+    timezone INT NOT NULL,
+    dst VARCHAR(1) NOT NULL,
+    timezone_db VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE customer_types (
@@ -36,11 +44,13 @@ CREATE TABLE customers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
-    company VARCHAR(100) NOT NULL,
+    company VARCHAR(100),
     street VARCHAR(50) NOT NULL,
     postal_code INT NOT NULL,
     country VARCHAR(50) NOT NULL,
     customer_type_id INT NOT NULL,
+    strike INT NOT NULL,
+    email VARCHAR(100) NOT NULL,
     FOREIGN KEY customer_type_key(customer_type_id) REFERENCES customer_types(id)
 );
 
@@ -64,7 +74,6 @@ CREATE TABLE users (
     username VARCHAR(50) NOT NULL,
     password VARCHAR(255) NOT NULL,
     group_id INT NOT NULL,
-    position VARCHAR(10),
     status INT NOT NULL,
     payment INT NOT NULL,
     created DATETIME,
@@ -79,7 +88,7 @@ CREATE TABLE flights (
     plane_id INT NOT NULL,
     start_date DATETIME,
     end_date DATETIME,
-    status VARCHAR(50),
+    status INT NOT NULL,
     FOREIGN KEY plane_key(plane_id) REFERENCES planes(id),
     FOREIGN KEY customer_key(customer_id) REFERENCES customers(id)
 );
@@ -88,7 +97,7 @@ CREATE TABLE users_flights (
     flight_id INT NOT NULL,
     user_id INT NOT NULL,
     PRIMARY KEY (flight_id, user_id),
-    FOREIGN KEY flight_key(flight_id) REFERENCES flights(id),
+    FOREIGN KEY flight_key1(flight_id) REFERENCES flights(id),
     FOREIGN KEY user_key(user_id) REFERENCES users(id)
 );
 
@@ -99,6 +108,15 @@ CREATE TABLE airports_flights (
     flight_time INT NOT NULL,
     stay_duration INT NOT NULL,
     order_number INT NOT NULL,
-    FOREIGN KEY flight_key(flight_id) REFERENCES flights(id),
+    FOREIGN KEY flight_key2(flight_id) REFERENCES flights(id),
     FOREIGN KEY airport_key(airport_id) REFERENCES airports(id)
+);
+
+CREATE TABLE invoices (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    flight_id INT NOT NULL,
+    value FLOAT(20,2),
+    status INT NOT NULL,
+    due_date DATETIME,
+    FOREIGN KEY flight_invoice_key(flight_id) REFERENCES flights(id)
 );

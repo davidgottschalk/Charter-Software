@@ -24,7 +24,7 @@ class AirportsFlightsFixture extends TestFixture
         'stay_duration' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'order_number' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
-            'flight_key' => ['type' => 'index', 'columns' => ['flight_id'], 'length' => []],
+            'flight_key2' => ['type' => 'index', 'columns' => ['flight_id'], 'length' => []],
             'airport_key' => ['type' => 'index', 'columns' => ['airport_id'], 'length' => []],
         ],
         '_constraints' => [

@@ -1,35 +1,37 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $planeType->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $planeType->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Plane Types'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Planes'), ['controller' => 'Planes', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Plane'), ['controller' => 'Planes', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
-<div class="planeTypes form large-10 medium-9 columns">
+    <div class="planeTypes view large-12 medium-9 columns">
     <?= $this->Form->create($planeType); ?>
     <fieldset>
-        <legend><?= __('Edit Plane Type') ?></legend>
+        <legend class="asapblau"><?= __('Flugzeugtyp bearbeiten') ?></legend>
+        <div class"actions">
+        </div>
+    <br/>
+    <div class="row">
+    <div class="large-3 columns strings">
         <?php
-            echo $this->Form->input('manufacturer');
-            echo $this->Form->input('type');
-            echo $this->Form->input('speed');
-            echo $this->Form->input('max_range');
+            echo $this->Form->input('manufacturer', array('label'=>'Hersteller'));
+            echo $this->Form->input('type', array('label'=>'Typ'));
+            echo $this->Form->input('engine_type', array('options'=>array('Jet'=>'Jet', 'Turbopropp'=>'Turbopropp'), 'label'=>'Triebwerksart'));
+        ?></div>
+    <div class="large-3 columns strings">
+        <?php
+            echo $this->Form->input('speed', array('label'=>'Geschwindigkeit'));
+            echo $this->Form->input('max_range', array('label'=>'Reichweite'));
+            echo $this->Form->input('engine_count', array('label'=>'Anzahl Triebwerke'));
+        ?></div>
+    <div class="large-3 columns strings">
+        <?php
+            echo $this->Form->input('flight_crew', array('label'=>'Cockpitpersonal (max)'));
+            echo $this->Form->input('cabin_crew', array('label'=>'Kabinenpersonal (max)'));
             echo $this->Form->input('pax');
-            echo $this->Form->input('engine_type');
-            echo $this->Form->input('engine_count');
-            echo $this->Form->input('hourly_cost');
-            echo $this->Form->input('annual_fixed_cost');
-            echo $this->Form->input('flight_crew');
-            echo $this->Form->input('cabin_crew');
-        ?>
+        ?></div>
+    <div class="large-2 columns strings">
+        <?php
+            echo $this->Form->input('hourly_cost', array('label'=>'Kosten / Stunde'));
+            echo $this->Form->input('annual_fixed_cost', array('label'=>'jährliche Fixkosten'));
+        ?></div></div></div>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <div class="planeTypes form large-12 medium-9 columns">
+    <?= $this->Form->button(__('Speichern')) ?>
+    <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
     <?= $this->Form->end() ?>
-</div>
+ </div>

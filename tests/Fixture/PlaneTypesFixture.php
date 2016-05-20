@@ -60,8 +60,8 @@ class PlaneTypesFixture extends TestFixture
             'annual_fixed_cost' => 1,
             'flight_crew' => 1,
             'cabin_crew' => 1,
-            'created' => '2016-04-28 13:30:44',
-            'modified' => '2016-04-28 13:30:44'
+            'created' => '2016-05-12 11:16:47',
+            'modified' => '2016-05-12 11:16:47'
         ],
     ];
 }

@@ -23,6 +23,7 @@ class AirportsFlightsTableTest extends TestCase
         'app.customer_types',
         'app.planes',
         'app.plane_types',
+        'app.invoices',
         'app.airports',
         'app.users',
         'app.groups',

@@ -1,25 +1,13 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $customerType->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $customerType->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Customer Types'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Customers', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Customer'), ['controller' => 'Customers', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
 <div class="customerTypes form large-10 medium-9 columns">
     <?= $this->Form->create($customerType); ?>
     <fieldset>
-        <legend><?= __('Edit Customer Type') ?></legend>
-        <?php
-            echo $this->Form->input('name');
-        ?>
+
+        <legend><h3>Kundengruppe <?= h($customerType->name) ?> bearbeiten</h3></legend>
+
+        <p><? echo $this->Form->input('name'); ?></p>
+
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Speichern')) ?>
+    <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
     <?= $this->Form->end() ?>
 </div>

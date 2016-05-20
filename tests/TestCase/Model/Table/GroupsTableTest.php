@@ -18,7 +18,16 @@ class GroupsTableTest extends TestCase
      */
     public $fixtures = [
         'app.groups',
-        'app.employees'
+        'app.users',
+        'app.flights',
+        'app.customers',
+        'app.customer_types',
+        'app.planes',
+        'app.plane_types',
+        'app.invoices',
+        'app.airports',
+        'app.airports_flights',
+        'app.users_flights'
     ];
 
     /**

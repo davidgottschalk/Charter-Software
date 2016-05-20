@@ -23,6 +23,7 @@ class Flight extends Entity
         'status' => true,
         'customer' => true,
         'plane' => true,
+        'invoices' => true,
         'airports' => true,
         'users' => true,
     ];

@@ -1,25 +1,20 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Html->link(__('New Customer'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Customer Types'), ['controller' => 'CustomerTypes', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Customer Type'), ['controller' => 'CustomerTypes', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Flights'), ['controller' => 'Flights', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Flight'), ['controller' => 'Flights', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
-<div class="customers index large-10 medium-9 columns">
-    <table cellpadding="0" cellspacing="0">
+<div class="customers index large-12 medium-9 columns">
+    <h3>Kunden</h3>
+    <hr>
+    <span class="actions primary"><?= $this->Html->link(__('Kunde hinzufügen'), ['action' => 'add']) ?></span>
+
+    <table id="charter-table" cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('id') ?></th>
-            <th><?= $this->Paginator->sort('first_name') ?></th>
-            <th><?= $this->Paginator->sort('last_name') ?></th>
-            <th><?= $this->Paginator->sort('company') ?></th>
-            <th><?= $this->Paginator->sort('street') ?></th>
-            <th><?= $this->Paginator->sort('postal_code') ?></th>
-            <th><?= $this->Paginator->sort('country') ?></th>
-            <th class="actions"><?= __('Actions') ?></th>
+            <th><?= $this->Paginator->sort('id', __('Kundennummer')) ?></th>
+            <th><?= $this->Paginator->sort('first_name', __('Vorname')) ?></th>
+            <th><?= $this->Paginator->sort('last_name', __('Nachname')) ?></th>
+            <th><?= $this->Paginator->sort('company', __('Firma')) ?></th>
+            <th><?= $this->Paginator->sort('street', __('Straße')) ?></th>
+            <th><?= $this->Paginator->sort('postal_code', __('PLZ')) ?></th>
+            <th><?= $this->Paginator->sort('country', __('Ort')) ?></th>
+            <th><?= $this->Paginator->sort('email', __('E-Mail')) ?></th>
+            <th style="width:200px"class="actions"><?= __('') ?></th>
         </tr>
     </thead>
     <tbody>
@@ -32,21 +27,20 @@
             <td><?= h($customer->street) ?></td>
             <td><?= $this->Number->format($customer->postal_code) ?></td>
             <td><?= h($customer->country) ?></td>
-            <td class="actions">
-                <?= $this->Html->link(__('View'), ['action' => 'view', $customer->id]) ?>
-                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $customer->id]) ?>
-                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $customer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $customer->id)]) ?>
+            <td><?= h($customer->email) ?></td>
+            <td>
+                <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $customer->id]) ?></span>
+                <span class="actions secondary"><?= $this->Html->link(__('Bearbeiten'), ['action' => 'edit', $customer->id]) ?></span>
             </td>
         </tr>
-
     <?php endforeach; ?>
     </tbody>
     </table>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->prev('<< ' . __('')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
+            <?= $this->Paginator->next(__('') . ' >>') ?>
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>

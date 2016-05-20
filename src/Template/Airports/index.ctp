@@ -14,6 +14,9 @@
             <th><?= $this->Paginator->sort('name') ?></th>
             <th><?= $this->Paginator->sort('city') ?></th>
             <th><?= $this->Paginator->sort('country') ?></th>
+            <th><?= $this->Paginator->sort('iata_faa') ?></th>
+            <th><?= $this->Paginator->sort('icao') ?></th>
+            <th><?= $this->Paginator->sort('latitude') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
     </thead>
@@ -24,6 +27,9 @@
             <td><?= h($airport->name) ?></td>
             <td><?= h($airport->city) ?></td>
             <td><?= h($airport->country) ?></td>
+            <td><?= h($airport->iata_faa) ?></td>
+            <td><?= h($airport->icao) ?></td>
+            <td><?= $this->Number->format($airport->latitude) ?></td>
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $airport->id]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $airport->id]) ?>

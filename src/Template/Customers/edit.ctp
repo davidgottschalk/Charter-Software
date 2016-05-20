@@ -1,33 +1,39 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $customer->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $customer->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Customers'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Customer Types'), ['controller' => 'CustomerTypes', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Customer Type'), ['controller' => 'CustomerTypes', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Flights'), ['controller' => 'Flights', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Flight'), ['controller' => 'Flights', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
 <div class="customers form large-10 medium-9 columns">
     <?= $this->Form->create($customer); ?>
     <fieldset>
-        <legend><?= __('Edit Customer') ?></legend>
-        <?php
-            echo $this->Form->input('first_name');
-            echo $this->Form->input('last_name');
-            echo $this->Form->input('company');
-            echo $this->Form->input('street');
-            echo $this->Form->input('postal_code');
-            echo $this->Form->input('country');
-            echo $this->Form->input('customer_type_id', ['options' => $customerTypes]);
-        ?>
+
+        <legend><h3>Kunde <?= h($customer->id) ?> bearbeiten</h3></legend>
+
+        <div class="large-3 columns strings edit-table">
+            <h6 class="subheader"><?= __('Vorname') ?></h6>
+            <p><? echo $this->Form->input('first_name'); ?></p>
+            <h6 class="subheader"><?= __('Nachname') ?></h6>
+            <p><? echo $this->Form->input('last_name'); ?></p>
+            <h6 class="subheader"><?= __('Firma') ?></h6>
+            <p><? echo $this->Form->input('company'); ?></p>
+            <h6 class="subheader"><?= __('E-Mail') ?></h6>
+            <p><? echo $this->Form->input('email'); ?></p>
+        </div>
+
+        <div class="large-3 columns strings edit-table">
+            <h6 class="subheader"><?= __('Straße') ?></h6>
+            <p><? echo $this->Form->input('street'); ?></p>
+            <h6 class="subheader"><?= __('PLZ') ?></h6>
+            <p><? echo $this->Form->input('postal_code'); ?></p>
+            <h6 class="subheader"><?= __('Ort') ?></h6>
+            <p><? echo $this->Form->input('country'); ?></p>
+        </div>
+
+        <div class="large-3 columns strings edit-table">
+            <h6 class="subheader"><?= __('Customer Type') ?></h6>
+            <p><? echo $this->Form->input('customer_type_id', ['options' => $customerTypes]); ?></p>
+        </div>
+
+        <div class="large-3 columns strings edit-table">
+        </div>
+
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Speichern')) ?>
+    <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
     <?= $this->Form->end() ?>
 </div>

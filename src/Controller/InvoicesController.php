@@ -49,22 +49,22 @@ class InvoicesController extends AppController
      *
      * @return void Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
-        $invoice = $this->Invoices->newEntity();
-        if ($this->request->is('post')) {
-            $invoice = $this->Invoices->patchEntity($invoice, $this->request->data);
-            if ($this->Invoices->save($invoice)) {
-                $this->Flash->success('The invoice has been saved.');
-                return $this->redirect(['action' => 'index']);
-            } else {
-                $this->Flash->error('The invoice could not be saved. Please, try again.');
-            }
-        }
-        $flights = $this->Invoices->Flights->find('list', ['limit' => 200]);
-        $this->set(compact('invoice', 'flights'));
-        $this->set('_serialize', ['invoice']);
-    }
+    // public function add()
+    // {
+    //     $invoice = $this->Invoices->newEntity();
+    //     if ($this->request->is('post')) {
+    //         $invoice = $this->Invoices->patchEntity($invoice, $this->request->data);
+    //         if ($this->Invoices->save($invoice)) {
+    //             $this->Flash->success('The invoice has been saved.');
+    //             return $this->redirect(['action' => 'index']);
+    //         } else {
+    //             $this->Flash->error('The invoice could not be saved. Please, try again.');
+    //         }
+    //     }
+    //     $flights = $this->Invoices->Flights->find('list', ['limit' => 200]);
+    //     $this->set(compact('invoice', 'flights'));
+    //     $this->set('_serialize', ['invoice']);
+    // }
 
     /**
      * Edit method

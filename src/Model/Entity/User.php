@@ -23,7 +23,6 @@ class User extends Entity
         'username' => true,
         'password' => true,
         'group_id' => true,
-        'position' => true,
         'status' => true,
         'payment' => true,
         'exit_date' => true,

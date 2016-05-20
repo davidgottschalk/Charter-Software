@@ -49,10 +49,10 @@ class PlaneTypesController extends AppController
         if ($this->request->is('post')) {
             $planeType = $this->PlaneTypes->patchEntity($planeType, $this->request->data);
             if ($this->PlaneTypes->save($planeType)) {
-                $this->Flash->success('The plane type has been saved.');
+                $this->Flash->success('Neuer Flugzeugtyp angelegt.');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The plane type could not be saved. Please, try again.');
+                $this->Flash->error('Der Flugzeugtyp konnte nicht gespeichert werden. Bitte erneut versuchen.');
             }
         }
         $this->set(compact('planeType'));
@@ -74,10 +74,10 @@ class PlaneTypesController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $planeType = $this->PlaneTypes->patchEntity($planeType, $this->request->data);
             if ($this->PlaneTypes->save($planeType)) {
-                $this->Flash->success('The plane type has been saved.');
+                $this->Flash->success('Die Änderungen wurden gespeichert.');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The plane type could not be saved. Please, try again.');
+                $this->Flash->error('Die Änderungen konnten nicht gespeichert werden, Bitte erneut versuchen.');
             }
         }
         $this->set(compact('planeType'));
@@ -96,9 +96,9 @@ class PlaneTypesController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $planeType = $this->PlaneTypes->get($id);
         if ($this->PlaneTypes->delete($planeType)) {
-            $this->Flash->success('The plane type has been deleted.');
+            $this->Flash->success('Der Flugzeugtyp wurde gelöscht.');
         } else {
-            $this->Flash->error('The plane type could not be deleted. Please, try again.');
+            $this->Flash->error('Der Flugzeugtyp konnte nicht gelöscht werden. Bitte erneut versuchen.');
         }
         return $this->redirect(['action' => 'index']);
     }

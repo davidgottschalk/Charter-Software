@@ -35,7 +35,7 @@ class FlightsController extends AppController
     public function view($id = null)
     {
         $flight = $this->Flights->get($id, [
-            'contain' => ['Customers', 'Planes', 'Airports', 'Users']
+            'contain' => ['Customers', 'Planes', 'Airports', 'Users', 'Invoices']
         ]);
         $this->set('flight', $flight);
         $this->set('_serialize', ['flight']);

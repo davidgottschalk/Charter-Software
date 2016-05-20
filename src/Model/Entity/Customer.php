@@ -22,6 +22,8 @@ class Customer extends Entity
         'postal_code' => true,
         'country' => true,
         'customer_type_id' => true,
+        'strike' => true,
+        'email' => true,
         'customer_type' => true,
         'flights' => true,
     ];

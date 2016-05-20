@@ -1,5 +1,5 @@
 <div role="banner" class="navbar navbar-default bs-docs-nav" style="width:100%; height:100%">
-
+    <div style="float:left;"><?=$this->Html->image( 'asap.jpg', ['style'=>'height:50px;'] )?></div>
     <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
         <ul class="nav navbar-nav" id="bpf-page-navi-items">
             <?if(!empty($navItems)){

@@ -48,8 +48,8 @@ class PlanesFixture extends TestFixture
             'plane_name' => 'Lorem ipsum dolor sit amet',
             'plane_number' => 1,
             'plane_type_id' => 1,
-            'created' => '2016-04-28 13:31:30',
-            'modified' => '2016-04-28 13:31:30'
+            'created' => '2016-05-12 11:16:48',
+            'modified' => '2016-05-12 11:16:48'
         ],
     ];
 }

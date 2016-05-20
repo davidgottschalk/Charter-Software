@@ -54,6 +54,40 @@ class AirportsTable extends Table
         $validator
             ->requirePresence('country', 'create')
             ->notEmpty('country');
+            
+        $validator
+            ->allowEmpty('iata_faa');
+            
+        $validator
+            ->allowEmpty('icao');
+            
+        $validator
+            ->add('latitude', 'valid', ['rule' => 'decimal'])
+            ->requirePresence('latitude', 'create')
+            ->notEmpty('latitude');
+            
+        $validator
+            ->add('longitude', 'valid', ['rule' => 'decimal'])
+            ->requirePresence('longitude', 'create')
+            ->notEmpty('longitude');
+            
+        $validator
+            ->add('altitude', 'valid', ['rule' => 'numeric'])
+            ->requirePresence('altitude', 'create')
+            ->notEmpty('altitude');
+            
+        $validator
+            ->add('timezone', 'valid', ['rule' => 'numeric'])
+            ->requirePresence('timezone', 'create')
+            ->notEmpty('timezone');
+            
+        $validator
+            ->requirePresence('dst', 'create')
+            ->notEmpty('dst');
+            
+        $validator
+            ->requirePresence('timezone_db', 'create')
+            ->notEmpty('timezone_db');
 
         return $validator;
     }

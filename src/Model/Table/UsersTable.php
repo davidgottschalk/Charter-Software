@@ -78,9 +78,6 @@ class UsersTable extends Table
             ->notEmpty('password');
             
         $validator
-            ->allowEmpty('position');
-            
-        $validator
             ->add('status', 'valid', ['rule' => 'numeric'])
             ->requirePresence('status', 'create')
             ->notEmpty('status');

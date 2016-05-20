@@ -32,24 +32,29 @@ class NavigationComponent extends Component {
         $this->controller = $this->_registry->getController();
         $this->navItems = [];
 
-        $this->navItems['Termine'] = [
-            [ "title" => "Übersicht", "controller" => "Flights", "action" => "index" ]
-        ];
-
-        $this->navItems['Personal'] = [
-            [ "title" => "Übersicht", "controller" => "Users", "action" => "index" ],
-            [ "title" => "Mitarbeiter hinzufügen", "controller" => "Users", "action" => "add" ]
-        ];
-
+        // $this->navItems['Termine'] = [
+        //     [ "title" => "Übersicht", "controller" => "Flights", "action" => "index" ]
+        // ];
         $this->navItems['Kunden'] = [
-            [ "title" => "Übersicht", "controller" => "Customers", "action" => "index" ]
+            [ "title" => "Übersicht", "controller" => "Customers", "action" => "index" ],
+            [ "title" => "Kunde hinzufügen", "controller" => "Customers", "action" => "add" ],
+            [ "title" => "Kundengruppen", "controller" => "CustomerTypes", "action" => "index" ]
+        ];
+        $this->navItems['Mahnwesen'] = [
+            [ "title" => "Übersicht", "controller" => "Invoices", "action" => "index" ]
         ];
 
         $this->navItems['Flugzeuge'] = [
-            [ "title" => "Hangar", "controller" => "Planes", "action" => "index" ],
+            [ "title" => "Flugzeuge", "controller" => "Planes", "action" => "index" ],
             [ "title" => "Flugzeugtypen", "controller" => "PlaneTypes", "action" => "index" ]
         ];
 
+        $this->navItems['Mitarbeiter'] = [
+            [ "title" => "Übersicht", "controller" => "Users", "action" => "index" ],
+            [ "title" => "Mitarbeiter hinzufügen", "controller" => "Users", "action" => "add" ],
+            // [ "title" => "Arbeitszeitkonto", "controller" => "Workinghours", "action" => "index" ],
+            [ "title" => "Mitarbeitergruppen", "controller" => "Groups", "action" => "index" ],
+        ];
 
     }
 

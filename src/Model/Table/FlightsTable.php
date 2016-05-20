@@ -6,13 +6,14 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Log\LogTrait;
 
 /**
  * Flights Model
  */
 class FlightsTable extends Table
 {
-
+    use LogTrait;
     /**
      * Initialize method
      *
@@ -31,6 +32,9 @@ class FlightsTable extends Table
         $this->belongsTo('Planes', [
             'foreignKey' => 'plane_id',
             'joinType' => 'INNER'
+        ]);
+        $this->hasMany('Invoices', [
+            'foreignKey' => 'flight_id'
         ]);
         $this->belongsToMany('Airports', [
             'foreignKey' => 'flight_id',
@@ -55,20 +59,22 @@ class FlightsTable extends Table
         $validator
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create');
-            
+
         $validator
             ->allowEmpty('flight_number');
-            
+
         $validator
             ->add('start_date', 'valid', ['rule' => 'datetime'])
             ->allowEmpty('start_date');
-            
+
         $validator
             ->add('end_date', 'valid', ['rule' => 'datetime'])
             ->allowEmpty('end_date');
-            
+
         $validator
-            ->allowEmpty('status');
+            ->add('status', 'valid', ['rule' => 'numeric'])
+            ->requirePresence('status', 'create')
+            ->notEmpty('status');
 
         return $validator;
     }

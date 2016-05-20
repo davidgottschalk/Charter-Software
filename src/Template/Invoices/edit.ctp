@@ -1,28 +1,16 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $invoice->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $invoice->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Invoices'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Flights'), ['controller' => 'Flights', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Flight'), ['controller' => 'Flights', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
+
 <div class="invoices form large-10 medium-9 columns">
     <?= $this->Form->create($invoice); ?>
     <fieldset>
-        <legend><?= __('Edit Invoice') ?></legend>
+        <legend><?= 'Rechnung bearbeiten' ?></legend>
         <?php
-            echo $this->Form->input('flight_id', ['options' => $flights]);
-            echo $this->Form->input('due_date');
-            echo $this->Form->input('value');
-            echo $this->Form->input('status');
+            echo $this->Form->input('flight_id', array('label'=>'Flugnummer'));
+            echo $this->Form->input('due_date', array('label'=>'Termin'));
+            echo $this->Form->input('value', array('label'=>'Summe'));
+            echo $this->Form->input('status', array('label'=>'Status'));
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button("Speichern") ?>
+    <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
     <?= $this->Form->end() ?>
 </div>

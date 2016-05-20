@@ -21,6 +21,7 @@ class FlightsControllerTest extends IntegrationTestCase
         'app.customer_types',
         'app.planes',
         'app.plane_types',
+        'app.invoices',
         'app.airports',
         'app.airports_flights',
         'app.users',

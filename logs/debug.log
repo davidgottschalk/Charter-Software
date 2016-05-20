@@ -1,0 +1,2180 @@
+2016-05-12 15:00:26 Debug: SELECT Invoices.id AS `Invoices__id`, Invoices.flight_id AS `Invoices__flight_id`, Invoices.due_date AS `Invoices__due_date`, Invoices.value AS `Invoices__value`, Invoices.status AS `Invoices__status` FROM invoices Invoices WHERE status = :c0
+2016-05-12 15:02:28 Debug: []
+2016-05-12 15:03:13 Debug: --2--
+2016-05-12 15:03:13 Debug: []
+2016-05-12 15:03:42 Debug: --2--
+2016-05-12 15:03:42 Debug: [{"id":2,"flight_id":2,"due_date":"2016-05-28T23:59:59+0000","value":820,"status":2}]
+2016-05-12 15:05:01 Debug: --2--
+2016-05-12 15:05:15 Debug: --2--
+2016-05-12 15:10:01 Debug: --2--
+2016-05-12 15:11:14 Debug: --2--
+2016-05-12 15:30:35 Debug: --2--
+2016-05-12 15:30:49 Debug: --2--
+2016-05-12 15:30:59 Debug: --2--
+2016-05-12 15:31:02 Debug: --2--
+2016-05-12 15:31:13 Debug: --2--
+2016-05-12 15:31:25 Debug: --2--
+2016-05-12 15:31:57 Debug: --2--
+2016-05-12 15:31:57 Debug: [{"id":1,"flight_id":1,"due_date":"2016-05-26T23:59:59+0000","value":270,"status":1,"Flights":{"id":"1","flight_number":"82376z4jhffes","customer_id":"1","plane_id":"1","start_date":"2016-05-17 18:15:00","end_date":"2016-05-17 19:20:00","status":"1"}},{"id":2,"flight_id":2,"due_date":"2016-05-28T23:59:59+0000","value":820,"status":2,"Flights":{"id":"2","flight_number":"hndap978dghq2","customer_id":"2","plane_id":"2","start_date":"2016-05-18 04:10:00","end_date":"2016-05-18 08:25:00","status":"1"}}]
+2016-05-12 15:32:00 Debug: --2--
+2016-05-12 15:32:11 Debug: --2--
+2016-05-12 15:32:25 Debug: [{"id":2,"flight_id":2,"due_date":"2016-05-28T23:59:59+0000","value":820,"status":2}]
+2016-05-12 15:32:54 Debug: --2--
+2016-05-12 15:33:32 Debug: --2--
+2016-05-12 15:34:32 Debug: --2--
+2016-05-12 15:34:32 Debug: [{"id":2,"flight_id":2,"due_date":"2016-05-28T23:59:59+0000","value":820,"status":2,"Flights":{"id":"2","flight_number":"hndap978dghq2","customer_id":"2","plane_id":"2","start_date":"2016-05-18 04:10:00","end_date":"2016-05-18 08:25:00","status":"1"}}]
+2016-05-13 07:15:12 Debug: --2--
+2016-05-13 07:15:12 Debug: [{"id":2,"flight_id":2,"due_date":"2016-05-28T23:59:59+0000","value":820,"status":2,"Flights":{"id":"2","flight_number":"hndap978dghq2","customer_id":"2","plane_id":"2","start_date":"2016-05-18 04:10:00","end_date":"2016-05-18 08:25:00","status":"1"}}]
+2016-05-13 07:16:02 Debug: --2--
+2016-05-13 07:16:02 Debug: [{"id":2,"flight_id":2,"due_date":"2016-05-28T23:59:59+0000","value":820,"status":2,"Flights":{"id":"2","flight_number":"hndap978dghq2","customer_id":"2","plane_id":"2","start_date":"2016-05-18 04:10:00","end_date":"2016-05-18 08:25:00","status":"1"},"Customers":{"id":"2","first_name":"Alexander","last_name":"Laube","company":"","street":"Isenstra\u00dfe 11","postal_code":"11234","country":"Berlin","customer_type_id":"2","strike":"0","email":""}}]
+2016-05-13 07:16:31 Debug: --2--
+2016-05-13 07:16:31 Debug: [{"id":2,"flight_id":2,"due_date":"2016-05-28T23:59:59+0000","value":820,"status":2,"Flights":{"id":"2","flight_number":"hndap978dghq2","customer_id":"2","plane_id":"2","start_date":"2016-05-18 04:10:00","end_date":"2016-05-18 08:25:00","status":"1"},"Customers":{"id":"2","first_name":"Alexander","last_name":"Laube","company":"","street":"Isenstra\u00dfe 11","postal_code":"11234","country":"Berlin","customer_type_id":"2","strike":"0","email":""}}]
+2016-05-13 07:16:55 Debug: --2--
+2016-05-13 07:17:06 Debug: --2--
+2016-05-13 07:17:06 Debug: [{"id":2,"flight_id":2,"due_date":"2016-05-28T23:59:59+0000","value":820,"status":2,"Flights":{"id":"2","flight_number":"hndap978dghq2","customer_id":"2","plane_id":"2","start_date":"2016-05-18 04:10:00","end_date":"2016-05-18 08:25:00","status":"1"},"Customers":{"id":"2","first_name":"Alexander","last_name":"Laube","company":"","street":"Isenstra\u00dfe 11","postal_code":"11234","country":"Berlin","customer_type_id":"2","strike":"0","email":""},"CustomerTypes":{"id":"2","name":"CORP"}}]
+2016-05-17 11:29:44 Debug: --2--
+2016-05-17 11:30:19 Debug: --2--
+2016-05-17 11:30:29 Debug: --2--
+2016-05-17 11:30:53 Debug: --2--
+2016-05-17 11:30:53 Notice: Notice (8): Undefined property: Cake\ORM\ResultSet::$Flights in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 93]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::firstReminder() - APP/Model/Table/InvoicesTable.php, line 93
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 79
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-17 11:30:53 Debug: 
+2016-05-17 11:31:20 Debug: --2--
+2016-05-17 11:31:59 Debug: --2--
+2016-05-17 11:31:59 Notice: Notice (8): Undefined property: Cake\ORM\ResultSet::$flight_id in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 93]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::firstReminder() - APP/Model/Table/InvoicesTable.php, line 93
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 79
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-17 11:31:59 Debug: 
+2016-05-17 11:32:42 Debug: --2--
+2016-05-17 11:32:42 Notice: Notice (8): Undefined property: Cake\ORM\ResultSet::$flight_id in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::firstReminder() - APP/Model/Table/InvoicesTable.php, line 96
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 79
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-17 11:32:42 Debug: 
+2016-05-17 11:33:00 Debug: --2--
+2016-05-17 11:33:02 Debug: --2--
+2016-05-17 11:34:54 Debug: --2--
+2016-05-17 11:34:54 Debug: Array
+(
+    [id] => 2
+    [flight_number] => hndap978dghq2
+    [customer_id] => 2
+    [plane_id] => 2
+    [start_date] => 2016-05-18 04:10:00
+    [end_date] => 2016-05-18 08:25:00
+    [status] => 1
+)
+
+2016-05-17 11:35:34 Debug: --2--
+2016-05-17 11:35:34 Debug: Array
+(
+    [id] => 2
+    [name] => CORP
+)
+
+2016-05-17 12:45:56 Debug: --2--
+2016-05-17 12:45:56 Debug: Array
+(
+    [id] => 2
+    [name] => CORP
+)
+
+2016-05-17 12:45:56 Debug: heute -2016-05-31- 
+2016-05-17 12:45:56 Debug: heute -2016-01-01 00:00:00- 
+2016-05-17 12:50:09 Debug: --2--
+2016-05-17 12:50:09 Debug: Array
+(
+    [id] => 2
+    [name] => CORP
+)
+
+2016-05-17 12:50:09 Debug: heute -2016-05-31 12:50:09- 
+2016-05-17 12:50:09 Debug: heute -2016-01-01 00:00:00- 
+2016-05-17 12:51:40 Debug: --2--
+2016-05-17 12:51:40 Debug: Array
+(
+    [id] => 2
+    [name] => CORP
+)
+
+2016-05-17 12:51:40 Debug: heute -2016-05-31 12:51:40- 
+2016-05-17 12:51:40 Debug: heute -2016-01-01 00:00:00- 
+2016-05-17 12:51:40 Debug: sollte hier sein
+2016-05-17 12:52:04 Debug: --2--
+2016-05-17 12:52:04 Debug: Array
+(
+    [id] => 2
+    [name] => CORP
+)
+
+2016-05-17 12:52:04 Debug: heute -2016-05-31 12:52:04- 
+2016-05-17 12:52:04 Debug: heute -2016-01-01 00:00:00- 
+2016-05-17 12:52:04 Debug: oha 
+2016-05-17 14:01:11 Debug: --2--
+2016-05-17 14:01:11 Debug: Array
+(
+    [id] => 2
+    [name] => CORP
+)
+
+2016-05-17 14:01:55 Debug: --2--
+2016-05-17 14:01:55 Debug: Array
+(
+    [id] => 2
+    [name] => CORP
+)
+
+2016-05-17 14:03:18 Debug: --2--
+2016-05-17 14:03:18 Debug: Array
+(
+    [id] => 2
+    [name] => CORP
+)
+
+2016-05-17 14:04:28 Debug: --2--
+2016-05-17 14:05:40 Debug: --2--
+2016-05-17 14:06:27 Debug: --2--
+2016-05-17 16:08:35 Debug: --2--
+2016-05-17 16:09:25 Debug: --2--
+2016-05-17 16:09:25 Notice: Notice (8): Array to string conversion in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::firstReminder() - APP/Model/Table/InvoicesTable.php, line 99
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 81
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-17 16:09:25 Debug: cust-type >Array<
+2016-05-17 16:09:46 Debug: --2--
+2016-05-17 16:09:46 Debug: Array
+(
+    [id] => 2
+    [name] => CORP
+)
+
+2016-05-17 16:10:38 Debug: --2--
+2016-05-17 16:10:38 Debug: CORP
+2016-05-17 16:11:35 Debug: --2--
+2016-05-17 16:11:35 Debug: CORP
+2016-05-17 16:11:35 Notice: Notice (8): Undefined variable: entity in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 125]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::setStatus() - APP/Model/Table/InvoicesTable.php, line 125
+App\Model\Table\InvoicesTable::firstReminder() - APP/Model/Table/InvoicesTable.php, line 104
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 81
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-17 16:11:35 Notice: Notice (8): Trying to get property of non-object in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 125]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::setStatus() - APP/Model/Table/InvoicesTable.php, line 125
+App\Model\Table\InvoicesTable::firstReminder() - APP/Model/Table/InvoicesTable.php, line 104
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 81
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-17 16:11:55 Debug: --2--
+2016-05-17 16:11:55 Debug: CORP
+2016-05-17 16:12:46 Debug: --2--
+2016-05-17 16:17:33 Notice: Notice (8): Undefined variable: today in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 84
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-17 16:18:26 Notice: Notice (8): Undefined variable: today in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 84
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-17 16:19:18 Notice: Notice (8): Undefined variable: newDate in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 122]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::setNewStatus() - APP/Model/Table/InvoicesTable.php, line 122
+App\Model\Table\InvoicesTable::firstReminder() - APP/Model/Table/InvoicesTable.php, line 98
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 84
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-17 16:19:18 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-17 16:19:44 Debug: noch Zeit bis zur ersten Erinnerung
+2016-05-17 16:20:45 Debug: noch Zeit bis zur ersten Erinnerung
+2016-05-17 16:21:20 Debug: new Date:2016-05-31 04:21:20
+2016-05-17 16:21:20 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-17 16:22:11 Debug: new Date:2016-05-31 04:22:11
+2016-05-17 16:22:11 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 10:05:21 Notice: Notice (8): Undefined variable: awaitPayments in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 123]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::secondReminder() - APP/Model/Table/InvoicesTable.php, line 123
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 86
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-18 10:07:17 Debug: new Date:2016-06-01 10:07:17
+2016-05-18 10:07:17 Notice: Notice (8): Object of class App\Model\Table\InvoicesTable to string conversion in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 186]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::checkStrikes() - APP/Model/Table/InvoicesTable.php, line 186
+App\Model\Table\InvoicesTable::secondWarning() - APP/Model/Table/InvoicesTable.php, line 159
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 88
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-18 10:07:17 Notice: Notice (8): Undefined variable: Object in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 186]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::checkStrikes() - APP/Model/Table/InvoicesTable.php, line 186
+App\Model\Table\InvoicesTable::secondWarning() - APP/Model/Table/InvoicesTable.php, line 159
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 88
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-18 10:07:38 Debug: new Date:2016-06-01 10:07:38
+2016-05-18 10:07:38 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 10:08:29 Debug: new Date:2016-06-01 10:08:29
+2016-05-18 10:08:29 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 10:08:29 Debug: new Date:2016-06-01 10:08:29
+2016-05-18 10:08:30 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 10:14:27 Debug: new Date:2016-06-01 10:14:27
+2016-05-18 10:14:27 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 10:14:27 Debug: new Date:2016-06-01 10:14:27
+2016-05-18 10:14:27 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 10:14:27 Debug: new Date:2016-06-01 10:14:27
+2016-05-18 10:14:27 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 10:14:27 Debug: new Date:2016-06-01 10:14:27
+2016-05-18 10:14:27 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 10:14:27 Debug: new Date:2016-06-01 10:14:27
+2016-05-18 10:14:27 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 10:24:54 Debug: ist 5/17/16, 10:14 AM kleiner als 2016-05-18 10:24:54?
+2016-05-18 10:27:55 Debug: ist 5/17/16, 10:14 AM kleiner als 2016-05-18 10:27:55?
+2016-05-18 10:28:15 Debug: ist 5/17/16, 10:14 AMMay kleiner als 2016-05-18 10:28:15?
+2016-05-18 10:30:52 Debug: ist 17.05.16 10:14 kleiner als 2016-05-18 10:30:52?
+2016-05-18 10:30:52 Debug: new Date:2016-06-01 10:30:52
+2016-05-18 10:30:52 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 10:30:52 Debug: new Date:2016-06-01 10:30:52
+2016-05-18 10:30:52 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 10:30:52 Debug: new Date:2016-06-01 10:30:52
+2016-05-18 10:30:52 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 10:30:52 Debug: new Date:2016-06-01 10:30:52
+2016-05-18 10:30:52 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 10:30:52 Debug: new Date:2016-06-01 10:30:52
+2016-05-18 10:30:52 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 10:39:02 Debug: ist 17.05.16 10:30 kleiner als 2016-05-18 10:39:02?
+2016-05-18 10:39:02 Debug: new Date:2016-06-01 10:39:02
+2016-05-18 10:39:02 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 10:39:02 Debug: new Date:2016-06-01 10:39:02
+2016-05-18 10:39:02 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 10:39:02 Debug: new Date:2016-06-01 10:39:02
+2016-05-18 10:39:02 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 10:39:02 Debug: new Date:2016-06-01 10:39:02
+2016-05-18 10:39:02 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 10:39:02 Debug: new Date:2016-06-01 10:39:02
+2016-05-18 10:39:02 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 10:46:54 Debug: ist 17.05.16 10:39 kleiner als 2016-05-18 10:46:54?
+2016-05-18 10:46:54 Debug: new Date:2016-06-01 10:46:54
+2016-05-18 10:46:54 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 10:46:54 Debug: new Date:2016-06-01 10:46:54
+2016-05-18 10:46:54 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 10:46:54 Debug: new Date:2016-06-01 10:46:54
+2016-05-18 10:46:54 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 10:46:54 Debug: new Date:2016-06-01 10:46:54
+2016-05-18 10:46:54 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 10:46:54 Debug: new Date:2016-06-01 10:46:54
+2016-05-18 10:46:54 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 10:50:59 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "due_date": "2016-05-17T10:46:54+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 10:50:59 Debug: ist 17.05.16 10:46 kleiner als 2016-05-18 10:50:59?
+2016-05-18 10:50:59 Debug: new Date:2016-06-01 10:50:59
+2016-05-18 10:50:59 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 10:50:59 Debug: new Date:2016-06-01 10:50:59
+2016-05-18 10:50:59 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 10:50:59 Debug: new Date:2016-06-01 10:50:59
+2016-05-18 10:50:59 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 10:50:59 Debug: new Date:2016-06-01 10:50:59
+2016-05-18 10:50:59 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 10:50:59 Debug: new Date:2016-06-01 10:50:59
+2016-05-18 10:50:59 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 11:23:14 Debug: {
+    "id": 3,
+    "flight_id": 2,
+    "due_date": "2016-05-16T23:59:59+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 11:23:14 Debug: ist 16.05.16 23:59 kleiner als 2016-05-18 11:23:14?
+2016-05-18 11:23:14 Debug: new Date:2016-06-01 11:23:14
+2016-05-18 11:23:14 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 11:23:14 Debug: new Date:2016-06-01 11:23:14
+2016-05-18 11:23:14 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 11:23:14 Debug: new Date:2016-06-01 11:23:14
+2016-05-18 11:23:14 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 11:23:14 Debug: new Date:2016-06-01 11:23:14
+2016-05-18 11:23:14 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 11:23:14 Debug: new Date:2016-06-01 11:23:14
+2016-05-18 11:23:14 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 11:27:21 Debug: {
+    "id": 3,
+    "flight_id": 2,
+    "due_date": "2016-05-17T11:23:14+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 11:27:21 Debug: 2016-05-18 04:10:00
+2016-05-18 11:27:21 Debug: ist 17.05.16 11:23 kleiner als 2016-05-18 11:27:21?
+2016-05-18 11:27:21 Debug: new Date:2016-06-01 11:27:21
+2016-05-18 11:27:21 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 11:27:21 Debug: new Date:2016-06-01 11:27:21
+2016-05-18 11:27:21 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 11:27:21 Debug: new Date:2016-06-01 11:27:21
+2016-05-18 11:27:21 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 11:27:21 Debug: new Date:2016-06-01 11:27:21
+2016-05-18 11:27:21 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 11:27:21 Debug: new Date:2016-06-01 11:27:21
+2016-05-18 11:27:21 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 11:28:20 Debug: {
+    "id": 3,
+    "flight_id": 2,
+    "due_date": "2016-05-17T11:27:21+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 11:28:20 Debug: 2016-05-18 04:10:00
+2016-05-18 11:28:20 Debug: 17.05.16 11:27
+2016-05-18 11:28:20 Debug: ist 17.05.16 11:27 kleiner als 2016-05-18 11:28:20?
+2016-05-18 11:28:20 Debug: new Date:2016-06-01 11:28:20
+2016-05-18 11:28:20 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 11:28:20 Debug: new Date:2016-06-01 11:28:20
+2016-05-18 11:28:20 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 11:28:20 Debug: new Date:2016-06-01 11:28:20
+2016-05-18 11:28:20 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 11:28:20 Debug: new Date:2016-06-01 11:28:20
+2016-05-18 11:28:20 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 11:28:20 Debug: new Date:2016-06-01 11:28:20
+2016-05-18 11:28:20 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 11:33:16 Debug: {
+    "id": 3,
+    "flight_id": 2,
+    "due_date": "2016-05-16T23:59:59+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 11:33:16 Debug: 2016-05-18 04:10:00
+2016-05-18 11:33:16 Debug: 16.05.16 23:59
+2016-05-18 11:33:16 Debug: ist 16.05.16 23:59 kleiner als 2016-05-18 11:33:16?
+2016-05-18 11:33:16 Debug: new Date:2016-06-01 11:33:16
+2016-05-18 11:33:16 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 11:33:16 Debug: new Date:2016-06-01 11:33:16
+2016-05-18 11:33:16 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 11:33:16 Debug: new Date:2016-06-01 11:33:16
+2016-05-18 11:33:16 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 11:33:16 Debug: new Date:2016-06-01 11:33:16
+2016-05-18 11:33:16 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 11:33:16 Debug: new Date:2016-06-01 11:33:16
+2016-05-18 11:33:16 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 11:40:43 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-05-16T23:59:59+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 11:40:43 Debug: 2016-05-18 04:10:00
+2016-05-18 11:40:43 Debug: 
+2016-05-18 11:40:43 Debug: ist  kleiner als 2016-05-18 11:40:43?
+2016-05-18 11:40:43 Debug: new Date:2016-06-01 11:40:43
+2016-05-18 11:40:43 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 11:40:43 Debug: new Date:2016-06-01 11:40:43
+2016-05-18 11:40:43 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 11:40:43 Debug: new Date:2016-06-01 11:40:43
+2016-05-18 11:40:43 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 11:40:43 Debug: new Date:2016-06-01 11:40:43
+2016-05-18 11:40:43 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 11:40:43 Debug: new Date:2016-06-01 11:40:43
+2016-05-18 11:40:43 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 11:41:24 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-05-16T23:59:59+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 11:41:24 Debug: 2016-05-18 04:10:00
+2016-05-18 11:41:24 Debug: 16.05.16 23:59
+2016-05-18 11:41:24 Debug: ist  kleiner als 2016-05-18 11:41:24?
+2016-05-18 11:41:24 Debug: new Date:2016-06-01 11:41:24
+2016-05-18 11:41:24 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 11:41:24 Debug: new Date:2016-06-01 11:41:24
+2016-05-18 11:41:24 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 11:41:24 Debug: new Date:2016-06-01 11:41:24
+2016-05-18 11:41:24 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 11:41:24 Debug: new Date:2016-06-01 11:41:24
+2016-05-18 11:41:24 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 11:41:24 Debug: new Date:2016-06-01 11:41:24
+2016-05-18 11:41:24 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 11:47:17 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-05-16T23:59:59+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 11:47:17 Debug: 2016-05-18 04:10:00
+2016-05-18 11:47:17 Debug: 16.05.16 23:59
+2016-05-18 11:47:17 Debug: ist  kleiner als 2016-05-18 11:47:17?
+2016-05-18 11:47:17 Debug: new Date:2016-06-01 11:47:17
+2016-05-18 11:47:17 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 11:47:17 Debug: new Date:2016-06-01 11:47:17
+2016-05-18 11:47:17 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 11:47:17 Debug: new Date:2016-06-01 11:47:17
+2016-05-18 11:47:17 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 11:47:17 Debug: new Date:2016-06-01 11:47:17
+2016-05-18 11:47:17 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 11:47:17 Debug: new Date:2016-06-01 11:47:17
+2016-05-18 11:47:17 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 14:15:27 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-05-17T11:47:17+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 14:15:27 Debug: >2016-05-18 04:10:00<
+2016-05-18 14:15:27 Debug: >17.05.16 11:47<
+2016-05-18 14:15:27 Debug: ist  kleiner als 2016-05-18 14:15:27?
+2016-05-18 14:15:27 Debug: new Date:2016-06-01 14:15:27
+2016-05-18 14:15:27 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 14:15:27 Debug: new Date:2016-06-01 14:15:27
+2016-05-18 14:15:27 Debug: der Termin ist abgelaufen, >zweite Erinnerung<
+2016-05-18 14:15:27 Debug: new Date:2016-06-01 14:15:27
+2016-05-18 14:15:27 Debug: der Termin ist abgelaufen, >erste Mahnung<
+2016-05-18 14:15:27 Debug: new Date:2016-06-01 14:15:27
+2016-05-18 14:15:27 Debug: der Termin ist abgelaufen, >zweite Mahnung<
+2016-05-18 14:15:27 Debug: new Date:2016-06-01 14:15:27
+2016-05-18 14:15:27 Debug: der Termin ist abgelaufen, >inkasso möglich<
+2016-05-18 15:40:13 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-05-17T14:15:27+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 15:40:13 Debug: >2016-05-18 04:10:00<
+2016-05-18 15:40:13 Debug: >17.05.16 14:15<
+2016-05-18 15:40:13 Debug: ist  kleiner als 2016-05-18 15:40:13?
+2016-05-18 15:40:13 Debug: new Date:2016-06-01 15:40:13
+2016-05-18 15:40:13 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 15:45:10 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-06-01T15:40:13+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 15:45:10 Debug: 2016-05-18 04:10:00
+2016-05-18 15:45:10 Debug: 
+2016-05-18 15:48:02 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-06-01T15:40:13+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 15:48:02 Debug: 2016-05-18 04:10:00
+2016-05-18 15:48:02 Debug: >01.06.16 15:40<
+2016-05-18 15:48:02 Debug: 
+2016-05-18 15:52:12 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-06-01T15:40:13+0200",
+    "value": 820,
+    "status": 2
+}
+2016-05-18 15:52:12 Debug: >01.06.16 15:40<
+2016-05-18 15:52:59 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-06-01T15:40:13+0200",
+    "value": 820,
+    "status": 2
+}
+2016-05-18 15:52:59 Debug: 01.06.16 15:40
+2016-05-18 15:54:03 Debug: {
+    "id": 5,
+    "flight_id": 2,
+    "blubb": "2016-06-01T15:40:13+0200",
+    "value": 820,
+    "status": 2,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 15:54:03 Debug: 01.06.16 15:40
+2016-05-18 15:57:15 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 2,
+    "due_date": "2016-05-16T12:59:59+0200",
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 15:57:15 Debug: 
+2016-05-18 15:58:45 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 2,
+    "due_date": "2016-05-16T12:59:59+0200",
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 15:58:45 Debug: 
+2016-05-18 16:00:17 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 2,
+    "due_date": "2016-05-16T12:59:59+0200",
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:00",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 16:00:17 Debug: 
+2016-05-18 16:00:36 Debug: {
+    "id": 1,
+    "flight_number": "82376z4jhffes",
+    "customer_id": 1,
+    "plane_id": 1,
+    "start_date": "2016-05-17T18:15:00+0200",
+    "end_date": "2016-05-17T19:20:00+0200",
+    "status": 1
+}
+2016-05-18 16:00:36 Debug: {
+    "id": 2,
+    "flight_number": "hndap978dghq2",
+    "customer_id": 2,
+    "plane_id": 2,
+    "start_date": "2016-05-18T04:10:00+0200",
+    "end_date": "2016-05-18T08:25:00+0200",
+    "status": 1
+}
+2016-05-18 16:03:28 Debug: {
+    "id": 1,
+    "flight_number": "82376z4jhffes",
+    "customer_id": 1,
+    "plane_id": 1,
+    "start_date": "2016-05-17T18:15:00+0200",
+    "end_date": "2016-05-17T19:20:00+0200",
+    "status": 1
+}
+2016-05-18 16:03:28 Debug: 17.05.16 18:15
+2016-05-18 16:03:28 Debug: {
+    "id": 2,
+    "flight_number": "hndap978dghq2",
+    "customer_id": 2,
+    "plane_id": 2,
+    "start_date": "2016-05-18T04:10:00+0200",
+    "end_date": "2016-05-18T08:25:00+0200",
+    "status": 1
+}
+2016-05-18 16:03:28 Debug: 18.05.16 04:10
+2016-05-18 16:04:01 Debug: {
+    "id": 1,
+    "flight_number": "82376z4jhffes",
+    "customer_id": 1,
+    "plane_id": 1,
+    "start_date": "2016-05-17T18:20:28+0200",
+    "end_date": "2016-05-17T19:20:00+0200",
+    "status": 1
+}
+2016-05-18 16:04:01 Debug: 17.05.16 18:20
+2016-05-18 16:04:01 Debug: {
+    "id": 2,
+    "flight_number": "hndap978dghq2",
+    "customer_id": 2,
+    "plane_id": 2,
+    "start_date": "2016-05-18T04:10:29+0200",
+    "end_date": "2016-05-18T08:25:00+0200",
+    "status": 1
+}
+2016-05-18 16:04:01 Debug: 18.05.16 04:10
+2016-05-18 16:07:05 Debug: 
+2016-05-18 16:07:05 Debug: 
+2016-05-18 16:07:05 Debug: 
+2016-05-18 16:07:05 Debug: 
+2016-05-18 16:09:47 Debug: 
+2016-05-18 16:09:47 Debug: 
+2016-05-18 16:09:47 Debug: 
+2016-05-18 16:09:47 Debug: 
+2016-05-18 16:10:14 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 16:10:34 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 16:10:36 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 16:11:34 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 16:12:14 Debug: der Termin nicht abgelaufen!!!
+2016-05-18 16:12:39 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 16:13:57 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 16:14:29 Debug: der Termin ist abgelaufen, >erste Erinnerung<
+2016-05-18 16:32:48 Debug: SELECT Invoices.id AS `Invoices__id`, Invoices.flight_id AS `Invoices__flight_id`, Invoices.value AS `Invoices__value`, Invoices.status AS `Invoices__status`, Invoices.due_date AS `Invoices__due_date`, Flights.id AS `Flights__id`, Flights.flight_number AS `Flights__flight_number`, Flights.customer_id AS `Flights__customer_id`, Flights.plane_id AS `Flights__plane_id`, Flights.start_date AS `Flights__start_date`, Flights.end_date AS `Flights__end_date`, Flights.status AS `Flights__status`, Customers.id AS `Customers__id`, Customers.first_name AS `Customers__first_name`, Customers.last_name AS `Customers__last_name`, Customers.company AS `Customers__company`, Customers.street AS `Customers__street`, Customers.postal_code AS `Customers__postal_code`, Customers.country AS `Customers__country`, Customers.customer_type_id AS `Customers__customer_type_id`, Customers.strike AS `Customers__strike`, Customers.email AS `Customers__email`, CustomerTypes.id AS `CustomerTypes__id`, CustomerTypes.name AS `CustomerTypes__name` FROM invoices Invoices INNER JOIN flights Flights ON Flights.id = (Invoices.flight_id) INNER JOIN customers Customers ON Customers.id = (Flights.customer_id) INNER JOIN customer_types CustomerTypes ON CustomerTypes.id = (Customers.customer_type_id) WHERE (Invoices.status = :c0 AND Invoices.due_date < :c1)
+2016-05-18 16:33:51 Debug: SELECT Invoices.id AS `Invoices__id`, Invoices.flight_id AS `Invoices__flight_id`, Invoices.value AS `Invoices__value`, Invoices.status AS `Invoices__status`, Invoices.due_date AS `Invoices__due_date`, Flights.id AS `Flights__id`, Flights.flight_number AS `Flights__flight_number`, Flights.customer_id AS `Flights__customer_id`, Flights.plane_id AS `Flights__plane_id`, Flights.start_date AS `Flights__start_date`, Flights.end_date AS `Flights__end_date`, Flights.status AS `Flights__status`, Customers.id AS `Customers__id`, Customers.first_name AS `Customers__first_name`, Customers.last_name AS `Customers__last_name`, Customers.company AS `Customers__company`, Customers.street AS `Customers__street`, Customers.postal_code AS `Customers__postal_code`, Customers.country AS `Customers__country`, Customers.customer_type_id AS `Customers__customer_type_id`, Customers.strike AS `Customers__strike`, Customers.email AS `Customers__email`, CustomerTypes.id AS `CustomerTypes__id`, CustomerTypes.name AS `CustomerTypes__name` FROM invoices Invoices INNER JOIN flights Flights ON Flights.id = (Invoices.flight_id) INNER JOIN customers Customers ON Customers.id = (Flights.customer_id) INNER JOIN customer_types CustomerTypes ON CustomerTypes.id = (Customers.customer_type_id) WHERE (Invoices.status = :c0 AND Invoices.due_date > :c1)
+2016-05-18 16:33:51 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 2,
+    "due_date": "2016-05-20T12:59:59+0200",
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 16:34:09 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 2,
+    "due_date": "2016-05-20T12:59:59+0200",
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 16:36:11 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 2,
+    "due_date": "2016-05-19T12:59:59+0200",
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 16:38:35 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 2,
+    "due_date": "2016-05-19T12:59:59+0200",
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 16:38:35 Debug: 2
+2016-05-18 16:38:52 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 2,
+    "due_date": "2016-05-19T12:59:59+0200",
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-05-18 16:38:52 Debug: 1
+2016-05-18 16:47:04 Debug: new Date:2016-06-01 16:47:04
+2016-05-18 16:47:04 Debug: new Date:2016-06-01 16:47:04
+2016-05-18 16:47:04 Debug: new Date:2016-06-01 16:47:04
+2016-05-18 16:47:04 Debug: new Date:2016-06-01 16:47:04
+2016-05-18 16:47:04 Debug: new Date:2016-06-01 16:47:04
+2016-05-18 16:47:04 Debug: new Date:2016-06-01 16:47:04
+2016-05-18 16:47:04 Notice: Notice (8): Undefined offset: 8 in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 101]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 101
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-18 16:47:04 Debug: new Date:2016-06-01 16:47:04
+2016-05-18 16:47:56 Debug: bearbeite Status:1
+2016-05-18 16:47:56 Debug: bearbeite Status:2
+2016-05-18 16:47:56 Debug: bearbeite Status:3
+2016-05-18 16:47:56 Debug: bearbeite Status:4
+2016-05-18 16:47:56 Debug: bearbeite Status:5
+2016-05-18 16:47:56 Debug: bearbeite Status:6
+2016-05-18 16:47:56 Debug: bearbeite Status:7
+2016-05-18 16:47:56 Debug: bearbeite Status:8
+2016-05-18 16:48:43 Debug: bearbeite Status:1
+2016-05-18 16:48:43 Debug: bearbeite Status:2
+2016-05-18 16:48:43 Debug: bearbeite Status:3
+2016-05-18 16:48:43 Debug: bearbeite Status:4
+2016-05-18 16:48:43 Debug: bearbeite Status:5
+2016-05-18 16:48:43 Debug: bearbeite Status:6
+2016-05-18 16:48:43 Debug: bearbeite Status:7
+2016-05-18 17:01:49 Debug: bearbeite Status:1
+2016-05-18 17:01:49 Debug: bearbeite Status:2
+2016-05-18 17:01:49 Debug: bearbeite Status:3
+2016-05-18 17:01:49 Debug: bearbeite Status:4
+2016-05-18 17:01:49 Debug: bearbeite Status:5
+2016-05-18 17:01:49 Debug: bearbeite Status:6
+2016-05-18 17:01:49 Debug: bearbeite Status:7
+2016-05-18 17:02:35 Debug: bearbeite Status:1
+2016-05-18 17:02:35 Debug: bearbeite Status:2
+2016-05-18 17:02:35 Debug: new Date:2016-06-01 17:02:35
+2016-05-18 17:02:35 Debug: bearbeite Status:3
+2016-05-18 17:02:35 Debug: bearbeite Status:4
+2016-05-18 17:02:35 Debug: bearbeite Status:5
+2016-05-18 17:02:35 Debug: bearbeite Status:6
+2016-05-18 17:02:35 Debug: bearbeite Status:7
+2016-05-18 17:03:07 Debug: bearbeite Status:1
+2016-05-18 17:03:07 Debug: bearbeite Status:2
+2016-05-18 17:03:07 Debug: bearbeite Status:3
+2016-05-18 17:03:07 Debug: bearbeite Status:4
+2016-05-18 17:03:07 Debug: bearbeite Status:5
+2016-05-18 17:03:07 Debug: bearbeite Status:6
+2016-05-18 17:03:07 Debug: bearbeite Status:7
+2016-05-18 17:03:21 Debug: bearbeite Status:1
+2016-05-18 17:03:21 Debug: bearbeite Status:2
+2016-05-18 17:03:21 Debug: bearbeite Status:3
+2016-05-18 17:03:21 Debug: bearbeite Status:4
+2016-05-18 17:03:21 Debug: bearbeite Status:5
+2016-05-18 17:03:21 Debug: bearbeite Status:6
+2016-05-18 17:03:21 Debug: bearbeite Status:7
+2016-05-18 17:03:39 Debug: bearbeite Status:1
+2016-05-18 17:03:39 Debug: bearbeite Status:2
+2016-05-18 17:03:39 Debug: bearbeite Status:3
+2016-05-18 17:03:39 Debug: new Date:2016-06-01 17:03:39
+2016-05-18 17:03:39 Debug: bearbeite Status:4
+2016-05-18 17:03:39 Debug: bearbeite Status:5
+2016-05-18 17:03:39 Debug: bearbeite Status:6
+2016-05-18 17:03:39 Debug: bearbeite Status:7
+2016-05-19 10:01:01 Debug: 
+2016-05-19 10:01:01 Debug: 
+2016-05-19 10:01:01 Debug: 
+2016-05-19 10:01:01 Debug: 
+2016-05-19 10:03:36 Debug: bearbeite Status:1
+2016-05-19 10:03:36 Debug: bearbeite Status:2
+2016-05-19 10:03:36 Debug: bearbeite Status:3
+2016-05-19 10:03:36 Debug: bearbeite Status:4
+2016-05-19 10:03:36 Debug: bearbeite Status:5
+2016-05-19 10:03:36 Debug: bearbeite Status:6
+2016-05-19 10:03:36 Debug: bearbeite Status:7
+2016-05-19 10:05:07 Debug: bearbeite Status:1
+2016-05-19 10:05:07 Debug: bearbeite Status:2
+2016-05-19 10:05:07 Debug: bearbeite Status:3
+2016-05-19 10:05:07 Debug: bearbeite Status:4
+2016-05-19 10:05:31 Debug: bearbeite Status:1
+2016-05-19 10:05:31 Debug: bearbeite Status:2
+2016-05-19 10:05:31 Debug: bearbeite Status:3
+2016-05-19 10:05:31 Debug: bearbeite Status:4
+2016-05-19 10:05:58 Debug: bearbeite Status:1
+2016-05-19 10:05:58 Debug: bearbeite Status:2
+2016-05-19 10:05:58 Debug: bearbeite Status:3
+2016-05-19 10:05:58 Debug: bearbeite Status:4
+2016-05-19 10:05:58 Debug: new Date:2016-06-02 10:05:58
+2016-05-19 10:05:58 Debug: bearbeite Status:5
+2016-05-19 10:05:58 Debug: bearbeite Status:6
+2016-05-19 10:05:58 Debug: bearbeite Status:7
+2016-05-19 10:07:29 Debug: bearbeite Status:1
+2016-05-19 10:07:29 Debug: bearbeite Status:2
+2016-05-19 10:07:29 Debug: bearbeite Status:3
+2016-05-19 10:07:29 Debug: bearbeite Status:4
+2016-05-19 10:07:29 Debug: bearbeite Status:5
+2016-05-19 10:07:29 Debug: new Date:2016-06-02 10:07:29
+2016-05-19 10:07:29 Debug: set to Status6
+2016-05-19 10:07:29 Debug: Customer ID :2
+2016-05-19 10:07:29 Debug: bearbeite Status:6
+2016-05-19 10:07:29 Debug: bearbeite Status:7
+2016-05-19 10:12:07 Debug: bearbeite Status:1
+2016-05-19 10:12:07 Debug: bearbeite Status:2
+2016-05-19 10:12:07 Debug: bearbeite Status:3
+2016-05-19 10:12:07 Debug: bearbeite Status:4
+2016-05-19 10:12:07 Debug: bearbeite Status:5
+2016-05-19 10:12:07 Debug: new Date:2016-06-02 10:12:07
+2016-05-19 10:12:07 Debug: set to Status6
+2016-05-19 10:12:07 Debug: Customer ID :2
+2016-05-19 10:12:22 Debug: bearbeite Status:1
+2016-05-19 10:12:22 Debug: bearbeite Status:2
+2016-05-19 10:12:22 Debug: bearbeite Status:3
+2016-05-19 10:12:22 Debug: bearbeite Status:4
+2016-05-19 10:12:22 Debug: bearbeite Status:5
+2016-05-19 10:12:22 Debug: bearbeite Status:6
+2016-05-19 10:12:22 Debug: bearbeite Status:7
+2016-05-19 10:12:56 Debug: bearbeite Status:1
+2016-05-19 10:12:56 Debug: bearbeite Status:2
+2016-05-19 10:12:56 Debug: bearbeite Status:3
+2016-05-19 10:12:56 Debug: bearbeite Status:4
+2016-05-19 10:12:56 Debug: bearbeite Status:5
+2016-05-19 10:12:56 Debug: new Date:2016-06-02 10:12:56
+2016-05-19 10:12:56 Debug: set to Status6
+2016-05-19 10:12:56 Debug: Customer ID :2
+2016-05-19 10:12:56 Debug: {
+    "id": 2,
+    "first_name": "Alexander",
+    "last_name": "Laube",
+    "company": "",
+    "street": "Isenstra\u00dfe 11",
+    "postal_code": 11234,
+    "country": "Berlin",
+    "customer_type_id": 2,
+    "strike": 1,
+    "email": ""
+}
+2016-05-19 10:12:56 Debug: bearbeite Status:6
+2016-05-19 10:12:56 Debug: bearbeite Status:7
+2016-05-19 10:14:22 Debug: bearbeite Status:1
+2016-05-19 10:14:22 Debug: bearbeite Status:2
+2016-05-19 10:14:22 Debug: bearbeite Status:3
+2016-05-19 10:14:22 Debug: bearbeite Status:4
+2016-05-19 10:14:22 Debug: bearbeite Status:5
+2016-05-19 10:14:22 Debug: bearbeite Status:6
+2016-05-19 10:14:22 Debug: bearbeite Status:7
+2016-05-19 10:14:45 Debug: bearbeite Status:1
+2016-05-19 10:14:45 Debug: bearbeite Status:2
+2016-05-19 10:14:45 Debug: bearbeite Status:3
+2016-05-19 10:14:45 Debug: bearbeite Status:4
+2016-05-19 10:14:45 Debug: bearbeite Status:5
+2016-05-19 10:14:45 Debug: bearbeite Status:6
+2016-05-19 10:14:45 Debug: new Date:2016-06-02 10:14:45
+2016-05-19 10:14:45 Debug: set to Status7
+2016-05-19 10:14:45 Debug: bearbeite Status:7
+2016-05-19 10:14:54 Debug: bearbeite Status:1
+2016-05-19 10:14:54 Debug: bearbeite Status:2
+2016-05-19 10:14:54 Debug: bearbeite Status:3
+2016-05-19 10:14:54 Debug: bearbeite Status:4
+2016-05-19 10:14:54 Debug: bearbeite Status:5
+2016-05-19 10:14:54 Debug: bearbeite Status:6
+2016-05-19 10:14:54 Debug: bearbeite Status:7
+2016-05-19 10:14:54 Notice: Notice (8): Undefined offset: 7 in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\InvoicesTable::checkPayment() - APP/Model/Table/InvoicesTable.php, line 100
+App\Controller\InvoicesController::index() - APP/Controller/InvoicesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-19 10:14:54 Debug: new Date:2016-06-02 10:14:54
+2016-05-19 10:14:54 Debug: set to Status
+2016-05-19 10:19:07 Debug: bearbeite Status:1
+2016-05-19 10:19:07 Debug: bearbeite Status:2
+2016-05-19 10:19:07 Debug: bearbeite Status:3
+2016-05-19 10:19:07 Debug: bearbeite Status:4
+2016-05-19 10:19:07 Debug: bearbeite Status:5
+2016-05-19 10:19:07 Debug: bearbeite Status:6
+2016-05-19 10:19:07 Debug: bearbeite Status:7
+2016-05-19 10:19:31 Debug: bearbeite Status:1
+2016-05-19 10:19:31 Debug: bearbeite Status:2
+2016-05-19 10:19:31 Debug: bearbeite Status:3
+2016-05-19 10:19:31 Debug: bearbeite Status:4
+2016-05-19 10:19:31 Debug: bearbeite Status:5
+2016-05-19 10:19:31 Debug: bearbeite Status:6
+2016-05-19 10:19:31 Debug: bearbeite Status:7
+2016-05-19 10:21:46 Debug: bearbeite Status:1
+2016-05-19 10:21:46 Debug: bearbeite Status:2
+2016-05-19 10:21:46 Debug: bearbeite Status:3
+2016-05-19 10:21:46 Debug: bearbeite Status:4
+2016-05-19 10:21:46 Debug: bearbeite Status:5
+2016-05-19 10:21:46 Debug: new Date:2016-06-02 10:21:46
+2016-05-19 10:21:46 Debug: set to Status6
+2016-05-19 10:21:46 Debug: Customer ID :2
+2016-05-19 10:21:46 Debug: {
+    "id": 2,
+    "first_name": "Alexander",
+    "last_name": "Laube",
+    "company": "",
+    "street": "Isenstra\u00dfe 11",
+    "postal_code": 11234,
+    "country": "Berlin",
+    "customer_type_id": 2,
+    "strike": 1,
+    "email": ""
+}
+2016-05-19 10:21:46 Debug: bearbeite Status:6
+2016-05-19 10:21:46 Debug: bearbeite Status:7
+2016-05-19 10:29:54 Debug: bearbeite Status:1
+2016-05-19 10:29:54 Debug: bearbeite Status:2
+2016-05-19 10:29:54 Debug: bearbeite Status:3
+2016-05-19 10:29:54 Debug: bearbeite Status:4
+2016-05-19 10:29:54 Debug: bearbeite Status:5
+2016-05-19 10:29:54 Debug: new Date:2016-06-02 10:29:54
+2016-05-19 10:29:54 Debug: set to Status6
+2016-05-19 10:29:54 Debug: Customer ID :2
+2016-05-19 10:29:54 Debug: {
+    "id": 2,
+    "first_name": "Alexander",
+    "last_name": "Laube",
+    "company": "",
+    "street": "Isenstra\u00dfe 11",
+    "postal_code": 11234,
+    "country": "Berlin",
+    "customer_type_id": 2,
+    "strike": 2,
+    "email": ""
+}
+2016-05-19 10:29:54 Debug: bearbeite Status:6
+2016-05-19 10:29:54 Debug: bearbeite Status:7
+2016-05-19 10:39:46 Debug: bearbeite Status:1
+2016-05-19 10:39:46 Debug: bearbeite Status:2
+2016-05-19 10:39:46 Debug: bearbeite Status:3
+2016-05-19 10:39:46 Debug: bearbeite Status:4
+2016-05-19 10:39:46 Debug: bearbeite Status:5
+2016-05-19 10:39:46 Debug: new Date:2016-06-02 10:39:46
+2016-05-19 10:39:46 Debug: set to Status6
+2016-05-19 10:39:46 Debug: bearbeite Status:6
+2016-05-19 10:39:46 Debug: bearbeite Status:7
+2016-05-19 10:40:52 Debug: bearbeite Status:1
+2016-05-19 10:40:52 Debug: bearbeite Status:2
+2016-05-19 10:40:52 Debug: bearbeite Status:3
+2016-05-19 10:40:52 Debug: bearbeite Status:4
+2016-05-19 10:40:52 Debug: bearbeite Status:5
+2016-05-19 10:40:52 Debug: new Date:2016-06-02 10:40:52
+2016-05-19 10:40:52 Debug: set to Status6
+2016-05-19 10:40:52 Debug: bearbeite Status:6
+2016-05-19 10:40:52 Debug: bearbeite Status:7
+2016-05-19 10:41:42 Debug: bearbeite Status:1
+2016-05-19 10:41:42 Debug: bearbeite Status:2
+2016-05-19 10:41:42 Debug: bearbeite Status:3
+2016-05-19 10:41:42 Debug: bearbeite Status:4
+2016-05-19 10:41:42 Debug: bearbeite Status:5
+2016-05-19 10:41:42 Debug: bearbeite Status:6
+2016-05-19 10:41:42 Debug: bearbeite Status:7
+2016-05-19 10:42:14 Debug: bearbeite Status:1
+2016-05-19 10:42:15 Debug: bearbeite Status:2
+2016-05-19 10:42:15 Debug: bearbeite Status:3
+2016-05-19 10:42:15 Debug: bearbeite Status:4
+2016-05-19 10:42:15 Debug: bearbeite Status:5
+2016-05-19 10:42:15 Debug: bearbeite Status:6
+2016-05-19 10:42:15 Debug: bearbeite Status:7
+2016-05-19 14:39:50 Debug: bearbeite Status:1
+2016-05-19 14:39:50 Debug: bearbeite Status:2
+2016-05-19 14:39:50 Debug: bearbeite Status:3
+2016-05-19 14:39:50 Debug: bearbeite Status:4
+2016-05-19 14:39:50 Debug: bearbeite Status:5
+2016-05-19 14:39:50 Debug: bearbeite Status:6
+2016-05-19 14:39:50 Debug: bearbeite Status:7
+2016-05-19 14:40:29 Debug: bearbeite Status:1
+2016-05-19 14:40:29 Debug: bearbeite Status:2
+2016-05-19 14:40:29 Debug: bearbeite Status:3
+2016-05-19 14:40:29 Debug: bearbeite Status:4
+2016-05-19 14:40:29 Debug: bearbeite Status:5
+2016-05-19 14:40:29 Debug: bearbeite Status:6
+2016-05-19 14:40:29 Debug: bearbeite Status:7
+2016-05-19 14:45:30 Debug: bearbeite Status:1
+2016-05-19 14:45:30 Debug: bearbeite Status:2
+2016-05-19 14:45:30 Debug: bearbeite Status:3
+2016-05-19 14:45:30 Debug: bearbeite Status:4
+2016-05-19 14:45:30 Debug: bearbeite Status:5
+2016-05-19 14:45:30 Debug: bearbeite Status:6
+2016-05-19 14:45:30 Debug: bearbeite Status:7
+2016-05-19 14:49:19 Debug: bearbeite Status:1
+2016-05-19 14:49:19 Debug: bearbeite Status:2
+2016-05-19 14:49:19 Debug: bearbeite Status:3
+2016-05-19 14:49:19 Debug: bearbeite Status:4
+2016-05-19 14:49:19 Debug: bearbeite Status:5
+2016-05-19 14:49:19 Debug: bearbeite Status:6
+2016-05-19 14:49:19 Debug: bearbeite Status:7
+2016-05-19 16:11:33 Debug: bearbeite Status:1
+2016-05-19 16:11:33 Debug: bearbeite Status:2
+2016-05-19 16:11:33 Debug: bearbeite Status:3
+2016-05-19 16:11:33 Debug: bearbeite Status:4
+2016-05-19 16:11:33 Debug: bearbeite Status:5
+2016-05-19 16:11:33 Debug: bearbeite Status:6
+2016-05-19 16:11:33 Debug: bearbeite Status:7
+2016-05-19 16:12:03 Debug: bearbeite Status:1
+2016-05-19 16:12:03 Debug: bearbeite Status:2
+2016-05-19 16:12:03 Debug: bearbeite Status:3
+2016-05-19 16:12:03 Debug: bearbeite Status:4
+2016-05-19 16:12:03 Debug: bearbeite Status:5
+2016-05-19 16:12:03 Debug: bearbeite Status:6
+2016-05-19 16:12:03 Debug: bearbeite Status:7
+2016-05-19 16:14:31 Debug: bearbeite Status:1
+2016-05-19 16:14:31 Debug: bearbeite Status:2
+2016-05-19 16:14:31 Debug: bearbeite Status:3
+2016-05-19 16:14:31 Debug: bearbeite Status:4
+2016-05-19 16:14:31 Debug: bearbeite Status:5
+2016-05-19 16:14:31 Debug: bearbeite Status:6
+2016-05-19 16:14:31 Debug: bearbeite Status:7
+2016-05-19 16:14:45 Debug: bearbeite Status:1
+2016-05-19 16:14:45 Debug: bearbeite Status:2
+2016-05-19 16:14:45 Debug: bearbeite Status:3
+2016-05-19 16:14:45 Debug: bearbeite Status:4
+2016-05-19 16:14:45 Debug: bearbeite Status:5
+2016-05-19 16:14:45 Debug: bearbeite Status:6
+2016-05-19 16:14:45 Debug: bearbeite Status:7
+2016-05-19 16:14:53 Debug: bearbeite Status:1
+2016-05-19 16:14:53 Debug: bearbeite Status:2
+2016-05-19 16:14:53 Debug: bearbeite Status:3
+2016-05-19 16:14:53 Debug: bearbeite Status:4
+2016-05-19 16:14:53 Debug: bearbeite Status:5
+2016-05-19 16:14:53 Debug: bearbeite Status:6
+2016-05-19 16:14:53 Debug: bearbeite Status:7
+2016-05-20 09:23:01 Debug: bearbeite Status:1
+2016-05-20 09:23:01 Debug: bearbeite Status:2
+2016-05-20 09:23:01 Debug: bearbeite Status:3
+2016-05-20 09:23:01 Debug: bearbeite Status:4
+2016-05-20 09:23:01 Debug: bearbeite Status:5
+2016-05-20 09:23:01 Debug: bearbeite Status:6
+2016-05-20 09:23:01 Debug: bearbeite Status:7
+2016-05-20 09:23:22 Debug: bearbeite Status:1
+2016-05-20 09:23:22 Debug: bearbeite Status:2
+2016-05-20 09:23:22 Debug: bearbeite Status:3
+2016-05-20 09:23:22 Debug: bearbeite Status:4
+2016-05-20 09:23:22 Debug: bearbeite Status:5
+2016-05-20 09:23:22 Debug: bearbeite Status:6
+2016-05-20 09:23:22 Debug: bearbeite Status:7
+2016-05-20 09:23:27 Debug: bearbeite Status:1
+2016-05-20 09:23:27 Debug: bearbeite Status:2
+2016-05-20 09:23:27 Debug: bearbeite Status:3
+2016-05-20 09:23:27 Debug: bearbeite Status:4
+2016-05-20 09:23:27 Debug: bearbeite Status:5
+2016-05-20 09:23:27 Debug: bearbeite Status:6
+2016-05-20 09:23:27 Debug: bearbeite Status:7
+2016-05-20 09:25:16 Debug: bearbeite Status:1
+2016-05-20 09:25:16 Debug: bearbeite Status:2
+2016-05-20 09:25:16 Debug: bearbeite Status:3
+2016-05-20 09:25:16 Debug: bearbeite Status:4
+2016-05-20 09:25:16 Debug: bearbeite Status:5
+2016-05-20 09:25:16 Debug: bearbeite Status:6
+2016-05-20 09:25:16 Debug: bearbeite Status:7
+2016-05-20 10:06:57 Debug: bearbeite Status:1
+2016-05-20 10:06:57 Debug: bearbeite Status:2
+2016-05-20 10:06:57 Debug: bearbeite Status:3
+2016-05-20 10:06:57 Debug: bearbeite Status:4
+2016-05-20 10:06:57 Debug: bearbeite Status:5
+2016-05-20 10:06:57 Debug: bearbeite Status:6
+2016-05-20 10:06:57 Debug: bearbeite Status:7
+2016-05-20 10:06:59 Debug: bearbeite Status:1
+2016-05-20 10:06:59 Debug: bearbeite Status:2
+2016-05-20 10:06:59 Debug: bearbeite Status:3
+2016-05-20 10:06:59 Debug: bearbeite Status:4
+2016-05-20 10:06:59 Debug: bearbeite Status:5
+2016-05-20 10:06:59 Debug: bearbeite Status:6
+2016-05-20 10:06:59 Debug: bearbeite Status:7
+2016-05-20 10:07:41 Debug: bearbeite Status:1
+2016-05-20 10:07:41 Debug: bearbeite Status:2
+2016-05-20 10:07:41 Debug: bearbeite Status:3
+2016-05-20 10:07:41 Debug: bearbeite Status:4
+2016-05-20 10:07:41 Debug: bearbeite Status:5
+2016-05-20 10:07:41 Debug: bearbeite Status:6
+2016-05-20 10:07:41 Debug: bearbeite Status:7
+2016-05-20 10:30:19 Debug: bearbeite Status:1
+2016-05-20 10:30:19 Debug: bearbeite Status:2
+2016-05-20 10:30:19 Debug: bearbeite Status:3
+2016-05-20 10:30:19 Debug: bearbeite Status:4
+2016-05-20 10:30:19 Debug: bearbeite Status:5
+2016-05-20 10:30:19 Debug: bearbeite Status:6
+2016-05-20 10:30:19 Debug: bearbeite Status:7
+2016-05-20 10:34:57 Debug: bearbeite Status:1
+2016-05-20 10:34:57 Debug: bearbeite Status:2
+2016-05-20 10:34:57 Debug: bearbeite Status:3
+2016-05-20 10:34:57 Debug: bearbeite Status:4
+2016-05-20 10:34:57 Debug: bearbeite Status:5
+2016-05-20 10:34:57 Debug: bearbeite Status:6
+2016-05-20 10:34:57 Debug: bearbeite Status:7
+2016-05-20 12:12:10 Notice: Notice (8): Undefined variable: plane in [/home/david/webdev/C/src/Template/Customers/add.ctp, line 35]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Customers/add.ctp, line 35
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 12:12:10 Notice: Notice (8): Trying to get property of non-object in [/home/david/webdev/C/src/Template/Customers/add.ctp, line 35]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Customers/add.ctp, line 35
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 12:43:28 Notice: Notice (8): Undefined variable: customer in [/home/david/webdev/C/src/Template/CustomerTypes/view.ctp, line 59]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/CustomerTypes/view.ctp, line 59
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 12:43:28 Notice: Notice (8): Trying to get property of non-object in [/home/david/webdev/C/src/Template/CustomerTypes/view.ctp, line 59]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/CustomerTypes/view.ctp, line 59
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 13:00:39 Debug: bearbeite Status:1
+2016-05-20 13:00:39 Debug: bearbeite Status:2
+2016-05-20 13:00:39 Debug: bearbeite Status:3
+2016-05-20 13:00:39 Debug: bearbeite Status:4
+2016-05-20 13:00:39 Debug: bearbeite Status:5
+2016-05-20 13:00:39 Debug: bearbeite Status:6
+2016-05-20 13:00:39 Debug: bearbeite Status:7
+2016-05-20 13:01:19 Debug: bearbeite Status:1
+2016-05-20 13:01:19 Debug: bearbeite Status:2
+2016-05-20 13:01:19 Debug: bearbeite Status:3
+2016-05-20 13:01:19 Debug: bearbeite Status:4
+2016-05-20 13:01:19 Debug: bearbeite Status:5
+2016-05-20 13:01:19 Debug: bearbeite Status:6
+2016-05-20 13:01:19 Debug: bearbeite Status:7
+2016-05-20 13:01:52 Debug: bearbeite Status:1
+2016-05-20 13:01:52 Debug: bearbeite Status:2
+2016-05-20 13:01:52 Debug: bearbeite Status:3
+2016-05-20 13:01:52 Debug: bearbeite Status:4
+2016-05-20 13:01:52 Debug: bearbeite Status:5
+2016-05-20 13:01:52 Debug: bearbeite Status:6
+2016-05-20 13:01:52 Debug: bearbeite Status:7
+2016-05-20 13:02:54 Debug: bearbeite Status:1
+2016-05-20 13:02:54 Debug: bearbeite Status:2
+2016-05-20 13:02:54 Debug: bearbeite Status:3
+2016-05-20 13:02:54 Debug: bearbeite Status:4
+2016-05-20 13:02:54 Debug: bearbeite Status:5
+2016-05-20 13:02:54 Debug: bearbeite Status:6
+2016-05-20 13:02:54 Debug: bearbeite Status:7
+2016-05-20 13:03:03 Debug: bearbeite Status:1
+2016-05-20 13:03:03 Debug: bearbeite Status:2
+2016-05-20 13:03:03 Debug: bearbeite Status:3
+2016-05-20 13:03:03 Debug: bearbeite Status:4
+2016-05-20 13:03:03 Debug: bearbeite Status:5
+2016-05-20 13:03:03 Debug: bearbeite Status:6
+2016-05-20 13:03:03 Debug: bearbeite Status:7
+2016-05-20 13:03:08 Debug: bearbeite Status:1
+2016-05-20 13:03:08 Debug: bearbeite Status:2
+2016-05-20 13:03:08 Debug: bearbeite Status:3
+2016-05-20 13:03:08 Debug: bearbeite Status:4
+2016-05-20 13:03:08 Debug: bearbeite Status:5
+2016-05-20 13:03:08 Debug: bearbeite Status:6
+2016-05-20 13:03:08 Debug: bearbeite Status:7
+2016-05-20 13:03:31 Debug: bearbeite Status:1
+2016-05-20 13:03:31 Debug: bearbeite Status:2
+2016-05-20 13:03:31 Debug: bearbeite Status:3
+2016-05-20 13:03:31 Debug: bearbeite Status:4
+2016-05-20 13:03:31 Debug: bearbeite Status:5
+2016-05-20 13:03:31 Debug: bearbeite Status:6
+2016-05-20 13:03:31 Debug: bearbeite Status:7
+2016-05-20 13:06:11 Debug: bearbeite Status:1
+2016-05-20 13:06:11 Debug: bearbeite Status:2
+2016-05-20 13:06:11 Debug: bearbeite Status:3
+2016-05-20 13:06:11 Debug: bearbeite Status:4
+2016-05-20 13:06:11 Debug: bearbeite Status:5
+2016-05-20 13:06:11 Debug: bearbeite Status:6
+2016-05-20 13:06:11 Debug: bearbeite Status:7
+2016-05-20 13:10:25 Notice: Notice (8): Undefined variable: customer in [/home/david/webdev/C/src/Template/Planes/view.ctp, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Planes/view.ctp, line 25
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 13:10:25 Notice: Notice (8): Trying to get property of non-object in [/home/david/webdev/C/src/Template/Planes/view.ctp, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Planes/view.ctp, line 25
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 13:26:55 Debug: bearbeite Status:1
+2016-05-20 13:26:55 Debug: bearbeite Status:2
+2016-05-20 13:26:55 Debug: bearbeite Status:3
+2016-05-20 13:26:55 Debug: bearbeite Status:4
+2016-05-20 13:26:55 Debug: bearbeite Status:5
+2016-05-20 13:26:55 Debug: bearbeite Status:6
+2016-05-20 13:26:55 Debug: bearbeite Status:7
+2016-05-20 14:04:21 Notice: Notice (8): Undefined variable: customer in [/home/david/webdev/C/src/Template/PlaneTypes/view.ctp, line 47]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/PlaneTypes/view.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 14:04:21 Notice: Notice (8): Trying to get property of non-object in [/home/david/webdev/C/src/Template/PlaneTypes/view.ctp, line 47]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/PlaneTypes/view.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 14:22:45 Debug: bearbeite Status:1
+2016-05-20 14:22:45 Debug: bearbeite Status:2
+2016-05-20 14:22:45 Debug: bearbeite Status:3
+2016-05-20 14:22:45 Debug: bearbeite Status:4
+2016-05-20 14:22:45 Debug: bearbeite Status:5
+2016-05-20 14:22:45 Debug: bearbeite Status:6
+2016-05-20 14:22:45 Debug: bearbeite Status:7
+2016-05-20 14:22:48 Debug: bearbeite Status:1
+2016-05-20 14:22:48 Debug: bearbeite Status:2
+2016-05-20 14:22:48 Debug: bearbeite Status:3
+2016-05-20 14:22:48 Debug: bearbeite Status:4
+2016-05-20 14:22:48 Debug: bearbeite Status:5
+2016-05-20 14:22:48 Debug: bearbeite Status:6
+2016-05-20 14:22:48 Debug: bearbeite Status:7
+2016-05-20 14:47:36 Debug: bearbeite Status:1
+2016-05-20 14:47:36 Debug: bearbeite Status:2
+2016-05-20 14:47:36 Debug: bearbeite Status:3
+2016-05-20 14:47:36 Debug: bearbeite Status:4
+2016-05-20 14:47:36 Debug: bearbeite Status:5
+2016-05-20 14:47:36 Debug: bearbeite Status:6
+2016-05-20 14:47:36 Debug: bearbeite Status:7
+2016-05-20 14:51:26 Debug: bearbeite Status:1
+2016-05-20 14:51:26 Debug: bearbeite Status:2
+2016-05-20 14:51:26 Debug: bearbeite Status:3
+2016-05-20 14:51:26 Debug: bearbeite Status:4
+2016-05-20 14:51:26 Debug: bearbeite Status:5
+2016-05-20 14:51:26 Debug: bearbeite Status:6
+2016-05-20 14:51:26 Debug: bearbeite Status:7
+2016-05-20 14:51:53 Debug: bearbeite Status:1
+2016-05-20 14:51:53 Debug: bearbeite Status:2
+2016-05-20 14:51:53 Debug: bearbeite Status:3
+2016-05-20 14:51:53 Debug: bearbeite Status:4
+2016-05-20 14:51:53 Debug: bearbeite Status:5
+2016-05-20 14:51:53 Debug: bearbeite Status:6
+2016-05-20 14:51:53 Debug: bearbeite Status:7
+2016-05-20 14:52:44 Debug: bearbeite Status:1
+2016-05-20 14:52:44 Debug: bearbeite Status:2
+2016-05-20 14:52:44 Debug: bearbeite Status:3
+2016-05-20 14:52:44 Debug: bearbeite Status:4
+2016-05-20 14:52:44 Debug: bearbeite Status:5
+2016-05-20 14:52:44 Debug: bearbeite Status:6
+2016-05-20 14:52:44 Debug: bearbeite Status:7
+2016-05-20 14:53:48 Debug: bearbeite Status:1
+2016-05-20 14:53:48 Debug: bearbeite Status:2
+2016-05-20 14:53:48 Debug: bearbeite Status:3
+2016-05-20 14:53:48 Debug: bearbeite Status:4
+2016-05-20 14:53:48 Debug: bearbeite Status:5
+2016-05-20 14:53:48 Debug: bearbeite Status:6
+2016-05-20 14:53:48 Debug: bearbeite Status:7
+2016-05-20 14:53:49 Debug: bearbeite Status:1
+2016-05-20 14:53:49 Debug: bearbeite Status:2
+2016-05-20 14:53:49 Debug: bearbeite Status:3
+2016-05-20 14:53:49 Debug: bearbeite Status:4
+2016-05-20 14:53:49 Debug: bearbeite Status:5
+2016-05-20 14:53:49 Debug: bearbeite Status:6
+2016-05-20 14:53:49 Debug: bearbeite Status:7
+2016-05-20 14:53:50 Debug: bearbeite Status:1
+2016-05-20 14:53:50 Debug: bearbeite Status:2
+2016-05-20 14:53:50 Debug: bearbeite Status:3
+2016-05-20 14:53:50 Debug: bearbeite Status:4
+2016-05-20 14:53:50 Debug: bearbeite Status:5
+2016-05-20 14:53:50 Debug: bearbeite Status:6
+2016-05-20 14:53:50 Debug: bearbeite Status:7
+2016-05-20 14:55:06 Debug: bearbeite Status:1
+2016-05-20 14:55:06 Debug: bearbeite Status:2
+2016-05-20 14:55:06 Debug: bearbeite Status:3
+2016-05-20 14:55:06 Debug: bearbeite Status:4
+2016-05-20 14:55:06 Debug: bearbeite Status:5
+2016-05-20 14:55:06 Debug: bearbeite Status:6
+2016-05-20 14:55:06 Debug: bearbeite Status:7
+2016-05-20 14:55:07 Debug: bearbeite Status:1
+2016-05-20 14:55:07 Debug: bearbeite Status:2
+2016-05-20 14:55:07 Debug: bearbeite Status:3
+2016-05-20 14:55:07 Debug: bearbeite Status:4
+2016-05-20 14:55:07 Debug: bearbeite Status:5
+2016-05-20 14:55:07 Debug: bearbeite Status:6
+2016-05-20 14:55:07 Debug: bearbeite Status:7
+2016-05-20 14:55:08 Debug: bearbeite Status:1
+2016-05-20 14:55:08 Debug: bearbeite Status:2
+2016-05-20 14:55:08 Debug: bearbeite Status:3
+2016-05-20 14:55:08 Debug: bearbeite Status:4
+2016-05-20 14:55:08 Debug: bearbeite Status:5
+2016-05-20 14:55:08 Debug: bearbeite Status:6
+2016-05-20 14:55:08 Debug: bearbeite Status:7
+2016-05-20 14:55:23 Debug: bearbeite Status:1
+2016-05-20 14:55:23 Debug: bearbeite Status:2
+2016-05-20 14:55:23 Debug: bearbeite Status:3
+2016-05-20 14:55:23 Debug: bearbeite Status:4
+2016-05-20 14:55:23 Debug: bearbeite Status:5
+2016-05-20 14:55:23 Debug: bearbeite Status:6
+2016-05-20 14:55:23 Debug: bearbeite Status:7
+2016-05-20 14:55:42 Debug: bearbeite Status:1
+2016-05-20 14:55:42 Debug: bearbeite Status:2
+2016-05-20 14:55:42 Debug: bearbeite Status:3
+2016-05-20 14:55:42 Debug: bearbeite Status:4
+2016-05-20 14:55:42 Debug: bearbeite Status:5
+2016-05-20 14:55:42 Debug: bearbeite Status:6
+2016-05-20 14:55:42 Debug: bearbeite Status:7
+2016-05-20 14:56:12 Debug: bearbeite Status:1
+2016-05-20 14:56:12 Debug: bearbeite Status:2
+2016-05-20 14:56:12 Debug: bearbeite Status:3
+2016-05-20 14:56:12 Debug: bearbeite Status:4
+2016-05-20 14:56:12 Debug: bearbeite Status:5
+2016-05-20 14:56:12 Debug: bearbeite Status:6
+2016-05-20 14:56:12 Debug: bearbeite Status:7
+2016-05-20 14:58:14 Debug: bearbeite Status:1
+2016-05-20 14:58:14 Debug: bearbeite Status:2
+2016-05-20 14:58:14 Debug: bearbeite Status:3
+2016-05-20 14:58:14 Debug: bearbeite Status:4
+2016-05-20 14:58:14 Debug: bearbeite Status:5
+2016-05-20 14:58:14 Debug: bearbeite Status:6
+2016-05-20 14:58:14 Debug: bearbeite Status:7
+2016-05-20 15:09:09 Debug: Array
+(
+    [first_name] => dwada
+    [last_name] => awd
+    [company] => awd
+    [street] => adwada
+    [postal_code] => 7
+    [country] => adwada
+    [customer_type_id] => 1
+)
+
+2016-05-20 15:09:29 Debug: {
+    "first_name": "dwada",
+    "last_name": "awd",
+    "company": "awd",
+    "street": "adwada",
+    "postal_code": 7,
+    "country": "adwada",
+    "customer_type_id": 1
+}
+2016-05-20 15:27:30 Debug: 
+2016-05-20 15:44:48 Debug: bearbeite Status:1
+2016-05-20 15:44:48 Debug: bearbeite Status:2
+2016-05-20 15:44:48 Debug: bearbeite Status:3
+2016-05-20 15:44:48 Debug: bearbeite Status:4
+2016-05-20 15:44:48 Debug: bearbeite Status:5
+2016-05-20 15:44:48 Debug: bearbeite Status:6
+2016-05-20 15:44:48 Debug: bearbeite Status:7
+2016-05-20 15:52:02 Debug: {
+    "first_name": "dwadawd",
+    "last_name": "awda",
+    "company": "awdawd",
+    "street": "awdawd",
+    "postal_code": 12331,
+    "country": "123awdwa",
+    "customer_type_id": 1
+}
+2016-05-20 16:05:38 Notice: Notice (8): Undefined variable: planeTypes in [/home/david/webdev/C/src/Template/Users/add.ctp, line 20]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Users/add.ctp, line 20
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 16:09:56 Notice: Notice (8): Undefined variable: users in [/home/david/webdev/C/src/Controller/UsersController.php, line 56]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Controller\UsersController::add() - APP/Controller/UsersController.php, line 56
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 16:09:56 Debug: 
+2016-05-20 16:09:56 Notice: Notice (8): Undefined variable: _SESSION in [/home/david/webdev/C/vendor/cakephp/cakephp/src/Network/Session.php, line 440]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\Network\Session::write() - CORE/src/Network/Session.php, line 440
+Cake\Controller\Component\FlashComponent::set() - CORE/src/Controller/Component/FlashComponent.php, line 99
+Cake\Controller\Component\FlashComponent::__call() - CORE/src/Controller/Component/FlashComponent.php, line 139
+Cake\Controller\Component\FlashComponent::success() - APP/Controller/UsersController.php, line 59
+App\Controller\UsersController::add() - APP/Controller/UsersController.php, line 59
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 16:10:04 Debug: {
+    "first_name": "dwad",
+    "last_name": "awd",
+    "username": "awd",
+    "street": "124",
+    "postal_code": 1234,
+    "country": "234fafdawd",
+    "payment": 234234234,
+    "group_id": 1,
+    "status": 1,
+    "password": "placeholder"
+}
+2016-05-20 16:10:09 Debug: {
+    "first_name": "dwad",
+    "last_name": "awd",
+    "username": "awddaw",
+    "street": "124",
+    "postal_code": 1234,
+    "country": "234fafdawd",
+    "payment": 234234234,
+    "group_id": 1,
+    "status": 1,
+    "password": "placeholder"
+}
+2016-05-20 16:12:20 Debug: {
+    "first_name": "dwada",
+    "last_name": "adwada",
+    "username": "dawdad",
+    "street": "423423dadwawd",
+    "postal_code": 3242342,
+    "country": "awdadad",
+    "payment": 234234234234,
+    "group_id": 1,
+    "status": 1,
+    "password": "placeholder"
+}
+2016-05-20 16:26:36 Notice: Notice (8): Undefined property: Cake\ORM\Query::$name in [/home/david/webdev/C/src/Template/Planes/add.ctp, line 13]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Planes/add.ctp, line 13
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 16:27:15 Notice: Notice (8): Undefined property: Cake\ORM\Query::$type in [/home/david/webdev/C/src/Template/Planes/add.ctp, line 13]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Planes/add.ctp, line 13
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 16:28:06 Notice: Notice (8): Undefined property: Cake\ORM\Query::$type in [/home/david/webdev/C/src/Template/Planes/add.ctp, line 13]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Planes/add.ctp, line 13
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 16:28:27 Notice: Notice (8): Undefined property: Cake\ORM\Query::$type in [/home/david/webdev/C/src/Template/Planes/add.ctp, line 13]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Planes/add.ctp, line 13
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 16:28:27 Notice: Notice (8): Undefined property: Cake\ORM\Query::$id in [/home/david/webdev/C/src/Template/Planes/add.ctp, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Planes/add.ctp, line 16
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-05-20 16:30:28 Debug: bearbeite Status:1
+2016-05-20 16:30:28 Debug: bearbeite Status:2
+2016-05-20 16:30:28 Debug: bearbeite Status:3
+2016-05-20 16:30:28 Debug: bearbeite Status:4
+2016-05-20 16:30:28 Debug: bearbeite Status:5
+2016-05-20 16:30:28 Debug: bearbeite Status:6
+2016-05-20 16:30:28 Debug: bearbeite Status:7
+2016-05-20 16:33:01 Debug: bearbeite Status:1
+2016-05-20 16:33:01 Debug: bearbeite Status:2
+2016-05-20 16:33:01 Debug: bearbeite Status:3
+2016-05-20 16:33:01 Debug: bearbeite Status:4
+2016-05-20 16:33:01 Debug: bearbeite Status:5
+2016-05-20 16:33:01 Debug: bearbeite Status:6
+2016-05-20 16:33:01 Debug: bearbeite Status:7
+2016-05-20 16:37:02 Debug: bearbeite Status:1
+2016-05-20 16:37:02 Debug: bearbeite Status:2
+2016-05-20 16:37:02 Debug: bearbeite Status:3
+2016-05-20 16:37:02 Debug: bearbeite Status:4
+2016-05-20 16:37:02 Debug: bearbeite Status:5
+2016-05-20 16:37:02 Debug: bearbeite Status:6
+2016-05-20 16:37:02 Debug: bearbeite Status:7
+2016-05-20 16:38:55 Debug: bearbeite Status:1
+2016-05-20 16:38:55 Debug: bearbeite Status:2
+2016-05-20 16:38:55 Debug: bearbeite Status:3
+2016-05-20 16:38:55 Debug: bearbeite Status:4
+2016-05-20 16:38:55 Debug: bearbeite Status:5
+2016-05-20 16:38:55 Debug: bearbeite Status:6
+2016-05-20 16:38:55 Debug: bearbeite Status:7
+2016-05-20 16:38:57 Debug: bearbeite Status:1
+2016-05-20 16:38:57 Debug: bearbeite Status:2
+2016-05-20 16:38:57 Debug: bearbeite Status:3
+2016-05-20 16:38:57 Debug: bearbeite Status:4
+2016-05-20 16:38:57 Debug: bearbeite Status:5
+2016-05-20 16:38:57 Debug: bearbeite Status:6
+2016-05-20 16:38:57 Debug: bearbeite Status:7
+2016-05-20 16:39:23 Debug: bearbeite Status:1
+2016-05-20 16:39:23 Debug: bearbeite Status:2
+2016-05-20 16:39:23 Debug: bearbeite Status:3
+2016-05-20 16:39:23 Debug: bearbeite Status:4
+2016-05-20 16:39:23 Debug: bearbeite Status:5
+2016-05-20 16:39:23 Debug: bearbeite Status:6
+2016-05-20 16:39:23 Debug: bearbeite Status:7
+2016-05-20 16:40:56 Debug: bearbeite Status:1
+2016-05-20 16:40:56 Debug: bearbeite Status:2
+2016-05-20 16:40:56 Debug: bearbeite Status:3
+2016-05-20 16:40:56 Debug: bearbeite Status:4
+2016-05-20 16:40:56 Debug: bearbeite Status:5
+2016-05-20 16:40:56 Debug: bearbeite Status:6
+2016-05-20 16:40:56 Debug: bearbeite Status:7
+2016-05-20 16:54:37 Debug: bearbeite Status:1
+2016-05-20 16:54:37 Debug: bearbeite Status:2
+2016-05-20 16:54:37 Debug: bearbeite Status:3
+2016-05-20 16:54:37 Debug: bearbeite Status:4
+2016-05-20 16:54:37 Debug: bearbeite Status:5
+2016-05-20 16:54:37 Debug: bearbeite Status:6
+2016-05-20 16:54:37 Debug: bearbeite Status:7

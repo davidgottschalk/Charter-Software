@@ -19,10 +19,26 @@
             <p><?= h($airport->city) ?></p>
             <h6 class="subheader"><?= __('Country') ?></h6>
             <p><?= h($airport->country) ?></p>
+            <h6 class="subheader"><?= __('Iata Faa') ?></h6>
+            <p><?= h($airport->iata_faa) ?></p>
+            <h6 class="subheader"><?= __('Icao') ?></h6>
+            <p><?= h($airport->icao) ?></p>
+            <h6 class="subheader"><?= __('Dst') ?></h6>
+            <p><?= h($airport->dst) ?></p>
+            <h6 class="subheader"><?= __('Timezone Db') ?></h6>
+            <p><?= h($airport->timezone_db) ?></p>
         </div>
         <div class="large-2 columns numbers end">
             <h6 class="subheader"><?= __('Id') ?></h6>
             <p><?= $this->Number->format($airport->id) ?></p>
+            <h6 class="subheader"><?= __('Latitude') ?></h6>
+            <p><?= $this->Number->format($airport->latitude) ?></p>
+            <h6 class="subheader"><?= __('Longitude') ?></h6>
+            <p><?= $this->Number->format($airport->longitude) ?></p>
+            <h6 class="subheader"><?= __('Altitude') ?></h6>
+            <p><?= $this->Number->format($airport->altitude) ?></p>
+            <h6 class="subheader"><?= __('Timezone') ?></h6>
+            <p><?= $this->Number->format($airport->timezone) ?></p>
         </div>
     </div>
 </div>

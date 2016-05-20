@@ -18,6 +18,14 @@ class Airport extends Entity
         'name' => true,
         'city' => true,
         'country' => true,
+        'iata_faa' => true,
+        'icao' => true,
+        'latitude' => true,
+        'longitude' => true,
+        'altitude' => true,
+        'timezone' => true,
+        'dst' => true,
+        'timezone_db' => true,
         'flights' => true,
     ];
 }

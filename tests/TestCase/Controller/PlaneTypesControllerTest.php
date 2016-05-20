@@ -17,7 +17,16 @@ class PlaneTypesControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.plane_types',
-        'app.planes'
+        'app.planes',
+        'app.flights',
+        'app.customers',
+        'app.customer_types',
+        'app.invoices',
+        'app.airports',
+        'app.airports_flights',
+        'app.users',
+        'app.groups',
+        'app.users_flights'
     ];
 
     /**

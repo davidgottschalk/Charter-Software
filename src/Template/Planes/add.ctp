@@ -1,21 +1,23 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Html->link(__('List Planes'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Plane Types'), ['controller' => 'PlaneTypes', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Plane Type'), ['controller' => 'PlaneTypes', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
-<div class="planes form large-10 medium-9 columns">
+<div class="planes view large-12 medium-9 columns">
     <?= $this->Form->create($plane); ?>
     <fieldset>
-        <legend><?= __('Add Plane') ?></legend>
+        <legend class="asapblau"><?= __('Flugzeug hinzufügen') ?></legend>
+        <div class"actions">
+        </div>
+    <br/>
+    <div class="row">
+    <div class="large-3 columns strings">
         <?php
-            echo $this->Form->input('plane_name');
-            echo $this->Form->input('plane_number');
-            echo $this->Form->input('plane_type_id', ['options' => $planeTypes]);
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+            echo $this->Form->input('plane_name', array('label'=>'Flugzeugname'));
+            echo $this->Form->input('plane_number', array('label'=>'Flugzeugnummer'));
+            echo $this->Form->input('plane_type_id', array('options' => $planeTypes, 'label'=>'Flugzeugtyp'));
+        ?></div></div>
+    <br/>
+
+    </div>
+    <div class="planes form large-12 medium-9 columns">
+    <?= $this->Form->button(__('Speichern')) ?>
+    <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
     <?= $this->Form->end() ?>
-</div>
+    </div>
+</fieldset>

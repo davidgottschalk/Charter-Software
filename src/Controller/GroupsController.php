@@ -32,7 +32,7 @@ class GroupsController extends AppController
     public function view($id = null)
     {
         $group = $this->Groups->get($id, [
-            'contain' => ['Employees']
+            'contain' => ['Users']
         ]);
         $this->set('group', $group);
         $this->set('_serialize', ['group']);

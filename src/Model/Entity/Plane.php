@@ -19,5 +19,6 @@ class Plane extends Entity
         'plane_number' => true,
         'plane_type_id' => true,
         'plane_type' => true,
+        'flights' => true,
     ];
 }

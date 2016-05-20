@@ -1,27 +1,30 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Html->link(__('List Customers'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Customer Types'), ['controller' => 'CustomerTypes', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Customer Type'), ['controller' => 'CustomerTypes', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Flights'), ['controller' => 'Flights', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Flight'), ['controller' => 'Flights', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
 <div class="customers form large-10 medium-9 columns">
     <?= $this->Form->create($customer); ?>
     <fieldset>
-        <legend><?= __('Add Customer') ?></legend>
-        <?php
-            echo $this->Form->input('first_name');
-            echo $this->Form->input('last_name');
-            echo $this->Form->input('company');
-            echo $this->Form->input('street');
-            echo $this->Form->input('postal_code');
-            echo $this->Form->input('country');
-            echo $this->Form->input('customer_type_id', ['options' => $customerTypes]);
-        ?>
+        <legend><h3><?= __('Kunde hinzufügen') ?></h3></legend>
+
+        <div class="large-3 columns strings edit-table">
+            <p><? echo $this->Form->input('first_name',['label' => 'Vorname']); ?></p>
+            <p><? echo $this->Form->input('last_name',['label' => 'Nachname']); ?></p>
+            <p><? echo $this->Form->input('company',['label' => 'Firma']); ?></p>
+            <p><? echo $this->Form->input('email',['label' => 'E-Mail']); ?></p>
+        </div>
+
+        <div class="large-3 columns strings edit-table">
+            <p><? echo $this->Form->input('street',['label' => 'Straße']); ?></p>
+            <p><? echo $this->Form->input('postal_code',['label' => 'Postleitzahl']); ?></p>
+            <p><? echo $this->Form->input('country',['label' => 'Ort']); ?></p>
+        </div>
+
+        <div class="large-3 columns strings edit-table">
+            <p><? echo $this->Form->input('customer_type_id', ['options' => $customerTypes, 'label' => 'Kundengruppe']); ?></p>
+        </div>
+
+        <div class="large-3 columns strings edit-table">
+        </div>
+
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button('Speichern') ?>
+    <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
     <?= $this->Form->end() ?>
 </div>

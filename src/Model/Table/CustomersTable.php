@@ -44,31 +44,35 @@ class CustomersTable extends Table
         $validator
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create');
-            
+
         $validator
             ->requirePresence('first_name', 'create')
             ->notEmpty('first_name');
-            
+
         $validator
             ->requirePresence('last_name', 'create')
             ->notEmpty('last_name');
-            
+
         $validator
-            ->requirePresence('company', 'create')
-            ->notEmpty('company');
-            
+            ->allowEmpty('company');
+
         $validator
             ->requirePresence('street', 'create')
             ->notEmpty('street');
-            
+
         $validator
             ->add('postal_code', 'valid', ['rule' => 'numeric'])
             ->requirePresence('postal_code', 'create')
             ->notEmpty('postal_code');
-            
+
         $validator
             ->requirePresence('country', 'create')
             ->notEmpty('country');
+
+        $validator
+            ->add('email', 'valid', ['rule' => 'email'])
+            ->requirePresence('email', 'create')
+            ->notEmpty('email');
 
         return $validator;
     }
@@ -82,6 +86,7 @@ class CustomersTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
+        $rules->add($rules->isUnique(['email']));
         $rules->add($rules->existsIn(['customer_type_id'], 'CustomerTypes'));
         return $rules;
     }

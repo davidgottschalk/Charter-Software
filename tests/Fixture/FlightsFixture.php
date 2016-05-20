@@ -23,7 +23,7 @@ class FlightsFixture extends TestFixture
         'plane_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'start_date' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'end_date' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-        'status' => ['type' => 'string', 'length' => 50, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
+        'status' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
             'plane_key' => ['type' => 'index', 'columns' => ['plane_id'], 'length' => []],
             'customer_key' => ['type' => 'index', 'columns' => ['customer_id'], 'length' => []],
@@ -51,9 +51,9 @@ class FlightsFixture extends TestFixture
             'flight_number' => 'Lorem ipsum dolor ',
             'customer_id' => 1,
             'plane_id' => 1,
-            'start_date' => '2016-04-28 13:31:42',
-            'end_date' => '2016-04-28 13:31:42',
-            'status' => 'Lorem ipsum dolor sit amet'
+            'start_date' => '2016-05-12 11:16:49',
+            'end_date' => '2016-05-12 11:16:49',
+            'status' => 1
         ],
     ];
 }

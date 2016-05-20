@@ -52,10 +52,10 @@ class PlanesController extends AppController
         if ($this->request->is('post')) {
             $plane = $this->Planes->patchEntity($plane, $this->request->data);
             if ($this->Planes->save($plane)) {
-                $this->Flash->success('The plane has been saved.');
+                $this->Flash->success('Flugzeug erfolgreich hinzugefügt.');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The plane could not be saved. Please, try again.');
+                $this->Flash->error('Die Änderungen konnten nicht gespeichert werden. Bitte erneut versuchen.');
             }
         }
         $planeTypes = $this->Planes->PlaneTypes->find('list', ['limit' => 200]);
@@ -78,10 +78,10 @@ class PlanesController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $plane = $this->Planes->patchEntity($plane, $this->request->data);
             if ($this->Planes->save($plane)) {
-                $this->Flash->success('The plane has been saved.');
+                $this->Flash->success('Das Flugzeug wurde gespeichert.');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The plane could not be saved. Please, try again.');
+                $this->Flash->error('Das Flugzeug konnte nicht gespeichert werden. Bitte erneut versuchen.');
             }
         }
         $planeTypes = $this->Planes->PlaneTypes->find('list', ['limit' => 200]);
@@ -101,9 +101,9 @@ class PlanesController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $plane = $this->Planes->get($id);
         if ($this->Planes->delete($plane)) {
-            $this->Flash->success('The plane has been deleted.');
+            $this->Flash->success('Das Flugzeug wurde glöscht..');
         } else {
-            $this->Flash->error('The plane could not be deleted. Please, try again.');
+            $this->Flash->error('Das zu löschende Flugzeug wurde nicht gefunden. Bitte erneut versuchen.');
         }
         return $this->redirect(['action' => 'index']);
     }

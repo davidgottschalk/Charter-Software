@@ -18,6 +18,7 @@
  * constants
  */
 require __DIR__ . '/paths.php';
+require __DIR__ . '/charter_constants.php';
 
 // Use composer to load the autoloader.
 require ROOT . DS . 'vendor' . DS . 'autoload.php';
@@ -86,7 +87,7 @@ if (!Configure::read('debug')) {
  * Set server timezone to UTC. You can change it to another timezone of your
  * choice but using UTC makes time calculations / conversions easier.
  */
-date_default_timezone_set('UTC');
+date_default_timezone_set('Europe/Berlin');
 
 /**
  * Configure the mbstring extension to use the correct encoding.
@@ -97,7 +98,7 @@ mb_internal_encoding(Configure::read('App.encoding'));
  * Set the default locale. This controls how dates, number and currency is
  * formatted and sets the default language to use for translations.
  */
-ini_set('intl.default_locale', 'en_US');
+ini_set('intl.default_locale', 'de_DE');
 
 /**
  * Register application error and exception handlers.

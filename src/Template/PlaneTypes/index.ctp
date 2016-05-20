@@ -1,50 +1,44 @@
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Html->link(__('New Plane Type'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Planes'), ['controller' => 'Planes', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Plane'), ['controller' => 'Planes', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
-<div class="planeTypes index large-10 medium-9 columns">
-    <table cellpadding="0" cellspacing="0">
-    <thead>
-        <tr>
-            <th><?= $this->Paginator->sort('id') ?></th>
-            <th><?= $this->Paginator->sort('manufacturer') ?></th>
-            <th><?= $this->Paginator->sort('type') ?></th>
-            <th><?= $this->Paginator->sort('speed') ?></th>
-            <th><?= $this->Paginator->sort('max_range') ?></th>
-            <th><?= $this->Paginator->sort('pax') ?></th>
-            <th><?= $this->Paginator->sort('engine_type') ?></th>
-            <th class="actions"><?= __('Actions') ?></th>
-        </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($planeTypes as $planeType): ?>
-        <tr>
-            <td><?= $this->Number->format($planeType->id) ?></td>
-            <td><?= h($planeType->manufacturer) ?></td>
-            <td><?= h($planeType->type) ?></td>
-            <td><?= $this->Number->format($planeType->speed) ?></td>
-            <td><?= $this->Number->format($planeType->max_range) ?></td>
-            <td><?= $this->Number->format($planeType->pax) ?></td>
-            <td><?= h($planeType->engine_type) ?></td>
-            <td class="actions">
-                <?= $this->Html->link(__('View'), ['action' => 'view', $planeType->id]) ?>
-                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $planeType->id]) ?>
-                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $planeType->id], ['confirm' => __('Are you sure you want to delete # {0}?', $planeType->id)]) ?>
-            </td>
-        </tr>
+<div class="customers index large-12 medium-9 columns">
+    <h3>Flugzeug Typen</h3>
+    <hr>
+    <span class="actions primary"><?= $this->Html->link(__('Flugzeug Typ hinzufügen'), ['action' => 'add']) ?></span>
 
-    <?php endforeach; ?>
-    </tbody>
+    <table id="charter-table" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th><?= $this->Paginator->sort('manufacturer','Hersteller') ?></th>
+                <th><?= $this->Paginator->sort('type','Flugzeugtyp') ?></th>
+                <th><?= $this->Paginator->sort('speed','Geschwindigkeit (max)') ?></th>
+                <th><?= $this->Paginator->sort('max_range','Reichweite (max)') ?></th>
+                <th><?= $this->Paginator->sort('pax','PAX (max)') ?></th>
+                <th><?= $this->Paginator->sort('engine_type','Triebwerksart') ?></th>
+                <th style="width:250px" class="actions"></th>
+            </tr>
+        </thead>
+        <tbody>
+        <? foreach ($planeTypes as $planeType){ ?>
+            <tr>
+                <td><?= h($planeType->manufacturer) ?></td>
+                <td><?= $this->Html->Link($planeType->type, ['action'=>'view', $planeType->id]) ?></td>
+                <td><?= $this->Number->format($planeType->speed, ['locale'=>'de-de', 'after'=>' km/h']) ?></td>
+                <td><?= $this->Number->format($planeType->max_range, ['locale'=>'de-de', 'after'=>' km']) ?></td>
+                <td><?= $this->Number->format($planeType->pax) ?></td>
+                <td><?= h($planeType->engine_type) ?></td>
+                <td class="actions">
+                    <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $planeType->id]) ?></span>
+                    <span class="actions secondary"><?= $this->Html->link(__('Bearbeiten'), ['action' => 'edit', $planeType->id]) ?></span>
+                    <span class="actions secondary"><?= $this->Form->postLink(__('Löschen'), ['action' => 'delete', $planeType->id], ['confirm' => __('Sind Sie sicher, dass Sie den Flugzeugtyp "{0}" löschen möchten?', $planeType->manufacturer.' '.$planeType->type)]) ?></span>
+                </td>
+            </tr>
+
+        <? } ?>
+        </tbody>
     </table>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->prev('< ' . __('zurück')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
+            <?= $this->Paginator->next(__('weiter') . ' >') ?>
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>
