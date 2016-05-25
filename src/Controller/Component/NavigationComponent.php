@@ -45,7 +45,7 @@ class NavigationComponent extends Component {
         ];
 
         $this->navItems['Flugzeuge'] = [
-            [ "title" => "Flugzeuge", "controller" => "Planes", "action" => "index" ],
+            [ "title" => "Übersicht", "controller" => "Planes", "action" => "index" ],
             [ "title" => "Flugzeugtypen", "controller" => "PlaneTypes", "action" => "index" ]
         ];
 
