@@ -85,16 +85,18 @@ class InvoicesTable extends Table{
 
         foreach( $statuus as $key => $status ){ // bspw. PAYED = 1, FIRST_REMINDER = 3
 
-            $this->log("bearbeite Status:".$status,'debug');
+            // $this->log("bearbeite Status:".$status,'debug');
 
             $invoicesPerStatus = clone $invoices;
 
             // selektiert nur abgelaufende für den jeweiligen Status
             $invoicesPerStatus
-                ->where(['Invoices.status' => $status,'Invoices.due_date <' => $today])
+                ->where(['Invoices.status' => $status,'Invoices.due_date <' => $today, 'Invoices.automatic' => 1])
                 ->contain(['flights.customers.customerTypes']);
 
             foreach( $invoicesPerStatus as $invoicePerStatus ){
+
+// $this->log($invoicePerStatus,'debug');
 
                 if( $invoicePerStatus['Customers']['customer_type_id'] == CORP ){
                     if(array_key_exists($key+1,$statuus)){

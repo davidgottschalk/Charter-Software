@@ -13,5 +13,6 @@ define('VIP', 1);
 define('CORP', 2);
 define('PRE', 3);
 
-define('INACTIVE', 0);
-define('ACTIVE', 1);
+define('USER_INACTIVE', 0);
+define('USER_ACTIVE', 1);
+define('USER_PASSWORD_CHANGE', 2);

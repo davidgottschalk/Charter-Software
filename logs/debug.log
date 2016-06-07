@@ -2192,3 +2192,811 @@ Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
 2016-05-25 10:04:39 Debug: bearbeite Status:5
 2016-05-25 10:04:39 Debug: bearbeite Status:6
 2016-05-25 10:04:39 Debug: bearbeite Status:7
+2016-06-02 13:59:38 Debug: bearbeite Status:1
+2016-06-02 13:59:38 Debug: bearbeite Status:2
+2016-06-02 13:59:38 Debug: bearbeite Status:3
+2016-06-02 13:59:38 Debug: bearbeite Status:4
+2016-06-02 13:59:38 Debug: bearbeite Status:5
+2016-06-02 13:59:38 Debug: bearbeite Status:6
+2016-06-02 13:59:38 Debug: bearbeite Status:7
+2016-06-02 14:05:52 Debug: bearbeite Status:1
+2016-06-02 14:05:52 Debug: bearbeite Status:2
+2016-06-02 14:05:52 Debug: bearbeite Status:3
+2016-06-02 14:05:52 Debug: bearbeite Status:4
+2016-06-02 14:05:52 Debug: bearbeite Status:5
+2016-06-02 14:05:52 Debug: bearbeite Status:6
+2016-06-02 14:05:52 Debug: bearbeite Status:7
+2016-06-02 14:06:50 Debug: bearbeite Status:1
+2016-06-02 14:06:50 Debug: bearbeite Status:2
+2016-06-02 14:06:50 Debug: bearbeite Status:3
+2016-06-02 14:06:50 Debug: bearbeite Status:4
+2016-06-02 14:06:50 Debug: bearbeite Status:5
+2016-06-02 14:06:50 Debug: bearbeite Status:6
+2016-06-02 14:06:50 Debug: bearbeite Status:7
+2016-06-02 14:06:53 Debug: bearbeite Status:1
+2016-06-02 14:06:53 Debug: bearbeite Status:2
+2016-06-02 14:06:53 Debug: bearbeite Status:3
+2016-06-02 14:06:53 Debug: bearbeite Status:4
+2016-06-02 14:06:53 Debug: bearbeite Status:5
+2016-06-02 14:06:53 Debug: bearbeite Status:6
+2016-06-02 14:06:53 Debug: bearbeite Status:7
+2016-06-02 14:07:00 Debug: bearbeite Status:1
+2016-06-02 14:07:00 Debug: bearbeite Status:2
+2016-06-02 14:07:00 Debug: bearbeite Status:3
+2016-06-02 14:07:00 Debug: bearbeite Status:4
+2016-06-02 14:07:00 Debug: bearbeite Status:5
+2016-06-02 14:07:00 Debug: bearbeite Status:6
+2016-06-02 14:07:00 Debug: bearbeite Status:7
+2016-06-02 14:07:28 Debug: bearbeite Status:1
+2016-06-02 14:07:28 Debug: bearbeite Status:2
+2016-06-02 14:07:28 Debug: bearbeite Status:3
+2016-06-02 14:07:28 Debug: bearbeite Status:4
+2016-06-02 14:07:28 Debug: bearbeite Status:5
+2016-06-02 14:07:28 Debug: bearbeite Status:6
+2016-06-02 14:07:28 Debug: bearbeite Status:7
+2016-06-02 14:07:31 Notice: Notice (8): Undefined variable: customer in [/home/david/webdev/C/src/Template/Invoices/view.ctp, line 21]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Invoices/view.ctp, line 21
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 14:07:31 Notice: Notice (8): Trying to get property of non-object in [/home/david/webdev/C/src/Template/Invoices/view.ctp, line 21]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Invoices/view.ctp, line 21
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 14:09:38 Debug: bearbeite Status:1
+2016-06-02 14:09:38 Debug: bearbeite Status:2
+2016-06-02 14:09:38 Debug: bearbeite Status:3
+2016-06-02 14:09:38 Debug: bearbeite Status:4
+2016-06-02 14:09:38 Debug: bearbeite Status:5
+2016-06-02 14:09:38 Debug: bearbeite Status:6
+2016-06-02 14:09:38 Debug: bearbeite Status:7
+2016-06-02 14:10:36 Debug: bearbeite Status:1
+2016-06-02 14:10:36 Debug: bearbeite Status:2
+2016-06-02 14:10:36 Debug: bearbeite Status:3
+2016-06-02 14:10:36 Debug: bearbeite Status:4
+2016-06-02 14:10:36 Debug: bearbeite Status:5
+2016-06-02 14:10:36 Debug: bearbeite Status:6
+2016-06-02 14:10:36 Debug: bearbeite Status:7
+2016-06-02 14:12:49 Debug: bearbeite Status:1
+2016-06-02 14:12:49 Debug: bearbeite Status:2
+2016-06-02 14:12:49 Debug: bearbeite Status:3
+2016-06-02 14:12:49 Debug: bearbeite Status:4
+2016-06-02 14:12:49 Debug: bearbeite Status:5
+2016-06-02 14:12:49 Debug: bearbeite Status:6
+2016-06-02 14:12:49 Debug: bearbeite Status:7
+2016-06-02 14:13:19 Debug: bearbeite Status:1
+2016-06-02 14:13:19 Debug: bearbeite Status:2
+2016-06-02 14:13:19 Debug: bearbeite Status:3
+2016-06-02 14:13:19 Debug: bearbeite Status:4
+2016-06-02 14:13:19 Debug: bearbeite Status:5
+2016-06-02 14:13:19 Debug: bearbeite Status:6
+2016-06-02 14:13:19 Debug: bearbeite Status:7
+2016-06-02 14:13:23 Debug: bearbeite Status:1
+2016-06-02 14:13:23 Debug: bearbeite Status:2
+2016-06-02 14:13:23 Debug: bearbeite Status:3
+2016-06-02 14:13:23 Debug: bearbeite Status:4
+2016-06-02 14:13:23 Debug: bearbeite Status:5
+2016-06-02 14:13:23 Debug: bearbeite Status:6
+2016-06-02 14:13:23 Debug: bearbeite Status:7
+2016-06-02 14:16:32 Debug: bearbeite Status:1
+2016-06-02 14:16:32 Debug: bearbeite Status:2
+2016-06-02 14:16:32 Debug: bearbeite Status:3
+2016-06-02 14:16:32 Debug: bearbeite Status:4
+2016-06-02 14:16:32 Debug: bearbeite Status:5
+2016-06-02 14:16:32 Debug: bearbeite Status:6
+2016-06-02 14:16:32 Debug: bearbeite Status:7
+2016-06-02 14:18:59 Debug: bearbeite Status:1
+2016-06-02 14:18:59 Debug: bearbeite Status:2
+2016-06-02 14:18:59 Debug: bearbeite Status:3
+2016-06-02 14:18:59 Debug: bearbeite Status:4
+2016-06-02 14:18:59 Debug: bearbeite Status:5
+2016-06-02 14:18:59 Debug: bearbeite Status:6
+2016-06-02 14:18:59 Debug: bearbeite Status:7
+2016-06-02 14:20:44 Debug: bearbeite Status:1
+2016-06-02 14:20:44 Debug: bearbeite Status:2
+2016-06-02 14:20:44 Debug: bearbeite Status:3
+2016-06-02 14:20:44 Debug: bearbeite Status:4
+2016-06-02 14:20:44 Debug: bearbeite Status:5
+2016-06-02 14:20:44 Debug: bearbeite Status:6
+2016-06-02 14:20:44 Debug: bearbeite Status:7
+2016-06-02 14:20:47 Debug: bearbeite Status:1
+2016-06-02 14:20:47 Debug: bearbeite Status:2
+2016-06-02 14:20:47 Debug: bearbeite Status:3
+2016-06-02 14:20:47 Debug: bearbeite Status:4
+2016-06-02 14:20:47 Debug: bearbeite Status:5
+2016-06-02 14:20:47 Debug: bearbeite Status:6
+2016-06-02 14:20:47 Debug: bearbeite Status:7
+2016-06-02 14:26:02 Debug: bearbeite Status:1
+2016-06-02 14:26:02 Debug: bearbeite Status:2
+2016-06-02 14:26:02 Debug: bearbeite Status:3
+2016-06-02 14:26:02 Debug: bearbeite Status:4
+2016-06-02 14:26:02 Debug: bearbeite Status:5
+2016-06-02 14:26:02 Debug: bearbeite Status:6
+2016-06-02 14:26:02 Debug: bearbeite Status:7
+2016-06-02 14:26:08 Debug: bearbeite Status:1
+2016-06-02 14:26:08 Debug: bearbeite Status:2
+2016-06-02 14:26:08 Debug: bearbeite Status:3
+2016-06-02 14:26:08 Debug: bearbeite Status:4
+2016-06-02 14:26:08 Debug: bearbeite Status:5
+2016-06-02 14:26:08 Debug: bearbeite Status:6
+2016-06-02 14:26:08 Debug: bearbeite Status:7
+2016-06-02 14:29:19 Notice: Notice (8): Undefined variable: planeType in [/home/david/webdev/C/src/Template/Invoices/edit.ctp, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Invoices/edit.ctp, line 16
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 14:29:19 Notice: Notice (8): Trying to get property of non-object in [/home/david/webdev/C/src/Template/Invoices/edit.ctp, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Invoices/edit.ctp, line 16
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 14:34:45 Debug: bearbeite Status:1
+2016-06-02 14:34:45 Debug: bearbeite Status:2
+2016-06-02 14:34:45 Debug: bearbeite Status:3
+2016-06-02 14:34:45 Debug: bearbeite Status:4
+2016-06-02 14:34:45 Debug: bearbeite Status:5
+2016-06-02 14:34:45 Debug: bearbeite Status:6
+2016-06-02 14:34:45 Debug: bearbeite Status:7
+2016-06-02 14:37:24 Debug: bearbeite Status:1
+2016-06-02 14:37:24 Debug: bearbeite Status:2
+2016-06-02 14:37:24 Debug: bearbeite Status:3
+2016-06-02 14:37:24 Debug: bearbeite Status:4
+2016-06-02 14:37:24 Debug: bearbeite Status:5
+2016-06-02 14:37:24 Debug: bearbeite Status:6
+2016-06-02 14:37:24 Debug: bearbeite Status:7
+2016-06-02 14:43:45 Debug: bearbeite Status:1
+2016-06-02 14:43:45 Debug: bearbeite Status:2
+2016-06-02 14:43:45 Debug: bearbeite Status:3
+2016-06-02 14:43:45 Debug: bearbeite Status:4
+2016-06-02 14:43:45 Debug: bearbeite Status:5
+2016-06-02 14:43:45 Debug: bearbeite Status:6
+2016-06-02 14:43:45 Debug: bearbeite Status:7
+2016-06-02 14:45:59 Debug: bearbeite Status:1
+2016-06-02 14:45:59 Debug: bearbeite Status:2
+2016-06-02 14:45:59 Debug: bearbeite Status:3
+2016-06-02 14:45:59 Debug: bearbeite Status:4
+2016-06-02 14:45:59 Debug: bearbeite Status:5
+2016-06-02 14:45:59 Debug: bearbeite Status:6
+2016-06-02 14:45:59 Debug: bearbeite Status:7
+2016-06-02 14:45:59 Notice: Notice (8): Undefined offset: 3 in [/home/david/webdev/C/src/Template/Invoices/index.ctp, line 26]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Invoices/index.ctp, line 26
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 14:46:09 Debug: bearbeite Status:1
+2016-06-02 14:46:09 Debug: bearbeite Status:2
+2016-06-02 14:46:09 Debug: bearbeite Status:3
+2016-06-02 14:46:09 Debug: bearbeite Status:4
+2016-06-02 14:46:09 Debug: bearbeite Status:5
+2016-06-02 14:46:09 Debug: bearbeite Status:6
+2016-06-02 14:46:09 Debug: bearbeite Status:7
+2016-06-02 14:46:33 Debug: bearbeite Status:1
+2016-06-02 14:46:33 Debug: bearbeite Status:2
+2016-06-02 14:46:33 Debug: bearbeite Status:3
+2016-06-02 14:46:33 Debug: bearbeite Status:4
+2016-06-02 14:46:33 Debug: bearbeite Status:5
+2016-06-02 14:46:33 Debug: bearbeite Status:6
+2016-06-02 14:46:33 Debug: bearbeite Status:7
+2016-06-02 14:46:35 Debug: bearbeite Status:1
+2016-06-02 14:46:35 Debug: bearbeite Status:2
+2016-06-02 14:46:35 Debug: bearbeite Status:3
+2016-06-02 14:46:35 Debug: bearbeite Status:4
+2016-06-02 14:46:35 Debug: bearbeite Status:5
+2016-06-02 14:46:35 Debug: bearbeite Status:6
+2016-06-02 14:46:35 Debug: bearbeite Status:7
+2016-06-02 14:47:18 Debug: bearbeite Status:1
+2016-06-02 14:47:18 Debug: bearbeite Status:2
+2016-06-02 14:47:18 Debug: bearbeite Status:3
+2016-06-02 14:47:18 Debug: bearbeite Status:4
+2016-06-02 14:47:18 Debug: bearbeite Status:5
+2016-06-02 14:47:18 Debug: bearbeite Status:6
+2016-06-02 14:47:18 Debug: bearbeite Status:7
+2016-06-02 14:47:19 Notice: Notice (8): Undefined offset: 3 in [/home/david/webdev/C/src/Template/Invoices/view.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Invoices/view.ctp, line 14
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 14:47:42 Debug: bearbeite Status:1
+2016-06-02 14:47:42 Debug: bearbeite Status:2
+2016-06-02 14:47:42 Debug: bearbeite Status:3
+2016-06-02 14:47:42 Debug: bearbeite Status:4
+2016-06-02 14:47:42 Debug: bearbeite Status:5
+2016-06-02 14:47:42 Debug: bearbeite Status:6
+2016-06-02 14:47:42 Debug: bearbeite Status:7
+2016-06-02 14:48:08 Debug: bearbeite Status:1
+2016-06-02 14:48:08 Debug: bearbeite Status:2
+2016-06-02 14:48:08 Debug: bearbeite Status:3
+2016-06-02 14:48:08 Debug: bearbeite Status:4
+2016-06-02 14:48:08 Debug: bearbeite Status:5
+2016-06-02 14:48:08 Debug: bearbeite Status:6
+2016-06-02 14:48:08 Debug: bearbeite Status:7
+2016-06-02 14:48:11 Debug: bearbeite Status:1
+2016-06-02 14:48:11 Debug: bearbeite Status:2
+2016-06-02 14:48:11 Debug: bearbeite Status:3
+2016-06-02 14:48:11 Debug: bearbeite Status:4
+2016-06-02 14:48:11 Debug: bearbeite Status:5
+2016-06-02 14:48:11 Debug: bearbeite Status:6
+2016-06-02 14:48:11 Debug: bearbeite Status:7
+2016-06-02 14:48:46 Debug: bearbeite Status:1
+2016-06-02 14:48:46 Debug: bearbeite Status:2
+2016-06-02 14:48:46 Debug: bearbeite Status:3
+2016-06-02 14:48:46 Debug: bearbeite Status:4
+2016-06-02 14:48:46 Debug: bearbeite Status:5
+2016-06-02 14:48:46 Debug: bearbeite Status:6
+2016-06-02 14:48:46 Debug: bearbeite Status:7
+2016-06-02 14:49:20 Debug: bearbeite Status:1
+2016-06-02 14:49:20 Debug: bearbeite Status:2
+2016-06-02 14:49:20 Debug: bearbeite Status:3
+2016-06-02 14:49:20 Debug: bearbeite Status:4
+2016-06-02 14:49:20 Debug: bearbeite Status:5
+2016-06-02 14:49:20 Debug: bearbeite Status:6
+2016-06-02 14:49:20 Debug: bearbeite Status:7
+2016-06-02 14:49:30 Debug: bearbeite Status:1
+2016-06-02 14:49:30 Debug: bearbeite Status:2
+2016-06-02 14:49:30 Debug: bearbeite Status:3
+2016-06-02 14:49:30 Debug: bearbeite Status:4
+2016-06-02 14:49:30 Debug: bearbeite Status:5
+2016-06-02 14:49:30 Debug: bearbeite Status:6
+2016-06-02 14:49:30 Debug: bearbeite Status:7
+2016-06-02 14:49:34 Debug: bearbeite Status:1
+2016-06-02 14:49:34 Debug: bearbeite Status:2
+2016-06-02 14:49:34 Debug: bearbeite Status:3
+2016-06-02 14:49:34 Debug: bearbeite Status:4
+2016-06-02 14:49:34 Debug: bearbeite Status:5
+2016-06-02 14:49:34 Debug: bearbeite Status:6
+2016-06-02 14:49:34 Debug: bearbeite Status:7
+2016-06-02 14:50:51 Debug: bearbeite Status:1
+2016-06-02 14:50:51 Debug: bearbeite Status:2
+2016-06-02 14:50:51 Debug: bearbeite Status:3
+2016-06-02 14:50:51 Debug: bearbeite Status:4
+2016-06-02 14:50:51 Debug: bearbeite Status:5
+2016-06-02 14:50:51 Debug: bearbeite Status:6
+2016-06-02 14:50:51 Debug: bearbeite Status:7
+2016-06-02 14:50:53 Debug: bearbeite Status:1
+2016-06-02 14:50:53 Debug: bearbeite Status:2
+2016-06-02 14:50:53 Debug: bearbeite Status:3
+2016-06-02 14:50:53 Debug: bearbeite Status:4
+2016-06-02 14:50:53 Debug: bearbeite Status:5
+2016-06-02 14:50:53 Debug: bearbeite Status:6
+2016-06-02 14:50:53 Debug: bearbeite Status:7
+2016-06-02 14:51:01 Debug: bearbeite Status:1
+2016-06-02 14:51:01 Debug: bearbeite Status:2
+2016-06-02 14:51:01 Debug: bearbeite Status:3
+2016-06-02 14:51:01 Debug: bearbeite Status:4
+2016-06-02 14:51:01 Debug: bearbeite Status:5
+2016-06-02 14:51:01 Debug: bearbeite Status:6
+2016-06-02 14:51:01 Debug: bearbeite Status:7
+2016-06-02 15:07:21 Debug: bearbeite Status:1
+2016-06-02 15:07:21 Debug: bearbeite Status:2
+2016-06-02 15:07:21 Debug: bearbeite Status:3
+2016-06-02 15:07:21 Debug: bearbeite Status:4
+2016-06-02 15:07:21 Debug: bearbeite Status:5
+2016-06-02 15:07:21 Debug: bearbeite Status:6
+2016-06-02 15:07:21 Debug: bearbeite Status:7
+2016-06-02 15:44:49 Debug: bearbeite Status:1
+2016-06-02 15:44:49 Debug: bearbeite Status:2
+2016-06-02 15:44:49 Debug: bearbeite Status:3
+2016-06-02 15:44:49 Debug: bearbeite Status:4
+2016-06-02 15:44:49 Debug: bearbeite Status:5
+2016-06-02 15:44:49 Debug: bearbeite Status:6
+2016-06-02 15:44:49 Debug: bearbeite Status:7
+2016-06-02 15:48:12 Debug: bearbeite Status:1
+2016-06-02 15:48:12 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 1,
+    "due_date": "2016-05-16T23:59:59+0200",
+    "automatic": 1,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "3",
+        "strike": "4",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "3",
+        "name": "PRE"
+    }
+}
+2016-06-02 15:48:12 Debug: bearbeite Status:2
+2016-06-02 15:48:12 Debug: bearbeite Status:3
+2016-06-02 15:48:12 Debug: {
+    "id": 1,
+    "flight_id": 1,
+    "value": 270,
+    "status": 3,
+    "due_date": "2016-05-26T23:59:00+0200",
+    "automatic": 1,
+    "Flights": {
+        "id": "1",
+        "flight_number": "82376z4jhffes",
+        "customer_id": "1",
+        "plane_id": "1",
+        "start_date": "2016-05-17 18:20:28",
+        "end_date": "2016-05-17 19:20:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "1",
+        "first_name": "Sandra",
+        "last_name": "Lipinski",
+        "company": "Siemens",
+        "street": "Hohenzollerndamm 150",
+        "postal_code": "14144",
+        "country": "Berlin",
+        "customer_type_id": "1",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "1",
+        "name": "VIP"
+    }
+}
+2016-06-02 15:48:12 Debug: bearbeite Status:4
+2016-06-02 15:48:12 Debug: bearbeite Status:5
+2016-06-02 15:48:12 Debug: bearbeite Status:6
+2016-06-02 15:48:12 Debug: bearbeite Status:7
+2016-06-02 15:50:02 Debug: bearbeite Status:1
+2016-06-02 15:50:02 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 1,
+    "due_date": "2016-05-16T23:59:59+0200",
+    "automatic": 1,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "3",
+        "strike": "4",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "3",
+        "name": "PRE"
+    }
+}
+2016-06-02 15:50:02 Debug: bearbeite Status:2
+2016-06-02 15:50:02 Debug: bearbeite Status:3
+2016-06-02 15:50:02 Debug: {
+    "id": 1,
+    "flight_id": 1,
+    "value": 270,
+    "status": 3,
+    "due_date": "2016-05-26T23:59:00+0200",
+    "automatic": 1,
+    "Flights": {
+        "id": "1",
+        "flight_number": "82376z4jhffes",
+        "customer_id": "1",
+        "plane_id": "1",
+        "start_date": "2016-05-17 18:20:28",
+        "end_date": "2016-05-17 19:20:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "1",
+        "first_name": "Sandra",
+        "last_name": "Lipinski",
+        "company": "Siemens",
+        "street": "Hohenzollerndamm 150",
+        "postal_code": "14144",
+        "country": "Berlin",
+        "customer_type_id": "1",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "1",
+        "name": "VIP"
+    }
+}
+2016-06-02 15:50:02 Debug: bearbeite Status:4
+2016-06-02 15:50:02 Debug: bearbeite Status:5
+2016-06-02 15:50:02 Debug: bearbeite Status:6
+2016-06-02 15:50:02 Debug: bearbeite Status:7
+2016-06-02 15:53:38 Debug: bearbeite Status:1
+2016-06-02 15:53:38 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 1,
+    "due_date": "2016-05-16T23:59:59+0200",
+    "automatic": 1,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "3",
+        "strike": "4",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "3",
+        "name": "PRE"
+    }
+}
+2016-06-02 15:53:38 Debug: bearbeite Status:2
+2016-06-02 15:53:38 Debug: bearbeite Status:3
+2016-06-02 15:53:38 Debug: {
+    "id": 1,
+    "flight_id": 1,
+    "value": 270,
+    "status": 3,
+    "due_date": "2016-05-26T23:59:00+0200",
+    "automatic": 1,
+    "Flights": {
+        "id": "1",
+        "flight_number": "82376z4jhffes",
+        "customer_id": "1",
+        "plane_id": "1",
+        "start_date": "2016-05-17 18:20:28",
+        "end_date": "2016-05-17 19:20:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "1",
+        "first_name": "Sandra",
+        "last_name": "Lipinski",
+        "company": "Siemens",
+        "street": "Hohenzollerndamm 150",
+        "postal_code": "14144",
+        "country": "Berlin",
+        "customer_type_id": "2",
+        "strike": "0",
+        "email": "aw1341d123adwl@web.de"
+    },
+    "CustomerTypes": {
+        "id": "2",
+        "name": "CORP"
+    }
+}
+2016-06-02 15:53:38 Debug: new Date:2016-06-16 15:53:38
+2016-06-02 15:53:38 Debug: set to Status4
+2016-06-02 15:53:38 Debug: bearbeite Status:4
+2016-06-02 15:53:38 Debug: bearbeite Status:5
+2016-06-02 15:53:38 Debug: bearbeite Status:6
+2016-06-02 15:53:38 Debug: bearbeite Status:7
+2016-06-02 16:03:03 Notice: Notice (8): Trying to get property of non-object in [/home/david/webdev/C/src/Template/Invoices/edit.ctp, line 26]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Invoices/edit.ctp, line 26
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 16:16:19 Debug: new Date:2016-06-16 16:16:19
+2016-06-02 16:16:19 Debug: set to Status8
+2016-06-02 16:17:49 Debug: new Date:2016-06-16 16:17:49
+2016-06-02 16:17:49 Debug: set to Status8
+2016-06-02 16:22:45 Debug: new Date:2016-06-16 16:22:45
+2016-06-02 16:22:45 Debug: set to Status8
+2016-06-03 11:16:33 Notice: Strict (2048): Declaration of App\Controller\AppController::beforeFilter() should be compatible with Cake\Controller\Controller::beforeFilter(Cake\Event\Event $event) in [/home/david/webdev/C/src/Controller/AppController.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Controller/AppController.php, line 28
+Composer\Autoload\includeFile - ROOT/vendor/composer/ClassLoader.php, line 412
+Composer\Autoload\ClassLoader::loadClass() - ROOT/vendor/composer/ClassLoader.php, line 301
+spl_autoload_call - [internal], line ??
+include - APP/Controller/InvoicesController.php, line 12
+Composer\Autoload\includeFile - ROOT/vendor/composer/ClassLoader.php, line 412
+Composer\Autoload\ClassLoader::loadClass() - ROOT/vendor/composer/ClassLoader.php, line 301
+spl_autoload_call - [internal], line ??
+class_exists - [internal], line ??
+Cake\Core\App::_classExistsInBase() - CORE/src/Core/App.php, line 89
+Cake\Core\App::className() - CORE/src/Core/App.php, line 66
+Cake\Routing\Filter\ControllerFactoryFilter::_getController() - CORE/src/Routing/Filter/ControllerFactoryFilter.php, line 78
+Cake\Routing\Filter\ControllerFactoryFilter::beforeDispatch() - CORE/src/Routing/Filter/ControllerFactoryFilter.php, line 49
+Cake\Routing\DispatcherFilter::handle() - CORE/src/Routing/DispatcherFilter.php, line 145
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 385
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 351
+Cake\Routing\Dispatcher::dispatchEvent() - CORE/src/Event/EventManagerTrait.php, line 78
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 62
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-03 11:16:33 Notice: Notice (8): Undefined variable: _SESSION in [/home/david/webdev/C/vendor/cakephp/cakephp/src/Network/Session.php, line 440]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\Network\Session::write() - CORE/src/Network/Session.php, line 440
+Cake\Controller\Component\FlashComponent::set() - CORE/src/Controller/Component/FlashComponent.php, line 99
+Cake\Controller\Component\AuthComponent::flash() - CORE/src/Controller/Component/AuthComponent.php, line 825
+Cake\Controller\Component\AuthComponent::_unauthenticated() - CORE/src/Controller/Component/AuthComponent.php, line 353
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 272
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 476
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-03 11:16:35 Notice: Strict (2048): Declaration of App\Controller\AppController::beforeFilter() should be compatible with Cake\Controller\Controller::beforeFilter(Cake\Event\Event $event) in [/home/david/webdev/C/src/Controller/AppController.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Controller/AppController.php, line 28
+Composer\Autoload\includeFile - ROOT/vendor/composer/ClassLoader.php, line 412
+Composer\Autoload\ClassLoader::loadClass() - ROOT/vendor/composer/ClassLoader.php, line 301
+spl_autoload_call - [internal], line ??
+include - APP/Controller/InvoicesController.php, line 12
+Composer\Autoload\includeFile - ROOT/vendor/composer/ClassLoader.php, line 412
+Composer\Autoload\ClassLoader::loadClass() - ROOT/vendor/composer/ClassLoader.php, line 301
+spl_autoload_call - [internal], line ??
+class_exists - [internal], line ??
+Cake\Core\App::_classExistsInBase() - CORE/src/Core/App.php, line 89
+Cake\Core\App::className() - CORE/src/Core/App.php, line 66
+Cake\Routing\Filter\ControllerFactoryFilter::_getController() - CORE/src/Routing/Filter/ControllerFactoryFilter.php, line 78
+Cake\Routing\Filter\ControllerFactoryFilter::beforeDispatch() - CORE/src/Routing/Filter/ControllerFactoryFilter.php, line 49
+Cake\Routing\DispatcherFilter::handle() - CORE/src/Routing/DispatcherFilter.php, line 145
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 385
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 351
+Cake\Routing\Dispatcher::dispatchEvent() - CORE/src/Event/EventManagerTrait.php, line 78
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 62
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-03 11:16:35 Notice: Notice (8): Undefined variable: _SESSION in [/home/david/webdev/C/vendor/cakephp/cakephp/src/Network/Session.php, line 440]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\Network\Session::write() - CORE/src/Network/Session.php, line 440
+Cake\Controller\Component\FlashComponent::set() - CORE/src/Controller/Component/FlashComponent.php, line 99
+Cake\Controller\Component\AuthComponent::flash() - CORE/src/Controller/Component/AuthComponent.php, line 825
+Cake\Controller\Component\AuthComponent::_unauthenticated() - CORE/src/Controller/Component/AuthComponent.php, line 353
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 272
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 476
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-03 11:19:16 Notice: Strict (2048): Declaration of App\Controller\UsersController::beforeFilter() should be compatible with App\Controller\AppController::beforeFilter(Cake\Event\Event $event) in [/home/david/webdev/C/src/Controller/UsersController.php, line 12]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Controller/UsersController.php, line 12
+Composer\Autoload\includeFile - ROOT/vendor/composer/ClassLoader.php, line 412
+Composer\Autoload\ClassLoader::loadClass() - ROOT/vendor/composer/ClassLoader.php, line 301
+spl_autoload_call - [internal], line ??
+class_exists - [internal], line ??
+Cake\Core\App::_classExistsInBase() - CORE/src/Core/App.php, line 89
+Cake\Core\App::className() - CORE/src/Core/App.php, line 66
+Cake\Routing\Filter\ControllerFactoryFilter::_getController() - CORE/src/Routing/Filter/ControllerFactoryFilter.php, line 78
+Cake\Routing\Filter\ControllerFactoryFilter::beforeDispatch() - CORE/src/Routing/Filter/ControllerFactoryFilter.php, line 49
+Cake\Routing\DispatcherFilter::handle() - CORE/src/Routing/DispatcherFilter.php, line 145
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 385
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 351
+Cake\Routing\Dispatcher::dispatchEvent() - CORE/src/Event/EventManagerTrait.php, line 78
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 62
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-03 11:22:29 Notice: Notice (8): Undefined variable: authUser in [/home/david/webdev/C/src/Template/Element/header.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Element/header.ctp, line 5
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::_renderElement() - CORE/src/View/View.php, line 1142
+Cake\View\View::element() - CORE/src/View/View.php, line 374
+include - APP/Template/Layout/default.ctp, line 55
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 509
+Cake\View\View::render() - CORE/src/View/View.php, line 471
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-06 16:50:23 Notice: Notice (8): Use of undefined constant ACTIVE - assumed 'ACTIVE' in [/home/david/webdev/C/src/Controller/UsersController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Controller\UsersController::add() - APP/Controller/UsersController.php, line 61
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-06 16:50:52 Notice: Notice (8): Use of undefined constant ACTIVE - assumed 'ACTIVE' in [/home/david/webdev/C/src/Controller/UsersController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Controller\UsersController::add() - APP/Controller/UsersController.php, line 61
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-07 14:48:10 Notice: Notice (8): Undefined variable: userData in [/home/david/webdev/C/src/Template/Element/contextmenu_user.ctp, line 7]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Element/contextmenu_user.ctp, line 7
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::_renderElement() - CORE/src/View/View.php, line 1142
+Cake\View\View::element() - CORE/src/View/View.php, line 374
+include - APP/Template/Element/header.ctp, line 39
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::_renderElement() - CORE/src/View/View.php, line 1142
+Cake\View\View::element() - CORE/src/View/View.php, line 374
+include - APP/Template/Layout/default.ctp, line 61
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 509
+Cake\View\View::render() - CORE/src/View/View.php, line 471
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-07 14:48:10 Notice: Notice (8): Undefined variable: userData in [/home/david/webdev/C/src/Template/Element/contextmenu_user.ctp, line 7]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Element/contextmenu_user.ctp, line 7
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::_renderElement() - CORE/src/View/View.php, line 1142
+Cake\View\View::element() - CORE/src/View/View.php, line 374
+include - APP/Template/Element/header.ctp, line 39
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::_renderElement() - CORE/src/View/View.php, line 1142
+Cake\View\View::element() - CORE/src/View/View.php, line 374
+include - APP/Template/Layout/default.ctp, line 61
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 509
+Cake\View\View::render() - CORE/src/View/View.php, line 471
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-07 14:48:10 Notice: Notice (8): Undefined variable: userData in [/home/david/webdev/C/src/Template/Element/contextmenu_user.ctp, line 11]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Element/contextmenu_user.ctp, line 11
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::_renderElement() - CORE/src/View/View.php, line 1142
+Cake\View\View::element() - CORE/src/View/View.php, line 374
+include - APP/Template/Element/header.ctp, line 39
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::_renderElement() - CORE/src/View/View.php, line 1142
+Cake\View\View::element() - CORE/src/View/View.php, line 374
+include - APP/Template/Layout/default.ctp, line 61
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 509
+Cake\View\View::render() - CORE/src/View/View.php, line 471
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+

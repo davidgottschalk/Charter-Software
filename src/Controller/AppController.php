@@ -15,6 +15,7 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Cake\Event\Event;
 
 /**
  * Application Controller
@@ -34,10 +35,34 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function initialize()
-    {
+    public function initialize(){
+
         parent::initialize();
         $this->loadComponent('Flash');
         $this->loadComponent('Navigation');
+
+        $this->loadComponent('Auth', [
+            'loginRedirect' => [
+                'controller' => 'Planes',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Users',
+                'action' => 'login',
+            ]
+        ]);
+        $this->set('authUser', $this->Auth->user());
+
+
+    }
+
+    public function beforeFilter(Event $event){
+
+        if( $this->Auth->user('status') == USER_PASSWORD_CHANGE) {
+            if( $this->request->action != 'passwordChange' && $this->request->action != 'login' && $this->request->action != 'logout'){
+                return $this->redirect(['controller' => 'users', 'action' => 'passwordChange', $this->Auth->user('id') ]);
+            }
+        }
+
     }
 }

@@ -118,5 +118,6 @@ CREATE TABLE invoices (
     value FLOAT(20,2),
     status INT NOT NULL,
     due_date DATETIME,
+    automatic INT,
     FOREIGN KEY flight_invoice_key(flight_id) REFERENCES flights(id)
 );

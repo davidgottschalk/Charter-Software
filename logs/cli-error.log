@@ -55,3 +55,43 @@ Stack Trace:
 #14 {main}
 
 
+2016-06-02 15:36:42 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Invoice" could not be found.
+Exception Attributes: array (
+  'class' => 'Invoice',
+)
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(201): Cake\Console\ShellDispatcher->findShell('invoice')
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(175): Cake\Console\ShellDispatcher->_dispatch()
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch()
+#3 /home/david/webdev/C/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+
+2016-06-02 15:38:21 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Invoice" could not be found.
+Exception Attributes: array (
+  'class' => 'Invoice',
+)
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(201): Cake\Console\ShellDispatcher->findShell('invoice')
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(175): Cake\Console\ShellDispatcher->_dispatch()
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch()
+#3 /home/david/webdev/C/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+
+2016-06-02 15:41:56 Error: [BadMethodCallException] Unknown method "checkPayment"
+Stack Trace:
+#0 /home/david/webdev/C/src/Shell/InvoiceShell.php(29): Cake\ORM\Table->__call('checkPayment', Array)
+#1 /home/david/webdev/C/src/Shell/InvoiceShell.php(29): Cake\ORM\Table->checkPayment()
+#2 [internal function]: App\Shell\InvoiceShell->warn()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/Shell.php(375): call_user_func_array(Array, Array)
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(204): Cake\Console\Shell->runCommand(Array, true)
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(175): Cake\Console\ShellDispatcher->_dispatch()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch()
+#7 /home/david/webdev/C/bin/cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#8 {main}
+
+
+2016-06-02 15:56:03 Error: sende Email
+2016-06-02 15:56:40 Error: sende Email
+2016-06-02 15:58:15 Error: sende Email

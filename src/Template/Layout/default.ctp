@@ -30,6 +30,7 @@ $cakeDescription = 'ASAP';
         'bootstrap.min',
         'bootstrap-responsive',
         'bootstrap-datetimepicker.min',
+        'font-awesome/css/font-awesome.min',
     ]);
 
     echo $this->Html->script([
@@ -50,7 +51,13 @@ $cakeDescription = 'ASAP';
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
+
 <body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('div.message.error').delay(4000).fadeOut('slow');
+        });
+    </script>
     <header>
         <?=$this->element('header') ?>
     </header>
@@ -59,7 +66,7 @@ $cakeDescription = 'ASAP';
         <div id="content">
             <?= $this->Flash->render() ?>
 
-            <div class="row">
+            <div class="row content-area">
                 <?= $this->fetch('content') ?>
             </div>
         </div>

@@ -45,10 +45,10 @@ INSERT INTO customer_types (name) VALUES ('VIP'), ('CORP'), ('PRE');
 -----------------------------------------------------------------------------------------------------------------
 
 INSERT INTO users (first_name, last_name, street, country, postal_code, username, password, group_id, status, payment, created, exit_date) VALUES
-('David', 'Gottschalk', 'Rummelsburger Straße', 'Berlin', '10315', 'david', 'password123', '1', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Sebastian', 'Rosenkranz-Bunzel', 'Landsberger Alle', 'Berlin', '15315', 'sebastian', 'password123', '2', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Marcus', 'Misiak', 'Treptow Allee', 'Berlin', '18723', 'marcus', 'password123', '3', '0', '4000', '2016-05-11 09:00:00'),
-('Michael', 'Lindow', 'Linden Allee', 'Berlin', '18323', 'michael', 'password123', '4', '0', '4000', '2016-05-11 09:00:00' );
+('David', 'Gottschalk', 'Rummelsburger Straße', 'Berlin', '10315', 'david', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Sebastian', 'Rosenkranz-Bunzel', 'Landsberger Alle', 'Berlin', '15315', 'sebastian', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Marcus', 'Misiak', 'Treptow Allee', 'Berlin', '18723', 'marcus', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '0', '4000', '2016-05-11 09:00:00'),
+('Michael', 'Lindow', 'Linden Allee', 'Berlin', '18323', 'michael', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '0', '4000', '2016-05-11 09:00:00' );
 
 INSERT INTO customers (first_name, last_name, company, street, postal_code, country, customer_type_id, strike, email) VALUES
 ('Sandra', 'Lipinski', 'Siemens', 'Hohenzollerndamm 150', '14144', 'Berlin', '1', '0', 'sandra.lipinski@web.de'),
@@ -63,9 +63,9 @@ INSERT INTO users_flights (flight_id, user_id) VALUES
  ('1', '1'),
  ('2', '1');
 
-INSERT INTO invoices (flight_id, blubb, value, status) VALUES
-('1', '2016-05-26 23:59:59', '270,00', '1'),
-('2', '2016-05-16 23:59:59', '820,15', '1');
+INSERT INTO invoices (flight_id, due_date, value, status, automatic) VALUES
+('1', '2016-05-26 23:59:59', '270,00', '1','1'),
+('2', '2016-05-16 23:59:59', '820,15', '1','1');
 
 INSERT INTO airports_flights (flight_id, airport_id, flight_time, stay_duration, order_number) VALUES
 ('1', '340', '0', '0', '0'),

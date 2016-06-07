@@ -16,8 +16,8 @@ class GroupsController extends AppController
      *
      * @return void
      */
-    public function index()
-    {
+    public function index(){
+
         $this->set('groups', $this->paginate($this->Groups));
         $this->set('_serialize', ['groups']);
     }
@@ -29,8 +29,8 @@ class GroupsController extends AppController
      * @return void
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function view($id = null)
-    {
+    public function view($id = null){
+
         $group = $this->Groups->get($id, [
             'contain' => ['Users']
         ]);

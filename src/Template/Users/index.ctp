@@ -9,6 +9,7 @@
             <th><?= $this->Paginator->sort('username', __('Benutzername')) ?></th>
             <th><?= $this->Paginator->sort('first_name', __('Vorname')) ?></th>
             <th><?= $this->Paginator->sort('last_name', __('Nachname')) ?></th>
+            <th><?= $this->Paginator->sort('group', __('Position')) ?></th>
             <th><?= $this->Paginator->sort('created', __('hinzugefügt am')) ?></th>
             <th class="actions"><?= __('') ?></th>
         </tr>
@@ -19,6 +20,7 @@
             <td><?= h($user->username) ?></td>
             <td><?= h($user->first_name) ?></td>
             <td><?= h($user->last_name) ?></td>
+            <td><?= h($user->group['name']) ?></td>
             <td><?= h($user->created) ?></td>
             <td class="actions">
                 <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $user->id]) ?></span>

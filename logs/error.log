@@ -11205,3 +11205,869 @@ Stack Trace:
 #2 {main}
 
 
+2016-06-02 14:29:04 Error: Fatal Error (4): syntax error, unexpected ']' in [/home/david/webdev/C/src/Template/Invoices/edit.ctp, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-02 14:29:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ']'
+Request URL: /c/invoices/edit/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 16)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-02 14:31:33 Error: [Cake\Controller\Exception\MissingActionException] Action InvoicesController::deactivateWarnings() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'InvoicesController',
+  'action' => 'deactivateWarnings',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/invoices/deactivateWarnings/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-02 14:34:51 Error: [Cake\View\Exception\MissingTemplateException] Template file "Invoices/deactivate_automatic_warnings.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/deactivate_automatic_warnings.ctp',
+)
+Request URL: /c/invoices/deactivateAutomaticWarnings/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-02 15:04:01 Warning: Warning (2): Illegal string offset 'type' in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1494]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1494
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:04:01 Warning: Warning (2): Illegal string offset 'secure' in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2343]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2343
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1496
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:04:01 Warning: Warning (2): array_search() expects parameter 2 to be array, string given in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2347]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+array_search - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2347
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1496
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:04:01 Warning: Warning (2): Illegal string offset 'name' in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2356]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2356
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1496
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:04:01 Warning: Warning (2): Illegal string offset 'val' in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2364]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2364
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1496
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:04:01 Error: Fatal Error (1): Cannot unset string offsets in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2369]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-02 15:04:01 Error: [Cake\Error\FatalErrorException] Cannot unset string offsets
+Request URL: /c/invoices/edit/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot unset st...', '/home/david/web...', 2369)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-02 15:06:15 Error: Fatal Error (4): syntax error, unexpected '=' in [/home/david/webdev/C/src/Template/Invoices/edit.ctp, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-02 15:06:15 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '='
+Request URL: /c/invoices/edit/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-02 15:06:18 Warning: Warning (2): Illegal string offset 'type' in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1494]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1494
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:06:18 Warning: Warning (2): Illegal string offset 'secure' in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2343]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2343
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1496
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:06:18 Warning: Warning (2): array_search() expects parameter 2 to be array, string given in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2347]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+array_search - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2347
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1496
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:06:19 Warning: Warning (2): Illegal string offset 'name' in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2356]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2356
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1496
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:06:19 Warning: Warning (2): Illegal string offset 'val' in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2364]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2364
+Cake\View\Helper\FormHelper::__call() - CORE/src/View/Helper/FormHelper.php, line 1496
+Cake\View\Helper\FormHelper::currency() - APP/Template/Invoices/edit.ctp, line 9
+include - APP/Template/Invoices/edit.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-02 15:06:19 Error: Fatal Error (1): Cannot unset string offsets in [/home/david/webdev/C/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2369]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-02 15:06:19 Error: [Cake\Error\FatalErrorException] Cannot unset string offsets
+Request URL: /c/invoices/edit/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot unset st...', '/home/david/web...', 2369)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-02 15:52:52 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/david/webdev/C/src/Template/Customers/edit.ctp, line 8]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-02 15:52:52 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ';'
+Request URL: /c/customers/edit/4
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 8)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-02 15:53:38 Error: sende Email
+2016-06-02 16:12:47 Error: [Cake\View\Exception\MissingTemplateException] Template file "Invoices/inkasso.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/inkasso.ctp',
+)
+Request URL: /c/invoices/inkasso/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-02 16:13:10 Error: [Cake\View\Exception\MissingTemplateException] Template file "Invoices/inkasso.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/inkasso.ctp',
+)
+Request URL: /c/invoices/inkasso/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-02 16:13:38 Error: [Cake\View\Exception\MissingTemplateException] Template file "Invoices/inkasso.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/inkasso.ctp',
+)
+Request URL: /c/invoices/inkasso/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-02 16:14:07 Error: [Cake\View\Exception\MissingTemplateException] Template file "Invoices/inkasso.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/inkasso.ctp',
+)
+Request URL: /c/invoices/inkasso/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-02 16:14:19 Error: [Cake\View\Exception\MissingTemplateException] Template file "Invoices/deactivate_automatic_warnings.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/deactivate_automatic_warnings.ctp',
+)
+Request URL: /c/invoices/deactivateAutomaticWarnings/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-02 16:14:36 Error: [Cake\View\Exception\MissingTemplateException] Template file "Invoices/deactivate_automatic_warnings.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/deactivate_automatic_warnings.ctp',
+)
+Request URL: /c/invoices/deactivateAutomaticWarnings/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-02 16:14:50 Error: [Cake\View\Exception\MissingTemplateException] Template file "Invoices/inkasso.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/inkasso.ctp',
+)
+Request URL: /c/invoices/inkasso/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-02 16:15:30 Error: [Cake\View\Exception\MissingTemplateException] Template file "Invoices/deactivate_automatic_warnings.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/deactivate_automatic_warnings.ctp',
+)
+Request URL: /c/invoices/deactivateAutomaticWarnings/1
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InvoicesController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-02 16:16:19 Error: sende Email
+2016-06-02 16:17:49 Error: sende Email
+2016-06-02 16:22:45 Error: sende Email
+2016-06-03 11:16:33 Warning: Warning (4096): Argument 1 passed to App\Controller\AppController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in /home/david/webdev/C/vendor/cakephp/cakephp/src/Event/EventManager.php on line 381 and defined in [/home/david/webdev/C/src/Controller/AppController.php, line 55]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Controller\AppController::beforeFilter() - APP/Controller/AppController.php, line 55
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 472
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-03 11:16:35 Warning: Warning (4096): Argument 1 passed to App\Controller\AppController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in /home/david/webdev/C/vendor/cakephp/cakephp/src/Event/EventManager.php on line 381 and defined in [/home/david/webdev/C/src/Controller/AppController.php, line 55]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Controller\AppController::beforeFilter() - APP/Controller/AppController.php, line 55
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 472
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-03 11:17:16 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::login() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/users/login
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-03 11:19:16 Warning: Warning (4096): Argument 1 passed to App\Controller\UsersController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in /home/david/webdev/C/vendor/cakephp/cakephp/src/Event/EventManager.php on line 381 and defined in [/home/david/webdev/C/src/Controller/UsersController.php, line 15]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Controller\UsersController::beforeFilter() - APP/Controller/UsersController.php, line 15
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 472
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-03 11:21:05 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/david/webdev/C/src/Template/Element/header.ctp, line 34]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-03 11:21:05 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /c/users/login
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 34)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-03 11:21:14 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /c/users/login
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php(87): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(732): Cake\View\HelperRegistry->__isset('Auth')
+#3 /home/david/webdev/C/src/Template/Element/header.ctp(5): Cake\View\View->__get('Auth')
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(815): include('/home/david/web...')
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(775): Cake\View\View->_evaluate('/home/david/web...', Array)
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(1142): Cake\View\View->_render('/home/david/web...', Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(374): Cake\View\View->_renderElement('/home/david/web...', Array, Array)
+#8 /home/david/webdev/C/src/Template/Layout/default.ctp(55): Cake\View\View->element('header')
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(815): include('/home/david/web...')
+#10 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(775): Cake\View\View->_evaluate('/home/david/web...', Array)
+#11 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(509): Cake\View\View->_render('/home/david/web...')
+#12 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(471): Cake\View\View->renderLayout('', 'default')
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-03 11:24:33 Warning: Warning (4096): Argument 1 passed to App\Controller\AppController::beforeFilter() must be an instance of Cake\Event\Event, none given, called in /home/david/webdev/C/src/Controller/UsersController.php on line 17 and defined in [/home/david/webdev/C/src/Controller/AppController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Controller\AppController::beforeFilter() - APP/Controller/AppController.php, line 57
+App\Controller\UsersController::beforeFilter() - APP/Controller/UsersController.php, line 17
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 381
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 351
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventManagerTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 472
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-03 11:28:37 Error: Fatal Error (1): Call to a member function user() on a non-object in [/home/david/webdev/C/src/Controller/AppController.php, line 54]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-03 11:28:37 Error: [Cake\Error\FatalErrorException] Call to a member function user() on a non-object
+Request URL: /c/users/login
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/home/david/web...', 54)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-06 16:50:23 Error: Fatal Error (1): Class 'App\Model\Entity\DefaultPasswordHasher' not found in [/home/david/webdev/C/src/Model/Entity/User.php, line 36]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-06 16:50:23 Error: [Cake\Error\FatalErrorException] Class 'App\Model\Entity\DefaultPasswordHasher' not found
+Request URL: /c/users/add
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Mode...', '/home/david/web...', 36)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-06 17:43:12 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::password_change() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'password_change',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/users/password_change/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-07 09:39:44 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::password_change() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'password_change',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/users/password_change/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-07 09:49:08 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::password_change() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'password_change',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/users/password_change/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-07 09:49:37 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::password_change() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'password_change',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/users/password_change/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-07 09:49:51 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::password_change() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'password_change',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/users/password_change/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-07 10:48:22 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::password_change() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'password_change',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/users/password_change/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-07 11:29:05 Error: Fatal Error (4): syntax error, unexpected end of file in [/home/david/webdev/C/src/Template/Element/header.ctp, line 43]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-07 11:29:05 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file
+Request URL: /c/users/passwordChange/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 43)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-07 14:09:10 Error: [BadMethodCallException] Unknown method "validationPasswordChange"
+Request URL: /c/users/passwordChange/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php(98): Cake\ORM\Table->__call('validationPassw...', Array)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php(98): App\Model\Table\UsersTable->validationPasswordChange(Object(Cake\Validation\Validator))
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Marshaller.php(173): Cake\ORM\Table->validator('PasswordChange')
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Marshaller.php(428): Cake\ORM\Marshaller->_validate(Array, Array, false)
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1978): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\User), Array, Array)
+#5 /home/david/webdev/C/src/Controller/UsersController.php(152): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\User), Array, Array)
+#6 [internal function]: App\Controller\UsersController->passwordChange('8')
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#10 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 {main}
+
+
+2016-06-07 14:10:58 Error: [BadMethodCallException] Unknown method "validationPasswordChange"
+Request URL: /c/users/passwordChange/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php(98): Cake\ORM\Table->__call('validationPassw...', Array)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Validation/ValidatorAwareTrait.php(98): App\Model\Table\UsersTable->validationPasswordChange(Object(Cake\Validation\Validator))
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Marshaller.php(173): Cake\ORM\Table->validator('PasswordChange')
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Marshaller.php(428): Cake\ORM\Marshaller->_validate(Array, Array, false)
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1978): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\User), Array, Array)
+#5 /home/david/webdev/C/src/Controller/UsersController.php(152): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\User), Array, Array)
+#6 [internal function]: App\Controller\UsersController->passwordChange('8')
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#10 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 {main}
+
+
+2016-06-07 14:11:09 Error: [BadMethodCallException] Unknown method "checkAuthStandard"
+Request URL: /c/users/passwordChange/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Validation/ValidationRule.php(140): Cake\ORM\Table->__call('checkAuthStanda...', Array)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Validation/ValidationRule.php(140): App\Model\Table\UsersTable->checkAuthStandard(8, Array)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Validation/Validator.php(656): Cake\Validation\ValidationRule->process(8, Array, Array)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Validation/Validator.php(136): Cake\Validation\Validator->_processRules('id', Object(Cake\Validation\ValidationSet), Array, false)
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Marshaller.php(181): Cake\Validation\Validator->errors(Array, false)
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Marshaller.php(428): Cake\ORM\Marshaller->_validate(Array, Array, false)
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1978): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\User), Array, Array)
+#7 /home/david/webdev/C/src/Controller/UsersController.php(152): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\User), Array, Array)
+#8 [internal function]: App\Controller\UsersController->passwordChange('8')
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#10 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#12 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-06-07 14:13:37 Error: Fatal Error (4): syntax error, unexpected '}', expecting ',' or ';' in [/home/david/webdev/C/src/Template/Element/header.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-07 14:13:37 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /c/
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-07 14:24:18 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [/home/david/webdev/C/src/Controller/UsersController.php, line 157]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-07 14:24:18 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /c/users/logout
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 157)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-07 14:33:00 Error: Fatal Error (1): Class 'App\Model\Table\DefaultPasswordHasher' not found in [/home/david/webdev/C/src/Model/Table/UsersTable.php, line 121]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-07 14:33:00 Error: [Cake\Error\FatalErrorException] Class 'App\Model\Table\DefaultPasswordHasher' not found
+Request URL: /c/users/passwordChange/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Mode...', '/home/david/web...', 121)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-07 14:33:45 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::changePassword() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'changePassword',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/users/changePassword/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-07 14:35:11 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::changePassword() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'changePassword',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /c/users/changePassword/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-06-07 14:41:36 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/david/webdev/C/src/Controller/UsersController.php, line 132]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-07 14:41:36 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')'
+Request URL: /c/users/passwordChange/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 132)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-07 15:00:10 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/david/webdev/C/src/Controller/UsersController.php, line 128]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-07 15:00:10 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')'
+Request URL: /c/Users/passwordChange/8
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 128)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-07 15:00:29 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/home/david/webdev/C/src/Controller/UsersController.php, line 129]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-07 15:00:29 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /c/users/login
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 129)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-07 15:01:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Letters could not be found.
+Exception Attributes: array (
+  'class' => 'Letters',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /c/letters
+Stack Trace:
+#0 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-06-07 15:01:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Letters could not be found.
+Exception Attributes: array (
+  'class' => 'Letters',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /c/letters
+Stack Trace:
+#0 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-06-07 15:01:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Letters could not be found.
+Exception Attributes: array (
+  'class' => 'Letters',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /c/letters
+Stack Trace:
+#0 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

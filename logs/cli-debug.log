@@ -1,0 +1,147 @@
+2016-06-02 15:42:48 Debug: bearbeite Status:1
+2016-06-02 15:42:48 Debug: bearbeite Status:2
+2016-06-02 15:42:48 Debug: bearbeite Status:3
+2016-06-02 15:42:48 Debug: bearbeite Status:4
+2016-06-02 15:42:48 Debug: bearbeite Status:5
+2016-06-02 15:42:48 Debug: bearbeite Status:6
+2016-06-02 15:42:48 Debug: bearbeite Status:7
+2016-06-02 15:43:54 Debug: bearbeite Status:1
+2016-06-02 15:43:54 Debug: bearbeite Status:2
+2016-06-02 15:43:54 Debug: bearbeite Status:3
+2016-06-02 15:43:54 Debug: bearbeite Status:4
+2016-06-02 15:43:54 Debug: bearbeite Status:5
+2016-06-02 15:43:54 Debug: bearbeite Status:6
+2016-06-02 15:43:54 Debug: bearbeite Status:7
+2016-06-02 15:44:13 Debug: bearbeite Status:1
+2016-06-02 15:44:13 Debug: bearbeite Status:2
+2016-06-02 15:44:13 Debug: bearbeite Status:3
+2016-06-02 15:44:13 Debug: bearbeite Status:4
+2016-06-02 15:44:13 Debug: bearbeite Status:5
+2016-06-02 15:44:13 Debug: bearbeite Status:6
+2016-06-02 15:44:13 Debug: bearbeite Status:7
+2016-06-02 15:45:15 Debug: bearbeite Status:1
+2016-06-02 15:45:15 Debug: bearbeite Status:2
+2016-06-02 15:45:15 Debug: bearbeite Status:3
+2016-06-02 15:45:15 Debug: bearbeite Status:4
+2016-06-02 15:45:15 Debug: bearbeite Status:5
+2016-06-02 15:45:15 Debug: bearbeite Status:6
+2016-06-02 15:45:15 Debug: bearbeite Status:7
+2016-06-02 15:46:37 Debug: bearbeite Status:1
+2016-06-02 15:46:37 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 1,
+    "due_date": "2016-05-16T23:59:59+0200",
+    "automatic": 1,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "3",
+        "strike": "4",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "3",
+        "name": "PRE"
+    }
+}
+2016-06-02 15:46:37 Debug: bearbeite Status:2
+2016-06-02 15:46:37 Debug: bearbeite Status:3
+2016-06-02 15:46:37 Debug: {
+    "id": 1,
+    "flight_id": 1,
+    "value": 270,
+    "status": 3,
+    "due_date": "2016-05-26T23:59:00+0200",
+    "automatic": 1,
+    "Flights": {
+        "id": "1",
+        "flight_number": "82376z4jhffes",
+        "customer_id": "1",
+        "plane_id": "1",
+        "start_date": "2016-05-17 18:20:28",
+        "end_date": "2016-05-17 19:20:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "1",
+        "first_name": "Sandra",
+        "last_name": "Lipinski",
+        "company": "Siemens",
+        "street": "Hohenzollerndamm 150",
+        "postal_code": "14144",
+        "country": "Berlin",
+        "customer_type_id": "1",
+        "strike": "0",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "1",
+        "name": "VIP"
+    }
+}
+2016-06-02 15:46:37 Debug: bearbeite Status:4
+2016-06-02 15:46:37 Debug: bearbeite Status:5
+2016-06-02 15:46:37 Debug: bearbeite Status:6
+2016-06-02 15:46:37 Debug: bearbeite Status:7
+2016-06-02 15:53:47 Debug: bearbeite Status:1
+2016-06-02 15:53:47 Debug: {
+    "id": 2,
+    "flight_id": 2,
+    "value": 820,
+    "status": 1,
+    "due_date": "2016-05-16T23:59:59+0200",
+    "automatic": 1,
+    "Flights": {
+        "id": "2",
+        "flight_number": "hndap978dghq2",
+        "customer_id": "2",
+        "plane_id": "2",
+        "start_date": "2016-05-18 04:10:29",
+        "end_date": "2016-05-18 08:25:00",
+        "status": "1"
+    },
+    "Customers": {
+        "id": "2",
+        "first_name": "Alexander",
+        "last_name": "Laube",
+        "company": "",
+        "street": "Isenstra\u00dfe 11",
+        "postal_code": "11234",
+        "country": "Berlin",
+        "customer_type_id": "3",
+        "strike": "4",
+        "email": ""
+    },
+    "CustomerTypes": {
+        "id": "3",
+        "name": "PRE"
+    }
+}
+2016-06-02 15:53:47 Debug: bearbeite Status:2
+2016-06-02 15:53:47 Debug: bearbeite Status:3
+2016-06-02 15:53:47 Debug: bearbeite Status:4
+2016-06-02 15:53:47 Debug: bearbeite Status:5
+2016-06-02 15:53:47 Debug: bearbeite Status:6
+2016-06-02 15:53:47 Debug: bearbeite Status:7
+2016-06-02 15:56:03 Debug: new Date:2016-06-16 15:56:03
+2016-06-02 15:56:03 Debug: set to Status5
+2016-06-02 15:56:40 Debug: new Date:2016-06-16 15:56:40
+2016-06-02 15:56:40 Debug: set to Status6
+2016-06-02 15:58:15 Debug: new Date:2016-06-16 15:58:15
+2016-06-02 15:58:15 Debug: set to Status7

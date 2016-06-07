@@ -2,31 +2,23 @@
     <?= $this->Form->create($customer); ?>
     <fieldset>
 
-        <legend><h3>Kunde <?= h($customer->id) ?> bearbeiten</h3></legend>
+        <legend class="asapblau"><h3>Kunde <?= h($customer->id) ?> bearbeiten</h3></legend>
 
         <div class="large-3 columns strings edit-table">
-            <h6 class="subheader"><?= __('Vorname') ?></h6>
-            <p><? echo $this->Form->input('first_name'); ?></p>
-            <h6 class="subheader"><?= __('Nachname') ?></h6>
-            <p><? echo $this->Form->input('last_name'); ?></p>
-            <h6 class="subheader"><?= __('Firma') ?></h6>
-            <p><? echo $this->Form->input('company'); ?></p>
-            <h6 class="subheader"><?= __('E-Mail') ?></h6>
-            <p><? echo $this->Form->input('email'); ?></p>
+            <p><? echo $this->Form->input('first_name', array('label'=>'Vorname')); ?></p>
+            <p><? echo $this->Form->input('last_name', array('label'=>'Nachname')); ?></p>
+            <p><? echo $this->Form->input('company', array('label'=>'Firma')); ?></p>
+            <p><? echo $this->Form->input('email', array('label'=>'E-Mail')); ?></p>
         </div>
 
         <div class="large-3 columns strings edit-table">
-            <h6 class="subheader"><?= __('Straße') ?></h6>
-            <p><? echo $this->Form->input('street'); ?></p>
-            <h6 class="subheader"><?= __('PLZ') ?></h6>
-            <p><? echo $this->Form->input('postal_code'); ?></p>
-            <h6 class="subheader"><?= __('Ort') ?></h6>
-            <p><? echo $this->Form->input('country'); ?></p>
+            <p><? echo $this->Form->input('street', array('label'=>'Straße')); ?></p>
+            <p><? echo $this->Form->input('postal_code', array('label'=>'Postleitzahl')); ?></p>
+            <p><? echo $this->Form->input('country', array('label'=>'Land')); ?></p>
         </div>
 
         <div class="large-3 columns strings edit-table">
-            <h6 class="subheader"><?= __('Customer Type') ?></h6>
-            <p><? echo $this->Form->input('customer_type_id', ['options' => $customerTypes]); ?></p>
+            <p><? echo $this->Form->input('customer_type_id', ['label' => 'Kundengruppe','options' => $customerTypes]); ?></p>
         </div>
 
         <div class="large-3 columns strings edit-table">

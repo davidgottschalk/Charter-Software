@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Users Controller
@@ -10,6 +11,12 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
+
+
+    public function beforeFilter(Event $event){
+        parent::beforeFilter($event);
+        // $this->Auth->allow(['login', 'logout']);
+    }
 
     /**
      * Index method
@@ -51,9 +58,8 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
-            $user->status = ACTIVE;
+            $user->status = USER_PASSWORD_CHANGE;
             $user->password = "placeholder";
-$this->log($user,'debug');
 
             if ($this->Users->save($user)) {
                 $this->Flash->success('The user has been saved.');
@@ -113,4 +119,59 @@ $this->log($user,'debug');
         }
         return $this->redirect(['action' => 'index']);
     }
+
+
+    public function login(){
+
+        if ($this->request->is('post')) {
+
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error("Falscher Benutzername oder Passwort!");
+        }
+    }
+
+    public function logout(){
+
+        return $this->redirect($this->Auth->logout());
+    }
+
+
+    public function passwordChange($id){
+
+        $user = $this->Users->get( $id );
+
+        if($this->request->is('get')){
+
+            if ( !$user ) {
+                $this->Flash->error('Passwort nicht änderbar.');
+                return $this->redirect(['action' => 'login']);
+            }
+        }
+
+        $userStatus = $user->status;
+
+        if($this->request->is('put')){
+
+            $this->Users->patchEntity($user, $this->request->data, ['validate' => 'PasswordChange']);
+            $user->status = USER_ACTIVE;
+
+            if( $this->Users->save($user) ){
+                $this->Flash->success('Passwort geändert');
+                if($userStatus == USER_ACTIVE){
+                    $this->redirect(['controller' => 'Planes']);
+                }else{
+                    $this->redirect(['controller' => 'Users', 'action' => 'logout']);
+                }
+            }else {
+                $this->Flash->error('Bitte Prüfen Sie Ihre Eingaben!');
+                return $this->redirect(['controller' => 'Users', 'action' => 'passwordChange', $id]);
+            }
+        }
+        $this->set('id',$id);
+    }
+
 }

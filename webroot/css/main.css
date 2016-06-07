@@ -7,7 +7,7 @@ table tbody tr:hover {
     color:rgba(6, 0, 98, 1);
 }
 
-#content{
+.content-area{
     margin-top:40px;
 }
 

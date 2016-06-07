@@ -11,11 +11,23 @@ use App\Controller\AppController;
 class InvoicesController extends AppController
 {
 
+
+
+    public function initialize() {
+        parent::initialize();
+
+        $this->set('invoiceStatus',['','bezahlt','warte auf Zahlung','1. Erinnerung', '2. Erinnerung', '1. Mahnung', '2. Mahnung', 'Inkassoverfahren möglich', 'Inkasso Büro beauftragt']);
+        $this->set('automaticStatus',['deaktiviert', 'aktiviert']);
+
+    }
+
+
     /**
      * Index method
      *
      * @return void
      */
+
     public function index()
     {
         $this->paginate = [
@@ -45,28 +57,6 @@ class InvoicesController extends AppController
     }
 
     /**
-     * Add method
-     *
-     * @return void Redirects on successful add, renders view otherwise.
-     */
-    // public function add()
-    // {
-    //     $invoice = $this->Invoices->newEntity();
-    //     if ($this->request->is('post')) {
-    //         $invoice = $this->Invoices->patchEntity($invoice, $this->request->data);
-    //         if ($this->Invoices->save($invoice)) {
-    //             $this->Flash->success('The invoice has been saved.');
-    //             return $this->redirect(['action' => 'index']);
-    //         } else {
-    //             $this->Flash->error('The invoice could not be saved. Please, try again.');
-    //         }
-    //     }
-    //     $flights = $this->Invoices->Flights->find('list', ['limit' => 200]);
-    //     $this->set(compact('invoice', 'flights'));
-    //     $this->set('_serialize', ['invoice']);
-    // }
-
-    /**
      * Edit method
      *
      * @param string|null $id Invoice id.
@@ -76,15 +66,15 @@ class InvoicesController extends AppController
     public function edit($id = null)
     {
         $invoice = $this->Invoices->get($id, [
-            'contain' => []
+            'contain' => ['Flights']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $invoice = $this->Invoices->patchEntity($invoice, $this->request->data);
             if ($this->Invoices->save($invoice)) {
-                $this->Flash->success('The invoice has been saved.');
+                $this->Flash->success('Die Rechnung wurde erfolgreich gespeichert.');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The invoice could not be saved. Please, try again.');
+                $this->Flash->error('Beim speichern der Rechnung ist ein Fehler aufgetreten.');
             }
         }
         $flights = $this->Invoices->Flights->find('list', ['limit' => 200]);
@@ -92,22 +82,32 @@ class InvoicesController extends AppController
         $this->set('_serialize', ['invoice']);
     }
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id Invoice id.
-     * @return void Redirects to index.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $invoice = $this->Invoices->get($id);
-        if ($this->Invoices->delete($invoice)) {
-            $this->Flash->success('The invoice has been deleted.');
-        } else {
-            $this->Flash->error('The invoice could not be deleted. Please, try again.');
+
+    public function deactivateAutomaticWarnings($id){
+
+        if ($this->request->is(['get'])) {
+            $invoice = $this->Invoices->get($id, [
+                'contain' => []
+            ]);
+            $invoice->automatic = 0;
+
+            if ($this->Invoices->save($invoice)) {
+                $this->Flash->success('Mahnwesen wurde für Rechnungsnummer:'.$id.' erfolgreich abgeschalten.');
+                return $this->redirect(['action' => 'edit', $id]);
+            } else {
+                $this->Flash->error('Ein Fehler bei der Deaktivierung des Mahnwesens ist aufgetreten.');
+                return $this->redirect(['action' => 'edit', $id]);
+            }
         }
-        return $this->redirect(['action' => 'index']);
+    }
+
+    public function inkasso($id){
+
+        if ($this->request->is(['get'])) {
+
+            $this->Invoices->setInkasso($id);
+            $this->Flash->success('Inkassoverfahren für Rechnungsnummer:'.$id.' erfolgreich eröffnet.');
+            return $this->redirect(['action' => 'edit', $id]);
+        }
     }
 }

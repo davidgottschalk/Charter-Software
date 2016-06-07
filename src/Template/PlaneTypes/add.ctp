@@ -30,8 +30,8 @@
             echo $this->Form->input('annual_fixed_cost', array('label'=>'jährliche Fixkosten'));
         ?></div></div></div>
        </fieldset>
-    <div class="planeTypes form large-12 medium-9 columns">
+
     <?= $this->Form->button(__('Speichern')) ?>
-    <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
+    <span class="secondary-button" ><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
     <?= $this->Form->end() ?>
 </div>
