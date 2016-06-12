@@ -121,3 +121,10 @@ CREATE TABLE invoices (
     automatic INT,
     FOREIGN KEY flight_invoice_key(flight_id) REFERENCES flights(id)
 );
+
+CREATE TABLE reject_reasons (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    reason_id INT NOT NULL,
+    created DATETIME,
+);
+
