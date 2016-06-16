@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `airports`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `airports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
+  `airport_name` varchar(100) NOT NULL,
   `city` varchar(100) NOT NULL,
   `country` varchar(100) NOT NULL,
   `iata_faa` varchar(100) DEFAULT NULL,

@@ -37,6 +37,7 @@ $cakeDescription = 'ASAP';
         'libs/jquery-1.11.0.min',
         'libs/jquery-ui-1.11.0.min',
         'libs/bootstrap.min',
+        'libs/moment-with-langs.min',
         'libs/bootstrap-datetimepicker.min',
     ]);
     ?>

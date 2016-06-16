@@ -2,14 +2,22 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\Log\LogTrait;
 /**
  * Flights Controller
  *
  * @property \App\Model\Table\FlightsTable $Flights
  */
-class FlightsController extends AppController
-{
+class FlightsController extends AppController{
+    use LogTrait;
+
+    public function initialize() {
+        parent::initialize();
+
+        $this->loadModel('Airports');
+        $this->loadModel('Planes');
+
+    }
 
     /**
      * Index method
@@ -24,6 +32,42 @@ class FlightsController extends AppController
         $this->set('flights', $this->paginate($this->Flights));
         $this->set('_serialize', ['flights']);
     }
+
+
+    public function order(){
+
+        $this->set('countries', $this->Airports->getAllCountries());
+        $this->set('planes', $this->Planes->getAllPlanes());
+
+        if ($this->request->is('post')) {
+
+
+            // $this->log($this->request->data(),'debug');
+
+$data = [
+    'startDate' => '16.06.2016 07:30:00',
+    'pax' => 7,
+    'country' => ['Albania','Guinea','Germany','Antigua and Barbuda'],
+    'airport' => ['Tirana Rinas','Fria','Strausberg','Codrington Airport'],
+    'stayDuration' => [0.5, 30],
+    'plane' => 0,
+    'catering' => 0,
+    'attendants' => 0,
+];
+            $this->Flights->setFlight($data);
+            $this->Flights->checkAvailability($data);
+
+            $this->Flash->success('The flight has been saved.');
+            // return $this->redirect(['action' => 'index']);
+        }
+    }
+
+    public function getAirportsByCountry(){
+        $this->autoRender = false;
+        $airportNames = $this->Airports->getAirportsByCountry($this->request->data('country'));
+        echo json_encode( $airportNames );
+    }
+
 
     /**
      * View method

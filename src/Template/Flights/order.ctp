@@ -20,7 +20,7 @@
                     <legend><h3>Zeitraum</h3></legend>
                     <p>Wann soll Ihr Flugzeug starten?</p>
                     <div class="large-3 columns">
-                        <? echo $this->Form->input('start_time',['class' => 'datetimepicker', 'label' => 'Von']); ?>
+                        <? echo $this->Form->input('startDate',['class' => 'datetimepicker', 'label' => 'Von']); ?>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -33,16 +33,17 @@
                 <fieldset>
                     <legend><h3>Stationen</h3></legend>
                     <p>Welche Stationen möchten Sie anfliegen. <br> Bitte beachten Sie das die Verfügbarkeitsprüfung erst am Ende der Erfassung erfolgt. </p>
+                    <p>Insofern Sie Zwischenstationen einplane, jedoch keine Aufenthaltsdauer angeben,<br> wird von einem Minimum von 45 Minuten ausgegangen um das Flugzeug neu zu betanken und zu beladen. </p>
                     <div class="row firstStation">
                         <hr>
                         <div class="large-2 columns">
                             <p>Start</p>
                         </div>
                         <div class="large-3 columns">
-                            <? echo $this->Form->select('country', $countries ,['default' => 0, 'class' => 'country']); ?>
+                            <? echo $this->Form->select('country[]', $countries ,['default' => 0, 'class' => 'country']); ?>
                         </div>
                         <div class="airport large-3 columns hiddenDiv">
-                            <? echo $this->Form->select('airport', [] ,['default' => 0]); ?>
+                            <? echo $this->Form->select('airport[]', [] ,['default' => 0]); ?>
                         </div>
                         <div class="large-3 columns">
                         </div>
@@ -59,10 +60,10 @@
                             <p>Ziel</p>
                         </div>
                         <div class="large-3 columns">
-                            <? echo $this->Form->select('country', $countries ,['default' => 0, 'class' => 'country']); ?>
+                            <? echo $this->Form->select('country[]', $countries ,['default' => 0, 'class' => 'country']); ?>
                         </div>
                         <div class="airport large-3 columns hiddenDiv">
-                            <? echo $this->Form->select('airport', [] ,['default' => 0]); ?>
+                            <? echo $this->Form->select('airport[]', [] ,['default' => 0]); ?>
                         </div>
                         <div class="large-3 columns">
                         </div>
@@ -94,10 +95,10 @@
                 <fieldset>
                     <legend><h3>Zeitraum</h3></legend>
                     <div class="large-3 columns">
-                        <? echo $this->Form->input('first_name',['class' => 'datetimepicker', 'label' => 'Von']); ?>
+                        <? echo $this->Form->input('startDate',['class' => 'datetimepicker', 'label' => 'Von']); ?>
                     </div>
                     <div class="large-3 columns">
-                        <? echo $this->Form->input('first_name',['class' => 'datetimepicker', 'label' => 'Bis']); ?>
+                        <? echo $this->Form->input('endDate',['class' => 'datetimepicker', 'label' => 'Bis']); ?>
                     </div>
                     <div class="large-3 columns">
 
@@ -132,13 +133,13 @@
                 <p>Zwischenstation</p>
             </div>
             <div class="large-3 columns">
-                <? echo $this->Form->select("country", $countries ,["default" => 0, "class" => "country"]); ?>
+                <? echo $this->Form->select("country[]", $countries ,["default" => 0, "class" => "country"]); ?>
             </div>
             <div class="airport large-3 columns hiddenDiv">
-                <? echo $this->Form->select("airport", [] ,["default" => 0]); ?>
+                <? echo $this->Form->select("airport[]", [] ,["default" => 0]); ?>
             </div>
             <div class="large-3 columns">
-                <? echo $this->Form->input('stay_duration',['label' => '','placeholder' => 'Aufenthaltsdauer']); ?>
+                <? echo $this->Form->input('stayDuration[]',['label' => '','placeholder' => 'Aufenthaltsdauer', 'default' => 0]); ?>
             </div>
             <div class="large-1 columns pull-left" style="padding-top:5px">
                 Stunde(n)
@@ -157,6 +158,11 @@
 
 
     $('.secondary-button-but-no-button').on('click', function() {
+
+        var i=0;
+
+        console.log(i);
+        i++;
 
         newStation = $(document).find('.newStation').clone();
 
@@ -207,9 +213,9 @@
                     stationRow.find('div.airport select').empty();
                     $.each(JSON.parse(data), function(key, airport) {
 
-                        console.log(key);
-                        console.log(airport.nameD);
-                        stationRow.find('div.airport select').append('<option value=' + key + '>' + airport + '</option>');
+                        // console.log(key);
+                        console.log(airport);
+                        stationRow.find('div.airport select').append('<option value="'+key+'">'+airport+'</option>');
                     });
 
                 },

@@ -145,3 +145,16 @@
 2016-06-02 15:56:40 Debug: set to Status6
 2016-06-02 15:58:15 Debug: new Date:2016-06-16 15:58:15
 2016-06-02 15:58:15 Debug: set to Status7
+2016-06-16 08:52:21 Notice: Notice (8): Undefined variable: message in [/home/david/webdev/C/src/Shell/customerSatisfactionShell.php, line 38]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\customerSatisfactionShell::writeDatabaseExceptionMail() - APP/Shell/customerSatisfactionShell.php, line 38
+App\Shell\customerSatisfactionShell::send() - APP/Shell/customerSatisfactionShell.php, line 30
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 375
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 204
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 175
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 126
+[main] - ROOT/bin/cake.php, line 33
+
+
+

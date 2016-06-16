@@ -2,6 +2,13 @@ table tbody tr:hover {
     background-color:#e7e7e7;
 }
 
+.hiddenDiv{
+    visibility: hidden;
+}
+
+#asapblau{
+    color:rgba(6, 0, 98, 1);
+}
 
 .asapblau{
     color:rgba(6, 0, 98, 1);
@@ -53,6 +60,22 @@ table tbody tr:hover {
     }
 
 
+span.secondary-button-but-no-button{
+    text-decoration: none;
+    background-color: rgb(231, 231, 231);
+    color: rgba(6, 55, 98, 1);
+    border: 1px solid #ccc;
+    padding: 5px;
+    line-height: 2;
+    display:inline;
+    cursor: pointer;
+}
+span.secondary-button-but-no-button:hover {
+    text-decoration: none;
+    background-color: rgb(231, 231, 231);
+    color: rgba(6, 55, 98, 1);
+    box-shadow: 2px 2px 4px grey;
+}
 
 
 /*Pagination*/

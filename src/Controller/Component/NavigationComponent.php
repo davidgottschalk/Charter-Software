@@ -35,6 +35,13 @@ class NavigationComponent extends Component {
         // $this->navItems['Termine'] = [
         //     [ "title" => "Übersicht", "controller" => "Flights", "action" => "index" ]
         // ];
+
+        $this->navItems['Flüge'] = [
+            [ "title" => "Übersicht", "controller" => "Flights", "action" => "index" ],
+            [ "title" => "Flug anlegen", "controller" => "Flights", "action" => "order" ],
+        ];
+
+
         $this->navItems['Kunden'] = [
             [ "title" => "Übersicht", "controller" => "Customers", "action" => "index" ],
             [ "title" => "Kunde hinzufügen", "controller" => "Customers", "action" => "add" ],

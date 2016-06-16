@@ -22,7 +22,7 @@ CREATE TABLE groups (
 
 CREATE TABLE airports (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    airport_name VARCHAR(100) NOT NULL,
     city VARCHAR(100) NOT NULL,
     country VARCHAR(100) NOT NULL,
     iata_faa VARCHAR(100),
@@ -125,6 +125,6 @@ CREATE TABLE invoices (
 CREATE TABLE reject_reasons (
     id INT AUTO_INCREMENT PRIMARY KEY,
     reason_id INT NOT NULL,
-    created DATETIME,
+    created DATETIME
 );
 

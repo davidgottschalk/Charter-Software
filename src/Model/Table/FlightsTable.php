@@ -13,6 +13,9 @@ use Cake\Log\LogTrait;
  */
 class FlightsTable extends Table
 {
+
+    private $flight;
+
     use LogTrait;
     /**
      * Initialize method
@@ -46,6 +49,8 @@ class FlightsTable extends Table
             'targetForeignKey' => 'user_id',
             'joinTable' => 'users_flights'
         ]);
+
+
     }
 
     /**
@@ -92,4 +97,139 @@ class FlightsTable extends Table
         $rules->add($rules->existsIn(['plane_id'], 'Planes'));
         return $rules;
     }
+
+
+    public function checkAvailability(){
+
+        $this->log('check availability', 'debug');
+
+        $this->flight['startDate'] = (new \DateTime($this->flight['startDate']))->format('Y-m-d H:i:s');
+
+        $this->flight = $this->Airports->calculateDistances($this->flight);
+        $this->setTechnicallyPossiblePlaneTypes();
+
+
+
+        if(!empty($this->flight['technicallyPossiblePlaneTypes'])){
+
+            $this->log('Distance possible', 'debug');
+
+            $this->registerAvailablePlane();
+            $this->registerAvailableCrew();
+
+            $this->log($this->flight, 'debug');
+
+        }else{
+            $this->log('Distance or Pax!impossible!', 'debug');
+        }
+    }
+
+    public function registerAvailableCrew(){
+
+    }
+
+    private function registerAvailablePlane(){
+
+        $this->getPossibleDatesByPlaneType();
+        $this->filterPlaneTypesByAvailableCrew();
+
+        foreach($this->flight['technicallyPossiblePlaneTypes'] as $planeType ){
+
+            $planes = $this->Planes->find()->where(['plane_type_id' =>$planeType['id']])->all();
+
+            foreach($planes as $plane){
+
+                if( !$this->exists(['start_date <' => $this->flight['startDate'], 'end_date >' => $this->flight['startDate'] ,'plane_id' => $plane['id']]) && //vor
+                    !$this->exists(['start_date >' => $this->flight['startDate'], 'end_date <' => $planeType['calculatedEndDate'] ,'plane_id' => $plane['id']]) && //mitte
+                    !$this->exists(['start_date <' => $planeType['calculatedEndDate'], 'end_date >' => $planeType['calculatedEndDate'] ,'plane_id' => $plane['id']]) && //nach
+                    !$this->exists(['start_date <' => $this->flight['startDate'], 'end_date >' => $planeType['calculatedEndDate'] ,'plane_id' => $plane['id']]) //umfangend
+                    ){
+                    $this->flight['availablePlane'] = $plane;
+                    return;
+                }
+            }
+        }
+    }
+
+
+    private function filterPlaneTypesByAvailableCrew(){
+
+        foreach($this->flight['technicallyPossiblePlaneTypes'] as $planeType ){
+
+
+            $this->log('------------------------------------------------------------------------', 'debug');
+            $availableUser = $this->find()->orWhere(
+                [
+                    'NOT' => [' start_date <' => $this->flight['startDate'], 'end_date >' => $this->flight['startDate']] ,
+                    'NOT' => ['start_date >' => $this->flight['startDate'], 'end_date <' => $planeType['calculatedEndDate']] ,
+                    'NOT' => ['start_date <' => $planeType['calculatedEndDate'], 'end_date >' => $planeType['calculatedEndDate']] ,
+                    'NOT' => ['start_date <' => $this->flight['startDate'], 'end_date >' => $planeType['calculatedEndDate']] ,
+                ]
+                )->contain(['Users'])->all();
+
+            $this->log($availableUser, 'debug');
+            $this->log('------------------------------------------------------------------------', 'debug');
+
+        }
+
+    }
+
+    private function getPossibleDatesByPlaneType(){
+
+        $this->calculateTravellTimeByPlaneType();
+
+        foreach($this->flight['technicallyPossiblePlaneTypes'] as $key => $planeType){
+            unset($end);
+
+            $end = (new \DateTime($this->flight['startDate']))->modify('+'.ceil($planeType['travellTime']).' hour')->format('Y-m-d H:i:s');
+            $this->flight['technicallyPossiblePlaneTypes'][$key]['calculatedEndDate'] = $end;
+        }
+    }
+
+
+    private function calculateTravellTimeByPlaneType(){
+
+        foreach($this->flight['technicallyPossiblePlaneTypes'] as $key => $planeType){
+            $distance = 0;
+            $stayDuration = 0;
+            foreach($this->flight['stations'] as $stationKey => $station){
+                $distance += (isset($station['passedDistance']))?$station['passedDistance']:0;
+
+                if (isset($this->flight['stayDuration'][$stationKey])){
+                    if($this->flight['stayDuration'][$stationKey] < 0.75){
+                        $stayDuration += 0.75;
+                    }else{
+                        $stayDuration += $this->flight['stayDuration'][$stationKey];
+                    }
+                }
+            }
+            $nettoStayDuration = $stayDuration; // tatsächliche stay duration
+            $this->flight['technicallyPossiblePlaneTypes'][$key]['travellTime'] = ($distance/$planeType['speed'])+$nettoStayDuration;
+
+        }
+    }
+
+
+    private function setTechnicallyPossiblePlaneTypes(){
+
+        // range weit genug und genug Platz für Passagiere
+        $longestDistance = $this->getLongestDistance($this->flight);
+        $this->flight['technicallyPossiblePlaneTypes'] = $this->Planes->PlaneTypes->find()->where(['max_range >=' => $longestDistance, 'pax >=' => $this->flight['pax']])->order(['speed'=>'DESC'])->all()->toArray();
+
+        return $this->flight;
+    }
+
+    private function getLongestDistance($flight){
+        $longestDistance = 0;
+        foreach($flight['stations'] as $stations){
+
+            if(isset($stations['passedDistance'])  && $longestDistance < $stations['passedDistance']){
+                $longestDistance = $stations['passedDistance'];
+            }
+        }
+        return $longestDistance;
+    }
+
+    public function setFlight($data){ $this->flight = $data; }
+
 }

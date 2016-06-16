@@ -29,8 +29,6 @@
 
     <?php endforeach; ?>
 
-<? print_r($reasonText); ?>
-
     </tbody>
     </table>
     <div class="paginator">

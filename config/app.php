@@ -199,6 +199,21 @@ return [
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],
+        'hinotorie' => [
+            'from' => 'hinotorie@exec-charter.com',
+            'transport' => 'default',
+            'charset' => 'utf-8',
+            'template' => 'customer_satisfaction',
+            'layout' => 'success',
+            'emailFormat' => 'both',
+            'subject' => 'Hinotorie Exec Charter',
+            'attachments' => [
+                'asap-transparent.jpg' => [
+                    'file' => WWW_ROOT.'img/asap-transparent.jpg',
+                    'contentId' => 'HinotorieLogo'
+                ],
+            ],
+        ],
     ],
 
     /**

@@ -54,6 +54,14 @@ class AppController extends Controller
         $this->set('authUser', $this->Auth->user());
 
 
+// 1 = pilot
+// 2 = copilot
+// 3 = attendants
+// 4 = admin
+// alle andere
+
+
+
     }
 
     public function beforeFilter(Event $event){

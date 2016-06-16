@@ -45,11 +45,11 @@ class PlanesTable extends Table
         $validator
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create');
-            
+
         $validator
             ->requirePresence('plane_name', 'create')
             ->notEmpty('plane_name');
-            
+
         $validator
             ->add('plane_number', 'valid', ['rule' => 'numeric'])
             ->requirePresence('plane_number', 'create')
@@ -70,4 +70,19 @@ class PlanesTable extends Table
         $rules->add($rules->existsIn(['plane_type_id'], 'PlaneTypes'));
         return $rules;
     }
+
+    public function getAllPlanes(){
+
+        $planeNames =  $this->find()->select(['plane_name']);
+        $planes[0] = 'Bitte wählen';
+        $key = 1;
+        foreach($planeNames as $planeName){
+            $planes[$key]= $planeName->plane_name;
+            $key++;
+        }
+
+        return $planes;
+
+    }
+
 }
