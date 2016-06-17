@@ -15720,3 +15720,934 @@ Stack Trace:
 #17 {main}
 
 
+2016-06-17 09:21:45 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 163]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 09:21:46 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 163)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 09:29:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.id' in 'field list'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(657): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(608): Cake\ORM\Query->_all()
+#8 /home/david/webdev/C/src/Model/Table/FlightsTable.php(173): Cake\ORM\Query->all()
+#9 /home/david/webdev/C/src/Model/Table/FlightsTable.php(134): App\Model\Table\FlightsTable->filterPlaneTypesByAvailableCrew()
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): App\Model\Table\FlightsTable->registerAvailablePlane()
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-17 09:30:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.id' in 'field list'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(657): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(608): Cake\ORM\Query->_all()
+#8 /home/david/webdev/C/src/Model/Table/FlightsTable.php(174): Cake\ORM\Query->all()
+#9 /home/david/webdev/C/src/Model/Table/FlightsTable.php(134): App\Model\Table\FlightsTable->filterPlaneTypesByAvailableCrew()
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): App\Model\Table\FlightsTable->registerAvailablePlane()
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-17 09:30:26 Error: Fatal Error (1): Call to undefined method ArrayIterator::select() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 174]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 09:30:26 Error: [Cake\Error\FatalErrorException] Call to undefined method ArrayIterator::select()
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/home/david/web...', 174)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 09:40:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.id' in 'field list'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(657): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(608): Cake\ORM\Query->_all()
+#8 /home/david/webdev/C/src/Model/Table/FlightsTable.php(173): Cake\ORM\Query->all()
+#9 /home/david/webdev/C/src/Model/Table/FlightsTable.php(134): App\Model\Table\FlightsTable->filterPlaneTypesByAvailableCrew()
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): App\Model\Table\FlightsTable->registerAvailablePlane()
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-17 09:40:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.id' in 'field list'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(657): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(608): Cake\ORM\Query->_all()
+#8 /home/david/webdev/C/src/Model/Table/FlightsTable.php(173): Cake\ORM\Query->all()
+#9 /home/david/webdev/C/src/Model/Table/FlightsTable.php(134): App\Model\Table\FlightsTable->filterPlaneTypesByAvailableCrew()
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): App\Model\Table\FlightsTable->registerAvailablePlane()
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-17 09:40:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.id' in 'field list'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(657): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(608): Cake\ORM\Query->_all()
+#8 /home/david/webdev/C/src/Model/Table/FlightsTable.php(173): Cake\ORM\Query->all()
+#9 /home/david/webdev/C/src/Model/Table/FlightsTable.php(134): App\Model\Table\FlightsTable->filterPlaneTypesByAvailableCrew()
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): App\Model\Table\FlightsTable->registerAvailablePlane()
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-17 09:40:59 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.id' in 'field list'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(657): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(608): Cake\ORM\Query->_all()
+#8 /home/david/webdev/C/src/Model/Table/FlightsTable.php(173): Cake\ORM\Query->all()
+#9 /home/david/webdev/C/src/Model/Table/FlightsTable.php(134): App\Model\Table\FlightsTable->filterPlaneTypesByAvailableCrew()
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): App\Model\Table\FlightsTable->registerAvailablePlane()
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-17 09:57:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(657): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(608): Cake\ORM\Query->_all()
+#8 /home/david/webdev/C/src/Model/Table/FlightsTable.php(182): Cake\ORM\Query->all()
+#9 /home/david/webdev/C/src/Model/Table/FlightsTable.php(134): App\Model\Table\FlightsTable->filterPlaneTypesByAvailableCrew()
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): App\Model\Table\FlightsTable->registerAvailablePlane()
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-17 09:58:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.id' in 'where clause'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(657): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Query.php(608): Cake\ORM\Query->_all()
+#8 /home/david/webdev/C/src/Model/Table/FlightsTable.php(182): Cake\ORM\Query->all()
+#9 /home/david/webdev/C/src/Model/Table/FlightsTable.php(134): App\Model\Table\FlightsTable->filterPlaneTypesByAvailableCrew()
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): App\Model\Table\FlightsTable->registerAvailablePlane()
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-17 11:53:08 Error: Fatal Error (4): syntax error, unexpected '{' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 217]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 11:53:08 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 217)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 11:53:47 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 209]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 11:53:47 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 209)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 11:54:17 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 209]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 11:54:17 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 209)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 11:55:08 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 209]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 11:55:08 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 209)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 11:55:50 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 209]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 11:55:50 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 209)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 11:56:16 Error: Fatal Error (4): syntax error, unexpected ',' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 198]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 11:56:16 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ','
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 198)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 11:57:49 Error: Fatal Error (4): syntax error, unexpected '$cabinCrewNeeded' (T_VARIABLE) in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 200]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 11:57:49 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$cabinCrewNeeded' (T_VARIABLE)
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 200)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 11:57:57 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 209]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 11:57:57 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 209)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 12:45:20 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 209]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 12:45:20 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 209)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 12:45:52 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 209]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 12:45:52 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 209)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 12:54:04 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 201]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 12:54:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ';'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 201)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 13:21:58 Error: [BadMethodCallException] Unknown method "evaluateFlight"
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): Cake\ORM\Table->__call('evaluateFlight', Array)
+#1 /home/david/webdev/C/src/Model/Table/FlightsTable.php(117): App\Model\Table\FlightsTable->evaluateFlight()
+#2 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#3 [internal function]: App\Controller\FlightsController->order()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#7 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-06-17 14:20:47 Error: Fatal Error (4): syntax error, unexpected '{' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 138]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:20:47 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 138)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:26:06 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 172]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:26:06 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 172)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:27:28 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 146]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:27:28 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 146)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:27:31 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 146]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:27:31 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 146)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:28:07 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 146]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:28:08 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 146)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:28:18 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 174]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:28:18 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 174)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:28:41 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 174]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:28:41 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 174)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:30:02 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 174]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:30:02 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 174)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:31:05 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 174]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:31:06 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 174)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:32:00 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 175]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:32:00 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 175)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:34:47 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 148]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:34:47 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 148)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:34:56 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 148]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:34:56 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 148)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:35:21 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 175]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:35:21 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 175)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:40:22 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 178]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:40:23 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 178)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:53:14 Error: Fatal Error (4): syntax error, unexpected '{' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 132]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:53:14 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 132)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 14:57:43 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 139]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 14:57:43 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 139)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 15:01:24 Error: Fatal Error (4): syntax error, unexpected '>' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 138]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 15:01:24 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '>'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 138)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 15:01:33 Error: Fatal Error (1): Cannot use object of type Cake\ORM\ResultSet as array in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 140]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 15:01:34 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\ResultSet as array
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', '/home/david/web...', 140)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 15:05:11 Error: Fatal Error (1): Call to a member function log() on a non-object in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 135]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 15:05:11 Error: [Cake\Error\FatalErrorException] Call to a member function log() on a non-object
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/home/david/web...', 135)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 15:32:34 Error: [RuntimeException] Table "App\Model\Table\FlightsTable" is not associated with "unavailableReasons"
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/src/Model/Table/FlightsTable.php(249): Cake\ORM\Table->__get('unavailableReas...')
+#1 /home/david/webdev/C/src/Model/Table/FlightsTable.php(205): App\Model\Table\FlightsTable->checkSufficientCrewByPlanetype(0, Object(Cake\ORM\ResultSet))
+#2 /home/david/webdev/C/src/Model/Table/FlightsTable.php(130): App\Model\Table\FlightsTable->filterPlaneTypesByAvailableCrew()
+#3 /home/david/webdev/C/src/Model/Table/FlightsTable.php(110): App\Model\Table\FlightsTable->evaluateFlight()
+#4 /home/david/webdev/C/src/Controller/FlightsController.php(58): App\Model\Table\FlightsTable->checkAvailability(Array)
+#5 [internal function]: App\Controller\FlightsController->order()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#9 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-06-17 16:58:06 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 320]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-17 16:58:06 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 320)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-17 16:58:24 Warning: Warning (2): Missing argument 1 for App\Model\Table\FlightsTable::getFlight(), called in /home/david/webdev/C/src/Controller/FlightsController.php on line 59 and defined in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 320]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getFlight() - APP/Model/Table/FlightsTable.php, line 320
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 59
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:01:03 Warning: Warning (2): Missing argument 1 for App\Model\Table\FlightsTable::getFlight(), called in /home/david/webdev/C/src/Controller/FlightsController.php on line 59 and defined in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 320]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getFlight() - APP/Model/Table/FlightsTable.php, line 320
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 59
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:10:46 Warning: Warning (2): Missing argument 1 for App\Model\Table\FlightsTable::getFlight(), called in /home/david/webdev/C/src/Controller/FlightsController.php on line 50 and defined in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 321]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getFlight() - APP/Model/Table/FlightsTable.php, line 321
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 50
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:13:46 Warning: Warning (2): Missing argument 1 for App\Model\Table\FlightsTable::getFlight(), called in /home/david/webdev/C/src/Controller/FlightsController.php on line 50 and defined in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 321]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getFlight() - APP/Model/Table/FlightsTable.php, line 321
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 50
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:15:33 Warning: Warning (2): Missing argument 1 for App\Model\Table\FlightsTable::getFlight(), called in /home/david/webdev/C/src/Controller/FlightsController.php on line 53 and defined in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 321]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getFlight() - APP/Model/Table/FlightsTable.php, line 321
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 53
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:20:54 Warning: Warning (2): Missing argument 1 for App\Model\Table\FlightsTable::getFlight(), called in /home/david/webdev/C/src/Controller/FlightsController.php on line 53 and defined in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 321]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getFlight() - APP/Model/Table/FlightsTable.php, line 321
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 53
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:22:53 Warning: Warning (2): Missing argument 1 for App\Model\Table\FlightsTable::getFlight(), called in /home/david/webdev/C/src/Controller/FlightsController.php on line 53 and defined in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 327]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getFlight() - APP/Model/Table/FlightsTable.php, line 327
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 53
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:29:26 Warning: Warning (2): Missing argument 1 for App\Model\Table\FlightsTable::getFlight(), called in /home/david/webdev/C/src/Controller/FlightsController.php on line 53 and defined in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 327]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getFlight() - APP/Model/Table/FlightsTable.php, line 327
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 53
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:37:52 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/AirportsTable.php, line 128]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\AirportsTable::calculateDistances() - APP/Model/Table/AirportsTable.php, line 128
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 837
+Cake\ORM\Association\BelongsToMany::calculateDistances() - APP/Model/Table/FlightsTable.php, line 136
+App\Model\Table\FlightsTable::evaluateFlight() - APP/Model/Table/FlightsTable.php, line 136
+App\Model\Table\FlightsTable::checkAvailability() - APP/Model/Table/FlightsTable.php, line 110
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 48
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:37:52 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 317]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getLongestDistance() - APP/Model/Table/FlightsTable.php, line 317
+App\Model\Table\FlightsTable::setTechnicallyPossiblePlaneTypes() - APP/Model/Table/FlightsTable.php, line 311
+App\Model\Table\FlightsTable::evaluateFlight() - APP/Model/Table/FlightsTable.php, line 137
+App\Model\Table\FlightsTable::checkAvailability() - APP/Model/Table/FlightsTable.php, line 110
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 48
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:38:09 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/AirportsTable.php, line 128]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\AirportsTable::calculateDistances() - APP/Model/Table/AirportsTable.php, line 128
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 837
+Cake\ORM\Association\BelongsToMany::calculateDistances() - APP/Model/Table/FlightsTable.php, line 136
+App\Model\Table\FlightsTable::evaluateFlight() - APP/Model/Table/FlightsTable.php, line 136
+App\Model\Table\FlightsTable::checkAvailability() - APP/Model/Table/FlightsTable.php, line 110
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 48
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:38:09 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 317]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getLongestDistance() - APP/Model/Table/FlightsTable.php, line 317
+App\Model\Table\FlightsTable::setTechnicallyPossiblePlaneTypes() - APP/Model/Table/FlightsTable.php, line 311
+App\Model\Table\FlightsTable::evaluateFlight() - APP/Model/Table/FlightsTable.php, line 137
+App\Model\Table\FlightsTable::checkAvailability() - APP/Model/Table/FlightsTable.php, line 110
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 48
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:38:40 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/AirportsTable.php, line 128]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\AirportsTable::calculateDistances() - APP/Model/Table/AirportsTable.php, line 128
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 837
+Cake\ORM\Association\BelongsToMany::calculateDistances() - APP/Model/Table/FlightsTable.php, line 136
+App\Model\Table\FlightsTable::evaluateFlight() - APP/Model/Table/FlightsTable.php, line 136
+App\Model\Table\FlightsTable::checkAvailability() - APP/Model/Table/FlightsTable.php, line 110
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 51
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-17 17:38:40 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 317]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::getLongestDistance() - APP/Model/Table/FlightsTable.php, line 317
+App\Model\Table\FlightsTable::setTechnicallyPossiblePlaneTypes() - APP/Model/Table/FlightsTable.php, line 311
+App\Model\Table\FlightsTable::evaluateFlight() - APP/Model/Table/FlightsTable.php, line 137
+App\Model\Table\FlightsTable::checkAvailability() - APP/Model/Table/FlightsTable.php, line 110
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 51
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+

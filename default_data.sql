@@ -16,29 +16,28 @@ cabin_crew, created, modified) VALUES ('Cessna', 'Citation CJ1', '720',
 INSERT INTO groups (name) VALUES ('pilot'), ('copilot'), ('attendants'),
 ('admin');
 
-INSERT INTO planes (plane_name, plane_number, plane_type_id, created,
-modified) VALUES ('Alvid', '324332', '1', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Yngvar', '987124', '1', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Borgny', '723847', '1', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Kent', '138674', '1', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Vivaldi', '969414', '1', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Verdi', '019732', '1', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Elba', '901203', '2', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Ischia', '673947', '2', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Tizian', '121699', '2', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Botticelli', '239881', '2', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Marco', '987231', '2', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Persil', '234871', '2', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Faust', '267817', '3', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Macbeth', '564542', '3', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Nietzsche', '987123', '4', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Goethe', '578352', '4', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Schiller', '612344', '5', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Herder', '987723', '6', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Wieland', '078652', '6', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Plato', '372613', '6', '2016-05-09 09:00:00', '2016-05-09
-09:00:00'), ('Kant', '762314', '6', '2016-05-09 09:00:00', '2016-05-09
-09:00:00');
+INSERT INTO planes (plane_name, plane_number, plane_type_id, created,modified) VALUES
+('Alvid', '324332', '1', '2016-05-09 09:00:00', '2016-05-0909:00:00'),
+('Yngvar', '987124', '1', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Borgny', '723847', '1', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Kent', '138674', '1', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Vivaldi', '969414', '1', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Verdi', '019732', '1', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Elba', '901203', '2', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Ischia', '673947', '2', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Tizian', '121699', '2', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Botticelli', '239881', '2', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Marco', '987231', '2', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Persil', '234871', '2', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Faust', '267817', '3', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Macbeth', '564542', '3', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Nietzsche', '987123', '4', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Goethe', '578352', '4', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Schiller', '612344', '5', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Herder', '987723', '6', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Wieland', '078652', '6', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Plato', '372613', '6', '2016-05-09 09:00:00', '2016-05-09 09:00:00'),
+('Kant', '762314', '6', '2016-05-09 09:00:00', '2016-05-09 09:00:00');
 
 INSERT INTO customer_types (name) VALUES ('VIP'), ('CORP'), ('PRE');
 
@@ -48,25 +47,21 @@ INSERT INTO users (first_name, last_name, street, country, postal_code, username
 ('Marcus', 'Misiak', 'Treptow Alleee', 'Hamburg', '18723', 'marcus', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Michael', 'Lindow', 'Linden Alleee', 'Oldenburg', '18323', 'michael', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Alexander', 'Lipinski', 'Meier Straße', 'Köln', '18323', 'alexander', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-
 ('Petra', 'Rafen', 'Rummelsburger Straße', 'Berlin', '10315', 'petra', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Sabrina', 'Bauer', 'Landsberger Allee', 'Berlin', '15315', 'sabrina', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Julia', 'Dünnwieast', 'Treptow Alleee', 'Hamburg', '18723', 'julia', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Florian', 'Hörnicke', 'Linden Alleee', 'Oldenburg', '18323', 'florian', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Marco', 'Wendelmuth', 'Wenke Straße', 'Köln', '18323', 'marco', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-
 ('Oliver', 'Worst', 'Rummelsburger Straße', 'Berlin', '10315', 'oliver', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Udo', 'Oehmig', 'Landsberger Allee', 'Berlin', '15315', 'udo', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Robert', 'Grüne', 'Treptow Alleee', 'Hamburg', '18723', 'robert', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Jörg', 'Nobody', 'Linden Alleee', 'Oldenburg', '18323', 'joerg', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '3500', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Jens', 'Wichtig', 'Meier Straße', 'Köln', '18323', 'jens', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-
 ('Jan', 'Günzel', 'Rummelsburger Straße', 'Berlin', '10315', 'jan', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Felix', 'Ulkig', 'Landsberger Allee', 'Berlin', '15315', 'felix', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '8000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Conny', 'Klecker', 'Treptow Alleee', 'Hamburg', '18723', 'conny', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4500', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Steffen', 'Härter', 'Linden Alleee', 'Oldenburg', '18323', 'steffen', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Claudia', 'Brünett', 'Meier Straße', 'Köln', '18323', 'claudia', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-
 ('Paul', 'Manta', 'Meier Straße', 'Köln', '18323', 'alexander', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 
 ('Stephan', 'Hahn', 'Isen Straße', 'Berlin', '10315', 'stephan', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
@@ -75,7 +70,6 @@ INSERT INTO users (first_name, last_name, street, country, postal_code, username
 ('Peter', 'Bestpa', 'Breite Straße', 'Oldenburg', '73483', 'peter', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '0', '3100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Volker', 'Eckloff', 'Platanen Allee', 'München', '17323', 'volker', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '0', '2800', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 
-
 ('Stephanie', 'Gottschalk', 'Rummelsburger Straße', 'Berlin', '10315', 'stephanie', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '2000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Kerstin', 'Pappen', 'Sigfried Straße', 'München', '43254', 'kerstin', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '2100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Natalie', 'Schulz', 'Nerven Straße', 'Düsseldorf', '13521', 'natalie', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '0', '2200', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
@@ -83,12 +77,9 @@ INSERT INTO users (first_name, last_name, street, country, postal_code, username
 ('Rainer', 'Burmann', 'Ferdinand Allee', 'München', '17323', 'rainer', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '0', '2100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Andre', 'Meckel', 'Hammel Straße', 'Köln', '98712', 'andre', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '0', '2400', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 
-
 ('Erik', 'Enmis', 'Wönnich Straße', 'Oldenburg', '73483', 'erik', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Matthias', 'Röck', 'Ring Straße', 'München', '17323', 'matthias', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '0', '4100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 ('Nicolas', 'Bastelstube', 'Görlitz Weg', 'Köln', '98712', 'nicolas', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '0', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00');
-
-
 
 INSERT INTO customers (first_name, last_name, company, street, postal_code, country, customer_type_id, strike, email) VALUES
 ('Sandra', 'Lipinski', 'Siemens', 'Hohenzollerndamm 150', '14144', 'Berlin', '1', '0', 'sandra.lipinski@web.de'),
@@ -102,6 +93,37 @@ INSERT INTO flights (flight_number, customer_id, plane_id, start_date, end_date,
 INSERT INTO users_flights (flight_id, user_id) VALUES
  ('1', '1'),
  ('2', '1');
+
+
+
+ ('1', '2'),
+ ('1', '3'),
+ ('1', '5'),
+ ('1', '6'),
+ ('1', '8'),
+ ('1', '9'),
+ ('1', '10'),
+ ('1', '11'),
+ ('1', '12'),
+ ('1', '13'),
+ ('1', '15'),
+ ('1', '16'),
+ ('1', '18'),
+ ('1', '19'),
+ ('1', '20'),
+ ('1', '21'),
+ ('1', '22'),
+ ('1', '23'),
+ ('1', '24'),
+ ('1', '25'),
+ ('1', '26'),
+ ('1', '27'),
+ ('1', '28'),
+ ('1', '29'),
+ ('1', '30'),
+ ('1', '31'),
+ ('1', '32');
+
 
 INSERT INTO invoices (flight_id, due_date, value, status, automatic) VALUES
 ('1', '2016-05-26 23:59:59', '270,00', '1','1'),

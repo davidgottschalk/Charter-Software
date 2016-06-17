@@ -15,6 +15,7 @@
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="klassik"> <!-- klassik -->
                 <?= $this->Form->create(); ?>
+                <input style="visibility:hidden" name="mode" value="classicCharter"></input>
                 <br>
                 <fieldset>
                     <legend><h3>Zeitraum</h3></legend>
@@ -77,7 +78,7 @@
                         <? echo $this->Form->label('Catering'); ?>
                         <? echo $this->Form->select('catering',['0' => 'Bitte wählen','1' => 'Economy','2' => 'VIP', '3' => 'Vegan']); ?>
                         <? echo $this->Form->label('zuästzliche Flugbegleiter'); ?>
-                        <? echo $this->Form->select('attendants',['Bitte wählen','1','2','3']); ?>
+                        <? echo $this->Form->select('additionalAttendants',['Bitte wählen','1','2','3']); ?>
                     </div>
                     <div class="large-3 columns">
 
@@ -91,6 +92,9 @@
 
             </div> <!-- klassik -->
             <div role="tabpanel" class="tab-pane" id="timeCharter"> <!-- Zeitcharter -->
+                <?= $this->Form->create(); ?>
+                <input style="visibility:hidden" name="mode" value="timeCharter"></input>
+
                 <br>
                 <fieldset>
                     <legend><h3>Zeitraum</h3></legend>
@@ -109,11 +113,11 @@
                     <legend><h3>Sonderwünsche</h3></legend>
                     <div class="large-3 columns">
                         <? echo $this->Form->label('Flugzeug'); ?>
-                        <? echo $this->Form->select('plane',$planes); ?>
+                        <? echo $this->Form->select('wishedPlaneID',$planes); ?>
                         <? echo $this->Form->label('Catering'); ?>
                         <? echo $this->Form->select('catering',['0' => 'Bitte wählen','1' => 'Economy','2' => 'VIP', '3' => 'Vegan']); ?>
                         <? echo $this->Form->label('zuästzliche Flugbegleiter'); ?>
-                        <? echo $this->Form->select('catering',['Bitte wählen','1','2','3']); ?>
+                        <? echo $this->Form->select('additionalAttendants',['Bitte wählen','1','2','3']); ?>
                     </div>
                     <div class="large-3 columns">
 
@@ -122,6 +126,8 @@
                     <div class="large-3 columns"></div>
                 </fieldset>
 
+                <?= $this->Form->button('Anfrage abschicken') ?>
+                <?= $this->Form->end() ?>
             </div> <!-- Zeitcharter -->
         </div>
     <div>

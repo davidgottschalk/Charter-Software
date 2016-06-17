@@ -42,23 +42,18 @@ class FlightsController extends AppController{
         if ($this->request->is('post')) {
 
 
-            // $this->log($this->request->data(),'debug');
+            $this->log($this->request->data(),'debug');
 
-$data = [
-    'startDate' => '16.06.2016 07:30:00',
-    'pax' => 7,
-    'country' => ['Albania','Guinea','Germany','Antigua and Barbuda'],
-    'airport' => ['Tirana Rinas','Fria','Strausberg','Codrington Airport'],
-    'stayDuration' => [0.5, 30],
-    'plane' => 0,
-    'catering' => 0,
-    'attendants' => 0,
-];
-            $this->Flights->setFlight($data);
-            $this->Flights->checkAvailability($data);
+            $this->Flights->setFlight($this->request->data());
 
-            $this->Flash->success('The flight has been saved.');
-            // return $this->redirect(['action' => 'index']);
+            if($this->Flights->checkAvailability()){
+
+                $this->Flash->success('The flight has been saved.');
+            }
+            $this->Flash->error('bää');
+            // $this->log($this->Flights->getFlight(),'debug');
+
+            return $this->redirect(['action' => 'index']);
         }
     }
 
