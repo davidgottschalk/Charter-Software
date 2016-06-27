@@ -18,7 +18,9 @@
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($customers as $customer): ?>
+    <?php foreach ($customers as $customer):
+        if(!$customer->status == CUSTOMER_ACTIV){continue;}
+    ?>
         <tr>
             <td><?= $this->Number->format($customer->id) ?></td>
             <td><?= h($customer->first_name) ?></td>

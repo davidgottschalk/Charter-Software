@@ -13,7 +13,7 @@
         <div class="large-3 columns strings edit-table">
             <p><? echo $this->Form->input('street',['label' => 'Straße']); ?></p>
             <p><? echo $this->Form->input('postal_code',['label' => 'Postleitzahl']); ?></p>
-            <p><? echo $this->Form->input('country',['label' => 'Ort']); ?></p>
+            <p><? echo $this->Form->input('country',['label' => 'Land']); ?></p>
         </div>
 
         <div class="large-3 columns strings edit-table">

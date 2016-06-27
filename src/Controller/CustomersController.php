@@ -52,6 +52,8 @@ class CustomersController extends AppController
         if ($this->request->is('post')) {
             $customer = $this->Customers->patchEntity($customer, $this->request->data);
             $customer->strike = 0;
+            $customer->customer_id = rand(10000000,99999999);
+            $customer->status = CUSTOMER_ACTIV;
 
             if ($this->Customers->save($customer)) {
                 $this->Flash->success('The customer has been saved.');

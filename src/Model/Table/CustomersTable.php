@@ -90,4 +90,26 @@ class CustomersTable extends Table
         $rules->add($rules->existsIn(['customer_type_id'], 'CustomerTypes'));
         return $rules;
     }
+
+
+    public function createDummyCustomer(){
+
+        $customer = $this->newEntity();
+        $customer->customer_number = rand(10000000,99999999);
+        $customer->first_name = rand(10000000,99999999);
+        $customer->last_name = rand(10000000,99999999);
+        $customer->company = rand(10000000,99999999);
+        $customer->street = rand(10000000,99999999);
+        $customer->country = rand(10000000,99999999);
+        $customer->postal_code = 12345;
+        $customer->customer_type_id = 2;
+        $customer->strike = 0;
+        $customer->email = rand(10000000,99999999).'@'.'dummy.de';
+
+        return $this->save($customer);
+
+    }
+
+
+
 }

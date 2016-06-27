@@ -42,6 +42,7 @@ CREATE TABLE customer_types (
 
 CREATE TABLE customers (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_number INT NOT NULL,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
     company VARCHAR(100),
@@ -51,6 +52,7 @@ CREATE TABLE customers (
     customer_type_id INT NOT NULL,
     strike INT NOT NULL,
     email VARCHAR(100) NOT NULL,
+    status INT NOT NULL,
     FOREIGN KEY customer_type_key(customer_type_id) REFERENCES customer_types(id)
 );
 
@@ -89,6 +91,7 @@ CREATE TABLE flights (
     start_date DATETIME,
     end_date DATETIME,
     status INT NOT NULL,
+    cost_effectiv_travel_time DECIMAL(5,2) NOT NULL,
     FOREIGN KEY plane_key(plane_id) REFERENCES planes(id),
     FOREIGN KEY customer_key(customer_id) REFERENCES customers(id)
 );

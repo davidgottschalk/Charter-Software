@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Log\LogTrait;
+use Cake\Network\Session\DatabaseSession;
+
 /**
  * Flights Controller
  *
@@ -16,6 +18,7 @@ class FlightsController extends AppController{
 
         $this->loadModel('Airports');
         $this->loadModel('Planes');
+        $this->loadModel('Customers');
 
     }
 
@@ -41,28 +44,114 @@ class FlightsController extends AppController{
 
         if ($this->request->is('post')) {
 
-
-            $this->log($this->request->data(),'debug');
-
             $this->Flights->setFlight($this->request->data());
 
-            if($this->Flights->checkAvailability()){
+            if($this->Flights->isValidateInput()){
 
-                $this->Flash->success('The flight has been saved.');
+                if($this->Flights->checkAvailability()){
+
+                    if($this->Flights->saveFlight()){
+                        $this->request->session()->write('flight.data', $this->Flights->getFlight());
+                        $this->Flash->success('Wir konnten ein Flugzeug für Sie reservieren.');
+                        return $this->redirect(['action' => 'registerCustomer']);
+                    }
+                    $this->Flash->error('Der Flug ist leider nicht durchführbar!');
+                }else{
+                    $unavailableReasons = $this->Flights->getUnavailableReasons();
+                    $this->Flash->error('Der Flug ist leider nicht durchführbar!');
+                    if(isset($unavailableReasons['technicalUnavailable'])){
+                        $this->set('unavailableReasons', 'Es steht leider kein Flugzeug zu Verfügung welches technisch zu einer solchen Reise in der Lage wäre.');
+                    }elseif(isset($unavailableReasons['dateUnavailable'])){
+                        $this->set('unavailableReasons', 'Zu diesem Termin sind leider keine Flugzeuge mehr verfügbar.');
+                    }elseif(isset($unavailableReasons['insufficientCrew'])){
+                        $this->set('unavailableReasons', 'Zu diesem Termin ist leider kein Flugpersonal mehr verfügbar.');
+                    }
+                }
+
+            }else{
+                $this->log($this->Flights->getInputError(),'debug');
+                $this->set('inputErrors', $this->Flights->getInputError());
+                $this->Flash->error('Die eingegebenen Daten sind nicht korrekt.');
             }
-            $this->Flash->error('bää');
-            // $this->log($this->Flights->getFlight(),'debug');
-
-            return $this->redirect(['action' => 'index']);
         }
     }
+
+    public function registerCustomer(){
+
+        // $this->log($this->request->data(),'debug');
+
+        if($this->request->is('post')) {
+
+            $flight = $this->request->session()->read('flight.data');
+
+            if(isset($this->request->data['customerNumber'])){
+                $customer = $this->Customers->find()->where(['customer_number' => $this->request->data['customerNumber']])->first();
+                if($customer && strlen($this->request->data['customerNumber']) == 8){ // kunden mit Kundennummer identifiziert
+                    $this->request->session()->write('flight.customer', $customer);
+
+                    // Flug wurde mit Dummy Kunde angelegt, nun muss der dummy durch den mit der Kundennummer identifizierten ersetzt werden
+                    $flightEntity = $this->Flights->get($flight['databaseObject']->id);
+                    $flightEntity->customer_id = $customer['id'];
+
+                    if($this->Flights->save($flightEntity)){
+                        // und der Dummy Customer muss aufgeräumt werden
+                        $customerEntity = $this->Customers->get($flight['databaseObject']->customer_id);
+                        $this->Customers->delete( $customerEntity);
+                    }
+
+                    $this->Flash->success('Wir konnten ein Flugzeug für Sie reservieren.');
+                    return $this->redirect(['action' => 'offer']);
+                }else{
+                    $this->set('customerNumberError', 'Bitte prüfen Sie Ihre Kundenummer');
+                    $this->Flash->success('Die eingegebene Kundennummer gibt es nicht.');
+                }
+            }
+
+            if(isset($this->request->data['first_name'])){
+
+                $customer = $this->Customers->get($flight['databaseObject']->customer_id);
+                $customer = $this->Customers->patchEntity($customer, $this->request->data);
+                $this->request->session()->write('flight.customer', $customer);
+                $success = $this->Customers->save($customer);
+
+                if($success) {
+                    $this->Flash->success('The flight has been saved.');
+                    return $this->redirect(['action' => 'offer']);
+                } else {
+                    $this->set('errors', $customer->errors());
+                    $this->Flash->error('The flight could not be saved. Please, try again.');
+                }
+            }
+        }
+    }
+
+
+    public function abortCustomerCredentials(){
+
+        $flight = $this->request->session()->read('flight.data');
+        $this->request->session()->delete('flight');
+
+        $flightEntity = $this->Flights->get($flight['databaseObject']->id);
+        $this->Flights->delete( $flightEntity);
+        $customerEntity = $this->Customers->get($flight['databaseObject']->customer_id);
+        $this->Customers->delete( $customerEntity);
+        return $this->redirect(['action' => 'order']);
+    }
+
+    public function offer(){
+
+        // $this->log($this->request->session()->read('flight'), 'debug');
+
+
+        $this->set('data', $this->request->session()->read('flight'));
+    }
+
 
     public function getAirportsByCountry(){
         $this->autoRender = false;
         $airportNames = $this->Airports->getAirportsByCountry($this->request->data('country'));
         echo json_encode( $airportNames );
     }
-
 
     /**
      * View method
