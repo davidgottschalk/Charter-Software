@@ -102,7 +102,7 @@ class CustomersTable extends Table
         $customer->street = rand(10000000,99999999);
         $customer->country = rand(10000000,99999999);
         $customer->postal_code = 12345;
-        $customer->customer_type_id = 2;
+        $customer->customer_type_id = 3;
         $customer->strike = 0;
         $customer->email = rand(10000000,99999999).'@'.'dummy.de';
 

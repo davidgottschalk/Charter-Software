@@ -92,6 +92,7 @@ CREATE TABLE flights (
     end_date DATETIME,
     status INT NOT NULL,
     cost_effectiv_travel_time DECIMAL(5,2) NOT NULL,
+    catering INT NOT NULL,
     FOREIGN KEY plane_key(plane_id) REFERENCES planes(id),
     FOREIGN KEY customer_key(customer_id) REFERENCES customers(id)
 );
@@ -117,6 +118,7 @@ CREATE TABLE airports_flights (
 
 CREATE TABLE invoices (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    invoice_number VARCHAR(20),
     flight_id INT NOT NULL,
     value FLOAT(20,2),
     status INT NOT NULL,

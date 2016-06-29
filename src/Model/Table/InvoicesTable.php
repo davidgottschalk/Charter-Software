@@ -140,6 +140,9 @@ class InvoicesTable extends Table{
         $invoice = $this->get($id);
         $invoice->due_date = $newDate;
         $invoice->status = $status;
+
+// ++
+
         if($this->save($invoice)){
             $this->sendNotification();
         }

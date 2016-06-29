@@ -14,13 +14,13 @@
         <div>
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#klassik" aria-controls="klassik" role="tab" data-toggle="tab">Klassik</a></li>
-                <li role="presentation"><a href="#timeCharter" aria-controls="timeCharter" role="tab" data-toggle="tab">Zeitcharter</a></li>
+                <li role="presentation" class="<?=($activePanel=='classicCharter')?'active':'';?>"><a href="#klassik" aria-controls="klassik" role="tab" data-toggle="tab">Klassik</a></li>
+                <li role="presentation" class="<?=($activePanel=='timeCharter')?'active':'';?>"><a href="#timeCharter" aria-controls="timeCharter" role="tab" data-toggle="tab">Zeitcharter</a></li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="klassik"> <!-- klassik -->
+                <div role="tabpanel" class="tab-pane <?=($activePanel=='classicCharter')?'active':'';?>" id="klassik"> <!-- klassik -->
                     <?= $this->Form->create(); ?>
                     <input style="visibility:hidden" name="mode" value="classicCharter"></input>
                     <br>
@@ -123,21 +123,21 @@
                 <?= $this->Form->end() ?>
 
                 </div> <!-- klassik -->
-                <div role="tabpanel" class="tab-pane" id="timeCharter"> <!-- Zeitcharter -->
+                <div role="tabpanel" class="tab-pane <?=($activePanel=='timeCharter')?'active':'';?>" id="timeCharter"> <!-- Zeitcharter -->
                     <?= $this->Form->create(); ?>
                     <input style="visibility:hidden" name="mode" value="timeCharter"></input>
 
                     <br>
                     <?if(isset($inputErrors['startDate'])){?>
                         <div class="row" style="background-color:#f2dede; padding:5px; margin:10px 0px;">
-                            <div class="large-6 columns">
+                            <div class="large-10 columns">
                                 <?=$inputErrors['startDate']?>
                              </div>
                         </div>
                     <?}?>
                     <?if(isset($inputErrors['endDate'])){?>
                         <div class="row" style="background-color:#f2dede; padding:5px; margin:10px 0px;">
-                            <div class="large-6 columns">
+                            <div class="large-10 columns">
                                 <?=$inputErrors['endDate']?>
                              </div>
                         </div>

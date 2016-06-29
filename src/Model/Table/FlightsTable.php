@@ -115,64 +115,17 @@ class FlightsTable extends Table
         $flight['end_date'] = $planeType['calculatedEndDate'];
         $flight['status'] = FLIGHT_DUMMY;
         $flight['cost_effectiv_travel_time'] = $planeType['costEffectivTravellTime'];
+        $flight['catering'] = ($this->flight['catering'] != 0)?$this->flight['catering']: CATERING_ECO;
 
         $flight = $this->save($flight);
-        $this->flight['databaseObject'] = $flight;
+        $this->flight['flightDatabaseObject'] = $flight;
 
-
-
-        $airportsFlights = TableRegistry::get('AirportsFlights');
-        $usersFlights = TableRegistry::get('UsersFlights');
-
-//)->modify('+'.ceil($planeType['travellTime']).' hour')->
-        $departuresTime = (new \DateTime($this->flight['startDate']))->format('Y-m-d H:i:s');
-        $arrivalTime = '';
-
-        $order = 0;
-        foreach($this->flight['stations'] as $key => $station){
-
-
-            // AirportsFlights füllen
-            $airport = $this->Airports->find()->where(['airport_name' => $this->flight['airport'][$key] , 'country' => $this->flight['country'][$key]])->first();
-            $stayDuration = (isset($this->flight['stayDuration'][$key-1]))? $this->flight['stayDuration'][$key-1] : 0 ;
-            $flightTime = (isset($station['passedDistance']))? ceil(($station['passedDistance']/$planeType['speed'])*60):0; // flugzeit zur Station in Minuten
-
-            $stationData = $airportsFlights->newEntity();
-            $stationData['flight_id'] = $flight['id'];
-            $stationData['airport_id'] = $airport->id;
-            $stationData['flight_time'] = $flightTime;
-            $stationData['stay_duration'] = $stayDuration;
-            $stationData['order_number'] = $order;
-            $order++;
-            $airportsFlights->save($stationData);
-
-            // für anzeige
-
-
-            if(isset($this->flight['stations'][$key-1])){ // gibt es einen Flughafen zuvor?
-                $arrivalTimeDummy = (new \DateTime($this->flight['stations'][$key-1]['departuresTime']))->modify('+'.$flightTime.' minutes');
-                $arrivalTime = $arrivalTimeDummy->format('Y-m-d H:i:s');
-
-                if(isset($this->flight['stations'][$key+1])){
-                    $departuresTime =  $arrivalTimeDummy->modify('+'.$stayDuration.' hour')->format('Y-m-d H:i:s');
-                }else{
-                    $departuresTime = '';
-                }
-            }
-
-            $this->flight['stations'][$key]['arrivalTime'] = $arrivalTime;
-            $this->flight['stations'][$key]['flightTime'] = $flightTime;
-            $this->flight['stations'][$key]['stayDuration'] = $stayDuration;
-            $this->flight['stations'][$key]['passedDistance'] = (isset($station['passedDistance']))? $station['passedDistance']: 0;
-            $this->flight['stations'][$key]['airport'] = $this->flight['airport'][$key];
-            $this->flight['stations'][$key]['country'] = $this->flight['country'][$key];
-            $this->flight['stations'][$key]['departuresTime'] = $departuresTime;
-
-            // für den nächsten Flughafen Ankunftzeit
-
+        if($this->flight['mode'] == 'classicCharter'){
+            $this->setupRoute($flight['id'], $planeType);
         }
 
         // UsersFlights füllen
+        $usersFlights = TableRegistry::get('UsersFlights');
         $i = 0;
         if(isset($planeType['crew']['copilot'])){
             foreach($planeType['crew']['pilot'] as $pilot){
@@ -198,18 +151,13 @@ class FlightsTable extends Table
                 $usersFlights->save($usersFlightsData);
             }
         }
-        $this->log($usersFlightsData, 'debug');
-        $this->log($stationData, 'debug');
 
         $this->flight['planeType'] = $planeType;
 
         return $flight;
     }
 
-
     public function checkAvailability(){
-
-
 
         if($this->evaluateFlight()){
 
@@ -261,11 +209,11 @@ class FlightsTable extends Table
             if(isset($this->flight['endDate']) && !empty($this->flight['endDate'])){
                 $endDate = (new \DateTime($this->flight['endDate']))->format('Y-m-d H:i:s');
 
-                if($startDate > $endDate ){
-                    $this->inputError['endDate'] = "Das eingegebene Bis-Datum liegt vor dem eingebenen Von-Datum.";
+                if($startDate >= $endDate ){
+                    $this->inputError['endDate'] = "Das eingegebene Bis-Datum liegt vor dem eingebenen Von-Datum oder ist identisch mit dem Von-Datum.";
                     $return = false;
                 }else{
-                    $this->flight['endDate'] = $startDate;
+                    $this->flight['endDate'] = $endDate;
                 }
             }else{
                 $this->inputError['endDate'] = "Bitte geben Sie ein Bis-Datum ein.";
@@ -452,9 +400,13 @@ class FlightsTable extends Table
 
         }elseif($this->flight['mode'] == 'timeCharter'){
 
+            $costEffectivTravellTime = ((strtotime($this->flight['endDate'])-strtotime($this->flight['startDate']))/60)/60;
+
             foreach($this->flight['technicallyPossiblePlaneTypes'] as $key => $planeType){
                 $this->flight['technicallyPossiblePlaneTypes'][$key]['calculatedEndDate'] = $this->flight['endDate'];
+                $this->flight['technicallyPossiblePlaneTypes'][$key]['costEffectivTravellTime'] = $costEffectivTravellTime;
             }
+
         }
     }
 
@@ -519,6 +471,139 @@ class FlightsTable extends Table
                 return $planeType;
             }
         }
+    }
+
+
+    public function calculateCosts(){
+
+        $planeType = $this->flight['planeType'];
+
+// $this->log(($planeType['annual_fixed_cost']),'debug');
+// $this->log(($planeType['annual_fixed_cost']/8760),'debug');
+// $this->log($planeType['costEffectivTravellTime'],'debug');
+
+        $planeAnnualFixCost = ($planeType['annual_fixed_cost']/8760)*$planeType['costEffectivTravellTime'];
+        $planeHourlyCost = $planeType['costEffectivTravellTime']*$planeType['hourly_cost'];
+
+        $costs['planeHourlyCost'] = $planeHourlyCost;
+        $costs['planeAnnualFixCost'] = $planeAnnualFixCost;
+        $costs['planeCost'] = round($planeHourlyCost+$planeAnnualFixCost,2);
+
+        $costEffectivTravellDays = ceil($planeType['costEffectivTravellTime']/24);
+        $crewCost = 0;
+
+        $costs['pilotCost'] = 0;
+        $costs['copilotCost'] = 0;
+        $costs['attendantsCost'] = 0;
+        $costs['crewCost'] = 0;
+
+        foreach($planeType['crew']['pilot'] as $pilot){
+            $costs['pilotCost'] += round((($pilot['payment']*1.2)/210)*$costEffectivTravellDays,2); // 240 WT -30 Tage Urlaub, Kunde bezahlt immer ganzen Tag
+            $costs['crewCost'] += $costs['pilotCost'];
+        }
+        foreach($planeType['crew']['copilot'] as $copilot){
+            $costs['copilotCost'] += round((($copilot['payment']*1.2)/210)*$costEffectivTravellDays,2);
+            $costs['crewCost'] += $costs['attendantsCost'];
+        }
+        foreach($planeType['crew']['attendants'] as $attendants){
+            $costs['attendantsCost'] += round((($attendants['payment']*1.2)/210)*$costEffectivTravellDays,2);
+            $costs['crewCost'] += $costs['attendantsCost'];
+        }
+
+        $costs['crewCost'] = round($costs['crewCost'],'2');
+
+        $costs['summeCrewPlane'] = round($costs['crewCost']+$costs['planeCost'],2);
+
+        if($this->flight['customer']['customer_type_id'] == 3){
+            $costs['unknowCredibilityCost'] = $costs['summeCrewPlane']*0.05;
+            $costs['nettoSumme'] = round($costs['summeCrewPlane']+$costs['unknowCredibilityCost'],2);
+        }else{
+            $costs['nettoSumme'] = $costs['summeCrewPlane'];
+        }
+
+        $costs['tax'] = round($costs['nettoSumme']*0.19,2);
+        $costs['bruttoSumme'] = round($costs['nettoSumme']+$costs['tax'],2);
+        $this->flight['costs'] = $costs;
+    }
+
+    public function setupRoute($flightId, $planeType){
+
+        $airportsFlights = TableRegistry::get('AirportsFlights');
+        $departuresTime = (new \DateTime($this->flight['startDate']))->format('Y-m-d H:i:s');
+        $arrivalTime = '';
+
+        $order = 0;
+
+        foreach($this->flight['stations'] as $key => $station){
+            // AirportsFlights füllen
+            $airport = $this->Airports->find()->where(['airport_name' => $this->flight['airport'][$key] , 'country' => $this->flight['country'][$key]])->first();
+            $stayDuration = (isset($this->flight['stayDuration'][$key-1]))? $this->flight['stayDuration'][$key-1] : 0 ;
+            $flightTime = (isset($station['passedDistance']))? ceil(($station['passedDistance']/$planeType['speed'])*60):0; // flugzeit zur Station in Minuten
+
+            $stationData = $airportsFlights->newEntity();
+            $stationData['flight_id'] = $flightId;
+            $stationData['airport_id'] = $airport->id;
+            $stationData['flight_time'] = $flightTime;
+            $stationData['stay_duration'] = $stayDuration;
+            $stationData['order_number'] = $order;
+            $order++;
+            $airportsFlights->save($stationData);
+
+            // für anzeige
+
+
+            if(isset($this->flight['stations'][$key-1])){ // gibt es einen Flughafen zuvor?
+                $arrivalTimeDummy = (new \DateTime($this->flight['stations'][$key-1]['departuresTime']))->modify('+'.$flightTime.' minutes');
+                $arrivalTime = $arrivalTimeDummy->format('Y-m-d H:i:s');
+
+                if(isset($this->flight['stations'][$key+1])){
+                    $departuresTime =  $arrivalTimeDummy->modify('+'.$stayDuration.' hour')->format('Y-m-d H:i:s');
+                }else{
+                    $departuresTime = '';
+                }
+            }
+
+            $this->flight['stations'][$key]['arrivalTime'] = $arrivalTime;
+            $this->flight['stations'][$key]['flightTime'] = $flightTime;
+            $this->flight['stations'][$key]['stayDuration'] = $stayDuration;
+            $this->flight['stations'][$key]['passedDistance'] = (isset($station['passedDistance']))? $station['passedDistance']: 0;
+            $this->flight['stations'][$key]['airport'] = $this->flight['airport'][$key];
+            $this->flight['stations'][$key]['country'] = $this->flight['country'][$key];
+            $this->flight['stations'][$key]['departuresTime'] = $departuresTime;
+
+            // für den nächsten Flughafen Ankunftzeit
+        }
+    }
+
+    public function writeInvoice($paymentStatus){
+        $automatic = 1;
+        if($paymentStatus == AWAIT_PAYMENT){
+            $this->log("-hier-",'debug');
+            $this->log($this->flight['customer'],'debug');
+            if($this->flight['customer']['customer_type_id'] == VIP){
+                $automatic = 0;
+            }
+        }
+
+        // $this->log($this->flight,'debug');
+
+        $invoice = $this->Invoices->newEntity();
+        $invoice->invoice_number = "R-".rand(1000000000,9999999999);
+        $invoice->flight_id = $this->flight['flightDatabaseObject']['id'];
+        $invoice->value = $this->flight['costs']['bruttoSumme'];
+        $invoice->status = $paymentStatus;
+        $invoice->due_date = date('Y-m-d H:i:s', strtotime("+14 days"));
+        $invoice->automatic = $automatic;
+
+        return $this->Invoices->save($invoice);
+
+    }
+
+
+    public function setActiveFlight(){
+        $flight = $this->flight['flightDatabaseObject'];
+        $flight->status = FLIGHT_SOON;
+        $this->save($flight);
     }
 
     public function setFlight($data){ $this->flight = $data; }

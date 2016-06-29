@@ -18932,3 +18932,1291 @@ Stack Trace:
 #7 {main}
 
 
+2016-06-28 08:28:18 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 90]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Flights/offer.ctp, line 90
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 08:52:53 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [/home/david/webdev/C/src/Controller/FlightsController.php, line 155]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 08:52:53 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 155)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 09:08:27 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:09:47 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:18:12 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:18:38 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:19:32 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:19:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:20:18 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:20:43 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:21:08 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:21:30 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:22:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:25:38 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:28:05 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 450]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 09:28:05 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')'
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 450)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 09:28:15 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cost_effectiv_travel_time' cannot be null
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Flight), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Flight), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 /home/david/webdev/C/src/Model/Table/FlightsTable.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\Flight))
+#11 /home/david/webdev/C/src/Controller/FlightsController.php(53): App\Model\Table\FlightsTable->saveFlight()
+#12 [internal function]: App\Controller\FlightsController->order()
+#13 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#14 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#15 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#16 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-06-28 09:29:36 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 132]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::saveFlight() - APP/Model/Table/FlightsTable.php, line 132
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 53
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 09:39:42 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 90]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Flights/offer.ctp, line 90
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 10:23:36 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Flights/offer.ctp, line 96
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 10:25:07 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 211]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 10:25:07 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /c/Flights/order
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 211)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 10:28:32 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+include - APP/Template/Flights/offer.ctp, line 96
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
+Cake\View\View::_render() - CORE/src/View/View.php, line 775
+Cake\View\View::render() - CORE/src/View/View.php, line 463
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 581
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 10:35:05 Error: Fatal Error (4): syntax error, unexpected end of file in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 147]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 10:35:06 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 147)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 10:41:19 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 89]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 10:41:19 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 89)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 10:43:12 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 89]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 10:43:12 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 89)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 10:43:17 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 89]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 10:43:17 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 89)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 10:43:29 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 89]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 10:43:29 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 89)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 10:43:48 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 89]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 10:43:48 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 89)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 11:18:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 495]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 495
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 11:18:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 498]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 498
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 11:18:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 501]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 501
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 11:18:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 495]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 495
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 11:18:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 498]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 498
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 11:18:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 501]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 501
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 11:18:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 495]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 495
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 11:18:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 498]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 498
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 11:18:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 501]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 501
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 11:29:14 Warning: Warning (2): Division by zero in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 498]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 498
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 12:32:15 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 501]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 501
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 12:32:15 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 505]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 505
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 12:32:15 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 509]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 509
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 12:33:33 Warning: Warning (2): Division by zero in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 540]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::setupRoute() - APP/Model/Table/FlightsTable.php, line 540
+App\Model\Table\FlightsTable::saveFlight() - APP/Model/Table/FlightsTable.php, line 123
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 53
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 12:33:33 Warning: Warning (2): Division by zero in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 540]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::setupRoute() - APP/Model/Table/FlightsTable.php, line 540
+App\Model\Table\FlightsTable::saveFlight() - APP/Model/Table/FlightsTable.php, line 123
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 53
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 12:33:33 Warning: Warning (2): Division by zero in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 540]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::setupRoute() - APP/Model/Table/FlightsTable.php, line 540
+App\Model\Table\FlightsTable::saveFlight() - APP/Model/Table/FlightsTable.php, line 123
+App\Controller\FlightsController::order() - APP/Controller/FlightsController.php, line 53
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 12:46:19 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 525]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 12:46:19 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 525)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 12:47:26 Error: Fatal Error (4): syntax error, unexpected '2' (T_LNUMBER) in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 524]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 12:47:26 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '2' (T_LNUMBER)
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 524)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 13:31:58 Error: [Exception] DateTime::__construct(): Failed to parse time string (0) at position 0 (0): Unexpected character
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/src/Template/Flights/offer.ctp(105): DateTime->__construct('0')
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(815): include('/home/david/web...')
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(775): Cake\View\View->_evaluate('/home/david/web...', Array)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(463): Cake\View\View->_render('/home/david/web...')
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#7 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-06-28 14:14:30 Error: Fatal Error (4): syntax error, unexpected ',' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 52]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 14:14:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ','
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 52)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 14:14:40 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 52]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 14:14:40 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ';'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 52)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 14:23:13 Error: Fatal Error (4): syntax error, unexpected '}', expecting ',' or ';' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 79]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 14:23:13 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 79)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 15:16:25 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 117]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 15:16:25 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 117)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 15:16:33 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 117]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 15:16:33 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 117)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 15:17:04 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 117]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 15:17:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 117)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 15:38:01 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 91]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 15:38:01 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 91)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 15:49:20 Error: Fatal Error (4): syntax error, unexpected ',', expecting ')' in [/home/david/webdev/C/src/Controller/FlightsController.php, line 154]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 15:49:20 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ',', expecting ')'
+Request URL: /c/flights/offer?blubb=test
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 154)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 15:56:31 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 277]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 15:56:32 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /c/flights/offer?blubb=test
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 277)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 15:56:52 Error: Fatal Error (4): syntax error, unexpected '[' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 278]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 15:56:52 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '['
+Request URL: /c/flights/offer?blubb=test
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 278)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 15:56:58 Error: Fatal Error (4): syntax error, unexpected '?>' in [/home/david/webdev/C/src/Template/Flights/offer.ctp, line 286]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 15:56:58 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /c/flights/offer?blubb=test
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 286)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 16:35:32 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 500]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 500
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 16:35:32 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 504]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 504
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 16:35:32 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 508]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 508
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 16:40:40 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "flights"
+Request URL: /c/flights/abortCustomerCredentials
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1127): Cake\ORM\Query->firstOrFail()
+#1 /home/david/webdev/C/src/Controller/FlightsController.php(139): Cake\ORM\Table->get(5)
+#2 [internal function]: App\Controller\FlightsController->abortCustomerCredentials()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#6 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-06-28 16:40:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class F could not be found.
+Exception Attributes: array (
+  'class' => 'F',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /c/f
+Stack Trace:
+#0 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-06-28 16:43:55 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/david/webdev/C/src/Controller/FlightsController.php, line 162]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 16:43:55 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 162)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 16:44:00 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [/home/david/webdev/C/src/Controller/FlightsController.php, line 170]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 16:44:00 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 170)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 17:00:48 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 582]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 17:00:48 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 582)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 17:06:33 Error: Fatal Error (1): Call to a member function writeInvoice() on a non-object in [/home/david/webdev/C/src/Controller/FlightsController.php, line 163]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 17:06:33 Error: [Cake\Error\FatalErrorException] Call to a member function writeInvoice() on a non-object
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/home/david/web...', 163)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 17:06:41 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [/home/david/webdev/C/src/Model/Table/InvoicesTable.php, line 146]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 17:06:41 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 146)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-28 17:06:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'flight_id' cannot be null
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Invoice), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Invoice), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 [internal function]: Cake\ORM\Table->save(Object(App\Model\Entity\Invoice))
+#11 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Association.php(837): call_user_func_array(Array, Array)
+#12 /home/david/webdev/C/src/Model/Table/FlightsTable.php(595): Cake\ORM\Association->__call('save', Array)
+#13 /home/david/webdev/C/src/Model/Table/FlightsTable.php(595): Cake\ORM\Association\HasMany->save(Object(App\Model\Entity\Invoice))
+#14 /home/david/webdev/C/src/Controller/FlightsController.php(163): App\Model\Table\FlightsTable->writeInvoice(1)
+#15 [internal function]: App\Controller\FlightsController->offer()
+#16 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#17 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#19 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-06-28 17:09:53 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 500]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 500
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 17:09:53 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 504]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 504
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 17:09:53 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 508]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 508
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-28 17:14:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'flight_id' cannot be null
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(169): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Query.php(175): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1462): Cake\Database\Query->execute()
+#6 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1382): Cake\ORM\Table->_insert(Object(App\Model\Entity\Invoice), Array)
+#7 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1313): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Invoice), Object(ArrayObject))
+#8 /home/david/webdev/C/vendor/cakephp/cakephp/src/Database/Connection.php(561): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Table.php(1314): Cake\Database\Connection->transactional(Object(Closure))
+#10 [internal function]: Cake\ORM\Table->save(Object(App\Model\Entity\Invoice))
+#11 /home/david/webdev/C/vendor/cakephp/cakephp/src/ORM/Association.php(837): call_user_func_array(Array, Array)
+#12 /home/david/webdev/C/src/Model/Table/FlightsTable.php(595): Cake\ORM\Association->__call('save', Array)
+#13 /home/david/webdev/C/src/Model/Table/FlightsTable.php(595): Cake\ORM\Association\HasMany->save(Object(App\Model\Entity\Invoice))
+#14 /home/david/webdev/C/src/Controller/FlightsController.php(168): App\Model\Table\FlightsTable->writeInvoice(2)
+#15 [internal function]: App\Controller\FlightsController->offer()
+#16 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(410): call_user_func_array(Array, Array)
+#17 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#19 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-06-28 17:21:46 Error: Fatal Error (4): syntax error, unexpected '"-hier-"' (T_CONSTANT_ENCAPSED_STRING), expecting variable (T_VARIABLE) or '$' in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 581]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-06-28 17:21:46 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '"-hier-"' (T_CONSTANT_ENCAPSED_STRING), expecting variable (T_VARIABLE) or '$'
+Request URL: /c/flights/offer
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/home/david/web...', 581)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-06-29 08:12:22 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 500]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 500
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-29 08:12:22 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 504]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 504
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-29 08:12:22 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 508]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 508
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-29 16:06:45 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 500]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 500
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 148
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-29 16:06:45 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 504]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 504
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 148
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-29 16:06:45 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/david/webdev/C/src/Model/Table/FlightsTable.php, line 508]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Model\Table\FlightsTable::calculateCosts() - APP/Model/Table/FlightsTable.php, line 508
+App\Controller\FlightsController::offer() - APP/Controller/FlightsController.php, line 148
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 410
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-06-29 16:07:42 Error: [Cake\View\Exception\MissingTemplateException] Template file "Flights/bookingdone.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Flights/bookingdone.ctp',
+)
+Request URL: /c/flights/bookingdone
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-29 16:12:34 Error: [Cake\View\Exception\MissingTemplateException] Template file "Flights/bookingdone.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Flights/bookingdone.ctp',
+)
+Request URL: /c/flights/bookingdone
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-06-29 16:12:47 Error: [Cake\View\Exception\MissingTemplateException] Template file "Flights/bookingdone.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Flights/bookingdone.ctp',
+)
+Request URL: /c/flights/bookingdone
+Stack Trace:
+#0 /home/david/webdev/C/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /home/david/webdev/C/vendor/cakephp/cakephp/src/Controller/Controller.php(581): Cake\View\View->render(NULL, NULL)
+#2 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /home/david/webdev/C/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\FlightsController))
+#4 /home/david/webdev/C/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+

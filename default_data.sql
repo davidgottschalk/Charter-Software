@@ -42,53 +42,53 @@ INSERT INTO planes (plane_name, plane_number, plane_type_id, created,modified) V
 INSERT INTO customer_types (name) VALUES ('VIP'), ('CORP'), ('PRE');
 
 INSERT INTO users (first_name, last_name, street, country, postal_code, username, password, group_id, status, payment, created, exit_date) VALUES
-('David', 'Gottschalk', 'Rummelsburger Straße', 'Berlin', '10315', 'david', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Sebastian', 'Rosenkranz-Bunzel', 'Landsberger Allee', 'Berlin', '15315', 'sebastian', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Marcus', 'Misiak', 'Treptow Alleee', 'Hamburg', '18723', 'marcus', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Michael', 'Lindow', 'Linden Alleee', 'Oldenburg', '18323', 'michael', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Alexander', 'Lipinski', 'Meier Straße', 'Köln', '18323', 'alexander', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Petra', 'Rafen', 'Rummelsburger Straße', 'Berlin', '10315', 'petra', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Sabrina', 'Bauer', 'Landsberger Allee', 'Berlin', '15315', 'sabrina', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Julia', 'Dünnwieast', 'Treptow Alleee', 'Hamburg', '18723', 'julia', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Florian', 'Hörnicke', 'Linden Alleee', 'Oldenburg', '18323', 'florian', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Marco', 'Wendelmuth', 'Wenke Straße', 'Köln', '18323', 'marco', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Oliver', 'Worst', 'Rummelsburger Straße', 'Berlin', '10315', 'oliver', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Udo', 'Oehmig', 'Landsberger Allee', 'Berlin', '15315', 'udo', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Robert', 'Grüne', 'Treptow Alleee', 'Hamburg', '18723', 'robert', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Jörg', 'Nobody', 'Linden Alleee', 'Oldenburg', '18323', 'joerg', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '3500', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Jens', 'Wichtig', 'Meier Straße', 'Köln', '18323', 'jens', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Jan', 'Günzel', 'Rummelsburger Straße', 'Berlin', '10315', 'jan', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Felix', 'Ulkig', 'Landsberger Allee', 'Berlin', '15315', 'felix', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '8000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Conny', 'Klecker', 'Treptow Alleee', 'Hamburg', '18723', 'conny', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4500', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Steffen', 'Härter', 'Linden Alleee', 'Oldenburg', '18323', 'steffen', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Claudia', 'Brünett', 'Meier Straße', 'Köln', '18323', 'claudia', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Paul', 'Manta', 'Meier Straße', 'Köln', '18323', 'alexander', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('David', 'Gottschalk', 'Rummelsburger Straße', 'Berlin', '10315', 'david', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Sebastian', 'Rosenkranz-Bunzel', 'Landsberger Allee', 'Berlin', '15315', 'sebastian', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Marcus', 'Misiak', 'Treptow Alleee', 'Hamburg', '18723', 'marcus', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Michael', 'Lindow', 'Linden Alleee', 'Oldenburg', '18323', 'michael', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Alexander', 'Lipinski', 'Meier Straße', 'Köln', '18323', 'alexander', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Petra', 'Rafen', 'Rummelsburger Straße', 'Berlin', '10315', 'petra', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Sabrina', 'Bauer', 'Landsberger Allee', 'Berlin', '15315', 'sabrina', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Julia', 'Dünnwieast', 'Treptow Alleee', 'Hamburg', '18723', 'julia', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Florian', 'Hörnicke', 'Linden Alleee', 'Oldenburg', '18323', 'florian', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Marco', 'Wendelmuth', 'Wenke Straße', 'Köln', '18323', 'marco', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Oliver', 'Worst', 'Rummelsburger Straße', 'Berlin', '10315', 'oliver', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Udo', 'Oehmig', 'Landsberger Allee', 'Berlin', '15315', 'udo', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Robert', 'Grüne', 'Treptow Alleee', 'Hamburg', '18723', 'robert', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Jörg', 'Nobody', 'Linden Alleee', 'Oldenburg', '18323', 'joerg', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Jens', 'Wichtig', 'Meier Straße', 'Köln', '18323', 'jens', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Jan', 'Günzel', 'Rummelsburger Straße', 'Berlin', '10315', 'jan', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Felix', 'Ulkig', 'Landsberger Allee', 'Berlin', '15315', 'felix', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Conny', 'Klecker', 'Treptow Alleee', 'Hamburg', '18723', 'conny', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Steffen', 'Härter', 'Linden Alleee', 'Oldenburg', '18323', 'steffen', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Claudia', 'Brünett', 'Meier Straße', 'Köln', '18323', 'claudia', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Paul', 'Manta', 'Meier Straße', 'Köln', '18323', 'alexander', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '1', '1', '43000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 
-('Stephan', 'Hahn', 'Isen Straße', 'Berlin', '10315', 'stephan', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '5000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Simone', 'Gotsloff', 'Liebkind Allee', 'München', '43254', 'simone', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Lucienne', 'Dziekanaksi', 'Babyboom Straße', 'Düsseldorf', '13521', 'lucienne', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Peter', 'Bestpa', 'Breite Straße', 'Oldenburg', '73483', 'peter', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '3100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Volker', 'Eckloff', 'Platanen Allee', 'München', '17323', 'volker', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '2800', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Stephan', 'Hahn', 'Isen Straße', 'Berlin', '10315', 'stephan', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '30000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Simone', 'Gotsloff', 'Liebkind Allee', 'München', '43254', 'simone', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '30000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Lucienne', 'Dziekanaksi', 'Babyboom Straße', 'Düsseldorf', '13521', 'lucienne', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '30000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Peter', 'Bestpa', 'Breite Straße', 'Oldenburg', '73483', 'peter', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '30000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Volker', 'Eckloff', 'Platanen Allee', 'München', '17323', 'volker', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '2', '1', '30000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 
-('Stephanie', 'Gottschalk', 'Rummelsburger Straße', 'Berlin', '10315', 'stephanie', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '2000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Kerstin', 'Pappen', 'Sigfried Straße', 'München', '43254', 'kerstin', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '2100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Natalie', 'Schulz', 'Nerven Straße', 'Düsseldorf', '13521', 'natalie', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '2200', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Wulf', 'Mann', 'Hemel Brücke', 'Oldenburg', '73483', 'wulf', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '3000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Rainer', 'Burmann', 'Ferdinand Allee', 'München', '17323', 'rainer', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '2100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Andre', 'Meckel', 'Hammel Straße', 'Köln', '98712', 'andre', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '2400', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Stephanie', 'Gottschalk', 'Rummelsburger Straße', 'Berlin', '10315', 'stephanie', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '25000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Kerstin', 'Pappen', 'Sigfried Straße', 'München', '43254', 'kerstin', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '25000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Natalie', 'Schulz', 'Nerven Straße', 'Düsseldorf', '13521', 'natalie', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '25000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Wulf', 'Mann', 'Hemel Brücke', 'Oldenburg', '73483', 'wulf', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '25000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Rainer', 'Burmann', 'Ferdinand Allee', 'München', '17323', 'rainer', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '25000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Andre', 'Meckel', 'Hammel Straße', 'Köln', '98712', 'andre', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '3', '1', '25000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
 
-('Erik', 'Enmis', 'Wönnich Straße', 'Oldenburg', '73483', 'erik', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Matthias', 'Röck', 'Ring Straße', 'München', '17323', 'matthias', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '1', '4100', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
-('Nicolas', 'Bastelstube', 'Görlitz Weg', 'Köln', '98712', 'nicolas', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '1', '4000', '2016-05-11 09:00:00', '2016-05-11 09:00:00');
+('Erik', 'Enmis', 'Wönnich Straße', 'Oldenburg', '73483', 'erik', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '1', '28000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Matthias', 'Röck', 'Ring Straße', 'München', '17323', 'matthias', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '1', '28000', '2016-05-11 09:00:00', '2016-05-11 09:00:00'),
+('Nicolas', 'Bastelstube', 'Görlitz Weg', 'Köln', '98712', 'nicolas', '$2y$10$F2pGkwwD0AjDVid/J.Xyhuf1.84BCD1nDJvD5WV/9/q5Dz.0NZYfK', '4', '1', '28000', '2016-05-11 09:00:00', '2016-05-11 09:00:00');
 
 INSERT INTO customers (customer_number,first_name, last_name, company, street, postal_code, country, customer_type_id, strike, email, status) VALUES
 ('83950812','Sandra', 'Lipinski', 'Siemens', 'Hohenzollerndamm 150', '14144', 'Berlin', '1', '0', 'sandra.lipinski@web.de', '1'),
 ('76380374','Alexander', 'Laube', '', 'Isenstraße 11', '11234', 'Berlin', '2', '0', 'alexander.laube@aol.de', '1'),
 ('12891468','Paul', 'Mahlendorf', '', 'Regenstraße 4', '83463', 'Köln', '3', '0', 'paul.mahlendorf@gmx.de', '1');
 
-INSERT INTO flights (flight_number, customer_id, plane_id, start_date, end_date, status, cost_effectiv_travel_time) VALUES
-('XXX-83726492-F', '1', '1', '2016-05-17 18:15:00', '2016-05-17 19:20:00', '1', '123'),
-('XXX-18527182-F', '2', '2', '2016-05-18 04:10:00', '2016-05-18 08:25:00', '1', '456');
+INSERT INTO flights (flight_number, customer_id, plane_id, start_date, end_date, status, cost_effectiv_travel_time, catering) VALUES
+('XXX-83726492-F', '1', '1', '2016-05-17 18:15:00', '2016-05-17 19:20:00', '1', '123', '1'),
+('XXX-18527182-F', '2', '2', '2016-05-18 04:10:00', '2016-05-18 08:25:00', '1', '456', '2');
 
 INSERT INTO users_flights (flight_id, user_id) VALUES
  ('1', '1'),
@@ -122,9 +122,9 @@ INSERT INTO users_flights (flight_id, user_id) VALUES
  ('1', '32');
 
 
-INSERT INTO invoices (flight_id, due_date, value, status, automatic) VALUES
-('1', '2016-05-26 23:59:59', '270,00', '1','1'),
-('2', '2016-05-16 23:59:59', '820,15', '1','1');
+INSERT INTO invoices (invoice_number ,flight_id, due_date, value, status, automatic) VALUES
+('R-9038618362', '1', '2016-05-26 23:59:59', '270,00', '1','1'),
+('R-2638496236', '2', '2016-05-16 23:59:59', '820,15', '1','1');
 
 INSERT INTO airports_flights (flight_id, airport_id, flight_time, stay_duration, order_number) VALUES
 ('1', '340', '0', '0', '0'),

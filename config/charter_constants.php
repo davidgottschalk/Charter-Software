@@ -22,4 +22,8 @@ define('FLIGHT_SOON', 1);
 define('FLIGHT_DUMMY', 2);
 
 define('CUSTOMER_DUMMY', 0);
-define('CUSTOMER_ACTIV', 1);
+define('CUSTOMER_ACTIVE', 1);
+
+define('CATERING_ECO', 1);
+define('CATERING_VEG', 2);
+define('CATERING_VIP', 3);

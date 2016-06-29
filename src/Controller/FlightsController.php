@@ -51,7 +51,7 @@ class FlightsController extends AppController{
                 if($this->Flights->checkAvailability()){
 
                     if($this->Flights->saveFlight()){
-                        $this->request->session()->write('flight.data', $this->Flights->getFlight());
+                        $this->request->session()->write('flight', $this->Flights->getFlight());
                         $this->Flash->success('Wir konnten ein Flugzeug für Sie reservieren.');
                         return $this->redirect(['action' => 'registerCustomer']);
                     }
@@ -66,6 +66,7 @@ class FlightsController extends AppController{
                     }elseif(isset($unavailableReasons['insufficientCrew'])){
                         $this->set('unavailableReasons', 'Zu diesem Termin ist leider kein Flugpersonal mehr verfügbar.');
                     }
+                    $this->set('activePanel',$this->request->data('mode'));
                 }
 
             }else{
@@ -73,6 +74,10 @@ class FlightsController extends AppController{
                 $this->set('inputErrors', $this->Flights->getInputError());
                 $this->Flash->error('Die eingegebenen Daten sind nicht korrekt.');
             }
+            $this->set('activePanel',$this->request->data('mode'));
+        }
+        if ($this->request->is('get')) {
+            $this->set('activePanel','classicCharter');
         }
     }
 
@@ -82,7 +87,7 @@ class FlightsController extends AppController{
 
         if($this->request->is('post')) {
 
-            $flight = $this->request->session()->read('flight.data');
+            $flight = $this->request->session()->read('flight');
 
             if(isset($this->request->data['customerNumber'])){
                 $customer = $this->Customers->find()->where(['customer_number' => $this->request->data['customerNumber']])->first();
@@ -90,12 +95,11 @@ class FlightsController extends AppController{
                     $this->request->session()->write('flight.customer', $customer);
 
                     // Flug wurde mit Dummy Kunde angelegt, nun muss der dummy durch den mit der Kundennummer identifizierten ersetzt werden
-                    $flightEntity = $this->Flights->get($flight['databaseObject']->id);
+                    $flightEntity = $this->Flights->get($flight['flightDatabaseObject']->id);
                     $flightEntity->customer_id = $customer['id'];
-
                     if($this->Flights->save($flightEntity)){
                         // und der Dummy Customer muss aufgeräumt werden
-                        $customerEntity = $this->Customers->get($flight['databaseObject']->customer_id);
+                        $customerEntity = $this->Customers->get($flight['flightDatabaseObject']->customer_id);
                         $this->Customers->delete( $customerEntity);
                     }
 
@@ -109,8 +113,9 @@ class FlightsController extends AppController{
 
             if(isset($this->request->data['first_name'])){
 
-                $customer = $this->Customers->get($flight['databaseObject']->customer_id);
+                $customer = $this->Customers->get($flight['flightDatabaseObject']->customer_id);
                 $customer = $this->Customers->patchEntity($customer, $this->request->data);
+                $customer->status = CUSTOMER_ACTIVE;
                 $this->request->session()->write('flight.customer', $customer);
                 $success = $this->Customers->save($customer);
 
@@ -125,27 +130,61 @@ class FlightsController extends AppController{
         }
     }
 
-
     public function abortCustomerCredentials(){
 
-        $flight = $this->request->session()->read('flight.data');
+        $flight = $this->request->session()->read('flight');
         $this->request->session()->delete('flight');
 
-        $flightEntity = $this->Flights->get($flight['databaseObject']->id);
+        $flightEntity = $this->Flights->get($flight['flightDatabaseObject']->id);
         $this->Flights->delete( $flightEntity);
-        $customerEntity = $this->Customers->get($flight['databaseObject']->customer_id);
+        $customerEntity = $this->Customers->get($flight['flightDatabaseObject']->customer_id);
         $this->Customers->delete( $customerEntity);
         return $this->redirect(['action' => 'order']);
     }
 
     public function offer(){
 
-        // $this->log($this->request->session()->read('flight'), 'debug');
+        $this->Flights->setFlight($this->request->session()->read('flight'));
+        $this->Flights->calculateCosts();
 
+        $this->set('data', $this->Flights->getFlight());
 
-        $this->set('data', $this->request->session()->read('flight'));
+        $this->log($this->request->data,'debug');
+
+        if($this->request->is('post')){
+
+            $this->log("es wird gebucht",'debug');
+
+            $this->Flights->setActiveFlight(); // kein Dummy Flight mehr
+
+            if($this->request->data('payed')){ // direkt bezahlt, PRE
+                $this->log("payed",'debug');
+                $invoice = $this->Flights->writeInvoice(PAYED);
+                // E-Mail senden
+                $this->redirect(['action'=>'payed',$invoice->invoice_number]);
+
+            }else{ // noch nicht bezahlt
+                $this->log("await",'debug');
+                $this->Flights->writeInvoice(AWAIT_PAYMENT);
+                // E-Mail senden
+                $this->redirect(['action' => 'bookingDone']);
+
+            }
+
+        }
+
     }
 
+    public function payed(){}
+    public function bookingDone(){}
+
+
+
+    public function aboutOffer(){
+
+
+        // redirect zu RejectReasons
+    }
 
     public function getAirportsByCountry(){
         $this->autoRender = false;
