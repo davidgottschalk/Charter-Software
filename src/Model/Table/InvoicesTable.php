@@ -8,6 +8,8 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use Cake\Log\LogTrait;
 use Cake\I18n\Time;
+use Cake\Core\Configure;
+use Cake\Network\Email\Email;
 
 /**
  * Invoices Model
@@ -84,9 +86,6 @@ class InvoicesTable extends Table{
         $invoices = $this->find('all');
 
         foreach( $statuus as $key => $status ){ // bspw. PAYED = 1, FIRST_REMINDER = 3
-
-            // $this->log("bearbeite Status:".$status,'debug');
-
             $invoicesPerStatus = clone $invoices;
 
             // selektiert nur abgelaufende für den jeweiligen Status
@@ -95,8 +94,6 @@ class InvoicesTable extends Table{
                 ->contain(['flights.customers.customerTypes']);
 
             foreach( $invoicesPerStatus as $invoicePerStatus ){
-
-// $this->log($invoicePerStatus,'debug');
 
                 if( $invoicePerStatus['Customers']['customer_type_id'] == CORP ){
                     if(array_key_exists($key+1,$statuus)){
@@ -112,10 +109,11 @@ class InvoicesTable extends Table{
             }
             unset($invoicesPerStatus);
         }
-        return "test";
     }
 
-    public function setInkasso($id){ $this->setNewStatus( $id, INKASSO ); }
+    public function setInkasso($id){
+        $this->setNewStatus( $id, INKASSO );
+    }
 
     private function checkStrikes($customerId){
         $customer = $this->Flights->Customers->get($customerId);
@@ -132,24 +130,39 @@ class InvoicesTable extends Table{
         $this->Flights->Customers->save($customer);
     }
 
-    private function setNewStatus( $id, $status ){
+    public function setNewStatus( $id, $status ){
 
         $newDate = date('Y-m-d H:i:s', strtotime("+14 days"));
-        $this->log('new Date:'.$newDate,'debug');
 
         $invoice = $this->get($id);
+        if($status == FIRST_WARNING){
+            $invoice->value = $invoice->value*Configure::read('firstWarningPercent');
+        }
+        if($status == SECOND_WARNING){
+            $invoice->value = $invoice->value*Configure::read('secondWarningPercent');
+        }
         $invoice->due_date = $newDate;
         $invoice->status = $status;
 
-// ++
-
-        if($this->save($invoice)){
-            $this->sendNotification();
+        $invoice = $this->save($invoice);
+        if($invoice && in_array($invoice->status, [FIRST_REMINDER, SECOND_REMINDER, FIRST_WARNING, SECOND_WARNING, INKASSO])){
+            $this->sendNotification( $invoice );
         }
         $this->log('set to Status'.$status,'debug');
     }
 
-    private function sendNotification(){
-        $this->log('sende Email');
+    private function sendNotification( $invoice ){
+
+        $flight = $this->Flights->find()->where(['Flights.id' =>$invoice->flight_id])->contain(['Customers'])->first();
+
+        $email = new Email('notification');
+        $email->subject('Rechnungsnummer: '.$invoice->invoice_number);
+        $email->addTo($flight->customer->email);
+        $email->viewVars([
+            'invoice' => $invoice,
+            'flight' => $flight,
+        ]);
+        $email->send();
+
     }
 }

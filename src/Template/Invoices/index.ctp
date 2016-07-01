@@ -19,7 +19,7 @@
         <? foreach ($invoices as $invoice){ ?>
             <tr>
                 <td>
-                    <?= $invoice->has('flight') ? $this->Html->link($invoice->flight->id, ['controller' => 'Flights', 'action' => 'view', $invoice->flight->id]) : '' ?>
+                    <?= $invoice->has('flight') ? $this->Html->link($invoice->flight->flight_number, ['controller' => 'Flights', 'action' => 'view', $invoice->flight->id]) : '' ?>
                 </td>
                 <td>
                     <?= $invoice->has('flight') ? $this->Html->link($invoice->flight->customer_id, ['controller' => 'Customers', 'action' => 'view', $invoice->flight->customer_id]) : '' ?>

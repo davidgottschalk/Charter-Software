@@ -43,6 +43,12 @@
                 <p><?= h($planeType->modified->format('d.m.Y, H:i')) ?></p>
             </div>
         </div>
+        <br>
+        <div class="row">
+            <div class="large-3 columns strings" style="text-align:center; padding-bottom:20px">
+            <?=$this->Html->image( 'type_'.$planeType->id.'.jpg', ['style'=>'height:150px;'] )?>
+            </div>
+        </div>
     </fieldset>
     <span class="primary-button" style=""><?= $this->Html->link("Bearbeiten", ['action' => 'edit', $planeType->id]) ?></span>
     <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>

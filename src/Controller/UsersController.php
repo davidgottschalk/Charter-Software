@@ -58,10 +58,14 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
+            $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
+            $password = substr( str_shuffle( $chars ), 0, $length );
             $user->status = USER_PASSWORD_CHANGE;
-            $user->password = "placeholder";
+            $user->password = $password;
+
 
             if ($this->Users->save($user)) {
+                $this->User->sendGeneratedPassword();
                 $this->Flash->success('The user has been saved.');
                 return $this->redirect(['action' => 'index']);
             } else {

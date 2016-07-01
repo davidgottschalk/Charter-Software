@@ -19,6 +19,7 @@ class FlightsController extends AppController{
         $this->loadModel('Airports');
         $this->loadModel('Planes');
         $this->loadModel('Customers');
+        $this->loadModel('Invoices');
 
     }
 
@@ -149,36 +150,39 @@ class FlightsController extends AppController{
 
         $this->set('data', $this->Flights->getFlight());
 
-        $this->log($this->request->data,'debug');
-
         if($this->request->is('post')){
 
-            $this->log("es wird gebucht",'debug');
-
             $this->Flights->setActiveFlight(); // kein Dummy Flight mehr
+            $flight = $this->Flights->getFlight();
 
             if($this->request->data('payed')){ // direkt bezahlt, PRE
                 $this->log("payed",'debug');
-                $invoice = $this->Flights->writeInvoice(PAYED);
-                // E-Mail senden
-                $this->redirect(['action'=>'payed',$invoice->invoice_number]);
+                $invoice = $this->Flights->writeInvoice(PAYED, false);
+                $this->Flights->writeFlightInfoMail(); // sendet Flugdatensmail
+
+                $this->redirect(['action'=>'payed','invoice_number' => $invoice->invoice_number,'flight_number' => $flight['flightDatabaseObject']['flight_number']]);
 
             }else{ // noch nicht bezahlt
                 $this->log("await",'debug');
-                $this->Flights->writeInvoice(AWAIT_PAYMENT);
-                // E-Mail senden
+                $this->Flights->writeInvoice(AWAIT_PAYMENT, true); // sendet Rechnungsmail
+                $this->request->session()->write('flight', $this->Flights->getFlight());
+                $this->Flights->writeFlightInfoMail(); // sendet Flugdatensmail
                 $this->redirect(['action' => 'bookingDone']);
 
             }
-
         }
-
     }
 
-    public function payed(){}
+    public function payed(){
+
+        if( $this->request->query('invoice_id') ){
+            $this->Invoices->setNewStatus($this->request->query('invoice_id'), PAYED);
+        }
+
+        $this->set('invoiceNumber',$this->request->query('invoice_number'));
+        $this->set('flightNumber',$this->request->query('flight_number'));
+    }
     public function bookingDone(){}
-
-
 
     public function aboutOffer(){
 

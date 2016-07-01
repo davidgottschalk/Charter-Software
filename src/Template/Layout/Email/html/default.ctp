@@ -16,9 +16,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 <head>
+    <style type="text/css">
+        img{width:200px;}
+    </style>
     <title><?= $this->fetch('title') ?></title>
 </head>
 <body>
     <?= $this->fetch('content') ?>
+    <br>
+    <p>Ihr Hinotorie Team</p>
+    <img src="cid:HinotorieLogo"/>
 </body>
 </html>

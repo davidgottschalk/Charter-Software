@@ -133,3 +133,11 @@ CREATE TABLE reject_reasons (
     created DATETIME
 );
 
+CREATE TABLE income_by_plane_types (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    plane_type_id INT NOT NULL,
+    invoice_id INT NOT NULL,
+    created DATETIME,
+    FOREIGN KEY plane_type_key(plane_type_id) REFERENCES plane_types(id),
+    FOREIGN KEY invoice_key(invoice_id) REFERENCES invoices(id)
+);

@@ -8,6 +8,7 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use Cake\Log\LogTrait;
 use Cake\ORM\TableRegistry;
+use Cake\Network\Email\Email;
 
 /**
  * Flights Model
@@ -575,30 +576,83 @@ class FlightsTable extends Table
         }
     }
 
-    public function writeInvoice($paymentStatus){
-        $automatic = 1;
-        if($paymentStatus == AWAIT_PAYMENT){
-            $this->log("-hier-",'debug');
-            $this->log($this->flight['customer'],'debug');
-            if($this->flight['customer']['customer_type_id'] == VIP){
-                $automatic = 0;
+    public function writeInvoice($paymentStatus, $writeMail){
+
+        // nur wenn nicht bereits ein Rechnung geschrieben wurde
+        if(!$this->Invoices->exists(['flight_id' => $this->flight['flightDatabaseObject']['id']])){
+            $automatic = 1;
+            if($paymentStatus == AWAIT_PAYMENT){
+                $this->log($this->flight['customer'],'debug');
+                if($this->flight['customer']['customer_type_id'] == VIP){
+                    $automatic = 0;
+                }
             }
+
+            // $this->log($this->flight,'debug');
+
+            $invoice = $this->Invoices->newEntity();
+            $invoice->invoice_number = "R-".rand(1000000000,9999999999);
+            $invoice->flight_id = $this->flight['flightDatabaseObject']['id'];
+            $invoice->value = $this->flight['costs']['bruttoSumme'];
+            $invoice->status = $paymentStatus;
+            $invoice->due_date = date('Y-m-d H:i:s', strtotime("+14 days"));
+            $invoice->automatic = $automatic;
+
+
+            $invoice =  $this->Invoices->save($invoice);
+            $this->flight['invoice'] = $invoice;
+
+            //Statitiken
+            $incomeByPlaneTypes = TableRegistry::get('IncomeByPlaneTypes');
+            $incomeByPlaneType = $incomeByPlaneTypes->newEntity();
+            $incomeByPlaneType->plane_type_id = $this->flight['planeType']['id'];
+            $incomeByPlaneType->invoice_id = $invoice->id;
+            $incomeByPlaneTypes->save($incomeByPlaneType);
+
+            if($writeMail){
+                $this->writeVoicesMail();
+            }
+
+            return $invoice;
         }
+        else{
+            $this->log('habe Rechnung schon geschrieben','debug');
 
-        // $this->log($this->flight,'debug');
-
-        $invoice = $this->Invoices->newEntity();
-        $invoice->invoice_number = "R-".rand(1000000000,9999999999);
-        $invoice->flight_id = $this->flight['flightDatabaseObject']['id'];
-        $invoice->value = $this->flight['costs']['bruttoSumme'];
-        $invoice->status = $paymentStatus;
-        $invoice->due_date = date('Y-m-d H:i:s', strtotime("+14 days"));
-        $invoice->automatic = $automatic;
-
-        return $this->Invoices->save($invoice);
-
+            return $this->flight['invoice'];
+        }
     }
 
+    private function writeVoicesMail(){
+
+        $email = new Email('invoice');
+        $email->subject('Rechnung '.$this->flight['invoice']['invoice_number']);
+        $email->addTo($this->flight['customer']['email']);
+        $email->viewVars([
+            'flight' => $this->flight,
+        ]);
+        $email->send();
+    }
+
+    public function writeFlightInfoMail(){
+
+        $email = new Email('flightData');
+        $email->subject('Fluginformationen zum Flug:'.$this->flight['flightDatabaseObject']['flight_number']);
+        $email->addTo($this->flight['customer']['email']);
+        $email->viewVars([
+            'flight' => $this->flight,
+        ]);
+
+        $email->attachments(['type_'.$this->flight['planeType']['id'].'.jpg' => [
+                'file' => WWW_ROOT.'img/type_'.$this->flight['planeType']['id'].'.jpg',
+                'contentId' => 'planeType'
+                ],
+                'asap-transparent.jpg' => [
+                    'file' => WWW_ROOT.'img/asap-transparent.jpg',
+                    'contentId' => 'HinotorieLogo'
+                ],
+            ]);
+        $email->send();
+    }
 
     public function setActiveFlight(){
         $flight = $this->flight['flightDatabaseObject'];

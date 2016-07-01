@@ -136,5 +136,19 @@ class UsersTable extends Table
         return $rules;
     }
 
+    public function sendGeneratedPassword($password, $email){
+
+        $flight = $this->Flights->find()->where(['Flights.id' =>$invoice->flight_id])->contain(['Customers'])->first();
+
+        $email = new Email('password_send');
+        $email->subject('Ihr neues Password');
+        $email->addTo($flight->customer->email);
+        $email->viewVars([
+            'password' => $password,
+
+        ]);
+        $email->send();
+
+    }
 
 }

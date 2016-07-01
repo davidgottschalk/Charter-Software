@@ -204,7 +204,67 @@ return [
             'transport' => 'default',
             'charset' => 'utf-8',
             'template' => 'customer_satisfaction',
-            'layout' => 'success',
+            'layout' => 'default',
+            'emailFormat' => 'both',
+            'subject' => 'Hinotorie Exec Charter',
+            'attachments' => [
+                'asap-transparent.jpg' => [
+                    'file' => WWW_ROOT.'img/asap-transparent.jpg',
+                    'contentId' => 'HinotorieLogo'
+                ],
+            ],
+        ],
+        'invoice' => [
+            'from' => 'hinotorie@exec-charter.com',
+            'transport' => 'default',
+            'charset' => 'utf-8',
+            'template' => 'invoice',
+            'layout' => 'default',
+            'emailFormat' => 'both',
+            'subject' => 'Hinotorie Exec Charter',
+            'attachments' => [
+                'asap-transparent.jpg' => [
+                    'file' => WWW_ROOT.'img/asap-transparent.jpg',
+                    'contentId' => 'HinotorieLogo'
+                ],
+            ],
+        ],
+        'flightData' => [
+            'from' => 'hinotorie@exec-charter.com',
+            'transport' => 'default',
+            'charset' => 'utf-8',
+            'template' => 'flight_data',
+            'layout' => 'default',
+            'emailFormat' => 'both',
+            'subject' => 'Hinotorie Exec Charter',
+            'attachments' => [
+                'asap-transparent.jpg' => [
+                    'file' => WWW_ROOT.'img/asap-transparent.jpg',
+                    'contentId' => 'HinotorieLogo'
+                ],
+            ],
+        ],
+        'notification' => [
+            'from' => 'hinotorie@exec-charter.com',
+            'transport' => 'default',
+            'charset' => 'utf-8',
+            'template' => 'notification',
+            'layout' => 'default',
+            'emailFormat' => 'both',
+            'subject' => 'Hinotorie Exec Charter',
+            'attachments' => [
+                'asap-transparent.jpg' => [
+                    'file' => WWW_ROOT.'img/asap-transparent.jpg',
+                    'contentId' => 'HinotorieLogo'
+                ],
+            ],
+        ],
+        'passwordSend' => [
+            'from' => 'hinotorie@exec-charter.com',
+            'transport' => 'default',
+            'charset' => 'utf-8',
+            'template' => 'password_send',
+            'layout' => 'default',
             'emailFormat' => 'both',
             'subject' => 'Hinotorie Exec Charter',
             'attachments' => [
