@@ -29,6 +29,7 @@ class User extends Entity
         'exit_date' => true,
         'group' => true,
         'flights' => true,
+        'email' => true
     ];
 
 

@@ -128,6 +128,7 @@ class FlightsTable extends Table
         // UsersFlights füllen
         $usersFlights = TableRegistry::get('UsersFlights');
         $i = 0;
+
         if(isset($planeType['crew']['copilot'])){
             foreach($planeType['crew']['pilot'] as $pilot){
                 $usersFlightsData = $usersFlights->newEntity();
@@ -161,16 +162,8 @@ class FlightsTable extends Table
     public function checkAvailability(){
 
         if($this->evaluateFlight()){
-
-            // $this->log($this->flight['availablePlane'], 'debug');
-
-            // $this->log($this->flight, 'debug');
-            // $this->log($this->unavailableReasons, 'debug');
             return true;
         }else{
-            // $this->log($this->flight['availablePlane'], 'debug');
-            // $this->log($this->flight, 'debug');
-            // $this->log($this->unavailableReasons, 'debug');
             return false;
         }
     }
@@ -479,10 +472,6 @@ class FlightsTable extends Table
 
         $planeType = $this->flight['planeType'];
 
-// $this->log(($planeType['annual_fixed_cost']),'debug');
-// $this->log(($planeType['annual_fixed_cost']/8760),'debug');
-// $this->log($planeType['costEffectivTravellTime'],'debug');
-
         $planeAnnualFixCost = ($planeType['annual_fixed_cost']/8760)*$planeType['costEffectivTravellTime'];
         $planeHourlyCost = $planeType['costEffectivTravellTime']*$planeType['hourly_cost'];
 
@@ -582,13 +571,10 @@ class FlightsTable extends Table
         if(!$this->Invoices->exists(['flight_id' => $this->flight['flightDatabaseObject']['id']])){
             $automatic = 1;
             if($paymentStatus == AWAIT_PAYMENT){
-                $this->log($this->flight['customer'],'debug');
                 if($this->flight['customer']['customer_type_id'] == VIP){
                     $automatic = 0;
                 }
             }
-
-            // $this->log($this->flight,'debug');
 
             $invoice = $this->Invoices->newEntity();
             $invoice->invoice_number = "R-".rand(1000000000,9999999999);
@@ -616,8 +602,6 @@ class FlightsTable extends Table
             return $invoice;
         }
         else{
-            $this->log('habe Rechnung schon geschrieben','debug');
-
             return $this->flight['invoice'];
         }
     }

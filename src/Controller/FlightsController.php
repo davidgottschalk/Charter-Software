@@ -20,23 +20,9 @@ class FlightsController extends AppController{
         $this->loadModel('Planes');
         $this->loadModel('Customers');
         $this->loadModel('Invoices');
+        $this->loadModel('Groups');
 
     }
-
-    /**
-     * Index method
-     *
-     * @return void
-     */
-    public function index()
-    {
-        $this->paginate = [
-            'contain' => ['Customers', 'Planes']
-        ];
-        $this->set('flights', $this->paginate($this->Flights));
-        $this->set('_serialize', ['flights']);
-    }
-
 
     public function order(){
 
@@ -71,7 +57,6 @@ class FlightsController extends AppController{
                 }
 
             }else{
-                $this->log($this->Flights->getInputError(),'debug');
                 $this->set('inputErrors', $this->Flights->getInputError());
                 $this->Flash->error('Die eingegebenen Daten sind nicht korrekt.');
             }
@@ -83,8 +68,6 @@ class FlightsController extends AppController{
     }
 
     public function registerCustomer(){
-
-        // $this->log($this->request->data(),'debug');
 
         if($this->request->is('post')) {
 
@@ -104,11 +87,11 @@ class FlightsController extends AppController{
                         $this->Customers->delete( $customerEntity);
                     }
 
-                    $this->Flash->success('Wir konnten ein Flugzeug für Sie reservieren.');
+                    $this->Flash->success('Der Flug wurde wurde mit Ihrer Kundennummer verbunden.');
                     return $this->redirect(['action' => 'offer']);
                 }else{
                     $this->set('customerNumberError', 'Bitte prüfen Sie Ihre Kundenummer');
-                    $this->Flash->success('Die eingegebene Kundennummer gibt es nicht.');
+                    $this->Flash->error('Die eingegebene Kundennummer gibt es nicht.');
                 }
             }
 
@@ -121,11 +104,11 @@ class FlightsController extends AppController{
                 $success = $this->Customers->save($customer);
 
                 if($success) {
-                    $this->Flash->success('The flight has been saved.');
+                    $this->Flash->success('Der Flug wurde wurde mit Ihrer Kundennummer verbunden.');
                     return $this->redirect(['action' => 'offer']);
                 } else {
                     $this->set('errors', $customer->errors());
-                    $this->Flash->error('The flight could not be saved. Please, try again.');
+                    $this->Flash->error('Die eingegebenen Daten sind leider nicht korrekt');
                 }
             }
         }
@@ -140,6 +123,7 @@ class FlightsController extends AppController{
         $this->Flights->delete( $flightEntity);
         $customerEntity = $this->Customers->get($flight['flightDatabaseObject']->customer_id);
         $this->Customers->delete( $customerEntity);
+        $this->Flash->success('Die Reservierung wurde aufgehoben.');
         return $this->redirect(['action' => 'order']);
     }
 
@@ -156,14 +140,12 @@ class FlightsController extends AppController{
             $flight = $this->Flights->getFlight();
 
             if($this->request->data('payed')){ // direkt bezahlt, PRE
-                $this->log("payed",'debug');
                 $invoice = $this->Flights->writeInvoice(PAYED, false);
                 $this->Flights->writeFlightInfoMail(); // sendet Flugdatensmail
 
                 $this->redirect(['action'=>'payed','invoice_number' => $invoice->invoice_number,'flight_number' => $flight['flightDatabaseObject']['flight_number']]);
 
             }else{ // noch nicht bezahlt
-                $this->log("await",'debug');
                 $this->Flights->writeInvoice(AWAIT_PAYMENT, true); // sendet Rechnungsmail
                 $this->request->session()->write('flight', $this->Flights->getFlight());
                 $this->Flights->writeFlightInfoMail(); // sendet Flugdatensmail
@@ -186,8 +168,8 @@ class FlightsController extends AppController{
 
     public function aboutOffer(){
 
-
-        // redirect zu RejectReasons
+        $this->Flash->success('Das angefragte Angebot wurde zurückgezogen.');
+        $this->redirect(['controller' => 'RejectReasons','action' => 'survey']);
     }
 
     public function getAirportsByCountry(){
@@ -195,6 +177,65 @@ class FlightsController extends AppController{
         $airportNames = $this->Airports->getAirportsByCountry($this->request->data('country'));
         echo json_encode( $airportNames );
     }
+
+    /**
+     * Index method
+     *
+     * @return void
+     */
+    public function index()
+    {
+
+        $today = date('Y-m-d H:i:s');
+
+        if($this->Flights->exists(['end_date <' => $today])){
+            $statusDone = ['status' => FLIGHT_DONE];
+            $statusFlying =['status' => FLIGHT_FLYING];
+            foreach($flightOver = $this->Flights->find()->where(['start_date <=' => $today, 'end_date >=' => $today])->all() as $flight){
+                $flight = $this->Flights->patchEntity($flight, $statusFlying);
+                $this->Flights->save($flight);
+            }
+            foreach($flightOver = $this->Flights->find()->where(['end_date <' => $today])->all() as $flight){
+                $flight = $this->Flights->patchEntity($flight, $statusDone);
+                $this->Flights->save($flight);
+            }
+        }
+
+        $this->set('flightStatus', ['Flug erledigt','Flug bald', '','Unterwegs']);
+
+        $todayMorning = (new \DateTime())->format('Y-m-d')." 00:00:00";
+        $todayNight = (new \DateTime())->format('Y-m-d')." 23:59:59";
+
+        $todayFlights = $this->Flights->find()->where(['start_date >' => $todayMorning, 'start_date <' => $todayNight ])->orWhere(['Flights.status' => FLIGHT_FLYING])->contain(['Customers', 'Planes'])->all();
+
+        $this->set('todayFlights', $todayFlights);
+        $condition = [];
+
+        if( $this->request->data('startDate') && $this->request->data('endDate') ){
+            $startDate = (new \DateTime($this->request->data('startDate')))->format('Y-m-d H:i:s');
+            $endDate = (new \DateTime($this->request->data('endDate')))->format('Y-m-d H:i:s');
+
+            if($startDate > $endDate){
+
+                $this->set('inputErrors','Das eingegebene Von-Datum liegt nach dem Bis-Datum!');
+                $this->Flash->error('Die eingegebenen Daten sind nicht korrekt.');
+            }else{
+                $condition = ['start_date >=' => $startDate, 'start_date <=' => $endDate ];
+                $this->Flash->success('Die Suche wurde eingegrenzt');
+            }
+
+        }
+
+        $this->paginate = [
+            'conditions' => $condition,
+            'contain' => ['Customers', 'Planes'],
+            'limit' => 5,
+        ];
+
+        $this->set('flights', $this->paginate($this->Flights));
+        $this->set('_serialize', ['flights']);
+    }
+
 
     /**
      * View method
@@ -205,6 +246,10 @@ class FlightsController extends AppController{
      */
     public function view($id = null)
     {
+
+        $this->set('groupNames', $this->Groups->find()->all()->toArray());
+
+        $this->set('flightStatus', ['Flug erledigt','Flug bald', '','Unterwegs']);
         $flight = $this->Flights->get($id, [
             'contain' => ['Customers', 'Planes', 'Airports', 'Users', 'Invoices']
         ]);

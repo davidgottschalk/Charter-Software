@@ -1,7 +1,6 @@
 <div class="customers form large-10 medium-9 columns">
     <?= $this->Form->create($customer); ?>
     <fieldset>
-
         <legend class="asapblau"><h3>Kunde <?= h($customer->id) ?> bearbeiten</h3></legend>
 
         <div class="large-3 columns strings edit-table">

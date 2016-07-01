@@ -8,12 +8,16 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use Cake\Datasource\EntityInterface;
 use Cake\Auth\DefaultPasswordHasher;
+use Cake\Network\Email\Email;
+use Cake\Log\LogTrait;
+
 /**
+ *
  * Users Model
  */
 class UsersTable extends Table
 {
-
+    use LogTrait;
     /**
      * Initialize method
      *
@@ -92,6 +96,11 @@ class UsersTable extends Table
             ->add('exit_date', 'valid', ['rule' => 'datetime'])
             ->allowEmpty('exit_date');
 
+        $validator
+            ->add('email', 'valid', ['rule' => 'email'])
+            ->requirePresence('email', 'create')
+            ->notEmpty('email');
+
         return $validator;
     }
 
@@ -136,19 +145,27 @@ class UsersTable extends Table
         return $rules;
     }
 
-    public function sendGeneratedPassword($password, $email){
+    public function generatePassword(){
+        $password = '';
+        $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
+        for ($i = 0; $i < 9; $i++) {
+            $password .= $chars[mt_rand(0, strlen($chars)-1)];
+        }
+        return $password;
+    }
 
-        $flight = $this->Flights->find()->where(['Flights.id' =>$invoice->flight_id])->contain(['Customers'])->first();
+    public function sendGeneratedPassword($password, $user){
 
-        $email = new Email('password_send');
+        $this->log($user,'debug');
+
+        $email = new Email('passwordSend');
         $email->subject('Ihr neues Password');
-        $email->addTo($flight->customer->email);
+        $email->addTo($user->email);
         $email->viewVars([
             'password' => $password,
-
+            'username' => $user->username,
         ]);
         $email->send();
-
     }
 
 }

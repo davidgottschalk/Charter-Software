@@ -80,6 +80,7 @@ CREATE TABLE users (
     payment INT NOT NULL,
     created DATETIME,
     exit_date DATETIME,
+    email VARCHAR(100) NOT NULL,
     FOREIGN KEY group_key(group_id) REFERENCES groups(id)
 );
 

@@ -20,6 +20,7 @@ define('USER_PASSWORD_CHANGE', 2);
 define('FLIGHT_DONE', 0);
 define('FLIGHT_SOON', 1);
 define('FLIGHT_DUMMY', 2);
+define('FLIGHT_FLYING', 3);
 
 define('CUSTOMER_DUMMY', 0);
 define('CUSTOMER_ACTIVE', 1);

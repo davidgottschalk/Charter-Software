@@ -7,6 +7,7 @@
             <h6 class="subheader"><? echo $this->Form->input('first_name',['label' => 'Vorname']); ?></h6>
             <h6 class="subheader"><? echo $this->Form->input('last_name',['label' => 'Nachname']); ?></h6>
             <h6 class="subheader"><? echo $this->Form->input('username',['label' => 'Benutzername']); ?></h6>
+            <h6 class="subheader"><? echo $this->Form->input('email',['label' => 'E-Mail']); ?></h6>
         </div>
 
         <div class="large-4 columns strings edit-table">

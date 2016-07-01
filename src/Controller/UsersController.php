@@ -58,14 +58,14 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
-            $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
-            $password = substr( str_shuffle( $chars ), 0, $length );
+
+            $password = $this->Users->generatePassword();
             $user->status = USER_PASSWORD_CHANGE;
             $user->password = $password;
 
-
-            if ($this->Users->save($user)) {
-                $this->User->sendGeneratedPassword();
+            $user = $this->Users->save($user);
+            if ($user) {
+                $this->Users->sendGeneratedPassword($password, $user);
                 $this->Flash->success('The user has been saved.');
                 return $this->redirect(['action' => 'index']);
             } else {
@@ -73,8 +73,8 @@ class UsersController extends AppController
             }
         }
         $groups = $this->Users->Groups->find('list', ['limit' => 200]);
-        $flights = $this->Users->Flights->find('list', ['limit' => 200]);
         $this->set(compact('user', 'groups', 'flights'));
+        $flights = $this->Users->Flights->find('list', ['limit' => 200]);
         $this->set('_serialize', ['user']);
     }
 
@@ -132,7 +132,7 @@ class UsersController extends AppController
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect(['controller' => 'Flights', 'action'=>'index']);
             }
             $this->Flash->error("Falscher Benutzername oder Passwort!");
         }
@@ -166,7 +166,7 @@ class UsersController extends AppController
             if( $this->Users->save($user) ){
                 $this->Flash->success('Passwort geändert');
                 if($userStatus == USER_ACTIVE){
-                    $this->redirect(['controller' => 'Planes']);
+                    $this->redirect(['controller' => 'Flights']);
                 }else{
                     $this->redirect(['controller' => 'Users', 'action' => 'logout']);
                 }

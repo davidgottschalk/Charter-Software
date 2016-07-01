@@ -19,7 +19,7 @@
     </thead>
     <tbody>
     <?php foreach ($customers as $customer):
-        if(!$customer->status == CUSTOMER_ACTIV){continue;}
+        if(!$customer->status == CUSTOMER_ACTIVE){continue;}
     ?>
         <tr>
             <td><?= $this->Number->format($customer->id) ?></td>

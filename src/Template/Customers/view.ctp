@@ -1,6 +1,6 @@
 <div class="customers view large-12 medium-9 columns">
     <fieldset>
-        <legend class="asapblau">Kundennummer <?= h($customer->id) ?></legend>
+        <legend class="asapblau">Kundennummer <?= h($customer->customer_number) ?></legend>
 
         <div class="large-3 columns strings view-table">
             <h6 class="subheader"><?= __('Vorname') ?></h6>
