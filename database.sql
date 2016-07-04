@@ -7,8 +7,8 @@ CREATE TABLE plane_types (
     pax INT NOT NULL,
     engine_type VARCHAR(50),
     engine_count INT NOT NULL,
-    hourly_cost FLOAT(10,2) NOT NULL,
-    annual_fixed_cost FLOAT(20,2) NOT NULL,
+    hourly_cost DECIMAL(10,2) NOT NULL,
+    annual_fixed_cost DECIMAL(20,2) NOT NULL,
     flight_crew INT NOT NULL,
     cabin_crew INT NOT NULL,
     created DATETIME,
@@ -121,7 +121,7 @@ CREATE TABLE invoices (
     id INT AUTO_INCREMENT PRIMARY KEY,
     invoice_number VARCHAR(20),
     flight_id INT NOT NULL,
-    value FLOAT(20,2),
+    value DECIMAL(20,2),
     status INT NOT NULL,
     due_date DATETIME,
     automatic INT,
@@ -139,6 +139,7 @@ CREATE TABLE income_by_plane_types (
     plane_type_id INT NOT NULL,
     invoice_id INT NOT NULL,
     created DATETIME,
+    travell_time DECIMAL(5,2);
     FOREIGN KEY plane_type_key(plane_type_id) REFERENCES plane_types(id),
     FOREIGN KEY invoice_key(invoice_id) REFERENCES invoices(id)
 );
