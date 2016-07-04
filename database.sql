@@ -136,7 +136,7 @@ CREATE TABLE reject_reasons (
 
 CREATE TABLE income_by_plane_types (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    plane_type_id INT NOT NULL,
+    plane_typ_id INT NOT NULL,
     invoice_id INT NOT NULL,
     created DATETIME,
     travell_time DECIMAL(5,2);
