@@ -592,6 +592,7 @@ class FlightsTable extends Table
             $incomeByPlaneTypes = TableRegistry::get('IncomeByPlaneTypes');
             $incomeByPlaneType = $incomeByPlaneTypes->newEntity();
             $incomeByPlaneType->plane_type_id = $this->flight['planeType']['id'];
+            $incomeByPlaneType->travell_ime = $this->flight['planeType']['costEffectivTravellTime'];
             $incomeByPlaneType->invoice_id = $invoice->id;
             $incomeByPlaneTypes->save($incomeByPlaneType);
 
