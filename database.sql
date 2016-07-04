@@ -139,7 +139,7 @@ CREATE TABLE income_by_plane_types (
     plane_typ_id INT NOT NULL,
     invoice_id INT NOT NULL,
     created DATETIME,
-    travell_time DECIMAL(5,2);
+    travell_time DECIMAL(5,2),
     FOREIGN KEY plane_typ_key(plane_typ_id) REFERENCES plane_types(id),
     FOREIGN KEY invoice_key(invoice_id) REFERENCES invoices(id)
 );
