@@ -132,7 +132,7 @@ class ReportingsController extends AppController {
                     ->select(['id', 'type']);
                 }])
             ->select(['summe' => $query->func()->sum('value')])
-            ->group('IncomeByPlaneTypes.created');
+            ->group('DATE(IncomeByPlaneTypes.created)');
 
         } else{
             $incomeByPlaneType = $this->IncomeByPlaneTypes->find()
@@ -157,7 +157,7 @@ class ReportingsController extends AppController {
                     ->select(['id', 'type']);
                 }])
             ->select(['summe' => $query->func()->sum('value')])
-            ->group('IncomeByPlaneTypes.created');
+            ->group('DATE(IncomeByPlaneTypes.created)');
         }
 
         $this->set('incomeByPlaneType', $incomeByPlaneType);
