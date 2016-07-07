@@ -112,7 +112,7 @@ class AirportsTable extends Table
     public function getAirportsByCountry($country){
         $airports =  $this->find()->where(['country' => $country])->select(['airport_name'])->distinct(['airport_name']);
 
-        $airportNames[0] = 'Bitte wählen Sie ein Land aus.';
+        $airportNames[0] = 'Bitte wählen Sie einen Flughafen aus.';
         // $key = 1;
         foreach($airports as $airport){
             $airportNames[$airport->airport_name] = $airport->airport_name;

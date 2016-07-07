@@ -477,7 +477,7 @@ class FlightsTable extends Table
 
         $costs['planeHourlyCost'] = $planeHourlyCost;
         $costs['planeAnnualFixCost'] = $planeAnnualFixCost;
-        $costs['planeCost'] = number_format($planeHourlyCost+$planeAnnualFixCost,2)
+        $costs['planeCost'] = number_format($planeHourlyCost+$planeAnnualFixCost,2);
 
         $costEffectivTravellDays = ceil($planeType['costEffectivTravellTime']/24);
         $crewCost = 0;
