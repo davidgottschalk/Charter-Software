@@ -75,6 +75,7 @@ $cakeDescription = 'ASAP';
         <br>
         <br>
         <footer id="footer">
+            <hr>
             <center>ASAP - Aviation services and project GmbH</center>
         </footer>
     </div>
