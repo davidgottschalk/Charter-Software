@@ -26,6 +26,8 @@ class UsersController extends AppController{
             }else{
                 throw new UnauthorizedException();
             }
+        }elseif( !in_array($this->request->action,['login', 'logout', 'passwordChange']) ){
+            throw new UnauthorizedException();
         }
         $this->Auth->allow(['login', 'logout']);
 

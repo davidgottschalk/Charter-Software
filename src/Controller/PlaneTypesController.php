@@ -24,6 +24,8 @@ class PlaneTypesController extends AppController
             }else{
                 throw new UnauthorizedException();
             }
+        }else{
+            throw new UnauthorizedException();
         }
     }
 

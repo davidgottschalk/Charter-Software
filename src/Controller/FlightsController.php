@@ -40,6 +40,8 @@ class FlightsController extends AppController{
             }else{
                 throw new UnauthorizedException();
             }
+        }elseif( !in_array($this->request->action,['order', 'registerCustomer', 'abortCustomerCredentials', 'offer', 'payed', 'bookingDone', 'aboutOffer', 'getAirportsByCountry']) ){
+            throw new UnauthorizedException();
         }
     }
 
