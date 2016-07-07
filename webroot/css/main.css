@@ -26,14 +26,6 @@ table tbody tr:hover {
     color:black;
 }
 
-#footer{
-    width: 100%;
-    bottom:0;
-    background-color: #e7e7e7;
-    border-top: 1px solid #ccc;
-    padding:10px 0px;
-}
-
 .actions.primary a {
     text-decoration: none;
     background-color: rgba(6, 55, 98, 1);
