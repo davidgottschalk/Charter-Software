@@ -74,10 +74,10 @@ class CustomersController extends AppController
             $customer->status = CUSTOMER_ACTIV;
 
             if ($this->Customers->save($customer)) {
-                $this->Flash->success('The customer has been saved.');
+                $this->Flash->success('Der Kunde wurde gespeichert.');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The customer could not be saved. Please, try again.');
+                $this->Flash->error('Der Kunde konnte nicht gespeichert werden, bitte versuchen Sie es erneut.');
             }
         }
         $customerTypes = $this->Customers->CustomerTypes->find('list', ['limit' => 200]);
@@ -100,10 +100,10 @@ class CustomersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $customer = $this->Customers->patchEntity($customer, $this->request->data);
             if ($this->Customers->save($customer)) {
-                $this->Flash->success('The customer has been saved.');
+                $this->Flash->success('Der Kunde wurde gespeichert.');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The customer could not be saved. Please, try again.');
+                $this->Flash->error('Der Kunde konnte nicht gespeichert werden, bitte versuchen Sie es erneut.');
             }
         }
         $customerTypes = $this->Customers->CustomerTypes->find('list', ['limit' => 200]);
@@ -123,9 +123,9 @@ class CustomersController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $customer = $this->Customers->get($id);
         if ($this->Customers->delete($customer)) {
-            $this->Flash->success('The customer has been deleted.');
+            $this->Flash->success('Der Kunde wurde gelöscht.');
         } else {
-            $this->Flash->error('The customer could not be deleted. Please, try again.');
+            $this->Flash->error('Der Kunde konnte nicht gelöscht werden, bitte versuchen Sie es erneut.');
         }
         return $this->redirect(['action' => 'index']);
     }
