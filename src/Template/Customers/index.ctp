@@ -19,7 +19,7 @@
         if(!$customer->status == CUSTOMER_ACTIVE){continue;}
     ?>
         <tr>
-            <td><?= $this->Number->format($customer->customer_number) ?></td>
+            <td><?=$customer->customer_number?></td>
             <td><?= h($customer->first_name) ?></td>
             <td><?= h($customer->last_name) ?></td>
             <td><?= h($customer->company) ?></td>
