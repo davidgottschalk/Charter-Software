@@ -57,6 +57,7 @@ $cakeDescription = 'ASAP';
     <script type="text/javascript">
         $(document).ready(function() {
             $('div.message.error').delay(4000).fadeOut('slow');
+            $('div.message.success').delay(4000).fadeOut('slow');
         });
     </script>
     <header>
@@ -73,8 +74,7 @@ $cakeDescription = 'ASAP';
         </div>
         <br>
         <br>
-        <footer>
-            <hr>
+        <footer id="footer">
             <center>ASAP - Aviation services and project GmbH</center>
         </footer>
     </div>

@@ -2,6 +2,7 @@
     <h3>Heute</h3>
     <hr>
     <span class="actions primary"><?= $this->Html->link(__('Termin hinzufügen'), ['action' => 'order']) ?></span>
+
     <table id="charter-table" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -16,7 +17,22 @@
             </tr>
         </thead>
         <tbody>
+
+
         <?php foreach ($todayFlights as $flight): ?>
+
+        <?
+            $show = false;
+            foreach($flight->users as $user){
+
+                if($user->id == $userID && in_array($groupID, ['1','2','3'])  ){
+                    $show = true;
+                }elseif(in_array($groupID, ['4']) ){
+                    $show = true;
+                }
+
+            }?>
+            <?if($show){?>
             <tr>
                 <td><?= h($flight->flight_number) ?></td>
                 <td>
@@ -30,19 +46,16 @@
                 <td><?= $flightStatus[$flight->status] ?></td>
                 <td>
                     <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $flight->id]) ?></span>
-                    <span class="actions secondary"><?= $this->Html->link(__('Bearbeiten'), ['action' => 'edit', $flight->id]) ?></span>
                 </td>
             </tr>
+            <?}?>
 
         <?php endforeach; ?>
         </tbody>
     </table>
-
-<br>
-<br>
-
+    <br>
+    <br>
     <hr>
-
     <h3>Alle Termine</h3>
     <br>
 
@@ -80,22 +93,37 @@
         </thead>
         <tbody>
         <?php foreach ($flights as $flight): ?>
-            <tr>
-                <td><?= h($flight->flight_number) ?></td>
-                <td>
-                    <?= $flight->has('customer') ? $this->Html->link($flight->customer->customer_number, ['controller' => 'Customers', 'action' => 'view', $flight->customer->id]) : '' ?>
-                </td>
-                <td>
-                    <?= $flight->has('plane') ? $this->Html->link($flight->plane->plane_name, ['controller' => 'Planes', 'action' => 'view', $flight->plane->id]) : '' ?>
-                </td>
-                <td><?= h($flight->start_date) ?></td>
-                <td><?= h($flight->end_date) ?></td>
-                <td><?= $flightStatus[$flight->status] ?></td>
-                <td>
-                    <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $flight->id]) ?></span>
-                    <span class="actions secondary"><?= $this->Html->link(__('Bearbeiten'), ['action' => 'edit', $flight->id]) ?></span>
-                </td>
-            </tr>
+
+            <?
+            $show = false;
+            foreach($flight->users as $user){
+
+                if($user->id == $userID && in_array($groupID, ['1','2','3'])  ){
+                    $show = true;
+                }elseif(in_array($groupID, ['4']) ){
+                    $show = true;
+                }
+
+            }?>
+            <?if($show){?>
+
+                <tr>
+                    <td><?= h($flight->flight_number) ?></td>
+                    <td>
+                        <?= $flight->has('customer') ? $this->Html->link($flight->customer->customer_number, ['controller' => 'Customers', 'action' => 'view', $flight->customer->id]) : '' ?>
+                    </td>
+                    <td>
+                        <?= $flight->has('plane') ? $this->Html->link($flight->plane->plane_name, ['controller' => 'Planes', 'action' => 'view', $flight->plane->id]) : '' ?>
+                    </td>
+                    <td><?= h($flight->start_date) ?></td>
+                    <td><?= h($flight->end_date) ?></td>
+                    <td><?= $flightStatus[$flight->status] ?></td>
+                    <td>
+                        <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $flight->id]) ?></span>
+                        <span class="actions secondary"><?= $this->Html->link(__('Bearbeiten'), ['action' => 'edit', $flight->id]) ?></span>
+                    </td>
+                </tr>
+            <?}?>
 
         <?php endforeach; ?>
         </tbody>

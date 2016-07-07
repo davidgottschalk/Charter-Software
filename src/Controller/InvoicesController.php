@@ -2,23 +2,35 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
+use Cake\Network\Exception\NotFoundException;
+use Cake\Network\Exception\BadRequestException;
+use Cake\Network\Exception\UnauthorizedException;
 
 /**
  * Invoices Controller
  *
  * @property \App\Model\Table\InvoicesTable $Invoices
  */
-class InvoicesController extends AppController
-{
-
-
+class InvoicesController extends AppController{
 
     public function initialize() {
         parent::initialize();
 
         $this->set('invoiceStatus',['','bezahlt','warte auf Zahlung','1. Erinnerung', '2. Erinnerung', '1. Mahnung', '2. Mahnung', 'Inkassoverfahren möglich', 'Inkasso Büro beauftragt']);
         $this->set('automaticStatus',['deaktiviert', 'aktiviert']);
+    }
 
+    public function beforeFilter(Event $event){
+        parent::beforeFilter($event);
+
+        if( $this->Auth->user() ){ //eingelogget
+            if( (in_array($this->Auth->user('group_id'), ['4']) && in_array($this->request->action, ['index', 'view', 'edit', 'deactivateAutomaticWarnings', 'inkasso']) ) ){
+                // ok
+            }else{
+                throw new UnauthorizedException();
+            }
+        }
     }
 
 
@@ -31,7 +43,7 @@ class InvoicesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Flights']
+            'contain' => ['Flights' => ['Customers']]
         ];
         $this->set('invoices', $this->paginate($this->Invoices));
         $this->set('_serialize', ['invoices']);

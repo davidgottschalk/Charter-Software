@@ -1,7 +1,7 @@
 <div class="customers form large-10 medium-9 columns">
     <?= $this->Form->create($customer); ?>
     <fieldset>
-        <legend class="asapblau"><h3>Kunde <?= h($customer->id) ?> bearbeiten</h3></legend>
+        <legend class="asapblau"><h3>Kunde <?= h($customer->customer_number) ?> bearbeiten</h3></legend>
 
         <div class="large-3 columns strings edit-table">
             <p><? echo $this->Form->input('first_name', array('label'=>'Vorname')); ?></p>

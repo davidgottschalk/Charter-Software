@@ -136,10 +136,20 @@ CREATE TABLE reject_reasons (
 
 CREATE TABLE income_by_plane_types (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    plane_typ_id INT NOT NULL,
+    plane_type_id INT NOT NULL,
     invoice_id INT NOT NULL,
     created DATETIME,
     travell_time DECIMAL(5,2),
-    FOREIGN KEY plane_typ_key(plane_typ_id) REFERENCES plane_types(id),
+    FOREIGN KEY plane_typ_key(plane_type_id) REFERENCES plane_types(id),
     FOREIGN KEY invoice_key(invoice_id) REFERENCES invoices(id)
+);
+
+CREATE TABLE customer_satisfactions(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    answer1 INT NOT NULL,
+    answer2 INT NOT NULL,
+    answer3 INT NOT NULL,
+    answer4 INT NOT NULL,
+    answer5 INT NOT NULL,
+    created DATETIME
 );

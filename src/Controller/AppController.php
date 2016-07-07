@@ -16,7 +16,10 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
-
+use Cake\Network\Exception\NotFoundException;
+use Cake\Network\Exception\BadRequestException;
+use Cake\Network\Exception\UnauthorizedException;
+use Cake\Log\LogTrait;
 /**
  * Application Controller
  *
@@ -27,7 +30,7 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
-
+    use LogTrait;
     /**
      * Initialization hook method.
      *
@@ -52,25 +55,25 @@ class AppController extends Controller
             ]
         ]);
         $this->set('authUser', $this->Auth->user());
-
-
-// 1 = pilot
-// 2 = copilot
-// 3 = attendants
-// 4 = admin
-// alle andere
-
-
-
     }
 
     public function beforeFilter(Event $event){
+
+        // if(  ){
+        //     if( $this->request->action != 'login' && $this->request->action != 'logout' ){
+        //         $this->Flash->error('Der Benutzer konnte gefunden werden.');
+        //         return $this->redirect(['controller' => 'Users', 'action' => 'logout']);
+        //     }
+        // }
+
+        if($this->Auth->user() && $this->request->action == 'login' && $this->Auth->user('status') != USER_PASSWORD_CHANGE ){ // wenn auf login redirect aber bereits eingeloggt dann auf flights/index
+            return $this->redirect(['controller' => 'Flights', 'action' => 'index']);
+        }
 
         if( $this->Auth->user('status') == USER_PASSWORD_CHANGE) {
             if( $this->request->action != 'passwordChange' && $this->request->action != 'login' && $this->request->action != 'logout'){
                 return $this->redirect(['controller' => 'users', 'action' => 'passwordChange', $this->Auth->user('id') ]);
             }
         }
-
     }
 }

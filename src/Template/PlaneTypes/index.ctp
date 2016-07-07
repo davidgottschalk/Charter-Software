@@ -27,7 +27,6 @@
                 <td class="actions">
                     <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $planeType->id]) ?></span>
                     <span class="actions secondary"><?= $this->Html->link(__('Bearbeiten'), ['action' => 'edit', $planeType->id]) ?></span>
-                    <span class="actions secondary"><?= $this->Form->postLink(__('Löschen'), ['action' => 'delete', $planeType->id], ['confirm' => __('Sind Sie sicher, dass Sie den Flugzeugtyp "{0}" löschen möchten?', $planeType->manufacturer.' '.$planeType->type)]) ?></span>
                 </td>
             </tr>
 

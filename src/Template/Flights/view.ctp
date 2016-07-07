@@ -10,6 +10,8 @@
             <p><?= $flight->has('customer') ? $this->Html->link($flight->customer->customer_number, ['controller' => 'Customers', 'action' => 'view', $flight->customer->id]) : '' ?></p>
             <h6 class="subheader"><?= __('Flugzeug') ?></h6>
             <p><?= $flight->has('plane') ? $this->Html->link($flight->plane->plane_name, ['controller' => 'Planes', 'action' => 'view', $flight->plane->id]) : '' ?></p>
+            <h6 class="subheader"><?= __('Catering') ?></h6>
+            <p><?if($flight->catering == CATERING_VEG){echo 'Vegan';}elseif($flight->catering == CATERING_VIP){echo 'VIP';}else{echo 'Economy';}?></p>
         </div>
         <div class="large-2 columns numbers end">
 
@@ -27,8 +29,8 @@
 
 <div class="related row">
     <div style="margin-top:50px;" class="column large-12">
-    <h4 class="subheader"><?= __('Rechnung') ?></h4>
     <?php if (!empty($flight->invoices)): ?>
+    <h4 class="subheader"><?= __('Rechnung') ?></h4>
     <table cellpadding="0" cellspacing="0">
         <tr>
             <th><?= __('Rechnungsnummer') ?></th>
@@ -52,16 +54,14 @@
     </div>
 </div>
 
-
-
 <div class="related row">
     <div class="column large-12">
-    <h4 class="subheader"><?= __('Stationen') ?></h4>
     <?php if (!empty($flight->airports)): ?>
+    <h4 class="subheader"><?= __('Stationen') ?></h4>
     <table cellpadding="0" cellspacing="0">
         <tr>
 
-            <th><?= __('Name') ?></th>
+            <th><?= __('Flughafen') ?></th>
             <th><?= __('Stadt') ?></th>
             <th><?= __('Land') ?></th>
             <th>Aufenthaltsdauer</th>
@@ -92,8 +92,8 @@
 
 <div class="related row">
     <div class="column large-12">
-    <h4 class="subheader"><?= __('Crew-Mitglieder') ?></h4>
     <?php if (!empty($flight->users)): ?>
+    <h4 class="subheader"><?= __('Crew-Mitglieder') ?></h4>
     <table cellpadding="0" cellspacing="0">
         <tr>
 

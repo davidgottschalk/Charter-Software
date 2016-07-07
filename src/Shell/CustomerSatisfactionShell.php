@@ -12,6 +12,7 @@ namespace App\Shell;
 
 use Cake\Console\Shell;
 use Cake\Network\Email\Email;
+use Cake\Log\LogTrait;
 
 /**
  *
@@ -23,19 +24,30 @@ use Cake\Network\Email\Email;
 
 class customerSatisfactionShell extends Shell {
 
+    use LogTrait;
+
     public function send(){
 
-        $this->loadModel('Invoices');
+        $this->loadModel('Flights');
 
-        $this->writeDatabaseExceptionMail('');
+        $yesterdayMorning = (new \DateTime())->modify('- 1 Day')->format('Y-m-d')." 00:00:00";
+        $yesterdayNight = (new \DateTime())->modify('- 1 Day')->format('Y-m-d')." 23:59:59";
+
+        // wenn ende des Flugs gestern zwischen 00:00:00 und 23:59:59
+        $oldFlights = $this->Flights->find()->where(['end_date >=' => $yesterdayMorning, 'end_date <=' => $yesterdayNight])->contain('Customers')->all();
+
+        foreach($oldFlights as $oldFlight){
+            $this->writeDatabaseExceptionMail($oldFlight->customer->email);
+        }
     }
 
-    private function writeDatabaseExceptionMail($message){
-        $email = new Email('hinotorie');
+    private function writeDatabaseExceptionMail($emailadress){
+
+        $email = new Email('customerSatisfaction');
         $email->subject('Hinotorie Exec Charter');
-        $email->addTo('david.gottschalk@bancos.com');
+        $email->addTo($emailadress);
         $email->viewVars([
-            'message' => $message,
+            'message' => 'test',
         ]);
         $email->send();
 

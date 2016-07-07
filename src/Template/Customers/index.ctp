@@ -10,9 +10,6 @@
             <th><?= $this->Paginator->sort('first_name', __('Vorname')) ?></th>
             <th><?= $this->Paginator->sort('last_name', __('Nachname')) ?></th>
             <th><?= $this->Paginator->sort('company', __('Firma')) ?></th>
-            <th><?= $this->Paginator->sort('street', __('Straße')) ?></th>
-            <th><?= $this->Paginator->sort('postal_code', __('PLZ')) ?></th>
-            <th><?= $this->Paginator->sort('country', __('Ort')) ?></th>
             <th><?= $this->Paginator->sort('email', __('E-Mail')) ?></th>
             <th style="width:200px"class="actions"><?= __('') ?></th>
         </tr>
@@ -22,13 +19,10 @@
         if(!$customer->status == CUSTOMER_ACTIVE){continue;}
     ?>
         <tr>
-            <td><?= $this->Number->format($customer->id) ?></td>
+            <td><?= $this->Number->format($customer->customer_number) ?></td>
             <td><?= h($customer->first_name) ?></td>
             <td><?= h($customer->last_name) ?></td>
             <td><?= h($customer->company) ?></td>
-            <td><?= h($customer->street) ?></td>
-            <td><?= $this->Number->format($customer->postal_code) ?></td>
-            <td><?= h($customer->country) ?></td>
             <td><?= h($customer->email) ?></td>
             <td>
                 <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $customer->id]) ?></span>

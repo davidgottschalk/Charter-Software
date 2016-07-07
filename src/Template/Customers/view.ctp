@@ -36,12 +36,11 @@
 <div>
 <div class="related row">
     <div class="column large-12">
-    <h4 class="subheader"><?= __('Flüge des Kunden') ?></h4>
     <?php if (!empty($customer->flights)): ?>
+    <h4 class="subheader"><?= __('Flüge des Kunden') ?></h4>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <th><?= __('Flugnummer') ?></th>
-            <th><?= __('Flugzeug ID') ?></th>
             <th><?= __('Start Datum') ?></th>
             <th><?= __('Ende Datum') ?></th>
             <th><?= __('Status') ?></th>
@@ -51,10 +50,9 @@
         <tbody>
             <tr>
                 <td><?= h($flights->flight_number) ?></td>
-                <td><?= h($flights->plane_id) ?></td>
                 <td><?= h($flights->start_date) ?></td>
                 <td><?= h($flights->end_date) ?></td>
-                <td><?= h($flights->status) ?></td>
+                <td><?= $flightStatus[$flights->status] ?></td>
 
                 <td class="actions">
                     <span class="actions secondary"><?= $this->Html->link("Anzeigen", ['controller' => 'Flights', 'action' => 'view', $flights->id]) ?></span>

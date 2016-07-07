@@ -129,7 +129,7 @@ class FlightsTable extends Table
         $usersFlights = TableRegistry::get('UsersFlights');
         $i = 0;
 
-        if(isset($planeType['crew']['copilot'])){
+        if(isset($planeType['crew']['pilot'])){
             foreach($planeType['crew']['pilot'] as $pilot){
                 $usersFlightsData = $usersFlights->newEntity();
                 $usersFlightsData['flight_id'] = $flight['id'];
@@ -320,7 +320,7 @@ class FlightsTable extends Table
                     $blockedUserIds[] = $blockedUser->id;
                 }
             }
-            $availableUsers = $this->Users->find()->where(['Users.id NOT IN' => $blockedUserIds])->contain(['Groups'])->all();
+            $availableUsers = $this->Users->find()->where(['Users.status' => USER_ACTIVE,'Users.id NOT IN' => $blockedUserIds])->contain(['Groups'])->all();
 
             if($this->checkSufficientCrewByPlanetype($planeTypeKey, $availableUsers)){
                 $crewAvailable = true;
@@ -643,6 +643,12 @@ class FlightsTable extends Table
         $flight = $this->flight['flightDatabaseObject'];
         $flight->status = FLIGHT_SOON;
         $this->save($flight);
+    }
+
+    public function setActiveCustomer(){
+        $customer = $this->flight['customer'];
+        $customer->status = CUSTOMER_ACTIVE;
+        $this->Customers->save($customer);
     }
 
     public function setFlight($data){ $this->flight = $data; }

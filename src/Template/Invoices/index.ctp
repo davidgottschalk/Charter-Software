@@ -22,7 +22,7 @@
                     <?= $invoice->has('flight') ? $this->Html->link($invoice->flight->flight_number, ['controller' => 'Flights', 'action' => 'view', $invoice->flight->id]) : '' ?>
                 </td>
                 <td>
-                    <?= $invoice->has('flight') ? $this->Html->link($invoice->flight->customer_id, ['controller' => 'Customers', 'action' => 'view', $invoice->flight->customer_id]) : '' ?>
+                    <?= $invoice->has('flight') ? $this->Html->link($invoice->flight->customer->customer_number, ['controller' => 'Customers', 'action' => 'view', $invoice->flight->customer_id]) : '' ?>
                 </td>
                 <td><?= h($invoice->due_date) ?></td>
                 <td><?= $this->Number->currency($invoice->value, 'EUR') ?></td>

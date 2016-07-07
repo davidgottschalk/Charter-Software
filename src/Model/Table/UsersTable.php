@@ -156,8 +156,6 @@ class UsersTable extends Table
 
     public function sendGeneratedPassword($password, $user){
 
-        $this->log($user,'debug');
-
         $email = new Email('passwordSend');
         $email->subject('Ihr neues Password');
         $email->addTo($user->email);

@@ -16,6 +16,7 @@ define('PRE', 3);
 define('USER_INACTIVE', 0);
 define('USER_ACTIVE', 1);
 define('USER_PASSWORD_CHANGE', 2);
+define('USER_DISMISS', 3);
 
 define('FLIGHT_DONE', 0);
 define('FLIGHT_SOON', 1);

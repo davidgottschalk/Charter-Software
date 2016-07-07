@@ -4,6 +4,10 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Log\LogTrait;
 use Cake\Network\Session\DatabaseSession;
+use Cake\Event\Event;
+use Cake\Network\Exception\NotFoundException;
+use Cake\Network\Exception\BadRequestException;
+use Cake\Network\Exception\UnauthorizedException;
 
 /**
  * Flights Controller
@@ -22,6 +26,21 @@ class FlightsController extends AppController{
         $this->loadModel('Invoices');
         $this->loadModel('Groups');
 
+        $this->Auth->allow();
+
+    }
+
+    public function beforeFilter(Event $event){
+        parent::beforeFilter($event);
+
+        if( $this->Auth->user() ){ //eingelogget
+            if( (in_array($this->Auth->user('group_id'), ['4']) && in_array($this->request->action, ['index', 'view','edit', 'order', 'registerCustomer', 'abortCustomerCredentials', 'offer', 'payed', 'bookingDone', 'aboutOffer', 'getAirportsByCountry'])) ||
+                (in_array($this->Auth->user('group_id'), ['1','2','3']) && in_array($this->request->action, ['index', 'view'])) ){ // admin
+                // ok
+            }else{
+                throw new UnauthorizedException();
+            }
+        }
     }
 
     public function order(){
@@ -99,7 +118,7 @@ class FlightsController extends AppController{
 
                 $customer = $this->Customers->get($flight['flightDatabaseObject']->customer_id);
                 $customer = $this->Customers->patchEntity($customer, $this->request->data);
-                $customer->status = CUSTOMER_ACTIVE;
+                $customer->status = CUSTOMER_DUMMY;
                 $this->request->session()->write('flight.customer', $customer);
                 $success = $this->Customers->save($customer);
 
@@ -134,9 +153,10 @@ class FlightsController extends AppController{
 
         $this->set('data', $this->Flights->getFlight());
 
-        if($this->request->is('post')){
+        if($this->request->is('post')){ // buchung abgeschlossen
 
             $this->Flights->setActiveFlight(); // kein Dummy Flight mehr
+            $this->Flights->setActiveCustomer(); // kein Dummy Flight mehr
             $flight = $this->Flights->getFlight();
 
             if($this->request->data('payed')){ // direkt bezahlt, PRE
@@ -167,6 +187,15 @@ class FlightsController extends AppController{
     public function bookingDone(){}
 
     public function aboutOffer(){
+
+        $flight = $this->request->session()->read('flight');
+        $this->request->session()->delete('flight');
+
+        // Flugreservierung löschen
+        $flightEntity = $this->Flights->get($flight['flightDatabaseObject']->id);
+        $this->Flights->delete( $flightEntity);
+        // nur die Kunden aufräumen die noch keinen Flug haben
+        $this->Customers->deleteAll(['id' => $flight['flightDatabaseObject']->customer_id, 'status' => CUSTOMER_DUMMY] );
 
         $this->Flash->success('Das angefragte Angebot wurde zurückgezogen.');
         $this->redirect(['controller' => 'RejectReasons','action' => 'survey']);
@@ -206,7 +235,7 @@ class FlightsController extends AppController{
         $todayMorning = (new \DateTime())->format('Y-m-d')." 00:00:00";
         $todayNight = (new \DateTime())->format('Y-m-d')." 23:59:59";
 
-        $todayFlights = $this->Flights->find()->where(['start_date >' => $todayMorning, 'start_date <' => $todayNight ])->orWhere(['Flights.status' => FLIGHT_FLYING])->contain(['Customers', 'Planes'])->all();
+        $todayFlights = $this->Flights->find()->where(['start_date >' => $todayMorning, 'start_date <' => $todayNight ])->orWhere(['Flights.status' => FLIGHT_FLYING])->contain(['Customers', 'Planes','Users'])->all();
 
         $this->set('todayFlights', $todayFlights);
         $condition = [];
@@ -228,9 +257,12 @@ class FlightsController extends AppController{
 
         $this->paginate = [
             'conditions' => $condition,
-            'contain' => ['Customers', 'Planes'],
+            'contain' => ['Customers', 'Planes', 'Users'],
             'limit' => 5,
         ];
+
+        $this->set('userID', $this->Auth->user('id'));
+        $this->set('groupID', $this->Auth->user('group_id'));
 
         $this->set('flights', $this->paginate($this->Flights));
         $this->set('_serialize', ['flights']);
@@ -258,56 +290,28 @@ class FlightsController extends AppController{
     }
 
     /**
-     * Add method
-     *
-     * @return void Redirects on successful add, renders view otherwise.
-     */
-    public function add()
-    {
-        $flight = $this->Flights->newEntity();
-        if ($this->request->is('post')) {
-            $flight = $this->Flights->patchEntity($flight, $this->request->data);
-            if ($this->Flights->save($flight)) {
-                $this->Flash->success('The flight has been saved.');
-                return $this->redirect(['action' => 'index']);
-            } else {
-                $this->Flash->error('The flight could not be saved. Please, try again.');
-            }
-        }
-        $customers = $this->Flights->Customers->find('list', ['limit' => 200]);
-        $planes = $this->Flights->Planes->find('list', ['limit' => 200]);
-        $airports = $this->Flights->Airports->find('list', ['limit' => 200]);
-        $users = $this->Flights->Users->find('list', ['limit' => 200]);
-        $this->set(compact('flight', 'customers', 'planes', 'airports', 'users'));
-        $this->set('_serialize', ['flight']);
-    }
-
-    /**
      * Edit method
      *
      * @param string|null $id Flight id.
      * @return void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
-    {
-        $flight = $this->Flights->get($id, [
-            'contain' => ['Airports', 'Users']
-        ]);
+    public function edit($id = null) {
+
+        $flight = $this->Flights->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $flight = $this->Flights->patchEntity($flight, $this->request->data);
+            $flight->catering = $this->request->data('catering');
             if ($this->Flights->save($flight)) {
+
                 $this->Flash->success('The flight has been saved.');
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error('The flight could not be saved. Please, try again.');
             }
         }
-        $customers = $this->Flights->Customers->find('list', ['limit' => 200]);
-        $planes = $this->Flights->Planes->find('list', ['limit' => 200]);
-        $airports = $this->Flights->Airports->find('list', ['limit' => 200]);
-        $users = $this->Flights->Users->find('list', ['limit' => 200]);
-        $this->set(compact('flight', 'customers', 'planes', 'airports', 'users'));
+        $this->set('catering', ['','Economy','Vegan','VIP']);
+        $this->set(compact('flight'));
         $this->set('_serialize', ['flight']);
     }
 

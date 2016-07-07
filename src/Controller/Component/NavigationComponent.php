@@ -23,6 +23,8 @@ use Cake\Core\Configure;
 
 class NavigationComponent extends Component {
 
+    public $components = ['Auth'];
+
     private $navItems = [];
     private $controller = null;
     private $groupAro = null;
@@ -32,36 +34,42 @@ class NavigationComponent extends Component {
         $this->controller = $this->_registry->getController();
         $this->navItems = [];
 
-        // $this->navItems['Termine'] = [
-        //     [ "title" => "Übersicht", "controller" => "Flights", "action" => "index" ]
-        // ];
-
         $this->navItems['Flüge'] = [
             [ "title" => "Übersicht", "controller" => "Flights", "action" => "index" ],
             [ "title" => "Flug anlegen", "controller" => "Flights", "action" => "order" ],
         ];
 
+        if( in_array($this->Auth->user('group_id'), ['4']) ){
+            $this->navItems['Kunden'] = [
+                [ "title" => "Übersicht", "controller" => "Customers", "action" => "index" ],
+                [ "title" => "Kunde hinzufügen", "controller" => "Customers", "action" => "add" ],
+                [ "title" => "Kundengruppen", "controller" => "CustomerTypes", "action" => "index" ]
+            ];
 
-        $this->navItems['Kunden'] = [
-            [ "title" => "Übersicht", "controller" => "Customers", "action" => "index" ],
-            [ "title" => "Kunde hinzufügen", "controller" => "Customers", "action" => "add" ],
-            [ "title" => "Kundengruppen", "controller" => "CustomerTypes", "action" => "index" ]
-        ];
-        $this->navItems['Mahnwesen'] = [
-            [ "title" => "Übersicht", "controller" => "Invoices", "action" => "index" ]
-        ];
+            $this->navItems['Mahnwesen'] = [
+                [ "title" => "Übersicht", "controller" => "Invoices", "action" => "index" ]
+            ];
+        }
 
         $this->navItems['Flugzeuge'] = [
             [ "title" => "Übersicht", "controller" => "Planes", "action" => "index" ],
             [ "title" => "Flugzeugtypen", "controller" => "PlaneTypes", "action" => "index" ]
         ];
 
-        $this->navItems['Mitarbeiter'] = [
-            [ "title" => "Übersicht", "controller" => "Users", "action" => "index" ],
-            [ "title" => "Mitarbeiter hinzufügen", "controller" => "Users", "action" => "add" ],
-            // [ "title" => "Arbeitszeitkonto", "controller" => "Workinghours", "action" => "index" ],
-            [ "title" => "Mitarbeitergruppen", "controller" => "Groups", "action" => "index" ],
-        ];
+        if( in_array($this->Auth->user('group_id'), ['4']) ){
+            $this->navItems['Mitarbeiter'] = [
+                [ "title" => "Übersicht", "controller" => "Users", "action" => "index" ],
+                [ "title" => "Mitarbeiter hinzufügen", "controller" => "Users", "action" => "add" ],
+                // [ "title" => "Arbeitszeitkonto", "controller" => "Workinghours", "action" => "index" ],
+                [ "title" => "Mitarbeitergruppen", "controller" => "Groups", "action" => "index" ],
+            ];
+            $this->navItems[] = [ "title" => "Auswertungen","controller" => "Reportings", "action" => "index" ];
+        }
+
+        if( !in_array($this->Auth->user('group_id'), ['4']) ){
+            unset($this->navItems['Flugzeuge'][1]);
+            unset($this->navItems['Flüge'][1]);
+        }
 
     }
 

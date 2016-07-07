@@ -9,29 +9,7 @@ use Cake\Log\LogTrait;
  *
  * @property \App\Model\Table\RejectReasonsTable $RejectReasons
  */
-class RejectReasonsController extends AppController
-{
-    use LogTrait;
-    /**
-     * Index method
-     *
-     * @return void
-     */
-    // public function index()
-    // {
-    //     $this->set('rejectReasons', $this->paginate($this->RejectReasons));
-    //     $this->set('_serialize', ['rejectReasons']);
-
-    //     $reasonText = [
-    //         '',
-    //         'Flug nicht Verfügbar',
-    //         'Angebot nicht zurückerhalten',
-    //
-    //     ];
-
-    //     $this->set('reasonText', $reasonText);
-    // }
-
+class RejectReasonsController extends AppController{
 
     public function survey(){
 

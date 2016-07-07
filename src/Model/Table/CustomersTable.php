@@ -105,6 +105,7 @@ class CustomersTable extends Table
         $customer->customer_type_id = 3;
         $customer->strike = 0;
         $customer->email = rand(10000000,99999999).'@'.'dummy.de';
+        $customer->status = CUSTOMER_DUMMY;
 
         return $this->save($customer);
 

@@ -7,6 +7,6 @@
         <?= $this->Form->input('password_confirm', ['type'=>'password','label' => 'Neues Password wiederholen']) ?>
     </fieldset>
 <?= $this->Form->button(__('Ändern')); ?>
-<span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'login']) ?></span>
+<span class="secondary-button" style="margin-left:10px;"><?= $this->Html->link("Abbrechen", ['action' => 'login']) ?></span>
 <?= $this->Form->end() ?>
 </div>

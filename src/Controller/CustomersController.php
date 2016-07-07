@@ -2,7 +2,10 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\Event\Event;
+use Cake\Network\Exception\NotFoundException;
+use Cake\Network\Exception\BadRequestException;
+use Cake\Network\Exception\UnauthorizedException;
 /**
  * Customers Controller
  *
@@ -10,6 +13,18 @@ use App\Controller\AppController;
  */
 class CustomersController extends AppController
 {
+
+    public function beforeFilter(Event $event){
+        parent::beforeFilter($event);
+
+        if( $this->Auth->user() ){ //eingelogget
+            if( (in_array($this->Auth->user('group_id'), ['4']) && in_array($this->request->action, ['index', 'view', 'add', 'edit', 'delete']) ) ){
+                // ok
+            }else{
+                throw new UnauthorizedException();
+            }
+        }
+    }
 
     /**
      * Index method
@@ -37,6 +52,7 @@ class CustomersController extends AppController
         $customer = $this->Customers->get($id, [
             'contain' => ['CustomerTypes', 'Flights']
         ]);
+        $this->set('flightStatus', ['Flug erledigt','Flug bald', '','Unterwegs']);
         $this->set('customer', $customer);
         $this->set('_serialize', ['customer']);
     }

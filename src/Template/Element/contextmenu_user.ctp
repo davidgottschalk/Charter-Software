@@ -8,6 +8,9 @@
         </a>
         <ul role="menu" class="dropdown-menu">
             <li class="navitem">
+                <?=$this->Html->link("Profil", '/Users/view/'.$authUser['id'] );?>
+            </li>
+            <li class="navitem">
                 <?=$this->Html->link( "Passwort ändern", '/Users/passwordChange/'.$authUser['id'] );?>
             </li>
             <li class="navitem">

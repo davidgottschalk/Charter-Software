@@ -199,7 +199,7 @@ return [
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],
-        'hinotorie' => [
+        'customerSatisfaction' => [
             'from' => 'hinotorie@exec-charter.com',
             'transport' => 'default',
             'charset' => 'utf-8',

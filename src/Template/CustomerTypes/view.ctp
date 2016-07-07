@@ -7,11 +7,6 @@
             <p><?= h($customerType->name) ?></p>
         </div>
 
-       <div class="large-3 columns strings view-table">
-            <h6 class="subheader"><?= __('Id') ?></h6>
-            <p><?= $this->Number->format($customerType->id) ?></p>
-        </div>
-
         <div class="large-3 columns strings view-table">
         </div>
     </fieldset>
@@ -28,7 +23,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th><?= __('KdrNr') ?></th>
+                <th><?= __('Kundennummer') ?></th>
                 <th><?= __('Vorname') ?></th>
                 <th><?= __('Nachname') ?></th>
                 <th><?= __('Firma') ?></th>
@@ -41,7 +36,7 @@
         <?php foreach ($customerType->customers as $customers): ?>
         <tbody>
             <tr>
-                <td><?= h($customers->id) ?></td>
+                <td><?= h($customers->customer_number) ?></td>
                 <td><?= h($customers->first_name) ?></td>
                 <td><?= h($customers->last_name) ?></td>
                 <td><?= h($customers->company) ?></td>
