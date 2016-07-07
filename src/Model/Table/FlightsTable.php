@@ -477,6 +477,7 @@ class FlightsTable extends Table
 
         $costs['planeHourlyCost'] = $planeHourlyCost;
         $costs['planeAnnualFixCost'] = $planeAnnualFixCost;
+        
         $costs['planeCost'] = $planeHourlyCost+$planeAnnualFixCost;
         $costs['planeCost'] = number_format($costs['planeCost'],2);
 
@@ -517,7 +518,7 @@ class FlightsTable extends Table
         }
 
         $costs['tax'] = $costs['nettoSumme']*0.19;
-        $costs['tax'] = number_format($costs['tax'],2)
+        $costs['tax'] = number_format($costs['tax'],2);
 
         $costs['bruttoSumme'] = $costs['nettoSumme']+$costs['tax'];
         $costs['bruttoSumme'] = number_format($costs['bruttoSumme'],2);
