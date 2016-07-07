@@ -104,7 +104,7 @@
         <?
         echo $this->Html->link(
                 'Zum bezahlen bitte hier klicken',
-                'http://david.webdev.bancos.com/c/flights/payed?invoice_number='.$flight['invoice']['invoice_number'].'&flight_number='.$flight['flightDatabaseObject']['flight_number'].'&invoice_id='.$flight['invoice']['id'],
+                'http://asap.rosenkranz-berlin.de/backend/flights/payed?invoice_number='.$flight['invoice']['invoice_number'].'&flight_number='.$flight['flightDatabaseObject']['flight_number'].'&invoice_id='.$flight['invoice']['id'],
                 ['target' => '_blank']
         );
         ?>
