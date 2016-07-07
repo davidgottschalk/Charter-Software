@@ -30,8 +30,8 @@ class customerSatisfactionShell extends Shell {
 
         $this->loadModel('Flights');
 
-        $yesterdayMorning = (new \DateTime())->modify('- 1 Day')->format('Y-m-d')." 00:00:00";
-        $yesterdayNight = (new \DateTime())->modify('- 1 Day')->format('Y-m-d')." 23:59:59";
+        $yesterdayMorning = (new \DateTime())->format('Y-m-d')." 00:00:00";
+        $yesterdayNight = (new \DateTime())->format('Y-m-d')." 23:59:59";
 
         // wenn ende des Flugs gestern zwischen 00:00:00 und 23:59:59
         $oldFlights = $this->Flights->find()->where(['end_date >=' => $yesterdayMorning, 'end_date <=' => $yesterdayNight])->contain('Customers')->all();
