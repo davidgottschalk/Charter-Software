@@ -108,7 +108,7 @@
                             <? echo $this->Form->label('Flugzeug'); ?>
                             <? echo $this->Form->select('plane',$planes); ?>
                             <? echo $this->Form->label('Catering'); ?>
-                            <? echo $this->Form->select('catering',['0' => 'Bitte wählen','1' => 'Economy','2' => 'VIP', '3' => 'Vegan']); ?>
+                            <? echo $this->Form->select('catering',['0' => 'Bitte wählen','1' => 'Economy','2' => 'Vegan', '3' => 'VIP']); ?>
                             <? echo $this->Form->label('zuästzliche Flugbegleiter'); ?>
                             <? echo $this->Form->select('additionalAttendants',['Bitte wählen','1','2','3']); ?>
                         </div>
