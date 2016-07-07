@@ -16,8 +16,8 @@
 	$chartRows = [];
 
 	foreach($incomeByPlaneType as $income) {
-		$revenues[]= $income['summe'];
-		$dates[]= explode(' ',$income['created'])[0];
+		$revenues[] = $income['summe'];
+		$dates[] = explode(' ',$income['created'])[0];
 	}
 
 	// Values of each line

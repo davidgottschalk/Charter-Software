@@ -509,9 +509,9 @@ class FlightsTable extends Table
 
         if($this->flight['customer']['customer_type_id'] == 3){
             $costs['unknowCredibilityCost'] = round(($costs['summeCrewPlane']*0.05),2);
-            $costs['nettoSumme'] = number_format(round($costs['summeCrewPlane']+$costs['unknowCredibilityCost'],2),2,",",".")
+            $costs['nettoSumme'] = number_format(round($costs['summeCrewPlane']+$costs['unknowCredibilityCost'],2),2,",",".");
         }else{
-            $costs['nettoSumme'] = number_format(round($costs['summeCrewPlane'],2),2,",",".")
+            $costs['nettoSumme'] = number_format(round($costs['summeCrewPlane'],2),2,",",".");
         }
 
         $costs['tax'] = number_format(round($costs['nettoSumme']*0.19,2),2,",",".");
