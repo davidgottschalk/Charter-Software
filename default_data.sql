@@ -133,3 +133,7 @@ INSERT INTO reject_reasons (reason_id, created) VALUES
 ('2', '2016-05-27 15:00:00'),
 ('3', '2016-05-28 17:00:00'),
 ('4', '2016-05-29 18:00:00');
+
+INSERT INTO income_by_plane_types (plane_type_id, invoice_id, created, travell_time) VALUES
+('1', '1', '2016-05-26 12:00:00','123'),
+('1', '2', '2016-05-26 12:00:00','456');

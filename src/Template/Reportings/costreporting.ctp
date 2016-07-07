@@ -1,120 +1,116 @@
-
-		<div class="rejectReasons index large-10 medium-9 columns">
-			<h3 id="asapblau">Auswertung der Kosten und Umsätze</h3>
-			<hr>
-
 <?
+	$rows = array();
+	$table = array();
+	$table['cols'] = array(
 
-				$rows = array();
-				$table = array();
-				$table['cols'] = array(
+	// Labels the chart, these represent the column titles.
 
-				// Labels the chart, these represent the column titles.
+	array('label' => 'Zeitraum', 'type' => 'string'),
+	array('label' => 'Umsätze in EUR', 'type' => 'number'),
+	array('label' => 'Kosten in EUR', 'type' => 'number')
 
-				array('label' => 'Zeitraum', 'type' => 'string'),
-				array('label' => 'Umsätze in EUR', 'type' => 'number'),
-				array('label' => 'Kosten in EUR', 'type' => 'number')
+	);
+	/* Extract the information from $incomeByPlaneType and transfer created to date */
+	$revenues = [];
+	$dates = [];
+	$chartRows = [];
 
-				);
-				/* Extract the information from $incomeByPlaneType and transfer created to date */
+	foreach($incomeByPlaneType as $income) {
+		$revenues[]= $income['summe'];
+		$dates[]= explode(' ',$income['created'])[0];
+	}
 
-				foreach($incomeByPlaneType as $income) {
-					$sums[]= $income['summe'];
-					$creats[]= $income['created'];
-				}
+	// Values of each line
 
-				foreach($creats as $creat){
-					$date = date_create_from_format('d.m.y, H:i', $creat);
-					$dateFormated[]= date_format($date, 'Y-n-j');
-				}
+	for($i=0; $i<count($revenues); $i++) {
+		$chartRows[] = ['c' => [ ['v'=>$dates[$i] ], ['v'=>$revenues[$i] ], ['v'=>$planeCosts[$i] ] ] ];
+	}
 
-				// Values of each line
+	if(empty($chartRows)){
+		$chartRows = [['c' =>[[]]]];
+	}
 
-				for($i=0; $i<count($sums); $i++) {
-					$array[] = array('c' => array( array('v'=>$dateFormated[$i]), array('v'=>$sums[$i])) );
-				}
+	$table['rows'] = $chartRows;
 
-				$table['rows'] = $array;
-
-				// convert data into JSON format
-				$jsonTable = json_encode($table);
-
-
+	// convert data into JSON format
+	$jsonTable = json_encode($table);
 ?>
 
-<html>
-<head>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-		google.charts.load('current', {'packages':['line']});
-		google.charts.setOnLoadCallback(drawChart);
 
-		 function drawChart() {
+<div class="rejectReasons index large-10 medium-9 columns">
+	<h3 id="asapblau">Auswertung der Kosten und Umsätze</h3>
+	<hr>
+	<div class="row">
+		<div class="large-10 columns strings view-table" id="line_chart"></div>
+	</div>
+</div>
+
+<div class="incomeByPlaneTypes large-10 medium-9 columns">
+	<br>
+
+	<?if(!empty($allIncomes[0]->invoice)){?>
+	<h4 id="asapblau">Die Umsätze im Detail:</h4>
+	<table cellpadding="0" cellspacing="0">
+		<thead>
+			<tr>
+				<th>Rechnungs-ID</th>
+				<th>Flugzeug-ID</th>
+				<th>Flugzeugtyp</th>
+				<th>Rechungswert in EUR</th>
+				<th>erstellt am</th>
+			</tr>
+		</thead>
+		<tbody>
+		<?php foreach ($allIncomes as $income): ?>
+			<tr>
+				<td><?= $income->invoice->invoice_number?></td>
+				<td><?= $income->plane_type->manufacturer ?></td>
+				<td><?= $income->plane_type->type?></td>
+				<td><?= $income->invoice->value?></td>
+				<td><?= $income->created?></td>
+			</tr>
+
+		<?php endforeach; ?>
+		</tbody>
+	</table>
+	<?}?>
+</div>
+<div class="incomeByPlaneTypes large-12 medium-9 columns">
+	<div class="row">
+	<br />
+	<br />
+	<span class="primary-button" style=""><?= $this->Html->link("Zurück", ['action' => 'index']) ?></span>
+	</div>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+	google.charts.load('current', {'packages':['line']});
+	google.charts.setOnLoadCallback(drawChart);
+
+	 function drawChart() {
 
 
-		  var data = new google.visualization.DataTable(<?=$jsonTable?>);
+	  var data = new google.visualization.DataTable(<?=$jsonTable?>);
 
-		  var options = {
-			chart: {
-			  title: '',
-			  subtitle: ''
-			},
-			width: 900,
-			height: 480,
-			axes: {
-			  x: {
-				0: {side: 'bottom'}
-			  },
-			}
-		  };
-
-		  var chart = new google.charts.Line(document.getElementById('line_chart'));
-		  chart.draw(data, options);
+	  var options = {
+		chart: {
+		  title: '',
+		  subtitle: ''
+		},
+		width: 900,
+		height: 480,
+		axes: {
+		  x: {
+			0: {side: 'bottom'}
+		  },
 		}
+	  };
 
-  </script>
+	  var chart = new google.charts.Line(document.getElementById('line_chart'));
+	  if(typeof chart !== undefined){
+	  	chart.draw(data, options);
+	  }
+	}
 
-</head>
-<body>
-			<div class="row">
-				<div class="large-10 columns strings view-table" id="line_chart">
-				</div>
-			</div>
-		</div>
-		<br/>
-		<br>
-
-		<div class="incomeByPlaneTypes large-10 medium-9 columns">
-			<table cellpadding="0" cellspacing="0">
-				<thead>
-					<tr>
-						<th><?= $this->Paginator->sort('Rechnungs-ID') ?></th>
-						<th><?= $this->Paginator->sort('Flugzeug-ID') ?></th>
-						<th><?= $this->Paginator->sort('Flugzeugtyp') ?></th>
-						<th><?= $this->Paginator->sort('Rechungswert in EUR') ?></th>
-						<th><?= $this->Paginator->sort('erstellt am') ?></th>
-					</tr>
-				</thead>
-				<tbody>
-				<?php foreach ($incomeByPlaneType as $income): ?>
-					<tr>
-						<td><?= $income->invoice_id?></td>
-						<td><?= $income->plane_typ_id ?></td>
-						<td><?= $income->plane_type->type?></td>
-						<td><?= $income->invoice->value?></td>
-						<td><?= $income->created?></td>
-					</tr>
-
-				<?php endforeach; ?>
-				</tbody>
-			</table>
-		</div>
-		<div class="incomeByPlaneTypes large-12 medium-9 columns">
-			<div class="row">
-			<br />
-			<br />
-			<span class="primary-button" style=""><?= $this->Html->link("Zurück", ['action' => 'index']) ?></span>
-			</div>
-		</div>
-</body>
-</html>
+</script>

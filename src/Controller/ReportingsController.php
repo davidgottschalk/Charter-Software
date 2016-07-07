@@ -94,75 +94,128 @@ class ReportingsController extends AppController {
 		$this->set('satisfactions', $this->CustomerSatisfactions->find('all')->where(['created >' => $von, 'created <' => $bis]));
 	}
 
-	public function costreporting(){
+    public function costreporting(){
 
-		/*Umsatzanalyse: Hilfsvariablen aus index Beginn, Ende Filter und Flugzeugtypwahl**/
-		$startdate = $this->request->data('beginn');
-		$von = (new \DateTime($startdate))->format('Y-m-d H:i:s');
+        /*Umsatzanalyse: Hilfsvariablen aus index Beginn, Ende Filter und Flugzeugtypwahl**/
+        $startdate = $this->request->data('beginn');
+        $von = (new \DateTime($startdate))->format('Y-m-d H:i:s');
 
-		$enddate = $this->request->data('ende');
-		$bis = (new \DateTime($enddate))->format('Y-m-d H:i:s');
+        $enddate = $this->request->data('ende');
+        $bis = (new \DateTime($enddate))->format('Y-m-d H:i:s');
 
-		$flugzeug = $this->request->data('flugzeugauswahl');
-		$this->set('flugzeug', $flugzeug);
+        $flugzeug = $this->request->data('flugzeugauswahl');
+        $this->set('flugzeug', $flugzeug);
 
-		$query = $this->IncomeByPlaneTypes->find();
+        $query = $this->IncomeByPlaneTypes->find();
 
-		/*Umsatzanalyse: Select für einen bestimmten Flugzeugtyp oder alle***/
+        /*Umsatzanalyse: Select für einen bestimmten Flugzeugtyp oder alle***/
 
-		if ($flugzeug == 'allplanes'){
-			$incomeByPlaneType = $this->IncomeByPlaneTypes->find()
-			->select([
-				'id',
-				'plane_type_id',
-				'invoice_id',
-				'created'
-			])
-			->where(['IncomeByPlaneTypes.created >' => $von, 'IncomeByPlaneTypes.created <' => $bis])
-			->contain([
-				'Invoices' => function ($q) {
-				   return $q
-						->select(['id', 'value']);
-				}])
-			->contain([
-				'PlaneTypes' => function ($q) {
-				return $q
-					->select(['id', 'type']);
-				}])
-			->select(['summe' => $query->func()->sum('value')])
-			->group('IncomeByPlaneTypes.created');
+        if ($flugzeug == 'allplanes'){
+            $incomeByPlaneType = $this->IncomeByPlaneTypes->find()
+            ->select([
+                'id',
+                'plane_type_id',
+                'invoice_id',
+                'created'
+            ])
+            ->where(['IncomeByPlaneTypes.created >' => $von, 'IncomeByPlaneTypes.created <' => $bis])
+            ->contain([
+                'Invoices' => function ($q) {
+                   return $q
+                        ->select(['id', 'value']);
+                }])
+            ->contain([
+                'PlaneTypes' => function ($q) {
+                return $q
+                    ->select(['id', 'type']);
+                }])
+            ->select(['summe' => $query->func()->sum('value')])
+            ->group('IncomeByPlaneTypes.created');
 
-		} else{
-			$incomeByPlaneType = $this->IncomeByPlaneTypes->find()
-			->select([
-				'id',
-				'plane_type_id',
-				'invoice_id',
-				'created'
-			])
-			->where(['IncomeByPlaneTypes.created >' => $von, 'IncomeByPlaneTypes.created <' => $bis])
-			->andWhere([
-				'plane_type_id' => $flugzeug,
-			])
-			->contain([
-				'Invoices' => function ($q) {
-				   return $q
-						->select(['id', 'value']);
-				}])
-			->contain([
-				'PlaneTypes' => function ($q) {
-				return $q
-					->select(['id', 'type']);
-				}])
-			->select(['summe' => $query->func()->sum('value')])
-			->group('IncomeByPlaneTypes.created');
-		}
+        } else{
+            $incomeByPlaneType = $this->IncomeByPlaneTypes->find()
+            ->select([
+                'id',
+                'plane_type_id',
+                'invoice_id',
+                'created'
+            ])
+            ->where(['IncomeByPlaneTypes.created >' => $von, 'IncomeByPlaneTypes.created <' => $bis])
+            ->andWhere([
+                'plane_type_id' => $flugzeug,
+            ])
+            ->contain([
+                'Invoices' => function ($q) {
+                   return $q
+                        ->select(['id', 'value']);
+                }])
+            ->contain([
+                'PlaneTypes' => function ($q) {
+                return $q
+                    ->select(['id', 'type']);
+                }])
+            ->select(['summe' => $query->func()->sum('value')])
+            ->group('IncomeByPlaneTypes.created');
+        }
 
-		$this->set('incomeByPlaneType', $incomeByPlaneType);
+        $this->set('incomeByPlaneType', $incomeByPlaneType);
         $this->set('_serialize', ['incomeByPlaneType']);
 
+        /*Übersichtstabelle zu den einzelnen Umsätzen "$allIncomes"*/
+
+        if ($flugzeug == 'allplanes'){
+            $allIncomes = $this->IncomeByPlaneTypes->find()
+            ->where(['IncomeByPlaneTypes.created >' => $von, 'IncomeByPlaneTypes.created <' => $bis])
+            ->contain(['PlaneTypes', 'Invoices'])
+            ->all()
+            ->toArray();
+
+        } else {
+            $allIncomes = $this->IncomeByPlaneTypes->find()
+            ->where(['IncomeByPlaneTypes.created >' => $von, 'IncomeByPlaneTypes.created <' => $bis])
+            ->andWhere(['plane_type_id' => $flugzeug])
+            ->contain(['PlaneTypes', 'Invoices'])
+            ->all()
+            ->toArray();
+
+        }
+
+        $this->set('allIncomes', $allIncomes);
+
+        /*Kostenberechnung: Select für alle Flugzeugtypen und je Flugzeugtyp*/
+
+        if ($flugzeug == 'allplanes'){
+            $costs = $this->IncomeByPlaneTypes->find('all')
+            ->contain(['PlaneTypes']);
+        } else {
+            $costs = $this->IncomeByPlaneTypes->find('all')
+            ->where(['plane_type_id' => $flugzeug])
+            ->contain(['PlaneTypes']);
+        }
+
+        $costsPerDay = [];
+        foreach ($costs as $row){
+
+            $date = explode(' ',$row->created)[0];
+
+            $travellTimeByDay = ($row->travell_time) /24 ;
+            $planeCostPerDay = ($row->plane_type->hourly_cost) * 24;
+            $annualByDay = ($row->plane_type->annual_fixed_cost) / 365;
+            $cost = $travellTimeByDay * ($annualByDay + $planeCostPerDay);
+
+            if(array_key_exists($date, $costsPerDay)){
+                $costsPerDay[$date] += $cost;
+            } else{
+                $costsPerDay[$date] = $cost;
+            }
+        };
+        $planeCosts = [];
+        foreach($costsPerDay as $costs){
+            $planeCosts[] = $costs;
+        }
+
+        $this->set('planeCosts', $planeCosts);
     }
 }
-
 
 ?>
