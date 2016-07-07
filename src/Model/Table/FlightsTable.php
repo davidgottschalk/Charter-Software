@@ -491,28 +491,31 @@ class FlightsTable extends Table
             $costs['pilotCost'] += round((($pilot['payment']*1.2)/210)*$costEffectivTravellDays,2); // 240 WT -30 Tage Urlaub, Kunde bezahlt immer ganzen Tag
             $costs['crewCost'] += $costs['pilotCost'];
         }
+        $costs['pilotCost'] = number_format($costs['pilotCost'],2,",",".");
         foreach($planeType['crew']['copilot'] as $copilot){
             $costs['copilotCost'] += round((($copilot['payment']*1.2)/210)*$costEffectivTravellDays,2);
             $costs['crewCost'] += $costs['attendantsCost'];
         }
+        $costs['copilotCost'] = number_format($costs['copilotCost'],2,",",".");
         foreach($planeType['crew']['attendants'] as $attendants){
             $costs['attendantsCost'] += round((($attendants['payment']*1.2)/210)*$costEffectivTravellDays,2);
             $costs['crewCost'] += $costs['attendantsCost'];
         }
+        $costs['attendantsCost'] = number_format($costs['attendantsCost'],2,",",".");
 
-        $costs['crewCost'] = round($costs['crewCost'],'2');
+        $costs['crewCost'] = number_format(round($costs['crewCost'],'2'),2,",",".");
 
-        $costs['summeCrewPlane'] = round($costs['crewCost']+$costs['planeCost'],2);
+        $costs['summeCrewPlane'] = number_format(round($costs['crewCost']+$costs['planeCost'],2),2,",",".");;
 
         if($this->flight['customer']['customer_type_id'] == 3){
             $costs['unknowCredibilityCost'] = round(($costs['summeCrewPlane']*0.05),2);
-            $costs['nettoSumme'] = round($costs['summeCrewPlane']+$costs['unknowCredibilityCost'],2);
+            $costs['nettoSumme'] = number_format(round($costs['summeCrewPlane']+$costs['unknowCredibilityCost'],2),2,",",".")
         }else{
-            $costs['nettoSumme'] = $costs['summeCrewPlane'];
+            $costs['nettoSumme'] = number_format(round($costs['summeCrewPlane'],2),2,",",".")
         }
 
-        $costs['tax'] = round($costs['nettoSumme']*0.19,2);
-        $costs['bruttoSumme'] = round($costs['nettoSumme']+$costs['tax'],2);
+        $costs['tax'] = number_format(round($costs['nettoSumme']*0.19,2),2,",",".");
+        $costs['bruttoSumme'] = number_format(round($costs['nettoSumme']+$costs['tax'],2),2,",",".");
         $this->flight['costs'] = $costs;
     }
 
