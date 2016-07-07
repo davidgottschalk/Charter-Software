@@ -167,7 +167,7 @@
                     + Flugzeug Kosten :
                 </div>
                  <div class="large-2 columns" style="text-align:right;">
-                    <?=$data['costs']['planeCost'].' €'?>
+                    <?=$this->Number->currency($data['costs']['planeCost'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>
@@ -176,7 +176,7 @@
                     + Crew Kosten :
                 </div>
                  <div class="large-2 columns" style="text-align:right;">
-                    <?=$data['costs']['crewCost'].' €'?>
+                    <?=$this->Number->currency($data['costs']['crewCost'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>
@@ -185,7 +185,7 @@
                     <i>Davon Pilot</i>
                 </div>
                  <div class="large-2 columns" style="text-align:right; font-size:12px;">
-                    <?=$data['costs']['pilotCost'].' €'?>
+                    <?=$this->Number->currency($data['costs']['pilotCost'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>
@@ -194,7 +194,7 @@
                     <i>Davon Co-Pilot</i>
                 </div>
                  <div class="large-2 columns" style="text-align:right; font-size:12px;">
-                    <?=$data['costs']['copilotCost'].' €'?>
+                    <?=$this->Number->currency($data['costs']['copilotCost'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>
@@ -203,7 +203,7 @@
                     <i>Davon Flugbegleiter</i>
                 </div>
                  <div class="large-2 columns" style="text-align:right; font-size:12px;">
-                    <?=$data['costs']['attendantsCost'].' €'?>
+                    <?=$this->Number->currency($data['costs']['attendantsCost'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>
@@ -215,7 +215,7 @@
                     Zwischensumme
                 </div>
                  <div class="large-2 columns" style="text-align:right;">
-                    <?=$data['costs']['summeCrewPlane'].' €'?>
+                    <?=$this->Number->currency($data['costs']['summeCrewPlane'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>
@@ -225,7 +225,7 @@
                         + Risikozuschlag (5%)
                     </div>
                      <div class="large-2 columns" style="text-align:right; font-size:12px;">
-                        <?=$data['costs']['unknowCredibilityCost'].' €'?>
+                        <?=$this->Number->currency($data['costs']['unknowCredibilityCost'],'EUR')?>
                     </div>
                     <div class="large-8 columns"></div>
                 </div>
@@ -237,7 +237,7 @@
                     (Netto) Preis
                 </div>
                  <div class="large-2 columns" style="text-align:right; text-align:right;">
-                    <?=$data['costs']['nettoSumme'].' €'?>
+                    <?=$this->Number->currency($data['costs']['nettoSumme'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>
@@ -246,7 +246,7 @@
                     + Steuern (19%)
                 </div>
                  <div class="large-2 columns" style="font-size:12px; text-align:right;">
-                    <?=$data['costs']['tax'].' €'?>
+                    <?=$this->Number->currency($data['costs']['tax'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>
@@ -257,7 +257,7 @@
                     zu zahlender Betrag
                 </div>
                  <div class="large-2 columns" style="text-align:right;">
-                    <?=$data['costs']['bruttoSumme'].' €'?>
+                    <?=$this->Number->currency($data['costs']['bruttoSumme'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>

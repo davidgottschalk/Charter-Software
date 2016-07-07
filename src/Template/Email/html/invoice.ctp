@@ -7,7 +7,7 @@
                 + Flugzeug Kosten :
             </div>
              <div class="large-2 columns" style="text-align:right;">
-                <?=$flight['costs']['planeCost'].' €'?>
+                <?=$this->Number->currency($flight['costs']['planeCost'],'EUR')?>
             </div>
             <div class="large-8 columns"></div>
         </div>
@@ -16,7 +16,7 @@
                 + Crew Kosten :
             </div>
              <div class="large-2 columns" style="text-align:right;">
-                <?=$flight['costs']['crewCost'].' €'?>
+                <?=$this->Number->currency($flight['costs']['crewCost'],'EUR')?>
             </div>
             <div class="large-8 columns"></div>
         </div>
@@ -25,7 +25,7 @@
                 <i>Davon Pilot</i>
             </div>
              <div class="large-2 columns" style="text-align:right; font-size:12px;">
-                <?=$flight['costs']['pilotCost'].' €'?>
+                <?=$this->Number->currency($flight['costs']['pilotCost'],'EUR')?>
             </div>
             <div class="large-8 columns"></div>
         </div>
@@ -34,7 +34,7 @@
                 <i>Davon Co-Pilot</i>
             </div>
              <div class="large-2 columns" style="text-align:right; font-size:12px;">
-                <?=$flight['costs']['copilotCost'].' €'?>
+                <?=$this->Number->currency($flight['costs']['copilotCost'],'EUR')?>
             </div>
             <div class="large-8 columns"></div>
         </div>
@@ -43,7 +43,7 @@
                 <i>Davon Flugbegleiter</i>
             </div>
              <div class="large-2 columns" style="text-align:right; font-size:12px;">
-                <?=$flight['costs']['attendantsCost'].' €'?>
+                <?=$this->Number->currency($flight['costs']['attendantsCost'],'EUR')?>
             </div>
             <div class="large-8 columns"></div>
         </div>
@@ -55,7 +55,7 @@
                 Zwischensumme
             </div>
              <div class="large-2 columns" style="text-align:right;">
-                <?=$flight['costs']['summeCrewPlane'].' €'?>
+                <?=$this->Number->currency($flight['costs']['summeCrewPlane'],'EUR')?>
             </div>
             <div class="large-8 columns"></div>
         </div>
@@ -65,7 +65,7 @@
                     + Risikozuschlag (5%)
                 </div>
                  <div class="large-2 columns" style="text-align:right; font-size:12px;">
-                    <?=$flight['costs']['unknowCredibilityCost'].' €'?>
+                    <?=$this->Number->currency($flight['costs']['unknowCredibilityCost'],'EUR')?>
                 </div>
                 <div class="large-8 columns"></div>
             </div>
@@ -77,7 +77,7 @@
                 (Netto) Preis
             </div>
              <div class="large-2 columns" style="text-align:right; text-align:right;">
-                <?=$flight['costs']['nettoSumme'].' €'?>
+                <?=$this->Number->currency($flight['costs']['nettoSumme'],'EUR')?>
             </div>
             <div class="large-8 columns"></div>
         </div>
@@ -86,7 +86,7 @@
                 + Steuern (19%)
             </div>
              <div class="large-2 columns" style="font-size:12px; text-align:right;">
-                <?=$flight['costs']['tax'].' €'?>
+                <?=$this->Number->currency($flight['costs']['tax'],'EUR')?>
             </div>
             <div class="large-8 columns"></div>
         </div>
@@ -97,7 +97,7 @@
                 zu zahlender Betrag
             </div>
              <div class="large-2 columns" style="text-align:right;">
-                <?=$flight['costs']['bruttoSumme'].' €'?>
+                <?=$this->Number->currency($flight['costs']['bruttoSumme'],'EUR')?>
             </div>
             <div class="large-8 columns"></div>
         </div>

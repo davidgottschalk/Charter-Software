@@ -477,9 +477,9 @@ class FlightsTable extends Table
 
         $costs['planeHourlyCost'] = $planeHourlyCost;
         $costs['planeAnnualFixCost'] = $planeAnnualFixCost;
-        
+
         $costs['planeCost'] = $planeHourlyCost+$planeAnnualFixCost;
-        $costs['planeCost'] = number_format($costs['planeCost'],2);
+        $costs['planeCost'] = round($costs['planeCost'],2);
 
         $costEffectivTravellDays = ceil($planeType['costEffectivTravellTime']/24);
         $crewCost = 0;
@@ -495,34 +495,31 @@ class FlightsTable extends Table
         }
         foreach($planeType['crew']['copilot'] as $copilot){
             $costs['copilotCost'] += (($copilot['payment']*1.2)/210)*$costEffectivTravellDays;
-            $costs['crewCost'] += $costs['attendantsCost'];
+            $costs['crewCost'] += $costs['copilotCost'];
         }
         foreach($planeType['crew']['attendants'] as $attendants){
             $costs['attendantsCost'] += (($attendants['payment']*1.2)/210)*$costEffectivTravellDays;
             $costs['crewCost'] += $costs['attendantsCost'];
         }
 
-        $costs['pilotCost'] = number_format($costs['pilotCost'],2);
-        $costs['copilotCost'] = number_format($costs['copilotCost'],2);
-        $costs['attendantsCost'] = number_format($costs['attendantsCost'],2);
-        $costs['crewCost'] = number_format($costs['crewCost'],'2');
+        $costs['pilotCost'] = round($costs['pilotCost'],2);
+        $costs['copilotCost'] = round($costs['copilotCost'],2);
+        $costs['attendantsCost'] = round($costs['attendantsCost'],2);
+        $costs['crewCost'] = round($costs['crewCost'],2);
 
         $costs['summeCrewPlane'] = $costs['crewCost']+$costs['planeCost'];
-        $costs['summeCrewPlane'] = number_format($costs['summeCrewPlane'],2);
+        $costs['summeCrewPlane'] = round($costs['summeCrewPlane'],2);
 
         if($this->flight['customer']['customer_type_id'] == 3){
             $costs['unknowCredibilityCost'] = round(($costs['summeCrewPlane']*0.05),2);
-            $costs['nettoSumme'] = number_format($costs['summeCrewPlane']+$costs['unknowCredibilityCost'],2);
+            $costs['nettoSumme'] = round($costs['summeCrewPlane']+$costs['unknowCredibilityCost'],2);
         }else{
-            $costs['nettoSumme'] = number_format($costs['summeCrewPlane'],2);
+            $costs['nettoSumme'] = round($costs['summeCrewPlane'],2);
         }
 
-        $costs['tax'] = $costs['nettoSumme']*0.19;
-        $costs['tax'] = number_format($costs['tax'],2);
+        $costs['tax'] = round($costs['nettoSumme']*0.19,2);
 
-        $costs['bruttoSumme'] = $costs['nettoSumme']+$costs['tax'];
-        $costs['bruttoSumme'] = number_format($costs['bruttoSumme'],2);
-
+        $costs['bruttoSumme'] = round($costs['nettoSumme']+$costs['tax'],2);
         $this->flight['costs'] = $costs;
     }
 
