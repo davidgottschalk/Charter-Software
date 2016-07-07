@@ -505,7 +505,8 @@ class FlightsTable extends Table
 
         $costs['crewCost'] = number_format(round($costs['crewCost'],'2'),2,",",".");
 
-        $costs['summeCrewPlane'] = number_format(round($costs['crewCost']+$costs['planeCost'],2),2,",",".");;
+        $costs['summeCrewPlane'] = round($costs['crewCost']+$costs['planeCost'],2);
+$costs['summeCrewPlane'] = number_format($costs['summeCrewPlane'],2,",",".");
 
         if($this->flight['customer']['customer_type_id'] == 3){
             $costs['unknowCredibilityCost'] = round(($costs['summeCrewPlane']*0.05),2);
