@@ -22,6 +22,8 @@
                 <h6 class="subheader"><?= __('zuletzt geändert') ?></h6>
                 <p><?= h($plane->modified->format('d.m.Y, H:i')) ?></p>
             </div>
+            <div class="large-3 columns strings view-table"></div>
+        </div>
     </fieldset>
     <span class="primary-button" style=""><?= $this->Html->link("Bearbeiten", ['action' => 'edit', $plane->id]) ?></span>
     <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>

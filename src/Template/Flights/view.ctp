@@ -13,16 +13,18 @@
                 <h6 class="subheader"><?= __('Catering') ?></h6>
                 <p><?if($flight->catering == CATERING_VEG){echo 'Vegan';}elseif($flight->catering == CATERING_VIP){echo 'VIP';}else{echo 'Economy';}?></p>
             </div>
-            <div class="large-2 columns numbers end">
+            <div class="large-2 columns strings">
 
                 <h6 class="subheader"><?= __('Status') ?></h6>
                 <p><?= $flightStatus[$flight->status] ?></p>
             </div>
-            <div class="large-2 columns dates end">
+            <div class="large-2 columns strings">
                 <h6 class="subheader"><?= __('Start Datum') ?></h6>
                 <p><?= h($flight->start_date) ?></p>
                 <h6 class="subheader"><?= __('End Datum') ?></h6>
                 <p><?= h($flight->end_date) ?></p>
+            </div>
+            <div class="large-3 columns strings view-table">
             </div>
         </div>
     </fieldset>
