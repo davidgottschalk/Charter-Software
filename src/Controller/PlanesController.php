@@ -78,7 +78,7 @@ class PlanesController extends AppController
             }
         }
         $planeTypes = $this->Planes->PlaneTypes->find('list', ['limit' => 200]);
-        $this->set(compact('plane', 'planeTypes'));
+        $this->set(compact('plane','planeTypes'));
         $this->set('_serialize', ['plane']);
     }
 
@@ -104,7 +104,7 @@ class PlanesController extends AppController
             }
         }
         $planeTypes = $this->Planes->PlaneTypes->find('list', ['limit' => 200]);
-        $this->set(compact('plane', 'planeTypes'));
+        $this->set(compact('plane','planeTypes'));
         $this->set('_serialize', ['plane']);
     }
 

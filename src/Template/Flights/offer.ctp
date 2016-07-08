@@ -161,7 +161,7 @@
     <div class="large-12 columns">
 
         <fieldset>
-            <legend><h3>Kostenberechung</h3></legend>
+            <legend><h3>Kostenberechnung</h3></legend>
             <div class="row">
                 <div class="large-2 columns">
                     + Flugzeug Kosten :

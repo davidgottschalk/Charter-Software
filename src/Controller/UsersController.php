@@ -94,7 +94,6 @@ class UsersController extends AppController{
         }
         $groups = $this->Users->Groups->find('list', ['limit' => 200]);
         $this->set(compact('user', 'groups', 'flights'));
-        $flights = $this->Users->Flights->find('list', ['limit' => 200]);
         $this->set('_serialize', ['user']);
     }
 

@@ -8,6 +8,7 @@
     <div class="row">
     <div class="large-3 columns strings">
         <?php
+
             echo $this->Form->input('plane_name', array('label'=>'Flugzeugname'));
             echo $this->Form->input('plane_number', array('label'=>'Flugzeugnummer'));
             echo $this->Form->input('plane_type_id', array('options' => $planeTypes, 'label'=>'Flugzeugtyp'));
