@@ -1,4 +1,4 @@
-<div class="flights view large-10 medium-9 columns">
+<div class="flights view large-12 medium-9 columns">
     <fieldset>
         <legend class="asapblau"><?= "Flugnummer : ".h($flight->flight_number) ?></legend>
 
