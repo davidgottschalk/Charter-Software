@@ -1,6 +1,6 @@
 <div class="customers view large-12 medium-9 columns">
     <fieldset>
-        <legend class="asapblau"><?= "Rechnungnummer ".h($invoice->id) ?></legend>
+        <legend class="asapblau"><?= "Rechnungnummer ".h($invoice->invoice_number) ?></legend>
         <div class="row">
             <div class="large-5 columns strings">
                 <h6 class="subheader"><?= __('Flugnummer') ?></h6>

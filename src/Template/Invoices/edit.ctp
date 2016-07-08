@@ -2,7 +2,7 @@
 <div class="invoices form large-10 medium-9 columns">
     <?= $this->Form->create($invoice); ?>
     <fieldset>
-        <legend class="asapblau">Rechnungsnummer <?= h($invoice->id) ?> bearbeiten</legend>
+        <legend class="asapblau">Rechnungsnummer <?= h($invoice->invoice_number) ?> bearbeiten</legend>
         <?php
             echo $this->Form->input('flight_id', array('label'=>'Flugnummer'));
             echo $this->Form->input('due_date', array('label'=>'Termin'));
