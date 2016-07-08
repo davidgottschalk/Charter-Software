@@ -1,30 +1,33 @@
 <div class="flights view large-10 medium-9 columns">
-    <h2><?= "Flugnummer : ".h($flight->flight_number) ?></h2>
-    <hr>
-    <br>
-    <div class="row">
-        <div class="large-5 columns strings">
-            <h6 class="subheader"><?= __('Flugnummer') ?></h6>
-            <p><?= h($flight->flight_number) ?></p>
-            <h6 class="subheader"><?= __('Kundennummer') ?></h6>
-            <p><?= $flight->has('customer') ? $this->Html->link($flight->customer->customer_number, ['controller' => 'Customers', 'action' => 'view', $flight->customer->id]) : '' ?></p>
-            <h6 class="subheader"><?= __('Flugzeug') ?></h6>
-            <p><?= $flight->has('plane') ? $this->Html->link($flight->plane->plane_name, ['controller' => 'Planes', 'action' => 'view', $flight->plane->id]) : '' ?></p>
-            <h6 class="subheader"><?= __('Catering') ?></h6>
-            <p><?if($flight->catering == CATERING_VEG){echo 'Vegan';}elseif($flight->catering == CATERING_VIP){echo 'VIP';}else{echo 'Economy';}?></p>
-        </div>
-        <div class="large-2 columns numbers end">
+    <fieldset>
+        <legend class="asapblau"><?= "Flugnummer : ".h($flight->flight_number) ?></legend>
 
-            <h6 class="subheader"><?= __('Status') ?></h6>
-            <p><?= $flightStatus[$flight->status] ?></p>
+        <div class="row">
+            <div class="large-5 columns strings">
+                <h6 class="subheader"><?= __('Flugnummer') ?></h6>
+                <p><?= h($flight->flight_number) ?></p>
+                <h6 class="subheader"><?= __('Kundennummer') ?></h6>
+                <p><?= $flight->has('customer') ? $this->Html->link($flight->customer->customer_number, ['controller' => 'Customers', 'action' => 'view', $flight->customer->id]) : '' ?></p>
+                <h6 class="subheader"><?= __('Flugzeug') ?></h6>
+                <p><?= $flight->has('plane') ? $this->Html->link($flight->plane->plane_name, ['controller' => 'Planes', 'action' => 'view', $flight->plane->id]) : '' ?></p>
+                <h6 class="subheader"><?= __('Catering') ?></h6>
+                <p><?if($flight->catering == CATERING_VEG){echo 'Vegan';}elseif($flight->catering == CATERING_VIP){echo 'VIP';}else{echo 'Economy';}?></p>
+            </div>
+            <div class="large-2 columns numbers end">
+
+                <h6 class="subheader"><?= __('Status') ?></h6>
+                <p><?= $flightStatus[$flight->status] ?></p>
+            </div>
+            <div class="large-2 columns dates end">
+                <h6 class="subheader"><?= __('Start Datum') ?></h6>
+                <p><?= h($flight->start_date) ?></p>
+                <h6 class="subheader"><?= __('End Datum') ?></h6>
+                <p><?= h($flight->end_date) ?></p>
+            </div>
         </div>
-        <div class="large-2 columns dates end">
-            <h6 class="subheader"><?= __('Start Datum') ?></h6>
-            <p><?= h($flight->start_date) ?></p>
-            <h6 class="subheader"><?= __('End Datum') ?></h6>
-            <p><?= h($flight->end_date) ?></p>
-        </div>
-    </div>
+    </fieldset>
+    <span class="primary-button" style=""><?= $this->Html->link("Bearbeiten", ['action' => 'edit', $flight->id]) ?></span>
+    <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
 </div>
 
 <div class="related row">
