@@ -36,7 +36,7 @@
 <div>
 <div class="related row">
     <div class="column large-12">
-    <?php if (!empty($customer->flights)): ?>
+    <?php if (!empty($customer->flights) ): ?>
     <h4 class="subheader"><?= __('Flüge des Kunden') ?></h4>
     <table cellpadding="0" cellspacing="0">
         <thead>
@@ -46,18 +46,21 @@
             <th><?= __('Status') ?></th>
             <th class="actions"><?= __('') ?></th>
         </head>
-        <?php foreach ($customer->flights as $flights): ?>
         <tbody>
-            <tr>
-                <td><?= h($flights->flight_number) ?></td>
-                <td><?= h($flights->start_date) ?></td>
-                <td><?= h($flights->end_date) ?></td>
-                <td><?= $flightStatus[$flights->status] ?></td>
+        <?php foreach ($customer->flights as $flights):
+            if($flights->status != FLIGHT_DUMMY){
+            ?>
+                <tr>
+                    <td><?= h($flights->flight_number) ?></td>
+                    <td><?= h($flights->start_date) ?></td>
+                    <td><?= h($flights->end_date) ?></td>
+                    <td><?= $flightStatus[$flights->status] ?></td>
 
-                <td class="actions">
-                    <span class="actions secondary"><?= $this->Html->link("Anzeigen", ['controller' => 'Flights', 'action' => 'view', $flights->id]) ?></span>
-                </td>
-            </tr>
+                    <td class="actions">
+                        <span class="actions secondary"><?= $this->Html->link("Anzeigen", ['controller' => 'Flights', 'action' => 'view', $flights->id]) ?></span>
+                    </td>
+                </tr>
+            <?}?>
         <?php endforeach; ?>
         </tbody>
     </table>
