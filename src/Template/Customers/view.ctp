@@ -32,8 +32,8 @@
     </fieldset>
     <span class="primary-button" style=""><?= $this->Html->link("Bearbeiten", ['action' => 'edit', $customer->id]) ?></span>
     <span class="secondary-button" style=""><?= $this->Html->link("Abbrechen", ['action' => 'index']) ?></span>
-<br><br><br><br>
-<div>
+    <br><br><br><br>
+</div>
 <div class="related row">
     <div class="column large-12">
     <?php if (!empty($customer->flights) ): ?>
