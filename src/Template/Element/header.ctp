@@ -2,7 +2,7 @@
     <div style="float:left;"><?=$this->Html->image( 'asap.jpg', ['style'=>'height:50px;'] )?></div>
     <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
         <ul class="nav navbar-nav" id="bpf-page-navi-items">
-            <?if( !isset($authUser) || $authUser['status'] == USER_PASSWORD_CHANGE){ echo "<h3 style='margin-left:210px; padding-top:5px;'>".$this->Html->link("Hinotorie ExecCharter",
+            <?if( !isset($authUser) || $authUser['status'] == USER_PASSWORD_CHANGE){ echo "<h3 style='margin-left:210px; padding-top:5px;'>".$this->Html->link("Hinotori ExecCharter",
                 ['controller' => 'Users','action' => 'login'],['style'=>'color:black; text-decoration:none'])."</h3>"; }else{
 
 

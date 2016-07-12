@@ -4,7 +4,7 @@
         <legend><h3>Zufriedenheitsumfrage</h3></legend>
 
         <p><b>Dürften wir Sie um wenige Minuten Ihrer Zeit bitten?</b></p><br>
-        <p>Die Hinotorie Exec Charter ist stets interessiert an dem Wohlbefinden Ihrer Kunden, darum würden wir <br>
+        <p>Die Hinotori Exec Charter ist stets interessiert an dem Wohlbefinden Ihrer Kunden, darum würden wir <br>
            Sie gern darum bitte uns den Grund für Ihr ablehnen des Angebots zu nennen.
         </p>
 

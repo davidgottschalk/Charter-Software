@@ -24,7 +24,7 @@
 <body>
     <?= $this->fetch('content') ?>
     <br>
-    <p>Ihr Hinotorie Team</p>
+    <p>Ihr Hinotori Team</p>
     <img src="cid:HinotorieLogo"/>
 </body>
 </html>

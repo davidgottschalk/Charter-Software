@@ -108,7 +108,7 @@ class FlightsController extends AppController{
                         $this->Customers->delete( $customerEntity);
                     }
 
-                    $this->Flash->success('Der Flug wurde wurde mit Ihrer Kundennummer verbunden.');
+                    $this->Flash->success('Der Flug wurde mit Ihrer Kundennummer verbunden.');
                     return $this->redirect(['action' => 'offer']);
                 }else{
                     $this->set('customerNumberError', 'Bitte prüfen Sie Ihre Kundenummer');
@@ -125,7 +125,7 @@ class FlightsController extends AppController{
                 $success = $this->Customers->save($customer);
 
                 if($success) {
-                    $this->Flash->success('Der Flug wurde wurde mit Ihrer Kundennummer verbunden.');
+                    $this->Flash->success('Der Flug wurde mit Ihrer Kundennummer verbunden.');
                     return $this->redirect(['action' => 'offer']);
                 } else {
                     $this->set('errors', $customer->errors());

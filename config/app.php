@@ -206,7 +206,7 @@ return [
             'template' => 'customer_satisfaction',
             'layout' => 'default',
             'emailFormat' => 'both',
-            'subject' => 'Hinotorie Exec Charter',
+            'subject' => 'Hinotori Exec Charter',
             'attachments' => [
                 'asap-transparent.jpg' => [
                     'file' => WWW_ROOT.'img/asap-transparent.jpg',
@@ -221,7 +221,7 @@ return [
             'template' => 'invoice',
             'layout' => 'default',
             'emailFormat' => 'both',
-            'subject' => 'Hinotorie Exec Charter',
+            'subject' => 'Hinotori Exec Charter',
             'attachments' => [
                 'asap-transparent.jpg' => [
                     'file' => WWW_ROOT.'img/asap-transparent.jpg',
@@ -236,7 +236,7 @@ return [
             'template' => 'flight_data',
             'layout' => 'default',
             'emailFormat' => 'both',
-            'subject' => 'Hinotorie Exec Charter',
+            'subject' => 'Hinotori Exec Charter',
             'attachments' => [
                 'asap-transparent.jpg' => [
                     'file' => WWW_ROOT.'img/asap-transparent.jpg',
@@ -251,7 +251,7 @@ return [
             'template' => 'notification',
             'layout' => 'default',
             'emailFormat' => 'both',
-            'subject' => 'Hinotorie Exec Charter',
+            'subject' => 'Hinotori Exec Charter',
             'attachments' => [
                 'asap-transparent.jpg' => [
                     'file' => WWW_ROOT.'img/asap-transparent.jpg',
@@ -266,7 +266,7 @@ return [
             'template' => 'password_send',
             'layout' => 'default',
             'emailFormat' => 'both',
-            'subject' => 'Hinotorie Exec Charter',
+            'subject' => 'Hinotori Exec Charter',
             'attachments' => [
                 'asap-transparent.jpg' => [
                     'file' => WWW_ROOT.'img/asap-transparent.jpg',

@@ -44,7 +44,7 @@ class customerSatisfactionShell extends Shell {
     private function writeDatabaseExceptionMail($emailadress){
 
         $email = new Email('customerSatisfaction');
-        $email->subject('Hinotorie Exec Charter');
+        $email->subject('Hinotori Exec Charter');
         $email->addTo($emailadress);
         $email->viewVars([
             'message' => 'test',
