@@ -1,6 +1,6 @@
 <div class="customers view large-12 medium-9 columns">
     <br><br>
-        <h2 id="asapblau">Reise Buchen</h2>
+        <h2 id="asapblau">Reise buchen</h2>
         <hr>
         <br>
          <?if(isset($unavailableReasons)){?>
@@ -65,8 +65,8 @@
                     <?}?>
                     <fieldset>
                         <legend><h3>Stationen</h3></legend>
-                        <p>Welche Stationen möchten Sie anfliegen. <br> Bitte beachten Sie das die Verfügbarkeitsprüfung erst am Ende der Erfassung erfolgt. </p>
-                        <p>Insofern Sie Zwischenstationen einplane, jedoch keine Aufenthaltsdauer angeben,<br> wird von einem Minimum von 45 Minuten ausgegangen um das Flugzeug neu zu betanken und zu beladen. </p>
+                        <p>Welche Stationen möchten Sie anfliegen. <br> Bitte beachten Sie, dass die Verfügbarkeitsprüfung erst am Ende der Erfassung erfolgt. </p>
+                        <p>Insofern Sie Zwischenstationen einplanen, jedoch keine Aufenthaltsdauer angeben,<br> wird von einem Minimum von 45 Minuten ausgegangen um das Flugzeug neu zu betanken und zu beladen. </p>
                         <div class="row firstStation">
                             <hr>
                             <div class="large-2 columns">
@@ -265,6 +265,7 @@
     $('.datetimepicker').datetimepicker({
         format: 'DD.MM.YYYY HH:mm:ss',
         // startDate : '+0d',
+        locale: 'de',
         showClose: true,
         // startDate: '+0d'
     });

@@ -137,6 +137,11 @@ ul.pagination li{
     display:block;
 }
 
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus{
+    background-color:rgba(6, 55, 98, 1);
+}
+
 .pagination-centered{
     text-align:center;
 }

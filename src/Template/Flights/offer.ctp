@@ -137,7 +137,7 @@
                         </div>
                         <div class="medium-3 columns" style="background-color:#ccc; margin-right:5px;">
                             <span style="font-size:9px">Flughafen, Land</span><br>
-                            <?=$stations['airport'].' ,'.$stations['country']?>
+                            <?=$stations['airport'].', '.$stations['country']?>
                         </div>
                         <div class="medium-2 columns" style="background-color:#ccc; margin-right:5px;">
                             <span style="font-size:9px">Aufenthaltsdauer</span><br>
@@ -182,7 +182,7 @@
             </div>
             <div class="row">
                 <div class="large-2 columns" style="font-size:12px">
-                    <i>Davon Pilot</i>
+                    <i>davon Pilot</i>
                 </div>
                  <div class="large-2 columns" style="text-align:right; font-size:12px;">
                     <?=$this->Number->currency($data['costs']['pilotCost'],'EUR')?>
@@ -191,7 +191,7 @@
             </div>
             <div class="row">
                 <div class="large-2 columns" style="font-size:12px">
-                    <i>Davon Co-Pilot</i>
+                    <i>davon Co-Pilot</i>
                 </div>
                  <div class="large-2 columns" style="text-align:right; font-size:12px;">
                     <?=$this->Number->currency($data['costs']['copilotCost'],'EUR')?>
@@ -200,7 +200,7 @@
             </div>
             <div class="row">
                 <div class="large-2 columns" style="font-size:12px">
-                    <i>Davon Flugbegleiter</i>
+                    <i>davon Flugbegleiter</i>
                 </div>
                  <div class="large-2 columns" style="text-align:right; font-size:12px;">
                     <?=$this->Number->currency($data['costs']['attendantsCost'],'EUR')?>
@@ -267,7 +267,7 @@
         </fieldset>
         <fieldset>
             <legend><h3>Hinweise</h3></legend>
-            <p><b>Bitte beachten Sie das eine getätigte Buchung verbindlich ist. <br> Eine Stornierung der Buchung ist nicht möglich. </b></p>
+            <p><b>Bitte beachten Sie, dass eine getätigte Buchung verbindlich ist. <br> Eine Stornierung der Buchung ist nicht möglich. </b></p>
         </fieldset>
         <?if($data['customer']['customer_type_id'] == VIP || $data['customer']['customer_type_id'] == CORP){?>
             <input style="visibility:hidden; max-height:0px;" name="payed" value="0"></input><br>

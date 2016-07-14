@@ -145,6 +145,7 @@
         format: 'DD.MM.YYYY HH:mm:ss',
         // startDate : '+0d',
         showClose: true,
+        locale: 'de',
         // startDate: '+0d'
     });
 

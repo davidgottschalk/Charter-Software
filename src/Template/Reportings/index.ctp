@@ -93,6 +93,7 @@
         format: 'DD.MM.YYYY',
         // startDate : '+0d',
         showClose: true,
+        locale: 'de',
         // startDate: '+0d'
     });
 
