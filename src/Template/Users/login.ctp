@@ -28,7 +28,7 @@
     <?= $this->Form->create() ?>
 
         <fieldset>
-            <legend>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein.</legend>
+            <legend class="asapblau">Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein.</legend>
             <?= $this->Form->input('username', ['label' => 'Benutzername']) ?>
             <?= $this->Form->input('password', ['type'=>'password','label' => 'Passwort']) ?>
         </fieldset>

@@ -4,7 +4,7 @@
     <fieldset>
         <legend class="asapblau">Rechnungsnummer <?= h($invoice->invoice_number) ?> bearbeiten</legend>
         <?php
-            echo $this->Form->input('flight_id', array('label'=>'Flugnummer'));
+            echo $this->Form->input('flight_id', array('label'=>'Flugnummer','disabled' => 'disabled'));
             echo $this->Form->input('due_date', array('label'=>'Termin'));
             echo $this->Form->input('value', array('label'=>'Summe'));
             echo $this->Form->input('status', array('options' => $invoiceStatus,'label'=>'Status','disabled' => 'disabled'));

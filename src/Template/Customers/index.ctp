@@ -10,6 +10,7 @@
             <th><?= $this->Paginator->sort('first_name', __('Vorname')) ?></th>
             <th><?= $this->Paginator->sort('last_name', __('Nachname')) ?></th>
             <th><?= $this->Paginator->sort('company', __('Firma')) ?></th>
+            <th><?= $this->Paginator->sort('strike', __('Mahnungen')) ?></th>
             <th><?= $this->Paginator->sort('email', __('E-Mail')) ?></th>
             <th style="width:200px"class="actions"><?= __('') ?></th>
         </tr>
@@ -23,6 +24,7 @@
             <td><?= h($customer->first_name) ?></td>
             <td><?= h($customer->last_name) ?></td>
             <td><?= h($customer->company) ?></td>
+            <td><?= h($customer->strike) ?></td>
             <td><?= h($customer->email) ?></td>
             <td>
                 <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $customer->id]) ?></span>

@@ -16,7 +16,6 @@
             <td><?= h($group->name) ?></td>
             <td class="actions">
                 <span class="actions secondary"><?= $this->Html->link(__('Bearbeiten'), ['action' => 'edit', $group->id]) ?></span>
-                <span class="actions secondary"><?= $this->Form->postLink(__('Löschen'), ['action' => 'delete', $group->id], ['confirm' => __('Are you sure you want to delete # {0}?', $group->id)]) ?></span>
             </td>
         </tr>
 

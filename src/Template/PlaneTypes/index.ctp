@@ -1,7 +1,7 @@
 <div class="customers index large-12 medium-9 columns">
-    <h3>Flugzeug Typen</h3>
+    <h3>Flugzeugtypen</h3>
     <hr>
-    <span class="actions primary"><?= $this->Html->link(__('Flugzeug Typ hinzufügen'), ['action' => 'add']) ?></span>
+    <span class="actions primary"><?= $this->Html->link(__('Flugzeugtyp hinzufügen'), ['action' => 'add']) ?></span>
 
     <table id="charter-table" cellpadding="0" cellspacing="0">
         <thead>

@@ -46,9 +46,7 @@ class NavigationComponent extends Component {
                 [ "title" => "Kundengruppen", "controller" => "CustomerTypes", "action" => "index" ]
             ];
 
-            $this->navItems['Mahnwesen'] = [
-                [ "title" => "Übersicht", "controller" => "Invoices", "action" => "index" ]
-            ];
+            $this->navItems[] = [ "title" => "Mahnwesen", "controller" => "Invoices", "action" => "index" ];
         }
 
         $this->navItems['Flugzeuge'] = [

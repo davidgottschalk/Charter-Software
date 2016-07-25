@@ -67,10 +67,10 @@ class GroupsController extends AppController
         if ($this->request->is('post')) {
             $group = $this->Groups->patchEntity($group, $this->request->data);
             if ($this->Groups->save($group)) {
-                $this->Flash->success('The group has been saved.');
+                $this->Flash->success('Die Gruppe wurde gespeichert');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The group could not be saved. Please, try again.');
+                $this->Flash->error('Die Gruppe konnte nicht gespeichert werden, bitte versuchen Sie es erneut.');
             }
         }
         $this->set(compact('group'));
@@ -92,32 +92,13 @@ class GroupsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $group = $this->Groups->patchEntity($group, $this->request->data);
             if ($this->Groups->save($group)) {
-                $this->Flash->success('The group has been saved.');
+                $this->Flash->success('Die Gruppe wurde gespeichert');
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error('The group could not be saved. Please, try again.');
+                $this->Flash->error('Die Gruppe konnte nicht geändert werden, bitte versuchen Sie es erneut.');
             }
         }
         $this->set(compact('group'));
         $this->set('_serialize', ['group']);
-    }
-
-    /**
-     * Delete method
-     *
-     * @param string|null $id Group id.
-     * @return void Redirects to index.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $group = $this->Groups->get($id);
-        if ($this->Groups->delete($group)) {
-            $this->Flash->success('The group has been deleted.');
-        } else {
-            $this->Flash->error('The group could not be deleted. Please, try again.');
-        }
-        return $this->redirect(['action' => 'index']);
     }
 }

@@ -1,7 +1,7 @@
 <div class="users form large-10 medium-9 columns">
     <?= $this->Form->create($user); ?>
     <fieldset>
-        <legend><?= __('Mitarbeiter bearbeiten'); if($user->status == USER_DISMISS){echo ' (Entlassen)';} ?></legend>
+        <legend class="asapblau"><?= __('Mitarbeiter bearbeiten'); if($user->status == USER_DISMISS){echo ' (Entlassen)';} ?></legend>
         <div class="large-4 columns strings edit-table">
             <h6 class="subheader"><? echo $this->Form->input('first_name',['label'=>'Vorname']); ?></h6>
             <h6 class="subheader"><? echo $this->Form->input('last_name',['label'=>'Nachname']); ?></h6>

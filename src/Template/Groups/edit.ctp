@@ -1,7 +1,7 @@
 <div class="groups form large-10 medium-9 columns">
     <?= $this->Form->create($group); ?>
     <fieldset>
-        <legend><?= __('Mitarbeitergruppe bearbeiten') ?></legend>
+        <legend class="asapblau"><?= __('Mitarbeitergruppe bearbeiten') ?></legend>
         <?php
             echo $this->Form->input('name');
         ?>

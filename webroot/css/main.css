@@ -1,3 +1,11 @@
+a {
+    color:rgba(6, 0, 98, 1);
+}
+
+.nav-tabs>li>a:hover{
+   color:rgba(6, 0, 98, 1);
+}
+
 table tbody tr:hover {
     background-color:#e7e7e7;
 }

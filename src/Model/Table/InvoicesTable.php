@@ -103,9 +103,6 @@ class InvoicesTable extends Table{
                 if( $status == FIRST_WARNING ){
                     $this->setStrike( $invoicePerStatus['Customers']['id'] );
                 }
-                if( $status == INKASSO_POSSIBLE ){
-                    $this->checkStrikes( $invoicePerStatus['Customers']['id'] );
-                }
             }
             unset($invoicesPerStatus);
         }
@@ -113,15 +110,6 @@ class InvoicesTable extends Table{
 
     public function setInkasso($id){
         $this->setNewStatus( $id, INKASSO );
-    }
-
-    private function checkStrikes($customerId){
-        $customer = $this->Flights->Customers->get($customerId);
-
-        if($customer->strike >= 2){
-            $customer->customer_type_id = PRE;
-        }
-        $this->Flights->Customers->save($customer);
     }
 
     private function setStrike($customerId){

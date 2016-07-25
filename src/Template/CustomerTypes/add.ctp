@@ -2,7 +2,7 @@
     <?= $this->Form->create($customerType); ?>
     <fieldset>
 
-        <legend><h3><?= __('Kundegruppe hinzufügen') ?></h3></legend>
+        <legend><h3><?= __('Kundengruppe hinzufügen') ?></h3></legend>
 
         <?echo $this->Form->input('name');?>
 
