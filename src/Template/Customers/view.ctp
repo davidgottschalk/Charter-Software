@@ -18,7 +18,7 @@
             <p><?= h($customer->street) ?></p>
             <h6 class="subheader"><?= __('PLZ') ?></h6>
             <p><?= $this->Number->format($customer->postal_code) ?></p>
-            <h6 class="subheader"><?= __('Ort') ?></h6>
+            <h6 class="subheader"><?= __('Land') ?></h6>
             <p><?= h($customer->country) ?></p>
         </div>
 

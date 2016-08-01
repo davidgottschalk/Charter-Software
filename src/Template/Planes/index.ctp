@@ -30,7 +30,6 @@
                     <td>
                         <span class="actions secondary"><?= $this->Html->link(__('Anzeigen'), ['action' => 'view', $plane->id]) ?></span>
                         <span class="actions secondary"><?= $this->Html->link(__('Bearbeiten'), ['action' => 'edit', $plane->id]) ?></span>
-                        <span class="actions secondary"><?= $this->Form->postLink(__('Löschen'), ['action' => 'delete', $plane->id], ['confirm' => __('Flugzeug "{0}" löschen?', $plane->plane_name)]) ?></span>
                     </td>
                 </tr>
 

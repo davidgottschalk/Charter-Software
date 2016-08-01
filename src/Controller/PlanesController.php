@@ -107,27 +107,4 @@ class PlanesController extends AppController
         $this->set(compact('plane','planeTypes'));
         $this->set('_serialize', ['plane']);
     }
-
-    /**
-     * Delete method
-     *
-     * @param string|null $id Plane id.
-     * @return void Redirects to index.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $plane = $this->Planes->get($id);
-        if(!$this->Planes->Flights->exists(['plane_id' => $plane->id,'status IN' =>[FLIGHT_SOON, FLIGHT_FLYING]])){
-            if ($this->Planes->delete($plane)) {
-                $this->Flash->success('Das Flugzeug wurde glöscht..');
-            } else {
-                $this->Flash->error('Das zu löschende Flugzeug wurde nicht gefunden. Bitte erneut versuchen.');
-            }
-        }else{
-            $this->Flash->error('Das Flugzeug ist noch verbucht.');
-        }
-        return $this->redirect(['action' => 'index']);
-    }
 }
