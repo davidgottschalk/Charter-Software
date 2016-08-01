@@ -24,7 +24,7 @@
 
         <div class="large-3 columns strings view-table">
             <h6 class="subheader"><?= __('Kundengruppe') ?></h6>
-            <p><?= $customer->has('customer_type') ? $this->Html->link($customer->customer_type->name, ['controller' => 'CustomerTypes', 'action' => 'view', $customer->customer_type->id]) : '' ?></p>
+            <p class="asapblau"><?= $customer->has('customer_type') ? $this->Html->link($customer->customer_type->name, ['controller' => 'CustomerTypes', 'action' => 'view', $customer->customer_type->id]) : '' ?></p>
         </div>
 
         <div class="large-3 columns strings view-table">
